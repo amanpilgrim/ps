@@ -40,5 +40,8 @@
     <ProjectItemFile Source="icon-pause.png" Target="Images\" Type="ElementFile" />
     <ProjectItemFile Source="icon-pause.cur" Target="Images\" Type="ElementFile" />
     <ProjectItemFile Source="help-dark.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="bg-header.jpg" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="new-zealand-government.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="nz-parliament.png" Target="Images\" Type="ElementFile" />
   </Files>
 </ProjectItem>

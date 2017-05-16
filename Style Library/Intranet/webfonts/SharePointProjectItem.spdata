@@ -14,5 +14,10 @@
     <ProjectItemFile Source="OpenSans-CondLight-webfont.svg" Target="webfonts\" Type="ElementFile" />
     <ProjectItemFile Source="OpenSans-CondLight-webfont.ttf" Target="webfonts\" Type="ElementFile" />
     <ProjectItemFile Source="OpenSans-CondLight-webfont.woff" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="Open-Sans-regular.eot" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="Open-Sans-regular.svg" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="Open-Sans-regular.ttf" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="Open-Sans-regular.woff" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="Open-Sans-regular.woff2" Target="webfonts\" Type="ElementFile" />
   </Files>
 </ProjectItem>

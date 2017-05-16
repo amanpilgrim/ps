@@ -26,5 +26,6 @@
     <ProjectItemFile Source="textext.plugin.prompt.css" Target="CSS\" Type="ElementFile" />
     <ProjectItemFile Source="textext.plugin.tags.css" Target="CSS\" Type="ElementFile" />
     <ProjectItemFile Source="Peoplesearch.css" Target="CSS\" Type="ElementFile" />
+    <ProjectItemFile Source="normalize.css" Target="CSS\" Type="ElementFile" />
   </Files>
 </ProjectItem>

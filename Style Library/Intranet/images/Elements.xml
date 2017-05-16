@@ -39,5 +39,8 @@
     <File Path="icon-pause.png" Url="icon-pause.png" Type="GhostableInLibrary" />
     <File Path="icon-pause.cur" Url="icon-pause.cur" Type="GhostableInLibrary" />
     <File Path="help-dark.png" Url="help-dark.png" Type="GhostableInLibrary" />
+    <File Path="bg-header.jpg" Url="bg-header.jpg" Type="GhostableInLibrary"/>
+    <File Path="new-zealand-government.png" Url="new-zealand-government.png" Type="GhostableInLibrary"/>
+    <File Path="nz-parliament.png" Url="nz-parliament.png" Type="GhostableInLibrary"/>
   </Module>
 </Elements>
