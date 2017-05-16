@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="SearchDisplayTemplates" Url="_catalogs/masterpage/Display Templates/Search" RootWebOnly="TRUE">
+    
+    <File Path="SearchDisplayTemplates\Item_Person_PS.html" Url="Item_Person_PS.html" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="SearchDisplayTemplates\Item_Person_PS.js" Url="Item_Person_PS.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE">
+      <Property Name="ContentTypeId" Value="0x0101002039C03B61C64EC4A04F5361F38510660500C3F5F262E5F0D1468E353B575444E8C9" />
+      <Property Name="Title" Value="PS People Item" />
+      <Property Name="TargetControlType" Value=";#SearchResults;#" />
+      <Property Name="DisplayTemplateLevel" Value="Item" />
+      <Property Name="ManagedPropertyMapping" Value="'AboutMe':'AboutMe','AccountName':'AccountName','BaseOfficeLocation':'BaseOfficeLocation','Department':'Department','HitHighlightedProperties':'HitHighlightedProperties','Interests':'Interests','JobTitle':'JobTitle','LastModifiedTime':'LastModifiedTime','Memberships':'Memberships','PastProjects':'PastProjects','Path':'Path','PictureURL':'PictureURL','PreferredName':'PreferredName','Responsibilities':'Responsibilities','Schools':'Schools','ServiceApplicationID':'ServiceApplicationID','SipAddress':'SipAddress','Skills':'Skills','UserProfile_GUID':'UserProfile_GUID','WorkEmail':'WorkEmail','WorkId':'WorkId','YomiDisplayName':'YomiDisplayName','WorkPhone':'WorkPhone','MobilePhone':'MobilePhone','Office':'Office','PSPeopleSalutation':'PSPeopleSalutation','PSPeopleBusinessUnit':'PSPeopleBusinessUnit','PSPeopleJobTitle':'PSPeopleJobTitle','PSPeopleAlternativeEmail':'PSPeopleAlternativeEmail','PSPeopleOrganisation':'PSPeopleOrganisation','PSPeopleBusinessGroup':'PSPeopleBusinessGroup'" />
+      <Property Name="TemplateHidden" Value="FALSE" />
+    </File>
+  
+    <File Path="SearchDisplayTemplates\Item_Person_HoverPanel_PS.html" Url="Item_Person_HoverPanel_PS.html" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="SearchDisplayTemplates\Item_Person_HoverPanel_PS.js" Url="Item_Person_HoverPanel_PS.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE">
+      <Property Name="ContentTypeId" Value="0x0101002039C03B61C64EC4A04F5361F38510660500C3F5F262E5F0D1468E353B575444E8C9" />
+      <Property Name="Title" Value="PS People Hover Panel" />
+      <Property Name="TargetControlType" Value=";#SearchHoverPanel;#" />
+      <Property Name="DisplayTemplateLevel" Value="Item" />
+      <Property Name="ManagedPropertyMapping" Value="'AboutMe':'AboutMe','AccountName':'AccountName','BaseOfficeLocation':'BaseOfficeLocation','Department':'Department','HitHighlightedProperties':'HitHighlightedProperties','Interests':'Interests','JobTitle':'JobTitle','LastModifiedTime':'LastModifiedTime','Memberships':'Memberships','PastProjects':'PastProjects','Path':'Path','PictureURL':'PictureURL','PreferredName':'PreferredName','Responsibilities':'Responsibilities','Schools':'Schools','ServiceApplicationID':'ServiceApplicationID','SipAddress':'SipAddress','Skills':'Skills','UserProfile_GUID':'UserProfile_GUID','WorkEmail':'WorkEmail','WorkId':'WorkId','YomiDisplayName':'YomiDisplayName','WorkPhone':'WorkPhone','MobilePhone':'MobilePhone','Office':'Office','PSPeopleSalutation':'PSPeopleSalutation','PSPeopleBusinessUnit':'PSPeopleBusinessUnit','PSPeopleJobTitle':'PSPeopleJobTitle','PSPeopleAlternativeEmail':'PSPeopleAlternativeEmail','PSPeopleOrganisation':'PSPeopleOrganisation','PSPeopleBusinessGroup':'PSPeopleBusinessGroup'" />
+      <Property Name="TemplateHidden" Value="FALSE" />
+    </File>
+
+    <File Path="SearchDisplayTemplates\Item_Person_CompactHorizontal_PS.html" Url="Item_Person_CompactHorizontal_PS.html" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="SearchDisplayTemplates\Item_Person_CompactHorizontal_PS.js" Url="Item_Person_CompactHorizontal_PS.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE">
+      <Property Name="ContentTypeId" Value="0x0101002039C03B61C64EC4A04F5361F38510660500C3F5F262E5F0D1468E353B575444E8C9" />
+      <Property Name="Title" Value="PS People Item Compact Horizontal" />
+      <Property Name="TargetControlType" Value=";#SearchResults;#" />
+      <Property Name="DisplayTemplateLevel" Value="Item" />
+      <Property Name="ManagedPropertyMapping" Value="'AboutMe':'AboutMe','AccountName':'AccountName','BaseOfficeLocation':'BaseOfficeLocation','Department':'Department','HitHighlightedProperties':'HitHighlightedProperties','Interests':'Interests','JobTitle':'JobTitle','LastModifiedTime':'LastModifiedTime','Memberships':'Memberships','PastProjects':'PastProjects','Path':'Path','PictureURL':'PictureURL','PreferredName':'PreferredName','Responsibilities':'Responsibilities','Schools':'Schools','ServiceApplicationID':'ServiceApplicationID','SipAddress':'SipAddress','Skills':'Skills','UserProfile_GUID':'UserProfile_GUID','WorkEmail':'WorkEmail','WorkId':'WorkId','YomiDisplayName':'YomiDisplayName','WorkPhone':'WorkPhone','MobilePhone':'MobilePhone','Office':'Office'" />
+      <Property Name="TemplateHidden" Value="FALSE" />
+    </File>
+    
+    
+    <File Path="SearchDisplayTemplates\PS_Item_WebPage.html" Url="PS_Item_WebPage.html" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="SearchDisplayTemplates\PS_Item_WebPage.js" Url="PS_Item_WebPage.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE">
+      <Property Name="ContentTypeId" Value="0x0101002039C03B61C64EC4A04F5361F38510660500C3F5F262E5F0D1468E353B575444E8C9" />
+      <Property Name="Title" Value="PS Item WebPage" />
+      <Property Name="TargetControlType" Value=";#SearchResults;#" />
+      <Property Name="DisplayTemplateLevel" Value="Item" />
+      <Property Name="ManagedPropertyMapping" Value="'Title':'Title','Path':'Path','Description':'Description','EditorOWSUSER':'EditorOWSUSER','LastModifiedTime':'LastModifiedTime','CollapsingStatus':'CollapsingStatus','DocId':'DocId','HitHighlightedSummary':'HitHighlightedSummary','HitHighlightedProperties':'HitHighlightedProperties','FileExtension':'FileExtension','ViewsLifeTime':'ViewsLifeTime','ParentLink':'ParentLink','FileType':'FileType','IsContainer':'IsContainer','SecondaryFileExtension':'SecondaryFileExtension','DisplayAuthor':'DisplayAuthor','PSContentOwner':'PSContentOwner','PSPublishedDate':'PSPublishedDate'" />
+      <Property Name="TemplateHidden" Value="FALSE" />
+    </File>
+    
+    <File Path="SearchDisplayTemplates\PS_Item_Picture.html" Url="PS_Item_Picture.html" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="SearchDisplayTemplates\PS_Item_Picture.js" Url="PS_Item_Picture.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE">
+      <Property Name="ContentTypeId" Value="0x0101002039C03B61C64EC4A04F5361F38510660500C3F5F262E5F0D1468E353B575444E8C9" />
+      <Property Name="Title" Value="PS Item Picture" />
+      <Property Name="TargetControlType" Value=";#SearchResults;#" />
+      <Property Name="DisplayTemplateLevel" Value="Item" />
+      <Property Name="ManagedPropertyMapping" Value="'Title':'Title','Path':'Path','Description':'Description','EditorOWSUSER':'EditorOWSUSER','LastModifiedTime':'LastModifiedTime','CollapsingStatus':'CollapsingStatus','DocId':'DocId','HitHighlightedSummary':'HitHighlightedSummary','HitHighlightedProperties':'HitHighlightedProperties','FileExtension':'FileExtension','ViewsLifeTime':'ViewsLifeTime','ParentLink':'ParentLink','FileType':'FileType','IsContainer':'IsContainer','SecondaryFileExtension':'SecondaryFileExtension','DisplayAuthor':'DisplayAuthor','PictureHeight':'PictureHeight','PictureWidth':'PictureWidth','ImageDateCreated':'ImageDateCreated','PictureThumbnailURL':'PictureThumbnailURL','PictureURL':'PictureURL','PSImageCaption':'PSImageCaption','PSFileSize':'PSFileSize','PSReuseable':'PSReuseable'" />
+      <Property Name="TemplateHidden" Value="FALSE" />
+    </File>
+    
+    <File Path="SearchDisplayTemplates\PS_Item_Picture_HoverPanel.html" Url="PS_Item_Picture_HoverPanel.html" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="SearchDisplayTemplates\PS_Item_Picture_HoverPanel.js" Url="PS_Item_Picture_HoverPanel.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE">
+      <Property Name="ContentTypeId" Value="0x0101002039C03B61C64EC4A04F5361F38510660500C3F5F262E5F0D1468E353B575444E8C9" />
+      <Property Name="Title" Value="PS Item Picture Panel" />
+      <Property Name="TargetControlType" Value=";#SearchHoverPanel;#" />
+      <Property Name="DisplayTemplateLevel" Value="Item" />
+      <Property Name="ManagedPropertyMapping" Value="'Title':'Title','Path':'Path','Description':'Description','EditorOWSUSER':'EditorOWSUSER','LastModifiedTime':'LastModifiedTime','CollapsingStatus':'CollapsingStatus','DocId':'DocId','HitHighlightedSummary':'HitHighlightedSummary','HitHighlightedProperties':'HitHighlightedProperties','FileExtension':'FileExtension','ViewsLifeTime':'ViewsLifeTime','ParentLink':'ParentLink','FileType':'FileType','IsContainer':'IsContainer','SecondaryFileExtension':'SecondaryFileExtension','DisplayAuthor':'DisplayAuthor','PictureHeight':'PictureHeight','PictureWidth':'PictureWidth','ImageDateCreated':'ImageDateCreated','PictureThumbnailURL':'PictureThumbnailURL','PictureURL':'PictureURL','PSImageCaption':'PSImageCaption','PSFileSize':'PSFileSize','PSReuseable':'PSReuseable'" />
+      <Property Name="TemplateHidden" Value="FALSE" />
+    </File>
+    
+    <File Path="SearchDisplayTemplates\Item_CommonHoverPanel_Actions.html" Url="Item_CommonHoverPanel_Actions.html" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="SearchDisplayTemplates\Item_CommonHoverPanel_Actions.js" Url="Item_CommonHoverPanel_Actions.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE">
+      <Property Name="ContentTypeId" Value="0x0101002039C03B61C64EC4A04F5361F38510660500C3F5F262E5F0D1468E353B575444E8C9" />
+      <Property Name="Title" Value="Common Hover Panel Actions" />
+      <Property Name="TargetControlType" Value=";#SearchHoverPanel;#" />
+      <Property Name="DisplayTemplateLevel" Value="Item" />
+      <Property Name="TemplateHidden" Value="FALSE" />
+    </File>
+    
+    <File Path="SearchDisplayTemplates\Item_CommonHoverPanel_Header.html" Url="Item_CommonHoverPanel_Header.html" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="SearchDisplayTemplates\Item_CommonHoverPanel_Header.js" Url="Item_CommonHoverPanel_Header.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE">
+      <Property Name="ContentTypeId" Value="0x0101002039C03B61C64EC4A04F5361F38510660500C3F5F262E5F0D1468E353B575444E8C9" />
+      <Property Name="Title" Value="Common Hover Panel Header" />
+      <Property Name="TargetControlType" Value=";#SearchHoverPanel;#" />
+      <Property Name="DisplayTemplateLevel" Value="Item" />
+      <Property Name="TemplateHidden" Value="FALSE" />
+    </File>
+
+    <File Path="SearchDisplayTemplates\PS_Item_Video.html" Url="PS_Item_Video.html" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="SearchDisplayTemplates\PS_Item_Video.js" Url="PS_Item_Video.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE">
+      <Property Name="ContentTypeId" Value="0x0101002039C03B61C64EC4A04F5361F38510660500C3F5F262E5F0D1468E353B575444E8C9" />
+      <Property Name="Title" Value="PS Item Picture" />
+      <Property Name="TargetControlType" Value=";#SearchResults;#" />
+      <Property Name="DisplayTemplateLevel" Value="Item" />
+      <Property Name="ManagedPropertyMapping" Value="'Image Url'{Picture URL}:'PictureThumbnailURL;PictureURL;','Title','Title Link Url'{Link URL}:'Path','Summary'{Line 2}:'Description','HitHighlightedProperties','HitHighlightedSummary','FileExtension'{File Extension}:'SecondaryFileExtension','Author','ContentTypeId','Created','PeopleInMedia','MediaDuration','VideoFileURL'{Video File URL}:'UserEncodingURL;ExternalMediaURL;DefaultEncodingURL;','PSImageCaption':'PSImageCaption','PSFileSize':'PSFileSize','PSReuseable':'PSReuseable'" />
+      <Property Name="TemplateHidden" Value="FALSE" />
+    </File>
+    
+    <File Path="SearchDisplayTemplates\PS_Item_Video_HoverPanel.html" Url="PS_Item_Video_HoverPanel.html" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="SearchDisplayTemplates\PS_Item_Video_HoverPanel.js" Url="PS_Item_Video_HoverPanel.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE">
+      <Property Name="ContentTypeId" Value="0x0101002039C03B61C64EC4A04F5361F38510660500C3F5F262E5F0D1468E353B575444E8C9" />
+      <Property Name="Title" Value="PS Item Picture Panel" />
+      <Property Name="TargetControlType" Value=";#SearchHoverPanel;#" />
+      <Property Name="DisplayTemplateLevel" Value="Item" />
+      <Property Name="ManagedPropertyMapping" Value="'Image Url'{Picture URL}:'PictureThumbnailURL;PictureURL;','Title','Title Link Url'{Link URL}:'Path','Summary'{Line 2}:'Description','HitHighlightedProperties','HitHighlightedSummary','FileExtension'{File Extension}:'SecondaryFileExtension','Author','ContentTypeId','Created','PeopleInMedia','MediaDuration','VideoFileURL'{Video File URL}:'UserEncodingURL;ExternalMediaURL;DefaultEncodingURL;','PSImageCaption':'PSImageCaption','PSFileSize':'PSFileSize','PSReuseable':'PSReuseable'" />
+      <Property Name="TemplateHidden" Value="FALSE" />
+    </File>
+    
+    
+    <File Path="SearchDisplayTemplates\PS_Item_Audio.html" Url="PS_Item_Audio.html" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="SearchDisplayTemplates\PS_Item_Audio.js" Url="PS_Item_Audio.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE">
+      <Property Name="ContentTypeId" Value="0x0101002039C03B61C64EC4A04F5361F38510660500C3F5F262E5F0D1468E353B575444E8C9" />
+      <Property Name="Title" Value="PS Item Audio" />
+      <Property Name="TargetControlType" Value=";#SearchResults;#" />
+      <Property Name="DisplayTemplateLevel" Value="Item" />
+      <Property Name="ManagedPropertyMapping" Value="'Image Url'{Picture URL}:'PictureThumbnailURL;PictureURL;','Title','Title Link Url'{Link URL}:'Path','Summary'{Line 2}:'Description','HitHighlightedProperties','HitHighlightedSummary','FileExtension'{File Extension}:'SecondaryFileExtension','Author','ContentTypeId','Created','PeopleInMedia','MediaDuration','VideoFileURL'{Video File URL}:'UserEncodingURL;ExternalMediaURL;DefaultEncodingURL;','PSImageCaption':'PSImageCaption','PSFileSize':'PSFileSize','PSReuseable':'PSReuseable'" />
+      <Property Name="TemplateHidden" Value="FALSE" />
+    </File>
+    
+    <File Path="SearchDisplayTemplates\PS_Item_Audio_HoverPanel.html" Url="PS_Item_Audio_HoverPanel.html" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="SearchDisplayTemplates\PS_Item_Audio_HoverPanel.js" Url="PS_Item_Audio_HoverPanel.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE">
+      <Property Name="ContentTypeId" Value="0x0101002039C03B61C64EC4A04F5361F38510660500C3F5F262E5F0D1468E353B575444E8C9" />
+      <Property Name="Title" Value="PS Item Audio Panel" />
+      <Property Name="TargetControlType" Value=";#SearchHoverPanel;#" />
+      <Property Name="DisplayTemplateLevel" Value="Item" />
+      <Property Name="ManagedPropertyMapping" Value="'Image Url'{Picture URL}:'PictureThumbnailURL;PictureURL;','Title','Title Link Url'{Link URL}:'Path','Summary'{Line 2}:'Description','HitHighlightedProperties','HitHighlightedSummary','FileExtension'{File Extension}:'SecondaryFileExtension','Author','ContentTypeId','Created','PeopleInMedia','MediaDuration','VideoFileURL'{Video File URL}:'UserEncodingURL;ExternalMediaURL;DefaultEncodingURL;','PSImageCaption':'PSImageCaption','PSFileSize':'PSFileSize','PSReuseable':'PSReuseable'" />
+      <Property Name="TemplateHidden" Value="FALSE" />
+    </File>
+    
+    <File Path="SearchDisplayTemplates\PS_Item_Person.html" Url="PS_Item_Person.html" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="SearchDisplayTemplates\PS_Item_Person.js" Url="PS_Item_Person.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE">
+      <Property Name="ContentTypeId" Value="0x0101002039C03B61C64EC4A04F5361F38510660500C3F5F262E5F0D1468E353B575444E8C9" />
+      <Property Name="Title" Value="PS Item Person" />
+      <Property Name="TargetControlType" Value=";#SearchResults;#" />
+      <Property Name="DisplayTemplateLevel" Value="Item" />
+      <Property Name="ManagedPropertyMapping" Value="'PSPersonAccountName':'PSPersonAccountName','PSPersonFirstName':'PSPersonFirstName','PSPersonLastName':'PSPersonLastName','PSPersonFullName':'PSPersonFullName','PSPersonSalutation':'PSPersonSalutation','PSPersonPreferredName':'PSPersonPreferredName','PSPersonPreferredPhone':'PSPersonPreferredPhone','PSPersonEmail':'PSPersonEmail','PSPersonAlternativeEmail':'PSPersonAlternativeEmail','PSPersonMobileNumber':'PSPersonMobileNumber','PSPersonParty':'PSPersonParty','PSPersonJobTitle':'PSPersonJobTitle','PSPersonPhone':'PSPersonPhone','PSPersonOrganisation':'PSPersonOrganisation','PSPersonBusinessGroup':'PSPersonBusinessGroup','PSPersonBusinessUnit':'PSPersonBusinessUnit','PSPersonLocation':'PSPersonLocation','PSPersonMemberOffice':'PSPersonMemberOffice','PSPersonRole':'PSPersonRole','PSPersonPortfolio':'PSPersonPortfolio','PSPersonPhotoUrl':'PSPersonPhotoUrl','PSPersonId':'PSPersonId','PSPersonPreferredFullName':'PSPersonPreferredFullName'" />
+      <Property Name="TemplateHidden" Value="FALSE" />
+    </File>
+    
+    <File Path="SearchDisplayTemplates\PS_Item_Person_HoverPanel.html" Url="PS_Item_Person_HoverPanel.html" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE" />
+    <File Path="SearchDisplayTemplates\PS_Item_Person_HoverPanel.js" Url="PS_Item_Person_HoverPanel.js" Type="GhostableInLibrary" Level="Published" ReplaceContent="TRUE">
+      <Property Name="ContentTypeId" Value="0x0101002039C03B61C64EC4A04F5361F38510660500C3F5F262E5F0D1468E353B575444E8C9" />
+      <Property Name="Title" Value="PS People Hover Panel" />
+      <Property Name="TargetControlType" Value=";#SearchHoverPanel;#" />
+      <Property Name="DisplayTemplateLevel" Value="Item" />
+      <Property Name="ManagedPropertyMapping" Value="'PSPersonAccountName':'PSPersonAccountName','PSPersonFirstName':'PSPersonFirstName','PSPersonLastName':'PSPersonLastName','PSPersonFullName':'PSPersonFullName','PSPersonSalutation':'PSPersonSalutation','PSPersonPreferredName':'PSPersonPreferredName','PSPersonPreferredPhone':'PSPersonPreferredPhone','PSPersonEmail':'PSPersonEmail','PSPersonAlternativeEmail':'PSPersonAlternativeEmail','PSPersonMobileNumber':'PSPersonMobileNumber','PSPersonParty':'PSPersonParty','PSPersonJobTitle':'PSPersonJobTitle','PSPersonPhone':'PSPersonPhone','PSPersonOrganisation':'PSPersonOrganisation','PSPersonBusinessGroup':'PSPersonBusinessGroup','PSPersonBusinessUnit':'PSPersonBusinessUnit','PSPersonLocation':'PSPersonLocation','PSPersonMemberOffice':'PSPersonMemberOffice','PSPersonRole':'PSPersonRole','PSPersonPortfolio':'PSPersonPortfolio','PSPersonPhotoUrl':'PSPersonPhotoUrl','PSPersonId':'PSPersonId','PSPersonPreferredFullName':'PSPersonPreferredFullName'" />
+      <Property Name="TemplateHidden" Value="FALSE" />
+    </File>
+  </Module>
+</Elements>

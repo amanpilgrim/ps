@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="MasterPages" Url="_catalogs/masterpage" Path="MasterPage" RootWebOnly="TRUE">
+    <File Url="ParliamentIntranet.master" Type="GhostableInLibrary" IgnoreIfAlreadyExists="FALSE" ReplaceContent="TRUE" >
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_masterpage_name;" />
+      <Property Name="Title" Value="Parliament Intranet" />
+      <Property Name="PublishingPreviewImage" Value="$PublishingPreviewImage$" />
+      <Property Name="MasterPageDescription" Value="Parliament Intranet Masterpage" />
+    </File>
+    <File  Url="ParliamentIntranet.html" Type="GhostableInLibrary" IgnoreIfAlreadyExists="FALSE" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

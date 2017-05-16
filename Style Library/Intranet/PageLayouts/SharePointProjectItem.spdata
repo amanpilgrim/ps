@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="PageLayouts\" Type="ElementManifest" />
+    <ProjectItemFile Source="PSHomePageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
+    <ProjectItemFile Source="PSNewsContentPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
+    <ProjectItemFile Source="PSContentPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
+    <ProjectItemFile Source="PSSectionLandingPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
+    <ProjectItemFile Source="PSSubSectionLandingPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
+    <ProjectItemFile Source="PSListingPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
+    <ProjectItemFile Source="PSFAQPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
+    <ProjectItemFile Source="PSImageGalleryPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
+    <ProjectItemFile Source="PSNewsAndEventsLandingPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
+    <ProjectItemFile Source="PSDocumentPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
+    <ProjectItemFile Source="PSSitemapPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
+    <ProjectItemFile Source="PSNewsListingPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
+    <ProjectItemFile Source="PSNoticeboardPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
+    <ProjectItemFile Source="PSEventGalleriesLandingPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
+    <ProjectItemFile Source="PSTVReplayListingPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
+    <ProjectItemFile Source="PSArticlesPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
+    <ProjectItemFile Source="PSMembersBillPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
+    <ProjectItemFile Source="PSToolsPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
+    <ProjectItemFile Source="PSUserProfilePageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
+    <ProjectItemFile Source="PSEmergencyContactPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
+    <ProjectItemFile Source="PSArticleSearchPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
+    <ProjectItemFile Source="PSMyAlertsManagementPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
+    <ProjectItemFile Source="PSAdvancedPeopleSearchPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
+    <ProjectItemFile Source="PSArticleCategoryListingPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
+  </Files>
+  <ExtensionData>
+    <ExtensionDataItem Key="DeploymentConflictResolutionBehavior" Value="None" />
+  </ExtensionData>
+</ProjectItem>

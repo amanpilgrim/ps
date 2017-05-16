@@ -1,0 +1,291 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>PS People Item</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string">Displays a result tailored for a person.</mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#SearchResults;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:CrawlerXSLFile msdt:dt="string"></mso:CrawlerXSLFile>
+<mso:ManagedPropertyMapping msdt:dt="string">'AboutMe':'AboutMe','AccountName':'AccountName','BaseOfficeLocation':'BaseOfficeLocation','Department':'Department','HitHighlightedProperties':'HitHighlightedProperties','Interests':'Interests','JobTitle':'JobTitle','LastModifiedTime':'LastModifiedTime','Memberships':'Memberships','PastProjects':'PastProjects','Path':'Path','PictureURL':'PictureURL','PreferredName':'PreferredName','Responsibilities':'Responsibilities','Schools':'Schools','ServiceApplicationID':'ServiceApplicationID','SipAddress':'SipAddress','Skills':'Skills','UserProfile_GUID':'UserProfile_GUID','WorkEmail':'WorkEmail','WorkId':'WorkId','YomiDisplayName':'YomiDisplayName','WorkPhone':'WorkPhone','MobilePhone':'MobilePhone','Office':'Office','PSPeopleSalutation':'PSPeopleSalutation','PSPeopleBusinessUnit':'PSPeopleBusinessUnit','PSPeopleJobTitle':'PSPeopleJobTitle','PSPeopleAlternativeEmail':'PSPeopleAlternativeEmail','PSPeopleOrganisation':'PSPeopleOrganisation','PSPeopleBusinessGroup':'PSPeopleBusinessGroup'</mso:ManagedPropertyMapping>
+<mso:_dlc_DocId msdt:dt="string">OURHOUSE-1-4588</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">1f2c2764-1954-4f11-bffa-4408e7dd5916</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">http://ourhouse.campus.services/_layouts/15/DocIdRedir.aspx?ID=OURHOUSE-1-4588, OURHOUSE-1-4588</mso:_dlc_DocIdUrl>
+<mso:HtmlDesignConversionSucceeded msdt:dt="string">True</mso:HtmlDesignConversionSucceeded>
+<mso:HtmlDesignStatusAndPreview msdt:dt="string">http://ourhouse.campus.services/_catalogs/masterpage/Display Templates/Search/Item_Person_PS.html, Conversion successful.</mso:HtmlDesignStatusAndPreview>
+<mso:HtmlDesignPreviewUrl msdt:dt="string"></mso:HtmlDesignPreviewUrl>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="Item_Person">
+        <!--#_ 
+            if(!$isNull(ctx.CurrentItem) && !$isNull(ctx.ClientControl)){
+            var id = ctx.ClientControl.get_nextUniqueId();
+            var itemId = id + Srch.U.Ids.item;
+            var hoverId = id + Srch.U.Ids.hover;
+            $setResultItem(itemId, ctx.CurrentItem);
+            var container_id = id + "_peopleContainer";
+            var hhProps = Srch.U.createXMLDocument("<root>" + ctx.CurrentItem.HitHighlightedProperties + "</root>");
+            var currentpath = ctx.CurrentItem.Path;
+            var newpath = currentpath.replace('http://mysite.ourhouse.campus.services:8080/Person.aspx', 'http://ourhouse.parliament.nz/Pages/userprofile.aspx');
+            var encodedPath = $urlHtmlEncode(newpath);            
+            var has_pn = !$isEmptyString(ctx.CurrentItem.PreferredName);
+						var has_phno = !$isEmptyString(ctx.CurrentItem.WorkPhone);
+                        var has_sip = !$isEmptyString(ctx.CurrentItem.SipAddress);
+                        var has_email = !$isEmptyString(ctx.CurrentItem.WorkEmail);
+                        var has_jt = !$isEmptyString(ctx.CurrentItem.JobTitle);
+                        var has_dp = !$isEmptyString(ctx.CurrentItem.Department);
+                        var has_abme = !$isEmptyString(ctx.CurrentItem.AboutMe);
+                        var has_resp = !$isEmptyString(ctx.CurrentItem.Responsibilities);
+                        var has_pp = !$isEmptyString(ctx.CurrentItem.PastProjects);
+                        var has_ski = !$isEmptyString(ctx.CurrentItem.Skills);
+                        var has_sch = !$isEmptyString(ctx.CurrentItem.Schools);
+                        var has_int = !$isEmptyString(ctx.CurrentItem.Interests);
+                        var has_vlm = !$isEmptyString(ctx.CurrentItem.ProfileViewsLastMonth);
+                        var has_vlw = !$isEmptyString(ctx.CurrentItem.ProfileViewsLastWeek);
+                        var has_query = !$isEmptyString(ctx.CurrentItem.ProfileQueriesFoundYou);
+						
+						var has_salutation = !$isEmptyString(ctx.CurrentItem.PSPeopleSalutation);
+						var has_bu = !$isEmptyString(ctx.CurrentItem.PSPeopleBusinessUnit);
+						var has_psjobtitle = !$isEmptyString(ctx.CurrentItem.PSPeopleJobTitle);
+						
+						//Split multi value variables
+						
+						function identical(array) {
+							for(var i = 0; i < array.length - 1; i++) {
+								if(array[i] != array[i+1]) {
+									return false;
+								}
+							}
+							return true;
+						}
+						
+						function printJobTitle(jobTitleProperty){
+
+							var jobTitleArray = jobTitleProperty.split(';');
+							
+							if(jobTitleArray.length > 1){
+								if(identical(jobTitleArray)){
+									jobTitleProperty = jobTitleArray[0];
+								}
+								else{
+									jobTitleProperty= "Multiple roles, please view profile";
+								}
+							}
+							return jobTitleProperty;
+						}
+						
+						function printBusinessUnit(businessUnitProperty){
+							var businessUnitArray = businessUnitProperty.split(';');
+							
+							if(businessUnitArray.length > 1){
+								if(identical(businessUnitArray)){
+									businessUnitProperty = businessUnitArray[0];
+								}
+								else{
+									businessUnitProperty = "";
+								}
+							}
+							
+							return businessUnitProperty;
+						}
+						
+
+						
+						//Test Vars
+						var test_mobile = !$isEmptyString(ctx.CurrentItem.MobilePhone);
+						var test_office = !$isEmptyString(ctx.CurrentItem.Office);
+						
+                        var isSelfSrch = (has_vlm == true || has_vlw == true || has_query == true);
+                        var delimiter = "";
+                        var userPersonaId = $htmlEncode(id) + "_peopleUserPersona";
+                        var uSip = ctx.CurrentItem.SipAddress;
+                        var uEmail = ctx.CurrentItem.WorkEmail;
+                        var uName = ctx.CurrentItem.PreferredName;
+                        var uPicUrl = ctx.CurrentItem.PictureURL;
+                        var hoverUrl = "~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_Person_HoverPanel_PS.js";
+_#-->
+                        <div id="_#= $htmlEncode(container_id) =#_" class="ms-srch-people-outerContainer ms-srch-resultHover">
+                            <div id="_#= $htmlEncode(itemId) =#_" name="Item" class="ms-srch-people-item" onmouseover="EnsureScriptParams('SearchUI.js', 'HP.Init', event, '_#=$scriptEncode(itemId) =#_', '_#=$scriptEncode(hoverId) =#_', '_#=$scriptEncode(hoverUrl) =#_');" onmouseout="EnsureScriptParams('SearchUI.js', 'HP.Hide');">
+                            <div id="_#= $htmlEncode(hoverId) =#_" class="ms-srch-hover-outerContainer"></div>
+                                <div id="UserPersonaContainer">
+                                    <div id="UserPersona">
+                                        <div id="_#= userPersonaId =#_"></div>
+                                    </div>
+                                </div>
+                                <div id="UserInfoContainer">
+                                    <div id="ContactInfo">
+                                        <div id="NameField">
+<!--#_ 
+                                            
+											var encodedName = (has_pn == true) ? $htmlEncode(ctx.CurrentItem.PreferredName) : $htmlEncode(ctx.CurrentItem.YomiDisplayName);
+                                            var displayName = Srch.U.getSingleHHXMLNodeValue(hhProps, "preferredname");
+                                            if ($isEmptyString(displayName)) { displayName = encodedName }
+											if(has_salutation == true){
+												displayName = ctx.CurrentItem.PSPeopleSalutation + " " + displayName;
+											}
+_#-->	
+                                            <div id="NameValue" class="ms-srch-ellipsis ms-textLarge">
+                                                <a clicktype="Result" id="NameFieldLink" href="_#= encodedPath =#_" title="_#= encodedName =#_">_#= displayName =#_</a>
+                                            </div>
+                                        </div>
+<!--#_ 
+                                        if(has_psjobtitle == true && printJobTitle(ctx.CurrentItem.PSPeopleJobTitle) != "Multiple roles, please view profile") {
+_#-->
+                                            <div id="JobTitleField">
+<!--#_ 
+                                                var encodedJtitle = $htmlEncode(printJobTitle(ctx.CurrentItem.PSPeopleJobTitle));
+                                                displayJtitle = encodedJtitle;
+_#--> 
+                                                <div id="JobTitleValue" class="ms-srch-ellipsis" title="_#= encodedJtitle =#_"> _#= displayJtitle =#_ </div>
+                                            </div>
+<!--#_ 
+                                        }
+_#-->
+<!--#_ 
+                                        if(has_bu == true && printBusinessUnit(ctx.CurrentItem.PSPeopleBusinessUnit) != "") {
+_#-->
+                                            <div id="DepartmentField">
+<!--#_ 
+                                                var encodedBusinessUnit = $htmlEncode(printBusinessUnit(ctx.CurrentItem.PSPeopleBusinessUnit));
+_#--> 
+                                                <div id="DepartmentValue" class="ms-srch-ellipsis" title="_#= encodedBusinessUnit =#_"> _#= encodedBusinessUnit =#_ </div>
+                                            </div>
+<!--#_ 
+                                        }
+										
+										//Add Custom fields below this line
+_#-->
+
+<!--#_ 
+                                        if(has_email == true) {
+_#-->									
+<!--#_ 
+											var encodedEmail = $htmlEncode(ctx.CurrentItem.WorkEmail);
+											var displayEmail = Srch.U.getSingleHHXMLNodeValue(hhProps, "workemail");
+											if ($isEmptyString(displayEmail)) { displayPhone = encodedEmail }
+_#--> 
+												<div class="ms-srch-ellipsis">
+													<a href="mailto:_#= encodedEmail =#_">_#= encodedEmail =#_</a>
+												</div>
+<!--#_ 
+                                        }
+									
+_#-->
+
+				
+<!--#_ 
+                                        if(has_phno == true) {
+_#-->									
+
+                                            <div id="WorkPhoneField">
+<!--#_ 
+                                                var encodedPhone = $htmlEncode(ctx.CurrentItem.WorkPhone);
+                                                var displayPhone = Srch.U.getSingleHHXMLNodeValue(hhProps, "workphone");
+                                                if ($isEmptyString(displayPhone)) { displayPhone = encodedPhone }
+_#--> 
+                                                <div id="WorkPhoneValue" class="ms-srch-ellipsis" title="_#= encodedPhone =#_"> Preferred phone: <a href="tel:_#= displayPhone =#_">_#= displayPhone =#_</a></div>
+                                            </div>
+<!--#_ 
+                                        }
+									
+_#-->
+<!--#_ 
+										if(printJobTitle(ctx.CurrentItem.PSPeopleJobTitle) == "Multiple roles, please view profile"){
+_#-->
+											<div id="PleaseViewProfile">
+													<br /><div id="ViewProfile" class="ms-srch-ellipsis" title="Please view profile"><i>Multiple roles, view profile</i></div>
+											</div>
+<!--#_ 
+										}
+_#-->
+
+
+                                    </div>
+<!--#_ 
+                                    if(isSelfSrch == true) {
+_#-->
+                                        <hr class="ms-srch-people-item-separator" />
+                                        <div id="SelfSearchInfo">
+                                            <div id="Heading">
+                                                <a id="EditProfileLink" href="_#= $urlHtmlEncode(ctx.CurrentItem.EditProfileUrl) =#_"> _#= $htmlEncode(Srch.Res.item_People_EditProfileLink) =#_ </a>
+                                            </div>
+                                            <div id="Frequency">
+                                                <span id="FieldTitle" class="ms-soften"> _#= $htmlEncode(Srch.Res.item_People_SelfSearchFrequency) =#_ </span>
+                                                <ul id="FrequencyCard">
+                                                    <li id="MonthlyViews">
+<!--#_ 
+                                                        var encodedVal = (ctx.CurrentItem.ProfileViewsLastMonth == 1) ? $htmlEncode(String.format(Srch.Res.item_People_SelfSearchFrequency_ViewsMonths_Singular, ctx.CurrentItem.ProfileViewsLastMonth)) : 
+                                                            $htmlEncode(String.format(Srch.Res.item_People_SelfSearchFrequency_ViewsMonths_Plural, ctx.CurrentItem.ProfileViewsLastMonth));
+_#-->
+                                                           _#= encodedVal =#_  
+                                                    </li>
+                                                    <li id="DailyViews">
+<!--#_ 
+                                                        var encodedVal = (ctx.CurrentItem.ProfileViewsLastWeek == 1) ? $htmlEncode(String.format(Srch.Res.item_People_SelfSearchFrequency_ViewsWeeks_Singular, ctx.CurrentItem.ProfileViewsLastWeek)) :
+                                                            $htmlEncode(String.format(Srch.Res.item_People_SelfSearchFrequency_ViewsWeeks_Plural, ctx.CurrentItem.ProfileViewsLastWeek));
+_#-->
+                                                        _#= encodedVal =#_  
+                                                    </li>
+                                                </ul>
+                                            </div>
+<!--#_ 
+                                            if(has_query == true) {
+_#-->                                        
+                                                <div id="Keywords">
+                                                    <span id="Span1" class="ms-soften"> _#= $htmlEncode(Srch.Res.item_People_SelfSearchKeywords) =#_ </span>
+<!--#_ 
+                                                    var encodedVal = $htmlEncode(Srch.U.getTrimmedString(Srch.U.getUnEncodedMultiValuedResults(ctx.CurrentItem.ProfileQueriesFoundYou, 5, delimiter), 84));
+                                                    if (!Srch.U.e(encodedVal)) {
+_#-->
+                                                        _#= encodedVal =#_
+<!--#_ 
+                                                    } 
+_#-->
+                                                </div>    
+<!--#_ 
+                                            } 
+_#-->
+
+                                        </div>
+<!--#_ 
+                                    } 
+_#-->
+                                </div> 
+                            </div>
+                        </div>
+<!--#_
+                    AddPostRenderCallback(ctx, function(){
+                        EnsureScriptFunc("clienttemplates.js", "RenderUserFieldWorker", function() {
+                            var getUserPersona = function() {
+                                var renderCtx = new ContextInfo();
+                                renderCtx.Templates = {};
+                                renderCtx.Templates["Fields"] = {};
+                                var fieldSchemaData = { "PictureOnly":"1", "PictureSize": "Size_72px"};
+                                var listSchema = {"EffectivePresenceEnabled": "1", "PresenceAlt": Srch.Res.item_People_NoPresenceAvailable};
+                                var userData = {"title": uName, "email": uEmail, "picture": uPicUrl, "sip": uSip};
+                                var personaControlElement = document.getElementById(userPersonaId);
+                                if (!Srch.U.n(personaControlElement))
+                                {
+                                    personaControlElement.innerHTML = RenderUserFieldWorker(renderCtx, fieldSchemaData, userData, listSchema);
+                                }
+                                if(typeof(ctx.EnqueueImnRequest) == "undefined") { ctx.EnqueueImnRequest = false; }
+                                if (ctx.EnqueueImnRequest == false) {
+                                    ctx.ClientControl.add_oneTimeResultRendered(function(){ if (typeof(ProcessImn) != "undefined") { ProcessImn(); } });
+                                    ctx.EnqueueImnRequest = true;
+                                 }
+                            };
+                            getUserPersona();
+                        });
+                    });
+_#-->                        
+<!--#_ 
+                } 
+_#-->
+    </div>
+</body>
+</html>

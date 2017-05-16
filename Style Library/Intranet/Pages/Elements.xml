@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Pages" Url="Pages" RootWebOnly="FALSE" Path="Pages" xmlns="http://schemas.microsoft.com/sharepoint/">
+    <File Url="pspeopleresults.aspx" Type="GhostableInLibrary" Path="pspeopleresults.aspx">
+      <Property Name="Title" Value="People Search Results" />
+      <Property Name="ContentType" Value="Welcome Page" />
+      <Property Name="PublishingPageLayout" Value="~siteCollection/_catalogs/masterpage/searchresults.aspx, Search results" />
+    </File>
+    <File Url="advpplsrchresults.aspx" Type="GhostableInLibrary" Path="advpplsrchresults.aspx">
+      <Property Name="Title" Value="Advanced People Search Results" />
+      <Property Name="ContentType" Value="Welcome Page" />
+      <Property Name="PublishingPageLayout" Value="~siteCollection/_catalogs/masterpage/searchresults.aspx, Search results" />
+    </File>
+    <File Path="advpplsrchresults.aspx" Url="advpplsrchresults.aspx" />
+  </Module>
+</Elements>

@@ -1,0 +1,428 @@
+﻿<%@Master language="C#"%>
+<%@Register TagPrefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
+<%@Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
+<%@Register TagPrefix="wssucmui" TagName="MUISelector" Src="~/_controltemplates/15/MUISelector.ascx"%>
+<%@Register TagPrefix="wssuc" TagName="Welcome" Src="~/_controltemplates/15/Welcome.ascx"%>
+<%@Register TagPrefix="SearchWC" Namespace="Microsoft.Office.Server.Search.WebControls" Assembly="Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
+<%@Register TagPrefix="PublishingNavigation" Namespace="Microsoft.SharePoint.Publishing.Navigation" Assembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
+<%@Register TagPrefix="PublishingRibbon" TagName="PublishingRibbon" Src="~/_controltemplates/15/Ribbon.ascx"%>
+<%@Register TagPrefix="PS" TagName="NavigationTermSetHeader" Src="~/_controltemplates/15/NavigationTermSet/Header/Header.ascx" %>
+<%@Register TagPrefix="PS" TagName="NavigationTermSetFooter" Src="~/_controltemplates/15/NavigationTermSet/Footer/Footer.ascx" %>
+<%@Register TagPrefix="PS" TagName="ToolsDropDown" Src="~/_controltemplates/15/ToolsDropDown/ToolsDropDown.ascx" %>
+<!DOCTYPE HTML>
+<!--[if lt IE 7]> <html class="ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="ie8 oldie" lang="en"> <![endif]-->
+<!--[if !IE | gt IE 8]><!-->
+<SharePoint:SPHtmlTag runat="server" id="SPHtmlTag" dir="&lt;%$Resources:wss,multipages_direction_dir_value%&gt;">
+<!--<![endif]-->
+    <head id="Head1" runat="server">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charset="utf-8" />
+        <meta name="GENERATOR" content="Microsoft SharePoint" />
+        <meta http-equiv="Expires" content="0" />
+		
+        <!-- ===== STARTER: Robots  ======================================================================================================= -->
+        <SharePoint:RobotsMetaTag ID="RobotsMetaTag1" runat="server" />
+		
+		<!-- ===== STARTER: Favicon / Windows Tile ======================================================================================== -->	
+		<SharePoint:SPShortcutIcon ID="SPShortcutIcon1" runat="server" IconUrl="/Style Library/Intranet/images/favicon.ico" />
+		<SharePoint:SPPinnedSiteTile ID="SPPinnedSiteTile1" runat="server" TileUrl="/_layouts/15/images/SharePointMetroAppTile.png" TileColor="#0072C6" />				
+		
+		<!-- ===== STARTER: Page Title loaded from page or page layout ==================================================================== -->
+		<SharePoint:PageTitle ID="PageTitle1" runat="server">
+            <asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server"><SharePoint:ProjectProperty ID="ProjectProperty1" Property="Title" runat="server" /></asp:ContentPlaceHolder>
+		</SharePoint:PageTitle>
+		
+		<!-- ===== STARTER: SP Scripts =========================================================================================== -->
+		 <script src="/Style Library/Intranet/js/jquery-1.8.2.min.js"></script>    
+         <script src="/Style Library/Intranet/js/jquery.cookie.js"></script>    
+         <script src="/Style Library/Intranet/js/modernizr.custom.37436.js"></script>
+         <script src="/Style Library/Intranet/js/jquery.mousewheel.js"></script>
+         <script src="/Style Library/Intranet/js/jquery.jscrollpane.min.js"></script>
+         <script src="/Style Library/Intranet/js/jquery.print.js"></script>
+         <script src="/Style Library/Intranet/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+         
+        <!--[if lt IE 10]>
+            <script type="text/javascript" src="/Style Library/Intranet/js/PIE.js"></script>
+        <![endif]-->         
+
+        <SharePoint:StartScript ID="StartScript1" runat="server" />
+		<SharePoint:CssLink ID="CssLink1" runat="server" Version="15" />
+		<SharePoint:CacheManifestLink ID="CacheManifestLink1" runat="server" />
+		<SharePoint:PageRenderMode ID="PageRenderMode1" runat="server" RenderModeType="Standard" />
+		<SharePoint:ScriptLink ID="ScriptLink1" language="javascript" name="core.js" OnDemand="true" runat="server" Localizable="false" />
+		<SharePoint:ScriptLink ID="ScriptLink2" language="javascript" name="menu.js" OnDemand="true" runat="server" Localizable="false" />
+		<SharePoint:ScriptLink ID="ScriptLink3" language="javascript" name="callout.js" LoadAfterUI="true" runat="server" Localizable="false" />
+		<SharePoint:ScriptLink ID="ScriptLink4" language="javascript" name="sharing.js" OnDemand="true" runat="server" Localizable="false" />
+		<SharePoint:ScriptLink ID="ScriptLink5" language="javascript" name="suitelinks.js" OnDemand="true" runat="server" Localizable="false" />
+        <SharePoint:ScriptLink ID="ScriptLink6" language="javascript" Name="sp.ui.dialog.js" LoadAfterUI="true" Localizable="false" runat="server" />        
+        
+		<SharePoint:CustomJSUrl ID="CustomJSUrl1" runat="server" />
+		<SharePoint:SoapDiscoveryLink ID="SoapDiscoveryLink1" runat="server" />	
+		
+		<!-- ===== STARTER: Core SharePoint CSS =========================================================================================== -->
+		<SharePoint:CssRegistration ID="CssRegistration1" Name="Themable/corev15.css" runat="server" />
+		
+		<!-- ===== STARTER: Custom CSS  =================================================================================================== -->
+        <SharePoint:CssRegistration ID="CssRegistration2" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/css/normalize.css?Rev=2017.05.11 %&gt;" runat="server" after="SharepointCssFile"/>
+		<SharePoint:CssRegistration ID="CssRegistration3" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/css/main.css?Rev=2017.05.11 %&gt;" runat="server" after="SharepointCssFile"/>
+        <SharePoint:CssRegistration ID="CssRegistration4" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/css/pscore.css %&gt;" runat="server" after="SharepointCssFile"/>	
+        <link href="/Style Library/Intranet/css/print.css" rel="stylesheet" type="text/css" media="print" />
+
+		<!-- ===== STARTER: Additional header placeholder - overridden by asp:Content on pages or page layouts  =========================== -->
+		<asp:ContentPlaceHolder ID="PlaceHolderAdditionalPageHead" runat="server" />
+		<SharePoint:DelegateControl ID="DelegateControl1" runat="server" ControlId="AdditionalPageHead" AllowMultipleControls="true" />
+        <SharePoint:DelegateControl runat="server" ID="GlobalDelegate0" ControlId="GlobalSiteLink0" />
+        <SharePoint:DelegateControl ID="DelegateControl2"  runat="server" ControlId="SmallSearchInputBox" />		
+
+		<!-- ===== STARTER: Web Part Manager  ============================================================================================= -->
+		<WebPartPages:SPWebPartManager ID="SPWebPartManager1" runat="server"/>	
+        
+        <script type="text/javascript">
+            //this script is used for view metadata, put in master page because of use on search results pages.
+
+            function OpenDialog(pageUrl, title) {
+                var options = {
+                    url: pageUrl,
+                    title: "Metadata for " + title,
+                    autoSize: true,
+                    showClose: true,
+                    dialogReturnValueCallback: callback
+                };
+                SP.UI.ModalDialog.showModalDialog(options);
+            }
+
+            function callback(dialogResult)               // refresh function  
+            {
+                SP.UI.ModalDialog.RefreshPage(dialogResult);
+            }
+
+        </script>
+        
+
+	</head>
+	
+	<body>
+		<!-- ===== STARTER: SP IDs / Prefetch SP images / SP Form  =========================================================================== -->
+		<SharePoint:SPClientIDGenerator ID="SPClientIDGenerator1" runat="server" ServerControlID="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent"/>
+		<SharePoint:ImageLink ID="ImageLink1" runat="server"/>
+		<SharePoint:SharePointForm ID="SharePointForm1" onsubmit="if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;}" runat="server" __designer:Preview="&lt;table cellpadding=4 cellspacing=0 style=&quot;font:messagebox;color:buttontext;background-color:buttonface;border: solid 1px;border-top-color:buttonhighlight;border-left-color:buttonhighlight;border-bottom-color:buttonshadow;border-right-color:buttonshadow&quot;&gt;
+              &lt;tr&gt;&lt;td nowrap&gt;&lt;span style=&quot;font-weight:bold&quot;&gt;SharePointForm&lt;/span&gt; - SharePointForm1&lt;/td&gt;&lt;/tr&gt;
+              &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+            &lt;/table&gt;" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;SharePointForm1&#39; /&gt;&lt;P N=&#39;Method&#39; T=&#39;post&#39; /&gt;&lt;P N=&#39;Name&#39; ID=&#39;1&#39; T=&#39;aspnetForm&#39; /&gt;&lt;P N=&#39;TagName&#39; T=&#39;form&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;3&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;">
+			
+			<!-- ===== STARTER: ScriptManager ===================================================== -->
+			<asp:ScriptManager id="ScriptManager" runat="server" EnablePageMethods="false" EnablePartialRendering="true" EnableScriptGlobalization="false" EnableScriptLocalization="true" />
+		
+			<!-- ===== STARTER: Ribbon Code Starts Here (compressed for code readability) ===================================================== -->
+			<div class="altNav noindex">
+				<div class="container">
+					<PublishingRibbon:PublishingRibbon runat="server" />
+					<nav class="noindex" id="CustomHeaderNavigation">
+						<ul>
+						    <PS:NavigationTermSetHeader id="navigationTermSetHeader" runat="server" />
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<!-- ===== STARTER: Ribbon Code Ends Here  ======================================================================================== -->
+			
+			<!-- ===== STARTER: Authentication / Login link hidden for everyone by anonymous users  =========================================== -->
+			<SharePoint:SPSecurityTrimmedControl ID="SPSecurityTrimmedControl2" runat="server" AuthenticationRestrictions="AnonymousUsersOnly">
+				<wssuc:Welcome runat="server" EnableViewState="false" />
+			</SharePoint:SPSecurityTrimmedControl>
+			
+			<!-- ===== STARTER: Main Scrolling Body Starts Here =============================================================================== -->
+			<div id="s4-workspace">
+				<div id="s4-bodyContainer">
+
+				<!-- ===== STARTER: style.css adds width and margin =========================================================================================== -->
+					<div class="customWidth">					
+						<!-- START PS Header -->
+						<header>
+							<div class="container noindex">
+								<div class="logoSearch">
+									<!-- ===== STARTER: Site Logo with link to root ======================================================================= -->
+									<div class="ms-dialogHidden logo">
+										<SharePoint:SPLinkButton ID="SPLinkButton1" runat="server" NavigateUrl="~sitecollection/">
+											<SharePoint:SiteLogoImage ID="x63829de2201a4365a3904788f682d0a3" LogoImageUrl="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/images/Intranet-Logo.png %&gt;" AlternateText="Back to Home" runat="server" />
+										</SharePoint:SPLinkButton>
+									</div>
+
+									<!-- ===== STARTER: Search Control ==================================================================================== -->
+									<div class="search ms-dialogHidden">
+										<asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server">
+											<SharePoint:DelegateControl ID="DelegateControl4" runat="server" ControlId="SmallSearchInputBox" Version="4"/>
+										</asp:ContentPlaceHolder>
+									</div>
+
+                                    <!-- ===== Tools Control ==================================================================================== -->
+                                    <PS:ToolsDropDown runat="server" ID="ToolsDropDown" />  
+									
+									<!-- ===== STARTER: Global navigation ================================================================================= -->
+									<div class="ms-dialogHidden mainNav">
+										<div class="ms-displayInline ms-core-navigation ms-dialogHidden">
+											<PublishingNavigation:PortalSiteMapDataSource ID="topSiteMap" runat="server" EnableViewState="false" SiteMapProvider="GlobalNavigationSwitchableProvider" StartFromCurrentNode="true" StartingNodeOffset="0" ShowStartingNode="false" TrimNonCurrentTypes="Heading" />
+											<SharePoint:AspMenu ID="TopNavigationMenu" runat="server" EnableViewState="false" DataSourceID="topSiteMap" AccessKey="&lt;%$Resources:wss,navigation_accesskey%&gt;" UseSimpleRendering="true" UseSeparateCss="false" Orientation="Horizontal" StaticDisplayLevels="1" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="1" SkipLinkText="" />	
+                                            <%--<SharePoint:DelegateControl ID="DelegateControl3"  runat="server" ControlId="ToolsDropDown" />	--%>
+                                            											
+										</div>
+									</div>
+								</div>
+							</div>
+						</header>
+						<!-- END PS Header -->
+					
+						<!-- ===== STARTER: Body Area (includes left nav and body) ==================================================================== -->
+						<div class="container">
+		                    <div class="breadcrumb noindex">
+						    	<asp:ContentPlaceHolder id="PlaceHolderBreadcrumb" runat="server">
+									<b>You are here:</b><a href="/" class="icon home"><span class="hidden">Link to home</span></a><asp:sitemappath ID="Sitemappath1" PathSeparator="&nbsp;&raquo;&nbsp;" runat="server" sitemapproviders="SPSiteMapProvider,SPXmlContentMapProvider"  endercurrentnodeaslink="false" hideinteriorrootnodes="true" /></asp:ContentPlaceHolder >	
+							</div>
+							
+							<!-- ===== STARTER: Current navigation =========================================================================================== -->
+							<div class="ms-dialogHidden ms-forceWrap ms-noList">
+								<div class="ms-core-navigation">
+									<asp:ContentPlaceHolder id="PlaceHolderLeftNavBar" runat="server">
+										<div class="ms-quicklaunchouter subNav">
+											<div class="ms-quickLaunch noindex">
+												<asp:ContentPlaceHolder id="PlaceHolderQuickLaunchTop" runat="server">
+													<SharePoint:UIVersionedContent ID="UIVersionedContent1" UIVersion="3" runat="server">
+														<ContentTemplate>
+															<h3 class="ms-standardheader"><label class="ms-hidden"><SharePoint:EncodedLiteral ID="EncodedLiteral5" runat="server" text="<%$Resources:wss,quiklnch_pagetitle%>" EncodeMethod="HtmlEncode"/></label>
+																<Sharepoint:SPSecurityTrimmedControl ID="SPSecurityTrimmedControl1" runat="server" PermissionsString="ViewFormPages">
+																	<div class="ms-quicklaunchheader"><SharePoint:SPLinkButton id="idNavLinkViewAll" runat="server" NavigateUrl="~site/_layouts/15/viewlsts.aspx" Text="<%$Resources:wss,quiklnch_allcontent%>" accesskey="<%$Resources:wss,quiklnch_allcontent_AK%>"/></div>
+																</SharePoint:SPSecurityTrimmedControl>
+															</h3>
+														</ContentTemplate>
+													</SharePoint:UIVersionedContent>
+												</asp:ContentPlaceHolder>
+												<Sharepoint:SPNavigationManager
+													id="QuickLaunchNavigationManager"
+													runat="server"
+													QuickLaunchControlId="QuickLaunchMenu"
+													ContainedControl="QuickLaunch"
+													EnableViewState="false"
+													CssClass="ms-quicklaunch-navmgr">
+													<div class="noindex">
+														<SharePoint:DelegateControl ID="DelegateControl5" runat="server" ControlId="QuickLaunchDataSource">
+																<Template_Controls>
+																<asp:SiteMapDataSource SiteMapProvider="SPNavigationProvider" ShowStartingNode="False" id="QuickLaunchSiteMap" StartingNodeUrl="sid:1025" runat="server" />
+															</Template_Controls>
+														</SharePoint:DelegateControl>
+														<SharePoint:UIVersionedContent ID="UIVersionedContent2" UIVersion="3" runat="server">
+															<ContentTemplate>
+																<SharePoint:AspMenu id="QuickLaunchMenu" runat="server" DataSourceId="QuickLaunchSiteMap" Orientation="Vertical" StaticDisplayLevels="2" ItemWrap="true" MaximumDynamicDisplayLevels="0" StaticSubMenuIndent="0" SkipLinkText="" CssClass="s4-die">
+																	<LevelMenuItemStyles>
+																		<asp:menuitemstyle CssClass="ms-navheader" />
+																		<asp:menuitemstyle CssClass="ms-navitem" />
+																	</LevelMenuItemStyles>
+																	<LevelSubMenuStyles>
+																		<asp:submenustyle CssClass="ms-navSubMenu1" />
+																		<asp:submenustyle CssClass="ms-navSubMenu2" />
+																	</LevelSubMenuStyles>
+																	<LevelSelectedStyles>
+																		<asp:menuitemstyle CssClass="ms-selectednavheader" />
+																		<asp:menuitemstyle CssClass="ms-selectednav" />
+																	</LevelSelectedStyles>
+																</SharePoint:AspMenu>
+															</ContentTemplate>
+													</SharePoint:UIVersionedContent>
+														<SharePoint:UIVersionedContent ID="UIVersionedContent3" UIVersion="4" runat="server">
+															<ContentTemplate>
+																<SharePoint:AspMenu id="V4QuickLaunchMenu" runat="server" EnableViewState="false" DataSourceId="QuickLaunchSiteMap" UseSimpleRendering="true" UseSeparateCss="false" Orientation="Vertical" StaticDisplayLevels="2" MaximumDynamicDisplayLevels="0" SkipLinkText="" CssClass="s4-ql" />
+															</ContentTemplate>
+														</SharePoint:UIVersionedContent>
+													</div>
+												</Sharepoint:SPNavigationManager>
+												<Sharepoint:UIVersionedContent ID="UIVersionedContent4" runat="server" UIVersion="3">
+													<ContentTemplate>
+														<Sharepoint:SPNavigationManager
+															id="TreeViewNavigationManager"
+															runat="server"
+															ContainedControl="TreeView">
+															<table class="ms-navSubMenu1" cellpadding="0" cellspacing="0" border="0">
+																<tr>
+																	<td>
+																		<table class="ms-navheader" width="100%" cellpadding="0" cellspacing="0" border="0">
+																			<tr>
+																				<td nowrap="nowrap" id="idSiteHierarchy">
+																					<SharePoint:SPLinkButton runat="server" NavigateUrl="~site/_layouts/15/viewlsts.aspx" id="idNavLinkSiteHierarchy" Text="<%$Resources:wss,treeview_header%>" accesskey="<%$Resources:wss,quiklnch_allcontent_AK%>"/>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+															<div class="ms-treeviewouter">
+																<SharePoint:DelegateControl ID="DelegateControl6" runat="server" ControlId="TreeViewAndDataSource">
+																	<Template_Controls>
+																		<SharePoint:SPHierarchyDataSourceControl
+																			runat="server"
+																			id="TreeViewDataSource"
+																			RootContextObject="Web"
+																			IncludeDiscussionFolders="true"
+																			/>
+																		<SharePoint:SPRememberScroll runat="server" id="TreeViewRememberScroll" onscroll="javascript:_spRecordScrollPositions(this);" style="overflow: auto;height: 400px;width: 150px; ">
+																			<Sharepoint:SPTreeView
+																				id="WebTreeView"
+																				runat="server"
+																				ShowLines="false"
+																				DataSourceId="TreeViewDataSource"
+																				ExpandDepth="0"
+																				SelectedNodeStyle-CssClass="ms-tvselected"
+																				NodeStyle-CssClass="ms-navitem"
+																				NodeStyle-HorizontalPadding="2"
+																				SkipLinkText=""
+																				NodeIndent="12"
+																				ExpandImageUrl="/_layouts/15/images/tvplus.gif"
+																				CollapseImageUrl="/_layouts/15/images/tvminus.gif"
+																				NoExpandImageUrl="/_layouts/15/images/tvblank.gif">
+																			</Sharepoint:SPTreeView>
+																		</Sharepoint:SPRememberScroll>
+																	</Template_Controls>
+																</SharePoint:DelegateControl>
+															</div>
+														</Sharepoint:SPNavigationManager>
+													</ContentTemplate>
+												</SharePoint:UIVersionedContent>
+												<Sharepoint:UIVersionedContent ID="UIVersionedContent5" runat="server" UIVersion="4">
+													<ContentTemplate>
+														<Sharepoint:SPNavigationManager
+														id="TreeViewNavigationManagerV4"
+														runat="server"
+														ContainedControl="TreeView"
+														CssClass="s4-treeView">
+														<SharePoint:SPLinkButton runat="server" NavigateUrl="~site/_layouts/15/viewlsts.aspx" id="idNavLinkSiteHierarchyV4" Text="<%$Resources:wss,treeview_header%>" accesskey="<%$Resources:wss,quiklnch_allcontent_AK%>" CssClass="s4-qlheader" />
+															<div class="ms-treeviewouter">
+																<SharePoint:DelegateControl ID="DelegateControl7" runat="server" ControlId="TreeViewAndDataSource">
+																	<Template_Controls>
+																		<SharePoint:SPHierarchyDataSourceControl
+																			runat="server"
+																			id="TreeViewDataSourceV4"
+																			RootContextObject="Web"
+																			IncludeDiscussionFolders="true"
+																			/>
+																		<SharePoint:SPRememberScroll runat="server" id="TreeViewRememberScrollV4" onscroll="javascript:_spRecordScrollPositions(this);" style="overflow: auto;height: 400px;width: 155px; ">
+																			<Sharepoint:SPTreeView
+																				id="WebTreeViewV4"
+																				runat="server"
+																				ShowLines="false"
+																				DataSourceId="TreeViewDataSourceV4"
+																				ExpandDepth="0"
+																				SelectedNodeStyle-CssClass="ms-tvselected"
+																				NodeStyle-CssClass="ms-navitem"
+																				SkipLinkText=""
+																				NodeIndent="12"
+																				ExpandImageUrl="/_layouts/15/images/tvclosed.png"
+																				ExpandImageUrlRtl="/_layouts/15/images/tvclosedrtl.png"
+																				CollapseImageUrl="/_layouts/15/images/tvopen.png"
+																				CollapseImageUrlRtl="/_layouts/15/images/tvopenrtl.png"
+																				NoExpandImageUrl="/_layouts/15/images/tvblank.gif"
+																				>
+																			</Sharepoint:SPTreeView>
+																		</Sharepoint:SPRememberScroll>
+																	</Template_Controls>
+																</SharePoint:DelegateControl>
+															</div>
+														</Sharepoint:SPNavigationManager>
+													</ContentTemplate>
+												</SharePoint:UIVersionedContent>
+												<asp:ContentPlaceHolder id="PlaceHolderQuickLaunchBottom" runat="server">
+													<SharePoint:UIVersionedContent UIVersion="3" runat="server" id="PlaceHolderQuickLaunchBottomV3">
+														<ContentTemplate>
+															<table width="100%" cellpadding="0" cellspacing="0" border="0" class="s4-die">
+																<tbody>
+																<tr><td nowrap="nowrap">
+																	<SharePoint:SPLinkButton runat="server" NavigateUrl="~site/_layouts/15/recyclebin.aspx" id="v3idNavLinkRecycleBin" ImageUrl="/_layouts/15/images/recycbin.gif" Text="<%$Resources:wss,StsDefault_RecycleBin%>" PermissionsString="DeleteListItems" />
+																</td></tr>
+															</table>
+														</ContentTemplate>
+													</SharePoint:UIVersionedContent>
+													<SharePoint:UIVersionedContent UIVersion="4" runat="server" id="PlaceHolderQuickLaunchBottomV4">
+														<ContentTemplate>
+															<ul class="s4-specialNavLinkList">
+																<li>
+																	<SharePoint:ClusteredSPLinkButton
+																		runat="server"
+																		NavigateUrl="~site/_layouts/15/recyclebin.aspx"
+																		ImageClass="s4-specialNavIcon"
+																		ImageUrl="/_layouts/15/images/fgimg.png"
+																		ImageWidth=16
+																		ImageHeight=16
+																		OffsetX=0
+																		OffsetY=428
+																		id="idNavLinkRecycleBin"
+																		Text="<%$Resources:wss,StsDefault_RecycleBin%>"
+																		CssClass="s4-rcycl"
+																		PermissionsString="DeleteListItems" />
+																</li>
+																<li>
+																	<SharePoint:ClusteredSPLinkButton
+																		id="idNavLinkViewAllV4"
+																		runat="server"
+																		PermissionsString="ViewFormPages"
+																		NavigateUrl="~site/_layouts/15/viewlsts.aspx"
+																		ImageClass="s4-specialNavIcon"
+																		ImageUrl="/_layouts/15/images/fgimg.png"
+																		ImageWidth=16
+																		ImageHeight=16
+																		OffsetX=0
+																		OffsetY=0
+																		Text="<%$Resources:wss,quiklnch_allcontent_short%>"
+																		accesskey="<%$Resources:wss,quiklnch_allcontent_AK%>"/>
+																</li>
+															</ul>
+														</ContentTemplate>
+													</SharePoint:UIVersionedContent>
+												</asp:ContentPlaceHolder>
+											</div>
+										</div>
+									</asp:ContentPlaceHolder>										
+								</div>
+							</div>	
+							<!-- ===== STARTER: Main Placeholder gets replaced with content of the page ======================================= -->																							
+							<asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server" />
+                            <div class="backTop"><a id="backTopLink" href="#top">Back to top &#94;</a></div>	
+						</div>
+						
+                        <div class="noindex">
+						    <footer id="footer" class="noindex">
+							    <nav>
+								    <ul>
+									    <PS:NavigationTermSetFooter id="navigationTermSetFooter" runat="server" />
+									    <li class="last"><a href="http://newzealand.govt.nz" title="Open the New Zealand Government website in a new window. " target="_blank"><img src="/Style Library/Intranet/images/nzgovt-logo.png" alt="New Zealand Govt Website link. " /></a></li>
+								    </ul>
+							    </nav>
+						    </footer>
+                        </div>						
+					</div>
+				</div>
+			</div>
+			<!-- ===== STARTER: Main Scrolling Body Ends Here ================================================================================= -->
+			
+			<!-- ===== STARTER: Needed for form stuff ========================================================================================= -->
+			<asp:ContentPlaceHolder id="PlaceHolderFormDigest" runat="server">
+				<SharePoint:formdigest ID="Formdigest1" runat="server" />
+			</asp:ContentPlaceHolder>
+		
+			<!-- ===== STARTER: Hidden Placeholders =========================================================================================== -->	
+			<asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" Visible="False" runat="server" />
+			<asp:ContentPlaceHolder id="PlaceHolderTitleAreaClass" Visible="False" runat="server" />
+			<asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" Visible="false" runat="server" />
+			<asp:ContentPlaceHolder id="PlaceHolderPageDescription" Visible="false" runat="server"  />
+			<asp:ContentPlaceHolder id="PlaceHolderTitleBreadcrumb" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderGlobalNavigation" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderHorizontalNav" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTopNavBar" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderSiteName" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderPageImage" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleLeftBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderMiniConsole" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleRightMargin" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleAreaSeparator" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderNavSpacer" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBarBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderBodyLeftBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderBodyRightMargin" Visible="False" runat="server" /><asp:ContentPlaceHolder id="WSSDesignConsole" Visible="False" runat="server" />
+				
+		</SharePoint:SharePointForm>
+	
+		<!-- ===== STARTER: Adds extra stuff like another form for Survey management ====================================================== -->	
+		<asp:ContentPlaceHolder id="PlaceHolderUtilityContent" runat="server"/>
+		
+		<!-- Custom script -->
+		<script src="/Style Library/Intranet/js/script.js"></script>
+
+	</body>
+	
+	<!-- Created from Starter SP2013 Master Page originally by Randy Drisgill (http://blog.drisgill.com) - Oct. 29, 2012 -->
+</SharePoint:SPHtmlTag>

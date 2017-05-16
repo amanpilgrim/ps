@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="PageLayoutPreviewImages" Url="_catalogs/masterpage/$Resources:core,Culture;/Preview Images">
+    <File Path="PageLayoutPreviewImages\PSHomePageLayout.png" Url="PSHomePageLayout.png" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Home Page Layout Preview Image" />
+    </File>
+    <File Path="PageLayoutPreviewImages\PSNewsContentPageLayout.png" Url="PSNewsContentPageLayout.png" Type="GhostableInLibrary">
+      <Property Name="Title" Value="News Content Page Layout Preview Image" />
+    </File>
+    <File Path="PageLayoutPreviewImages\PSContentPageLayout.png" Url="PSContentPageLayout.png" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Content Page Layout Preview Image" />
+    </File>
+
+    <File Path="PageLayoutPreviewImages\PSSectionLandingPageLayout.png" Url="PSSectionLandingPageLayout.png" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Section Overview Page Layout Preview Image" />
+    </File>
+
+    <File Path="PageLayoutPreviewImages\PSSubSectionLandingPageLayout.png" Url="PSSubSectionLandingPageLayout.png" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Sub Section Page Layout Preview Image" />
+    </File>
+
+    <File Path="PageLayoutPreviewImages\PSListingPageLayout.png" Url="PSListingPageLayout.png" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Section List Page Layout Preview Image" />
+    </File>
+
+    <File Path="PageLayoutPreviewImages\PSFAQPageLayout.png" Url="PSFAQPageLayout.png" Type="GhostableInLibrary">
+      <Property Name="Title" Value="FAQ Page Layout Preview Image" />
+    </File>
+
+    <File Path="PageLayoutPreviewImages\PSImageGalleryPageLayout.png" Url="PSImageGalleryPageLayout.png" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Image Gallery Page Layout Preview Image" />
+    </File>
+
+    <File Path="PageLayoutPreviewImages\PSNewsAndEventsLandingPageLayout.png" Url="PSNewsAndEventsLandingPageLayout.png" Type="GhostableInLibrary">
+      <Property Name="Title" Value="News And Events Page Layout Preview Image" />
+    </File>
+
+    <File Path="PageLayoutPreviewImages\PSDocumentPageLayout.png" Url="PSDocumentPageLayout.png" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Document Centre Page Layout Preview Image" />
+    </File>
+    
+    <File Path="PageLayoutPreviewImages\PSResourceCentrePageLayout.png" Url="PSResourceCentrePageLayout.png" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Resource Centre Page Layout Preview Image" />
+    </File>
+
+    <File Path="PageLayoutPreviewImages\PSSitemapPageLayout.png" Url="PSSitemapPageLayout.png" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Sitemap Page Layout Preview Image" />
+    </File>
+
+    <File Path="PageLayoutPreviewImages\PSNewsListingPageLayout.png" Url="PSNewsListingPageLayout.png" Type="GhostableInLibrary">
+      <Property Name="Title" Value="News List Page Layout Preview Image" />
+    </File>
+
+    <File Path="PageLayoutPreviewImages\PSNoticeboardPageLayout.png" Url="PSNoticeboardPageLayout.png" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Noticeboard Page Layout Preview Image" />
+    </File>
+    <File Path="PageLayoutPreviewImages\PSEventGalleryLandingPageLayout.png" Url="PSEventGalleryLandingPageLayout.png" Type="GhostableInLibrary" >
+      <Property Name="Title" Value="PS Event Galleries Landing Page Layout Preview Image" />
+    </File>
+    <File Path="PageLayoutPreviewImages\PSTVReplayListingPageLayout.png" Url="PSTVReplayListingPageLayout.png" Type="GhostableInLibrary">
+      <Property Name="Title" Value="PS TV Replay Listing Page Layout Preview Image" />
+    </File>
+    <File Path="PageLayoutPreviewImages\PSArticlesPageLayout.png" Url="PSArticlesPageLayout.png" Type="GhostableInLibrary">
+      <Property Name="Title" Value="PS Articles Page Layout Preview Image" />
+    </File>
+    <File Path="PageLayoutPreviewImages\PSMembersBillPageLayout.png" Url="PSMembersBillPageLayout.png" Type="GhostableInLibrary">
+      <Property Name="Title" Value="PS Proposed Members Bill Layout Preview Image" />
+    </File>
+    <File Path="PageLayoutPreviewImages\PSToolsPageLayout.png" Url="PSToolsPageLayout.png" Type="GhostableInLibrary">
+      <Property Name="Title" Value="PS Tools Page Layout Preview Image" />
+    </File>
+    <File Path="PageLayoutPreviewImages\PSUserProfilePageLayout.png" Url="PSUserProfilePageLayout.png" Type="GhostableInLibrary">
+      <Property Name="Title" Value="PS User Profile Page Layout Preview Image" />
+    </File>
+  </Module>
+</Elements>

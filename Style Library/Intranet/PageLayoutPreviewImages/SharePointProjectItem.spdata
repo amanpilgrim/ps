@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="PageLayoutPreviewImages\" Type="ElementManifest" />
+    <ProjectItemFile Source="PSHomePageLayout.png" Target="PageLayoutPreviewImages\" Type="ElementFile" />
+    <ProjectItemFile Source="PSNewsContentPageLayout.png" Target="PageLayoutPreviewImages\" Type="ElementFile" />
+    <ProjectItemFile Source="PSContentPageLayout.png" Target="PageLayoutPreviewImages\" Type="ElementFile" />
+    <ProjectItemFile Source="PSSectionLandingPageLayout.png" Target="PageLayoutPreviewImages\" Type="ElementFile" />
+    <ProjectItemFile Source="PSSubSectionLandingPageLayout.png" Target="PageLayoutPreviewImages\" Type="ElementFile" />
+    <ProjectItemFile Source="PSListingPageLayout.png" Target="PageLayoutPreviewImages\" Type="ElementFile" />
+    <ProjectItemFile Source="PSFAQPageLayout.png" Target="PageLayoutPreviewImages\" Type="ElementFile" />
+    <ProjectItemFile Source="PSImageGalleryPageLayout.png" Target="PageLayoutPreviewImages\" Type="ElementFile" />
+    <ProjectItemFile Source="PSNewsAndEventsLandingPageLayout.png" Target="PageLayoutPreviewImages\" Type="ElementFile" />
+    <ProjectItemFile Source="PSDocumentPageLayout.png" Target="PageLayoutPreviewImages\" Type="ElementFile" />
+    <ProjectItemFile Source="PSResourceCentrePageLayout.png" Target="PageLayoutPreviewImages\" Type="ElementFile" />
+    <ProjectItemFile Source="PSSitemapPageLayout.png" Target="PageLayoutPreviewImages\" Type="ElementFile" />
+    <ProjectItemFile Source="PSNewsListingPageLayout.png" Target="PageLayoutPreviewImages\" Type="ElementFile" />
+    <ProjectItemFile Source="PSNoticeboardPageLayout.png" Target="PageLayoutPreviewImages\" Type="ElementFile" />
+    <ProjectItemFile Source="PSEventGalleryLandingPageLayout.png" Target="PageLayoutPreviewImages\" Type="ElementFile" />
+    <ProjectItemFile Source="PSTVReplayListingPageLayout.png" Target="PageLayoutPreviewImages\" Type="ElementFile" />
+    <ProjectItemFile Source="PSArticlesPageLayout.png" Target="PageLayoutPreviewImages\" Type="ElementFile" />
+    <ProjectItemFile Source="PSMembersBillPageLayout.png" Target="PageLayoutPreviewImages\" Type="ElementFile" />
+    <ProjectItemFile Source="PSToolsPageLayout.png" Target="PageLayoutPreviewImages\" Type="ElementFile" />
+    <ProjectItemFile Source="PSUserProfilePageLayout.png" Target="PageLayoutPreviewImages\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

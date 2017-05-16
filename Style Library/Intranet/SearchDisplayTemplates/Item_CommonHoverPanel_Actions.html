@@ -1,0 +1,140 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>Common Hover Panel Actions</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string">Displays the hover panel actions that are common to all results.</mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#SearchHoverPanel;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:_dlc_DocId msdt:dt="string">OURHOUSE-1-235</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">f3c72285-a69a-4e63-ac76-65e7e134b365</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">http://ourhouse.campus.services/_layouts/15/DocIdRedir.aspx?ID=OURHOUSE-1-235, OURHOUSE-1-235</mso:_dlc_DocIdUrl>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="Item_CommonHoverPanel_Actions">
+<!--#_	
+        var id = ctx.CurrentItem.id;   
+        var appAttribs = "";
+        if (!$isEmptyString(ctx.CurrentItem.csr_OpenApp)) { appAttribs += "openApp=\"" + $htmlEncode(ctx.CurrentItem.csr_OpenApp) + "\"" }; 
+        if (!$isEmptyString(ctx.CurrentItem.csr_OpenControl)) { appAttribs += " openControl=\"" + $htmlEncode(ctx.CurrentItem.csr_OpenControl) + "\"" };
+
+        if (!Srch.U.e(ctx.CurrentItem.Path))
+        {
+            var editId = id + HP.ids.open;
+            var editTitle = Srch.Res.hp_Tooltip_Open;
+            var editText = Srch.Res.hp_Open;
+
+            if (ctx.currentItem_IsOfficeDocument)
+            {
+                editId = id + HP.ids.open;
+                editTitle = Srch.Res.hp_Edit;
+                editText = Srch.Res.hp_Edit;
+            }
+            else if (!Srch.U.e(ctx.CurrentItem.ServerRedirectedURL) && !ctx.CurrentItem.IsContainer)
+            {
+                editId = id + HP.ids.openClient;
+                editTitle = Srch.Res.hp_Tooltip_OpenInClient;
+                editText = Srch.Res.hp_Edit;
+            }
+
+            var editHmtl = String.format('<a clicktype="ActionEdit" id="{0}" class="ms-calloutLink ms-uppercase" href="{1}" title="{2}" {3}>{4}</a>', 
+                                            $htmlEncode(editId), $urlHtmlEncode(ctx.CurrentItem.Path), $htmlEncode(editTitle), appAttribs, $htmlEncode(editText));
+_#-->				
+            <div class="ms-srch-hover-action">        
+                _#= editHmtl =#_                   
+            </div>
+<!--#_
+        }
+
+_#-->
+
+        <div class="ms-srch-hover-action">
+<!--#_
+            var emailLink = HP.GetEmailLink(ctx.CurrentItem.Title, ctx.CurrentItem.Path, ctx.CurrentItem.csr_ClientType, ctx.CurrentItem.ServerRedirectedURL);
+_#-->
+            <a clicktype="ActionSend" id="_#= $htmlEncode(id + HP.ids.send) =#_" class="ms-calloutLink ms-uppercase" title="_#= $htmlEncode(Srch.Res.hp_Tooltip_Send) =#_" href="_#= $htmlEncode(emailLink) =#_">
+                _#= $htmlEncode(Srch.Res.hp_Send) =#_
+            </a>
+        </div>
+<!--#_
+        if(!Srch.U.e(ctx.CurrentItem.ParentLink) && ctx.CurrentItem.csr_ShowViewLibrary) {
+_#-->
+            <div class="ms-srch-hover-action">
+                <a clicktype="ActionViewLibrary" id="_#= $htmlEncode(id + HP.ids.parentLink) =#_" class="ms-calloutLink ms-uppercase" title="_#= $htmlEncode(Srch.Res.hp_Tooltip_ViewLibrary) =#_" href="_#= $urlHtmlEncode(ctx.CurrentItem.ParentLink) =#_">_#= $htmlEncode(Srch.Res.hp_ViewLibrary) =#_</a>
+            </div>
+<!--#_
+        }
+        if(ctx.ClientControl.get_showViewDuplicates() && !Srch.U.n(ctx.CurrentItem.CollapsingStatus) && !Srch.U.n(ctx.CurrentItem.DocId)) {
+            if(ctx.CurrentItem.CollapsingStatus === 1){
+_#-->
+                <div class="ms-srch-hover-action">
+                    <a clicktype="ActionViewDupes" id="_#= $htmlEncode(id + HP.ids.viewDuplicates) =#_" class="ms-calloutLink ms-uppercase" title="_#= $htmlEncode(Srch.Res.hp_Tooltip_ViewDuplicates) =#_" href="javascript:HP.ViewDuplicates('_#= $scriptEncode(ctx.CurrentItem.id) =#_',_#= ctx.CurrentItem.DocId =#_)">
+                        _#= $htmlEncode(Srch.Res.hp_ViewDuplicates) =#_
+                    </a>
+                </div>
+<!--#_
+            }
+        }
+_#-->
+        <!--#_
+        
+            function OpenDialog(pageUrl, title) {
+            var options = {
+            url: pageUrl,
+            title: "Metadata for " + title,
+            autoSize: true,
+            showClose: true,
+            dialogReturnValueCallback: callback
+            };
+            SP.UI.ModalDialog.showModalDialog(options);
+            }
+    
+            function callback(dialogResult)               // refresh function  
+            {
+            SP.UI.ModalDialog.RefreshPage(dialogResult);
+            }
+		
+		
+		
+            function BuildMetadataLink(){
+			
+            var url = "";
+			
+            if(ctx.CurrentItem.PictureURL){
+            url = ctx.CurrentItem.PictureURL;
+            }
+            else {
+            if (ctx.CurrentItem.OriginalPath) {
+            if (ctx.CurrentItem.OriginalPath.indexOf(".aspx") == -1) {
+            return null;
+            }
+            url = ctx.CurrentItem.OriginalPath;
+            }
+            return null;
+            }
+
+            var metadataPageLink = "/_layouts/15/AppPage/metadata.aspx?targetPage=" + url;
+            var onClickString = "return OpenDialog('" + metadataPageLink + "', '" + ctx.CurrentItem.Title + "');";
+			
+            return onClickString;
+
+		}
+		
+		
+		if(ctx.CurrentItem.csr_ShowViewMetadata && BuildMetadataLink()) {
+_#-->
+            <div class="ms-srch-hover-action">
+                <a clicktype="ActionViewMetadata" id="searchViewMetadata" class="ms-calloutLink ms-uppercase" title="View Metadata for this result" href="#" onclick="_#= $htmlEncode(BuildMetadataLink()) =#_">View Metadata</a>
+            </div>
+<!--#_
+        }
+_#-->
+
+    </div>
+</body>
+</html>

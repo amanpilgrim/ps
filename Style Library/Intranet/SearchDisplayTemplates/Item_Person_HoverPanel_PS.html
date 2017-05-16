@@ -1,0 +1,333 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>PS People Hover Panel</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string">Displays a result hover panel tailored for a person.</mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#SearchHoverPanel;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:CrawlerXSLFile msdt:dt="string"></mso:CrawlerXSLFile>
+<mso:ManagedPropertyMapping msdt:dt="string">'AboutMe':'AboutMe','AccountName':'AccountName','BaseOfficeLocation':'BaseOfficeLocation','Department':'Department','HitHighlightedProperties':'HitHighlightedProperties','Interests':'Interests','JobTitle':'JobTitle','LastModifiedTime':'LastModifiedTime','Memberships':'Memberships','PastProjects':'PastProjects','Path':'Path','PictureURL':'PictureURL','PreferredName':'PreferredName','Responsibilities':'Responsibilities','Schools':'Schools','ServiceApplicationID':'ServiceApplicationID','SipAddress':'SipAddress','Skills':'Skills','UserProfile_GUID':'UserProfile_GUID','WorkEmail':'WorkEmail','WorkId':'WorkId','YomiDisplayName':'YomiDisplayName','WorkPhone':'WorkPhone','MobilePhone':'MobilePhone','Office':'Office','PSPeopleSalutation':'PSPeopleSalutation','PSPeopleBusinessUnit':'PSPeopleBusinessUnit','PSPeopleJobTitle':'PSPeopleJobTitle','PSPeopleAlternativeEmail':'PSPeopleAlternativeEmail','PSPeopleOrganisation':'PSPeopleOrganisation','PSPeopleBusinessGroup':'PSPeopleBusinessGroup'</mso:ManagedPropertyMapping>
+<mso:_dlc_DocId msdt:dt="string">OURHOUSE-1-4590</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">50a4f74f-84d4-4e6d-aad5-dc82fb7a7ce9</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">http://ourhouse.campus.services/_layouts/15/DocIdRedir.aspx?ID=OURHOUSE-1-4590, OURHOUSE-1-4590</mso:_dlc_DocIdUrl>
+<mso:HtmlDesignConversionSucceeded msdt:dt="string">True</mso:HtmlDesignConversionSucceeded>
+<mso:HtmlDesignStatusAndPreview msdt:dt="string">http://ourhouse.campus.services/_catalogs/masterpage/Display Templates/Search/Item_Person_HoverPanel_PS.html, Conversion successful.</mso:HtmlDesignStatusAndPreview>
+<mso:HtmlDesignPreviewUrl msdt:dt="string"></mso:HtmlDesignPreviewUrl>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="Item_Person_HoverPanel">
+<!--#_
+        if(!$isNull(ctx.CurrentItem)){
+            var id = ctx.CurrentItem.id;
+            var encodedId = $htmlEncode(ctx.CurrentItem.csr_id);
+            var followId = encodedId + "_hoverFollow";
+            var dynTagId = encodedId + "_hoverDynTag";
+            var dynTagIdRel = encodedId + "_hoverDynTagRel";
+            var visitId = encodedId + "_hoverVisit";
+            var hhProps = Srch.U.createXMLDocument("<root>" + ctx.CurrentItem.HitHighlightedProperties + "</root>");
+            var has_acc = !$isEmptyString(ctx.CurrentItem.AccountName); 
+            var has_abme = !$isEmptyString(ctx.CurrentItem.AboutMe);
+			var has_bol = !$isEmptyString(ctx.CurrentItem.BaseOfficeLocation);
+			var has_office = !$isEmptyString(ctx.CurrentItem.Office);
+            var has_resp = !$isEmptyString(ctx.CurrentItem.Responsibilities);
+            var has_ski = !$isEmptyString(ctx.CurrentItem.Skills);
+            var has_pp = !$isEmptyString(ctx.CurrentItem.PastProjects);
+            var has_sch = !$isEmptyString(ctx.CurrentItem.Schools);
+            var has_memb = !$isEmptyString(ctx.CurrentItem.Memberships);
+			var has_mob = !$isEmptyString(ctx.CurrentItem.MobilePhone);
+            var has_int = !$isEmptyString(ctx.CurrentItem.Interests);
+			var has_wkem = !$isEmptyString(ctx.CurrentItem.WorkEmail);				
+            var has_vlm = !$isEmptyString(ctx.CurrentItem.ProfileViewsLastMonth);
+            var has_vlw = !$isEmptyString(ctx.CurrentItem.ProfileViewsLastWeek);
+            var has_query = !$isEmptyString(ctx.CurrentItem.ProfileQueriesFoundYou);
+			var has_phno = !$isEmptyString(ctx.CurrentItem.WorkPhone);			
+			
+			var has_salutation = !$isEmptyString(ctx.CurrentItem.PSPeopleSalutation);
+			var has_bu = !$isEmptyString(ctx.CurrentItem.PSPeopleBusinessUnit);
+			var has_psjobtitle = !$isEmptyString(ctx.CurrentItem.PSPeopleJobTitle);
+			
+			var has_psorganisation = !$isEmptyString(ctx.CurrentItem.PSPeopleOrganisation);
+			var has_psalternativeemail = !$isEmptyString(ctx.CurrentItem.PSPeopleAlternativeEmail);
+			var has_psbusinessgroup = !$isEmptyString(ctx.CurrentItem.PSPeopleBusinessGroup);
+			
+			//Split multi value variables
+			
+			function identical(array) {
+				for(var i = 0; i < array.length - 1; i++) {
+					if(array[i] != array[i+1]) {
+						return false;
+					}
+				}
+				return true;
+			}
+			
+			function printJobTitle(jobTitleProperty){
+
+				var jobTitleArray = jobTitleProperty.split(';');
+				
+				if(jobTitleArray.length > 1){
+					if(identical(jobTitleArray)){
+						jobTitleProperty = jobTitleArray[0];
+					}
+					else{
+						jobTitleProperty= "Multiple roles, please view profile";
+					}
+				}
+				return jobTitleProperty;
+			}
+			
+			function printMultiValueProperty(property){
+				var businessUnitArray = property.split(';');
+				
+				if(businessUnitArray.length > 1){
+					if(identical(businessUnitArray)){
+						property = businessUnitArray[0];
+					}
+					else{
+						property = "";
+					}
+				}
+				
+				return property;
+			}
+			
+			
+			
+			
+            var isSelfSrch = (has_vlm == true || has_vlw == true || has_query == true);
+            var infoAvailable = false;
+            var delimiter = "";
+            var uname = ctx.CurrentItem.PreferredName;
+            var aname = ctx.CurrentItem.AccountName;
+            var isExpResult = false;
+            if (!$isNull(ctx.CurrentItem.ParentTableReference) && !$isNull(ctx.CurrentItem.ParentTableReference.QueryRuleId))
+            {
+              var orQRId  = new SP.Guid(ctx.CurrentItem.ParentTableReference.QueryRuleId);
+              var exQRId = new SP.Guid("915bafaa-12da-492c-89b3-516f811dbf8c");
+              if (!$isNull(orQRId) && !$isNull(exQRId) && orQRId.equals(exQRId))
+              {
+                isExpResult =  true;
+              }
+            }
+            if ($isEmptyString(uname)) { uname = ctx.CurrentItem.YomiDisplayName }
+_#-->
+            <div class="ms-srch-hover-innerContainer ms-srch-hover-standardSize" id="_#= $htmlEncode(id + HP.ids.inner) =#_">
+                <div class="ms-srch-hover-arrowBorder" id="_#= $htmlEncode(id + HP.ids.arrowBorder) =#_"></div>
+                <div class="ms-srch-hover-arrow" id="_#= $htmlEncode(id + HP.ids.arrow) =#_"></div>
+                <div class="ms-srch-hover-content" id="_#= $htmlEncode(id + HP.ids.content) =#_" data-displaytemplate="PeopleHoverPanel">
+                    <div id="_#= $htmlEncode(id + HP.ids.header) =#_" class="ms-srch-hover-header">
+                        <div class="ms-srch-hover-close">
+                            <a href="javascript:HP.Close()" id="_#= $htmlEncode(id + HP.ids.close) =#_" title="_#= $htmlEncode(Srch.Res.hp_Tooltip_Close) =#_">
+                                <img src="_#= $urlHtmlEncode(SP.Utilities.VersionUtility.getImageUrl(Srch.SU.closeImage)) =#_" alt="_#= $htmlEncode(Srch.Res.hp_Tooltip_Close) =#_" />
+                            </a>
+                        </div>
+                        <div class="ms-srch-hover-title">
+<!--#_                        
+                            if (!Srch.U.e(uname) && !Srch.U.e(ctx.CurrentItem.Path)) {
+                                var encodedName = $htmlEncode(uname);
+                                var displayName = Srch.U.getSingleHHXMLNodeValue(hhProps, "preferredname");
+                                if ($isEmptyString(displayName)) { displayName = encodedName }
+								if(has_salutation == true){
+									displayName = ctx.CurrentItem.PSPeopleSalutation + " " + displayName;
+								}
+_#-->                        
+                                <h2 class="ms-dlg-heading ms-srch-ellipsis">_#= displayName =#_</h2>
+								<br />
+<!--#_                        
+                            }
+_#--> 
+                        </div>
+                    </div>
+                    <div id="_#= $htmlEncode(id + HP.ids.body) =#_" class="ms-srch-hover-body ms-srch-people-hover-categories">
+                        <ul id="Categories">
+<!--#_                    
+                            if(isExpResult == true) {
+_#-->                        
+                              <div id="_#= dynTagId =#_"></div>
+<!--#_                                                                            
+                            }                
+_#-->   
+
+<!--#_ 
+                                        if(has_psjobtitle == true && printJobTitle(ctx.CurrentItem.PSPeopleJobTitle) != "Multiple roles, please view profile") {
+_#-->									
+<!--#_ 
+											var encodedPSJobTitle = $htmlEncode(printJobTitle(ctx.CurrentItem.PSPeopleJobTitle));
+
+_#--> 
+											<li id="PSJobTitle">
+												<div class="ms-srch-hover-text">
+													<p>_#= encodedPSJobTitle =#_</p>
+												</div>
+											</li>
+<!--#_ 
+                                        }
+									
+_#-->
+
+<!--#_ 
+                                        if(has_bu == true && printMultiValueProperty(ctx.CurrentItem.PSPeopleBusinessUnit) != "") {
+_#-->									
+<!--#_ 
+											var encodedPSBusinessUnit = $htmlEncode(printMultiValueProperty(ctx.CurrentItem.PSPeopleBusinessUnit));
+_#--> 
+											<li id="PSBusinessUnit">
+												<div class="ms-srch-hover-text">
+													<p>_#= encodedPSBusinessUnit =#_</p>
+												</div>
+											</li>
+<!--#_ 
+                                        }
+_#-->
+<!--#_ 									
+                                        if(has_psbusinessgroup == true) {
+											var businessGroupToPrint = printMultiValueProperty(ctx.CurrentItem.PSPeopleBusinessGroup)
+											if(businessGroupToPrint != ""){											
+_#-->									
+											<li id="PSBusinessGroup">
+												<div class="ms-srch-hover-text">
+													<p>_#= businessGroupToPrint =#_</p>
+												</div>
+											</li>
+<!--#_ 
+											}
+										}
+_#-->
+<!--#_ 										
+                                        if(has_psorganisation == true) {
+											var organisationToPrint = printMultiValueProperty(ctx.CurrentItem.PSPeopleOrganisation)
+											if(organisationToPrint != ""){											
+_#-->									
+											<li id="Li1">
+												<div class="ms-srch-hover-text">
+													<p>_#= organisationToPrint =#_</p>
+												</div>
+											</li>
+<!--#_ 
+											}
+										}
+_#-->         
+<!--#_ 
+                                        if(has_wkem == true) {
+_#-->									
+<!--#_ 
+											var encodedEmail = $htmlEncode(ctx.CurrentItem.WorkEmail);
+											var displayEmail = Srch.U.getSingleHHXMLNodeValue(hhProps, "workemail");
+											if ($isEmptyString(displayEmail)) { displayEmail = encodedEmail }
+_#--> 
+											<li id="WorkEmail">
+												<div class="ms-srch-hover-text">
+													<a href="mailto:_#= encodedEmail =#_">_#= encodedEmail =#_</a>
+												</div>
+											</li>
+<!--#_ 
+                                        }
+									
+_#-->
+
+<!--#_ 
+                                        if(has_psalternativeemail == true) {
+_#-->									
+<!--#_ 
+											var psalternativeemail = $htmlEncode(ctx.CurrentItem.PSPeopleAlternativeEmail);
+											var displayEmail = Srch.U.getSingleHHXMLNodeValue(hhProps, "psalternativeemail");
+											if ($isEmptyString(displayEmail)) { displayPhone = psalternativeemail }
+_#--> 
+											<li id="Li2">
+												<div class="ms-srch-hover-text">
+													<a href="mailto:_#= psalternativeemail =#_">_#= psalternativeemail =#_</a>
+												</div>
+											</li>
+<!--#_ 
+                                        }
+									
+_#-->
+
+<!--#_ 
+                                        if(has_phno == true) {
+_#-->									
+<!--#_ 
+											var encodedPreferredPhone = $htmlEncode(ctx.CurrentItem.WorkPhone);
+_#--> 
+											<li id="PreferredPhone">
+												<div class="ms-srch-hover-text">
+												    Preferred phone: <a href="tel:_#= encodedPreferredPhone =#_">_#= encodedPreferredPhone =#_</a>
+												</div>
+											</li>
+<!--#_ 
+                                        }
+									
+_#-->
+
+<!--#_ 
+                                        if(has_mob == true) {
+_#-->									
+<!--#_ 
+											var encodedMobilePhone = $htmlEncode(ctx.CurrentItem.MobilePhone);
+											var displayMobilePhone = Srch.U.getSingleHHXMLNodeValue(hhProps, "mobilephone");
+											if ($isEmptyString(displayMobilePhone)) { displayMobilePhone = encodedMobilePhone }
+_#--> 
+											<li id="MobilePhone">
+												<div class="ms-srch-hover-text">
+												    Mobile: <a href="tel:_#= encodedMobilePhone =#_">_#= encodedMobilePhone =#_</a>
+												</div>
+											</li>
+<!--#_ 
+                                        }
+									
+_#-->
+
+<!--#_                    
+                            if(isExpResult == false) {
+_#-->                        
+                              <div id="Div1"></div>
+<!--#_                                                                            
+                            }                
+_#-->   
+                        </ul>
+                    </div>
+                    <div id="_#= $htmlEncode(id + HP.ids.actions) =#_" class="ms-srch-hover-actions">
+                        <div class="ms-srch-hover-action">
+                            
+                            			<!--var currentpath = ctx.CurrentItem.Path;
+        		                        var newpath = currentpath.replace('http://mysite.ourhouse.campus.services:8080/Person.aspx', 'http://ourhouse.parliament.nz/Pages/userprofile.aspx');
+			                            var encodedPath = $urlHtmlEncode(newpath);-->
+
+                            <a id="_#= visitId =#_" class="ms-calloutLink ms-uppercase" href="_#= $urlHtmlEncode(newpath) =#_" title="_#= $htmlEncode(Srch.Res.hp_PeopleItem_ViewProfile) =#_">
+                                _#= $htmlEncode(Srch.Res.hp_PeopleItem_ViewProfile) =#_ 
+                            </a>
+                        </div>
+           
+                    </div>
+<!--#_
+                    AddPostRenderCallback(ctx, function(){
+                        var docCtrlElem = document.getElementById(dynTagId);
+                        Srch.PSU.documentsByQuery(ctx.ClientControl, uname, docCtrlElem, infoAvailable, isExpResult);
+                    });
+_#-->
+<!--#_
+                    var queryUserId = null;  
+                    if(ctx.ScriptApplicationManager && ctx.ScriptApplicationManager.states){
+                         queryUserId = ctx.ScriptApplicationManager.states.currentUserProfileId;
+					}
+                    var userId = ctx.CurrentItem.UserProfile_GUID;
+
+                    AddPostRenderCallback(ctx, function(){
+                        Srch.PSU.relatedThroughByQuery(ctx.ClientControl, userId, queryUserId, dynTagIdRel, infoAvailable);
+                    });
+_#-->
+
+                </div>
+            </div>
+<!--#_                        
+        }
+_#-->            
+    </div>
+</body>
+</html>

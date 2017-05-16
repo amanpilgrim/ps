@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="PageLayouts" Url="_catalogs/masterpage">
+    <File Path="PageLayouts\PSHomePageLayout.aspx" Url="PSHomePageLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Our House Home Page" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSHomePageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSHomePageLayout.png" />
+      <Property Name="PublishingAssociatedContentType" Value=";#PSHomePage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39001751E9882E0D45C5828F371CFFC164960010A8A7CB92184C09BE79A1CBC88421BC;#"/>
+    </File>
+
+    <File Path="PageLayouts\PSNewsContentPageLayout.aspx" Url="PSNewsContentPageLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Our House News Content Page" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSNewsContentPageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSNewsContentPageLayout.png" />
+      <Property Name="PublishingAssociatedContentType" Value=";#PSNewsContentPage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39001751E9882E0D45C5828F371CFFC1649600885BA25342834F2FA2B9D6A84D5159850010BC021860D04BD3B46E6896A823E933;#"/>
+    </File>
+    
+    <File Path="PageLayouts\PSContentPageLayout.aspx" Url="PSContentPageLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Our House Content Page" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSContentPageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSContentPageLayout.png" />
+      <Property Name="PublishingAssociatedContentType" Value=";#PSGenericContentPage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39001751E9882E0D45C5828F371CFFC1649600885BA25342834F2FA2B9D6A84D51598500CE2BAB64513A46459F72D0214218325F;#"/>
+    </File>
+
+    <File Path="PageLayouts\PSSectionLandingPageLayout.aspx" Url="PSSectionLandingPageLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Our House Section Landing Page" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSSectionLandingPageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSSectionLandingPageLayout.png" />
+      <Property Name="PublishingAssociatedContentType" Value=";#PSSectionLandingPage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39001751E9882E0D45C5828F371CFFC1649600885BA25342834F2FA2B9D6A84D51598500B5758445C1E34BC5B1E1A8B89742BCDF;#"/>
+    </File>
+
+    <File Path="PageLayouts\PSSubSectionLandingPageLayout.aspx" Url="PSSubSectionLandingPageLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Our House SubSection Landing Page" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSSubSectionLandingPageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSSubSectionLandingPageLayout.png" />
+      <Property Name="PublishingAssociatedContentType" Value=";#PSSubSectionLandingPage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39001751E9882E0D45C5828F371CFFC1649600885BA25342834F2FA2B9D6A84D5159850084DFF5392CB648C9B402BC05FACB921B;#"/>
+    </File>
+
+    <File Path="PageLayouts\PSListingPageLayout.aspx" Url="PSListingPageLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Our House Listing Page" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSListingPageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSListingPageLayout.png" />
+      <Property Name="PublishingAssociatedContentType" Value=";#PSListingPage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39001751E9882E0D45C5828F371CFFC1649600885BA25342834F2FA2B9D6A84D51598500DDD337FD6134458390962D935D0E7736;#"/>
+    </File>
+
+    <File Path="PageLayouts\PSFAQPageLayout.aspx" Url="PSFAQPageLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Our House FAQ Page" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSFAQPageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSFAQPageLayout.png" />
+      <Property Name="PublishingAssociatedContentType" Value=";#PSFAQsPage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39001751E9882E0D45C5828F371CFFC1649600A7E9D644DFB9473A9B84E1DFEB2264B5;#"/>
+    </File>
+
+    <File Path="PageLayouts\PSImageGalleryPageLayout.aspx" Url="PSImageGalleryPageLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Our House Image Gallery Page" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSImageGalleryPageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSImageGalleryPageLayout.png" />
+      <Property Name="PublishingAssociatedContentType" Value=";#PSImageGalleryPage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39001751E9882E0D45C5828F371CFFC1649600885BA25342834F2FA2B9D6A84D515985007557F03C17484ECF88187193B4BB026C;#"/>
+    </File>
+
+    <File Path="PageLayouts\PSNewsAndEventsLandingPageLayout.aspx" Url="PSNewsAndEventsLandingPageLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Our House News And Events Page" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSNewsAndEventsLandingPageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSNewsAndEventsLandingPageLayout.png" />
+      <Property Name="PublishingAssociatedContentType" Value=";#PSNewsAndEventsLandingPage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39001751E9882E0D45C5828F371CFFC1649600185DABF296FD468CAE58B7DB14637FD6;#"/>
+    </File>
+
+    <File Path="PageLayouts\PSDocumentPageLayout.aspx" Url="PSDocumentPageLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Our House Document Centre Page" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSDocumentPageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSDocumentPageLayout.png" />
+      <Property Name="PublishingAssociatedContentType" Value=";#PSDocumentPage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39001751E9882E0D45C5828F371CFFC164960064C663A652DD4E08A9C96EE040761ECF;#"/>
+    </File>
+
+    <File Path="PageLayouts\PSSitemapPageLayout.aspx" Url="PSSitemapPageLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Our House Sitemap Page" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSSitemapPageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSSitemapPageLayout.png" />
+      <Property Name="PublishingAssociatedContentType" Value=";#PSSitemapPage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39001751E9882E0D45C5828F371CFFC164960083C6F91A86DA489F8BD7DD11065D473E;#"/>
+    </File>
+    
+    <File Path="PageLayouts\PSNewsListingPageLayout.aspx" Url="PSNewsListingPageLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Our House News Listing Page" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSNewsListingPageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSNewsListingPageLayout.png" />
+      <Property Name="PublishingAssociatedContentType" Value=";#PSNewsListingPage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39001751E9882E0D45C5828F371CFFC1649600885BA25342834F2FA2B9D6A84D5159850074DDF46178434A4BB979CFC957971466;#"/>
+    </File>
+    
+    <File Path="PageLayouts\PSNoticeboardPageLayout.aspx" Url="PSNoticeboardPageLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Our House Noticeboard Page" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSNoticeboardPageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSNoticeboardPageLayout.png" />
+      <Property Name="PublishingAssociatedContentType" Value=";#PSNoticeboardPage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39001751E9882E0D45C5828F371CFFC1649600B67BB61BA26948ED8D32A0FC091824E4;#"/>
+    </File>    
+    <File Path="PageLayouts\PSEventGalleriesLandingPageLayout.aspx" Url="PSEventGalleriesLandingPageLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Our House Event Galleries Landing Page" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSEventGalleryLandingPageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSEventGalleryLandingPageLayout.png" />
+      <Property Name="PublishingAssociatedContentType" Value=";#PSEventGalleriesLandingPage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39001751E9882E0D45C5828F371CFFC1649600885BA25342834F2FA2B9D6A84D51598500779519C7942249C0A44DDB1E3CD0CB2D;#"/>
+    </File>
+    <File Path="PageLayouts\PSTVReplayListingPageLayout.aspx" Url="PSTVReplayListingPageLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Our House TV Replay Listing Page" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSTVReplayListingPageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSTVReplayListingPageLayout.png" />
+      <Property Name="PublishingAssociatedContentType" Value=";#PSTVReplayListingPage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39001751E9882E0D45C5828F371CFFC164960086CA175E8C8D44D0ADE24A60403F65B9;#"/>
+    </File>
+    <File Path="PageLayouts\PSArticlesPageLayout.aspx" Url="PSArticlesPageLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Our House Articles Page" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSArticlesPageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSArticlesPageLayout.png" />
+      <Property Name="PublishingAssociatedContentType" Value=";#PSArticlesPage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39001751E9882E0D45C5828F371CFFC1649600885BA25342834F2FA2B9D6A84D515985002D81775D51AF43C4809D1F46F44DC3A4;#"/>
+    </File>
+    <File Path="PageLayouts\PSMembersBillPageLayout.aspx" Url="PSMembersBillPageLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Our House Proposed Members Bill PageLayout Page" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSMembersBillPageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSMembersBillPageLayout.png" />
+      <Property Name="PublishingAssociatedContentType" Value=";#PSMembersBillPage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39001751E9882E0D45C5828F371CFFC1649600885BA25342834F2FA2B9D6A84D5159850013670E0C19DE49A1AF92A371D90CEC06;#"/>
+    </File>
+    <File Path="PageLayouts\PSToolsPageLayout.aspx" Url="PSToolsPageLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Our House Tools PageLayout Page" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSToolsPageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSToolsPageLayout.png" />
+      <Property Name="PublishingAssociatedContentType" Value=";#PSToolsPage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39001751E9882E0D45C5828F371CFFC1649600885BA25342834F2FA2B9D6A84D51598500BE73532589454D72AA067A8D7AFD8616;#"/>
+    </File>
+    <File Path="PageLayouts\PSUserProfilePageLayout.aspx" Url="PSUserProfilePageLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Our House User Profile PageLayout Page" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSUserProfilePageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSUserProfilePageLayout.png" />
+      <Property Name="PublishingAssociatedContentType" Value=";#PSUserProfilePage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39001751E9882E0D45C5828F371CFFC1649600885BA25342834F2FA2B9D6A84D5159850072FE5FF607004DCC9A7D53149A5987F1;#"/>
+    </File>
+    <File Path="PageLayouts\PSEmergencyContactPageLayout.aspx" Url="PSEmergencyContactPageLayout.aspx" Type="GhostableInLibrary">
+    <Property Name="Title" Value="Our House Emergency Contact Page" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSUserProfilePageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSUserProfilePageLayout.png" />
+      <Property Name="PublishingAssociatedContentType" Value=";#PSEmergencyContactPage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39001751E9882E0D45C5828F371CFFC1649600A7E9D644DFB9473A9B84E1DFEB000000;#"/>
+    </File>
+    <File Path="PageLayouts\PSArticleSearchPageLayout.aspx" Url="PSArticleSearchPageLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Our House Article Search Page" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSUserProfilePageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSUserProfilePageLayout.png" />
+      <Property Name="PublishingAssociatedContentType" Value=";#PSArticleSearchPage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39001751E9882E0D45C5828F371CFFC1649600A7E9D644DFB9473A9B84E1DFEB000011;#"/>
+    </File>
+    <File Path="PageLayouts\PSMyAlertsManagementPageLayout.aspx" Url="PSMyAlertsManagementPageLayout.aspx" Type="GhostableInLibrary">
+       <Property Name="Title" Value="Our House My Alerts Management Page" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSUserProfilePageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSUserProfilePageLayout.png" />
+      <Property Name="PublishingAssociatedContentType" Value=";#PSMyAlertsManagementPage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39001751E9882E0D45C5828F371CFFC1649600A7E9D644DFB9473A9B84E1DFEB000333;#"/>
+    </File>
+    <File Path="PageLayouts\PSAdvancedPeopleSearchPageLayout.aspx" Url="PSAdvancedPeopleSearchPageLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Our House Advanced People Search" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSUserProfilePageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSUserProfilePageLayout.png" />
+      <Property Name="PublishingAssociatedContentType" Value=";#PSAdvancedPeopleSearchPage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39001751E9882E0D45C5828F371CFFC1649600A7E9D644DFB9473A9B84E1DFEB000022;#"/>
+    </File>
+    <File Path="PageLayouts\PSArticleCategoryListingPageLayout.aspx" Url="PSArticleCategoryListingPageLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Our House Article Category Listing Page" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSUserProfilePageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSUserProfilePageLayout.png" />
+      <Property Name="PublishingAssociatedContentType" Value=";#PSArticleCategoryListingPage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39001751E9882E0D45C5828F371CFFC1649600885BA25342834F2FA2B9D6A84D51598500DDD337FD6134458390962D935D0E7700;#"/>
+    </File>
+  </Module>
+</Elements>

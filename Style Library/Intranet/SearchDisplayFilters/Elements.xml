@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="SearchDisplayFilters" Url="_catalogs/masterpage/Display Templates/Filters" RootWebOnly="TRUE">
+    <File Path="SearchDisplayFilters\Filter_Default.html" Url="Filter_Default.html" Type="GhostableInLibrary" Level="Draft" ReplaceContent="TRUE" />
+</Module>
+</Elements>

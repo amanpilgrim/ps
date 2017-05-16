@@ -1,0 +1,123 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>PS Picture Item</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string">Displays a result tailored for a picture.</mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#SearchResults;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:ManagedPropertyMapping msdt:dt="string">'Title':'Title','Path':'Path','Description':'Description','EditorOWSUSER':'EditorOWSUSER','LastModifiedTime':'LastModifiedTime','CollapsingStatus':'CollapsingStatus','DocId':'DocId','HitHighlightedSummary':'HitHighlightedSummary','HitHighlightedProperties':'HitHighlightedProperties','FileExtension':'FileExtension','ViewsLifeTime':'ViewsLifeTime','ParentLink':'ParentLink','FileType':'FileType','IsContainer':'IsContainer','SecondaryFileExtension':'SecondaryFileExtension','DisplayAuthor':'DisplayAuthor','PictureHeight':'PictureHeight','PictureWidth':'PictureWidth','ImageDateCreated':'ImageDateCreated','PictureThumbnailURL':'PictureThumbnailURL','PictureURL':'PictureURL','PSImageCaption':'PSImageCaption','PSFileSize':'PSFileSize','PSReuseable':'PSReuseable'</mso:ManagedPropertyMapping>
+<mso:_dlc_DocId msdt:dt="string">OURHOUSE-1-1604</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">00aa8894-d954-4a5b-b0ae-63cde587ab8f</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">http://ourhouse.campus.services/_layouts/15/DocIdRedir.aspx?ID=OURHOUSE-1-1604, OURHOUSE-1-1604</mso:_dlc_DocIdUrl>
+<mso:HtmlDesignStatusAndPreview msdt:dt="string">http://ourhouse.campus.services/_catalogs/masterpage/Display Templates/Search/PS_Item_Picture.html, Conversion successful.</mso:HtmlDesignStatusAndPreview>
+<mso:HtmlDesignConversionSucceeded msdt:dt="string">True</mso:HtmlDesignConversionSucceeded>
+<mso:CrawlerXSLFile msdt:dt="string"></mso:CrawlerXSLFile>
+<mso:HtmlDesignPreviewUrl msdt:dt="string"></mso:HtmlDesignPreviewUrl>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="Item_Picture">
+        <!--#_ 
+            if(!$isNull(ctx.CurrentItem) && !$isNull(ctx.ClientControl)){
+            var id = ctx.ClientControl.get_nextUniqueId();
+            var itemId = id + Srch.U.Ids.item;
+            var hoverId = id + Srch.U.Ids.hover;
+            var hoverUrl = "~sitecollection/_catalogs/masterpage/Display Templates/Search/PS_Item_Picture_HoverPanel.js";
+            $setResultItem(itemId, ctx.CurrentItem);
+            //ctx.CurrentItem.OriginalPath = ctx.CurrentItem.PictureURL;
+            ctx.CurrentItem.Path = ctx.CurrentItem.PictureURL;
+            var xml = ctx.CurrentItem.HitHighlightedProperties;
+            var has_PSReuseable = ctx.CurrentItem.PSReuseable;
+            
+            if(ctx.CurrentItem.HitHighlightedProperties){
+                if (ctx.CurrentItem.OriginalPath) {
+                    var checkString = "<HHUrl>" + ctx.CurrentItem.OriginalPath + "</HHUrl>";
+
+                    if (xml.indexOf(checkString) !== -1) {
+                        ctx.CurrentItem.HitHighlightedProperties = ctx.CurrentItem.HitHighlightedProperties.replace(ctx.CurrentItem.OriginalPath, ctx.CurrentItem.PictureURL);
+                    }
+                }
+            }
+
+
+			
+            ctx.currentItem_ShowHoverPanelCallback = Srch.U.getShowHoverPanelCallback(itemId, hoverId, hoverUrl);
+            ctx.currentItem_HideHoverPanelCallback = Srch.U.getHideHoverPanelCallback();
+_#-->
+            <div id="_#= $htmlEncode(itemId) =#_" name="Item" data-displaytemplate="PictureItem" class="ms-srch-item" onmouseover="_#= ctx.currentItem_ShowHoverPanelCallback =#_" onmouseout="_#= ctx.currentItem_HideHoverPanelCallback =#_">
+<!--#_				
+				if(!Srch.U.n(ctx.CurrentItem.PictureThumbnailURL) && !ctx.CurrentItem.IsContainer) {
+					ctx.CurrentItem.csr_PathLength = Srch.U.pathTruncationLengthWithPreview;
+                    ctx.CurrentItem.csr_PreviewImage = ctx.CurrentItem.PictureThumbnailURL;
+			    }
+_#-->
+				_#=ctx.RenderBody(ctx)=#_
+				
+<!--#_ 
+        
+				/**
+		 * Convert number of bytes into human readable format
+		 *
+		 * @param integer bytes     Number of bytes to convert
+		 * @param integer precision Number of digits after the decimal separator
+		 * @return string
+		 */
+		function bytesToSize(bytes, precision)
+		{	
+			var kilobyte = 1024;
+			var megabyte = kilobyte * 1024;
+			var gigabyte = megabyte * 1024;
+			var terabyte = gigabyte * 1024;
+			
+			if ((bytes >= 0) && (bytes < kilobyte)) {
+				return bytes + ' B';
+
+			} else if ((bytes >= kilobyte) && (bytes < megabyte)) {
+				return (bytes / kilobyte).toFixed(precision) + ' KB';
+
+			} else if ((bytes >= megabyte) && (bytes < gigabyte)) {
+				return (bytes / megabyte).toFixed(precision) + ' MB';
+
+			} else if ((bytes >= gigabyte) && (bytes < terabyte)) {
+				return (bytes / gigabyte).toFixed(precision) + ' GB';
+
+			} else if (bytes >= terabyte) {
+				return (bytes / terabyte).toFixed(precision) + ' TB';
+
+			} else {
+				return bytes + ' B';
+			}
+		}
+		if(ctx.CurrentItem.PSReuseable == "Enquire"){
+			ctx.CurrentItem.PSReuseable = "Enquire (click view metadata)";
+		}
+		
+		if(has_PSReuseable) {
+			
+			var imageSize = bytesToSize(ctx.CurrentItem.PSFileSize, 1)
+			var contentOwnerId = itemId + "_PSContentOwner";
+_#-->				
+			<div id="_#= $htmlEncode(contentOwnerId) =#_" class="ms-srch-item-summary">
+				Type: Picture
+				<br />
+				Reusable: _#= $htmlEncode(ctx.CurrentItem.PSReuseable) =#_ &#160;&#160;&#160;&#160;
+				<br />
+				Size: _#= $htmlEncode(imageSize) =#_
+			</div>	
+<!--#_ 
+        }
+_#-->
+				
+                <div id="_#= $htmlEncode(hoverId) =#_" class="ms-srch-hover-outerContainer"></div>
+            </div>
+<!--#_ 
+        } 
+_#-->
+    </div>
+</body>
+</html>

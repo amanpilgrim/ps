@@ -1,0 +1,71 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<head>
+<title>PS Picture Hover Panel</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string">Displays a result hover panel tailored for a picture.</mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#SearchHoverPanel;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:ManagedPropertyMapping msdt:dt="string">'Title':'Title','Path':'Path','Description':'Description','EditorOWSUSER':'EditorOWSUSER','LastModifiedTime':'LastModifiedTime','CollapsingStatus':'CollapsingStatus','DocId':'DocId','HitHighlightedSummary':'HitHighlightedSummary','HitHighlightedProperties':'HitHighlightedProperties','FileExtension':'FileExtension','ViewsLifeTime':'ViewsLifeTime','ParentLink':'ParentLink','FileType':'FileType','IsContainer':'IsContainer','SecondaryFileExtension':'SecondaryFileExtension','DisplayAuthor':'DisplayAuthor','PictureHeight':'PictureHeight','PictureWidth':'PictureWidth','ImageDateCreated':'ImageDateCreated','PictureThumbnailURL':'PictureThumbnailURL','PictureURL':'PictureURL','PSImageCaption':'PSImageCaption'</mso:ManagedPropertyMapping>
+<mso:_dlc_DocId msdt:dt="string">OURHOUSE-1-230</mso:_dlc_DocId>
+<mso:_dlc_DocIdItemGuid msdt:dt="string">e9fb6f93-6b80-4293-9cd8-f4af8218cbe5</mso:_dlc_DocIdItemGuid>
+<mso:_dlc_DocIdUrl msdt:dt="string">http://ourhouse.campus.services/_layouts/15/DocIdRedir.aspx?ID=OURHOUSE-1-230, OURHOUSE-1-230</mso:_dlc_DocIdUrl>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <div id="Item_Picture_HoverPanel">
+<!--#_
+        var i = 0;
+        var id = ctx.CurrentItem.csr_id;
+        ctx.CurrentItem.csr_FileType = "Picture Item";
+        //ctx.CurrentItem.csr_ShowViewLibrary = true;
+		ctx.CurrentItem.csr_ShowViewMetadata = true;
+        //ctx.currentItem_ShowChangedBySnippet = 
+		
+		var has_PSImageCaption = !$isEmptyString(ctx.CurrentItem.PSImageCaption);
+_#-->
+        <div class="ms-srch-hover-innerContainer ms-srch-hover-standardSize" id="_#= $htmlEncode(id + HP.ids.inner) =#_">
+            <div class="ms-srch-hover-arrowBorder" id="_#= $htmlEncode(id + HP.ids.arrowBorder) =#_"></div>
+            <div class="ms-srch-hover-arrow" id="_#= $htmlEncode(id + HP.ids.arrow) =#_"></div>
+            <div class="ms-srch-hover-content" id="_#= $htmlEncode(id + HP.ids.content) =#_" data-displaytemplate="PictureHoverPanel">
+                <div id="_#= $htmlEncode(id + HP.ids.header) =#_" class="ms-srch-hover-header">
+                    _#= ctx.RenderHeader(ctx) =#_
+                </div>
+                <div id="_#= $htmlEncode(id + HP.ids.body) =#_" class="ms-srch-hover-body">
+<!--#_
+                    if(!Srch.U.n(ctx.CurrentItem.PictureURL)){
+                        ctx.CurrentItem.csr_DataShown = true;
+_#-->
+                        <div class="ms-srch-hover-imageContainer">
+                            <img id="_#= $htmlEncode(id + HP.ids.preview) =#_" alt="_#= $htmlEncode(Srch.Res.hp_Alt_ImagePreview) =#_" src="_#= $urlHtmlEncode(ctx.CurrentItem.PictureURL) =#_" onload="this.style.display='block';" />
+                        </div>
+<!--#_
+                    }
+_#-->
+
+<!--#_
+                    if(has_PSImageCaption){
+					
+						var encodedPSImageCaption = $htmlEncode(ctx.CurrentItem.PSImageCaption);
+					
+_#-->
+						<div class="ms-srch-hover-subTitle"><h3 class="ms-soften">Image caption</h3></div>
+						<span class="ms-srch-hover-text"> _#= encodedPSImageCaption =#_ </span>
+<!--#_
+                    }
+_#-->
+
+                    _#= ctx.RenderBody(ctx) =#_
+                </div>
+                <div id="_#= $htmlEncode(id + HP.ids.actions) =#_" class="ms-srch-hover-actions">
+                    _#= ctx.RenderFooter(ctx) =#_
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
