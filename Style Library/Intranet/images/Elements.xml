@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="ImagesFiles" Url="Style Library/Intranet/Images" Path="Images" RootWebOnly="FALSE">
+    <File Path="active-bullet.png" Url="active-bullet.png"  Type="GhostableInLibrary" />
+    <File Path="bullet.png" Url="bullet.png" Type="GhostableInLibrary" />
+    <File Path="edit-pencil.png" Url="edit-pencil.png" Type="GhostableInLibrary" />
+    <File Path="fgimg.png" Url="fgimg.png" Type="GhostableInLibrary" />
+    <File Path="flag-icon.png" Url="flag-icon.png" Type="GhostableInLibrary" />
+    <File Path="footer-bg.png" Url="footer-bg.png" Type="GhostableInLibrary" />
+    <File Path="gallery-controls.png" Url="gallery-controls.png" Type="GhostableInLibrary" />
+    <File Path="loading.gif" Url="loading.gif" Type="GhostableInLibrary" />
+    <File Path="loading-bg.png" Url="loading-bg.png" Type="GhostableInLibrary" />
+    <File Path="Intranet-Logo.png" Url="Intranet-Logo.png" Type="GhostableInLibrary" />
+    <File Path="icons.png" Url="icons.png" Type="GhostableInLibrary" />
+    <File Path="Koru-bg.png" Url="Koru-bg.png" Type="GhostableInLibrary" />
+    <File Path="news-bullet.png" Url="news-bullet.png" Type="GhostableInLibrary" />
+    <File Path="news-placeholder.png" Url="news-placeholder.png" Type="GhostableInLibrary" />
+    <File Path="nzgovt-logo.png" Url="nzgovt-logo.png" Type="GhostableInLibrary" />
+    <File Path="people-icon.png" Url="people-icon.png" Type="GhostableInLibrary" />
+    <File Path="search-icon.png" Url="search-icon.png" Type="GhostableInLibrary" />
+    <File Path="Temp-Image1.png" Url="Temp-Image1.png" Type="GhostableInLibrary" />
+    <File Path="Temp-Image2.png" Url="Temp-Image2.png" Type="GhostableInLibrary" />
+    <File Path="logo-parltv.jpg" Url="logo-parltv.jpg" Type="GhostableInLibrary" />
+    <File Path="favicon.ico" Url="favicon.ico" Type="GhostableInLibrary" />
+    <File Path="ui-icons_222222_256x240.png" Url="ui-icons_222222_256x240.png" Type="GhostableInLibrary" />
+    <File Path="ui-icons_454545_256x240.png" Url="ui-icons_454545_256x240.png" Type="GhostableInLibrary" />
+    <File Path="ui-bg_flat_0_aaaaaa_40x100.png" Url="ui-bg_flat_0_aaaaaa_40x100.png" Type="GhostableInLibrary" />
+    <File Path="ui-bg_flat_75_ffffff_40x100.png" Url="ui-bg_flat_75_ffffff_40x100.png" Type="GhostableInLibrary" />
+    <File Path="ui-bg_glass_55_fbf9ee_1x400.png" Url="ui-bg_glass_55_fbf9ee_1x400.png" Type="GhostableInLibrary" />
+    <File Path="ui-bg_glass_65_ffffff_1x400.png" Url="ui-bg_glass_65_ffffff_1x400.png" Type="GhostableInLibrary" />
+    <File Path="ui-bg_glass_75_dadada_1x400.png" Url="ui-bg_glass_75_dadada_1x400.png" Type="GhostableInLibrary" />
+    <File Path="ui-bg_glass_75_e6e6e6_1x400.png" Url="ui-bg_glass_75_e6e6e6_1x400.png" Type="GhostableInLibrary" />
+    <File Path="ui-bg_glass_95_fef1ec_1x400.png" Url="ui-bg_glass_95_fef1ec_1x400.png" Type="GhostableInLibrary" />
+    <File Path="ui-bg_highlight-soft_75_cccccc_1x100.png" Url="ui-bg_highlight-soft_75_cccccc_1x100.png" Type="GhostableInLibrary" />
+    <File Path="ui-icons_2e83ff_256x240.png" Url="ui-icons_2e83ff_256x240.png" Type="GhostableInLibrary" />
+    <File Path="ui-icons_888888_256x240.png" Url="ui-icons_888888_256x240.png" Type="GhostableInLibrary" />
+    <File Path="ui-icons_cd0a0a_256x240.png" Url="ui-icons_cd0a0a_256x240.png" Type="GhostableInLibrary" />
+    <File Path="bg-relatedInfo.png" Url="bg-relatedInfo.png" Type="GhostableInLibrary" />
+    <File Path="icon-pause.png" Url="icon-pause.png" Type="GhostableInLibrary" />
+    <File Path="icon-pause.cur" Url="icon-pause.cur" Type="GhostableInLibrary" />
+    <File Path="help-dark.png" Url="help-dark.png" Type="GhostableInLibrary" />
+  </Module>
+</Elements>

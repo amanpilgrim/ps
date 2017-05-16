@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="js" Url="Style Library/Intranet/js" Path="js" RootWebOnly="FALSE">
+    <File Path="plugins.js" Url="plugins.js" Type="GhostableInLibrary" />
+    <File Path="script.js" Url="script.js" Type="GhostableInLibrary" />
+    <File Path="PIE.js" Url="PIE.js"  Type="GhostableInLibrary"/>
+    <File Path="respond.min.js" Url="respond.min.js"  Type="GhostableInLibrary" />
+    <File Path="jquery.cookie.js" Url="jquery.cookie.js" Type="GhostableInLibrary"  />
+    <File Path="jquery-ui-1.8.24.custom.min.js" Url="jquery-ui-1.8.24.custom.min.js" Type="GhostableInLibrary"  />
+    <File Path="jquery.mousewheel.js" Url="jquery.mousewheel.js" Type="GhostableInLibrary" />
+    <File Path="jquery.jscrollpane.min.js" Url="jquery.jscrollpane.min.js" Type="GhostableInLibrary" />
+    <File Path="jquery-1.8.2.min.js" Url="jquery-1.8.2.min.js" Type="GhostableInLibrary" />
+    <File Path="jquery-ui.js" Url="jquery-ui.js" Type="GhostableInLibrary" />
+    <File Path="jquery.print.js" Url="jquery.print.js" Type="GhostableInLibrary" />
+    <File Path="modernizr-2.5.3.min.js" Url="modernizr-2.5.3.min.js" Type="GhostableInLibrary" />
+    <File Path="jquery.colorbox.js" Url="jquery.colorbox.js" Type="GhostableInLibrary" />
+    <File Path="MicrosoftAjax.js" Url="MicrosoftAjax.js" Type="GhostableInLibrary" />
+    <File Path="UXScript.js" Url="UXScript.js" Type="GhostableInLibrary" />
+    <File Path="jquery.dataTables.min.js" Url="jquery.dataTables.min.js" Type="GhostableInLibrary" />
+		<File Path="jquery.dataTables.columnFilter.js" Url="jquery.dataTables.columnFilter.js" Type="GhostableInLibrary" />		
+    <File Path="dataTables.dataSourcePlugins.js" Url="dataTables.dataSourcePlugins.js" Type="GhostableInLibrary" />
+    <File Path="dataTables.fileSizeSort.js" Url="dataTables.fileSizeSort.js" Type="GhostableInLibrary" />
+    <File Path="dataTables.fileSizeTypeDetect.js" Url="dataTables.fileSizeTypeDetect.js" Type="GhostableInLibrary" />
+    <File Path="modernizr.custom.37436.js" Url="modernizr.custom.37436.js" Type="GhostableInLibrary" />
+    <File Path="jquery.scrollTo-1.4.3.1-min.js" Url="jquery.scrollTo-1.4.3.1-min.js" Type="GhostableInLibrary" />
+    <File Path="textext.core.js" Url="textext.core.js" Type="GhostableInLibrary" />
+    <File Path="textext.plugin.ajax.js" Url="textext.plugin.ajax.js" Type="GhostableInLibrary" />
+    <File Path="textext.plugin.arrow.js" Url="textext.plugin.arrow.js" Type="GhostableInLibrary" />
+    <File Path="textext.plugin.autocomplete.js" Url="textext.plugin.autocomplete.js" Type="GhostableInLibrary" />
+    <File Path="textext.plugin.clear.js" Url="textext.plugin.clear.js" Type="GhostableInLibrary" />
+    <File Path="textext.plugin.filter.js" Url="textext.plugin.filter.js" Type="GhostableInLibrary" />
+    <File Path="textext.plugin.focus.js" Url="textext.plugin.focus.js" Type="GhostableInLibrary" />
+    <File Path="textext.plugin.prompt.js" Url="textext.plugin.prompt.js" Type="GhostableInLibrary" />
+    <File Path="textext.plugin.suggestions.js" Url="textext.plugin.suggestions.js" Type="GhostableInLibrary" />
+    <File Path="textext.plugin.tags.js" Url="textext.plugin.tags.js" Type="GhostableInLibrary" />
+  </Module>
+</Elements>

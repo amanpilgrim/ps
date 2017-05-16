@@ -1,0 +1,65 @@
+﻿/* ******* STYLESHEET DETAILS ********************
+Date Created:   13-Feb-2012;
+Last Updated:   7-May-2013;
+Owner:          Parliamentary Service;
+Project:        Intranet Redevelopment;
+Author:         Datacom Wellington;
+Comment:        To be used when we need to override something in edit mode;
+************************************************** */
+.altNav nav { display: none; }
+
+div.primary.narrow { 
+    margin: 0;
+    width: 760px; 
+}
+
+/* Headings in Edit mode */
+div.primary header h1,
+div.primary header h2 {
+	border: 0;
+	font-size: 13px;
+	margin: 0;
+	padding: 0;
+}
+
+.column.contact .edit-mode-panel { margin-top: 15px; }
+
+.edit-mode-panel input.ms-long { width: 390px; }
+
+header input.ms-long,
+.edit-mode-panel input.ms-input { width: 350px; }
+.edit-mode-panel .ms-dtinput input.ms-input { width: 80px; }
+.column .edit-mode-panel input.ms-input { width: 250px; }
+
+/* Field Containers */
+.ms-formfieldvaluecontainer { 
+	border: 0; 
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.ms-formfieldvaluecontainer.ms-rte-border-field { 
+	border: 1px solid #ababab;
+	margin-left: 5px;
+}
+
+.edit-mode-panel { 
+	background-color: #fff; 
+	padding: 0;
+}
+
+div.ms-formfieldlabelcontainer { margin: 0; }
+
+div.ms-formfieldlabelcontainer span.ms-formfieldlabel {
+	clear: both;
+	display: block;
+	font: bold 13px verdana,arial,sans-serif;
+	margin: 15px 0 0 5px;
+	padding: 0; 
+}
+
+/* Field Descriptions */
+.edit-mode-panel .ms-metadata {
+	color: #777;
+	font: italic normal 12px verdana,arial,sans-serif;
+	margin-left: 5px;
+}

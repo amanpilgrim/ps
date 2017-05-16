@@ -1,0 +1,168 @@
+﻿/* ******* STYLESHEET DETAILS ********************
+Date Created:   -
+Last Updated:   1-July-2013;
+Owner:          Jack Moore (c) 2012 - jacklmoore.com;
+Project:        Parliment Intranet Redevelopment;
+Author:         Jack Moore;
+Comment:        ColorBox v1.3.20.1 - jQuery lightbox plugin;
+License: 		http://www.opensource.org/licenses/mit-license.php;
+************************************************** */
+	
+#colorbox, #cboxOverlay {position:absolute; top:0; left:0; z-index:1503; overflow:hidden;} /*z-index changed from 9999 to allow metadata pop up display ontop*/
+
+#cboxWrapper { position: relative; }
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+
+#cboxLoadedContent{overflow:auto;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box;}
+
+#cboxOverlay{ background: #000; }
+#colorbox{  
+	background-color: #e7e7e7;
+	border: 2px solid #999; 
+}
+
+    #cboxBottomCenter {height: 60px;  }
+    #cboxTopCenter { height: 45px; }
+
+    #cboxContent{background:#fff; overflow:visible; margin: 10px;}
+        .cboxIframe{background:#fff;}
+        #cboxError{padding:50px; border:1px solid #ccc;}
+        #cboxLoadedContent{margin-bottom:5px;}
+        #cboxLoadingOverlay{ background: url(../images/loading-bg.png) no-repeat center center; }
+        #cboxLoadingGraphic{ background: url(../images/loading.gif) no-repeat center center; }
+        #cboxGalleryDetails {
+			left: 10px;
+			overflow: hidden;
+			position: absolute;
+        	top: 5px;
+		}
+		#cboxGalleryName { 
+			font-size: 20px;
+			height: 46px;
+			line-height: 22px;
+			margin: 0;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			width: 85%;
+		}
+		#cboxGalleryDate {
+			background-color: #e7e7e7;
+			color: #004d38;
+			display: inline-block;
+			font-family: 'OpenSansCondensedLight';
+			font-size: 16px;
+			margin-top: 3px;
+			padding: 5px  5px 0;
+		}
+        #cboxTitle{ 
+        	position: absolute;
+        	margin-top: 5px;
+        	width: 90%;
+        }
+        #cboxCurrent{
+	        bottom: 3px;
+	        position: absolute; 
+	        right: 10px; 
+	   	}
+        
+        #cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{position:absolute;  background:url(../images/gallery-controls.png) no-repeat 0px 0px; width:23px; height:23px; text-indent:-9999px;}
+        #cboxPrevious, #cboxNext { top: 100px; }
+        #cboxPrevious{left: 10px; background-position: -51px -25px;}
+        #cboxPrevious:hover{background-position:-51px 0px;}
+        #cboxNext{right: 10px; background-position:-75px -25px;}
+        #cboxNext:hover{background-position:-75px 0px;}
+        #cboxClose{
+	        background-position: -100px -25px;
+	        bottom: auto;
+	        right: 10px; 
+	        top: 2px;
+	        z-index: 999;
+	    }
+        #cboxClose:hover{background-position:-100px 0px;}
+        #cboxDate {
+			left: 10px;			
+			position: absolute;
+			top: 5px;
+		}
+		#cboxDownload {
+			position: absolute;
+			left: 80px; 
+			text-align: right;
+			top: 3px;
+			width: 40%;
+		}
+		#cboxMetadata {
+			background: url(../images/icons.png) no-repeat -461px -1524px;
+			bottom: 3px;
+			left: 0;			
+			padding-left: 43px;
+			position: absolute;
+		}
+        #cboxMetadata:after {
+	        color: #333;
+	        content:"\00a0\00bb"; 
+        }
+
+/* Gallery List */
+ul.gallery li {
+	background-image: none;
+	float: left;
+	margin: 0 0 10px 10px;
+	padding: 0; 
+}
+ul.gallery li:first-child { margin-left: 0; }
+
+.gallery img {
+	height: 60px;
+	width: 90px;
+}
+
+
+/* Gallery Box - used for small views of Galleries */
+.row {
+	float: left;
+	width: 100%;
+}
+
+.galleryBox {
+	float: left;
+	margin-top: 10px;
+	width: 327px;
+}
+.galleryBox + .galleryBox { float: right; }
+
+.galleryBox h3 { margin: 0; }
+.galleryBox h3 a { 
+	float: left;
+    line-height: 1.3;
+	width: 55%; 
+}
+
+.floatLeft .galleryBox h3 span {
+    float: right;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.primary .galleryBox ul.gallery { 
+	float: left;
+	margin-left: 0; 
+	width: 100%;
+}
+
+.galleryBox .gallery img {
+	border: 1px solid #000;
+	margin: 0;
+	max-width: 110px;
+	width: 100px;
+}
+
+/*Gallery Landing Page*/
+#event-galleries { width: 100%; }

@@ -1,0 +1,336 @@
+﻿/* ******* STYLESHEET DETAILS ********************
+Date Created:   14-Sep-2012;
+Last Updated:   27-May-2014;
+Owner:          Parliamentary Service;
+Project:        Intranet Redevelopment;
+Author:         Datacom Wellington;
+Comment:        Homepage only;
+************************************************** */
+h1 { color: #000; }  
+
+.mainContainer { padding-top: 20px; }
+
+div.primary { 
+	margin-right: 30px;
+	width: 672px; 
+}
+.primary ul { margin-left: 0; }
+
+/* News Carousel */
+div.carousel { 
+	float: left; 
+	height: 300px;
+	padding: 0;
+	position: relative;
+	width: 665px;
+}
+.carousel .button { 
+	float: left; 
+	margin-left: 20px;
+}
+
+.feature {
+	/*cursor: url(/_layouts/15/pause.cur), pointer !important;*/
+    height: 200px;
+	overflow: hidden;
+}
+.feature img {
+	float: left;
+	margin-right: 20px;
+	max-width: 665px;
+}
+.feature h2,
+.feature p { margin: 0; }
+
+.feature a {
+	float: left;
+	width: 100%;
+}
+.feature a:hover {
+	color: #0167ce;
+	text-decoration: none;
+}
+.feature a:hover * { color: #0167ce; }
+
+div.carousel a.more {
+	bottom: 5px;
+	position: absolute;
+	right: 0;
+	width: auto;
+}
+div.carousel a.more:hover {
+	text-decoration: underline;
+}
+
+.carouselFooter { 
+	clear: both;
+	margin-top: 5px;
+	padding: 5px 0;
+}
+
+ul.carouselNav {
+	cursor: default !important;
+	float: left;
+}
+.carouselNav a {
+	background: url(../images/icons.png) no-repeat right -298px;
+	float: left;
+	height: 11px;
+	margin-right: 5px; 
+	text-indent: -9999px;
+	width: 11px;
+}
+.carouselNav a.current { 
+	background-position: right -199px; 
+	font-weight: bold;
+}
+
+/* Columns */
+.column a.button {
+	display: inline-block;
+	margin-top: 10px;
+}
+
+.column h3 { clear: both; }
+.column p { margin: 0; }
+
+.onParliament h3 {
+	background: url(../images/icons.png) no-repeat 5px -807px;
+	border-bottom: 1px solid #004d38;
+	color: #004d38;
+	font-size: 18px;
+	margin: 10px 0;
+	padding: 0;
+	text-indent: 30px;
+}
+.onParliament h3 a,
+.onParliament h3 a:link,
+.onParliament h3 a:visited { color: #004d38; }
+
+.onParliament .inner h3 {
+    background-image: none;
+    border: 0;
+    clear: both;
+    margin: 5px 0;
+    padding: 0;
+    text-indent: 0;
+}
+
+.sitting p {
+	background-color: #d1e9da;
+	margin-top: 10px;
+	padding: 3px 0;
+	text-align: center;
+}
+.sitting p.calendarUnavailable {
+    background-color: #ff5050;
+}
+
+.sitting ul li {
+	background-image: none;
+	margin: 0;
+	padding: 0;
+}
+.sitting li a:after {
+	color: #333;
+	content:"\00a0\00bb"; 
+}
+
+
+.calBox {
+	float: left;
+	margin: 0 6px 10px 0;
+	width: 60px;
+}
+
+.calBox span {
+	background: #ccc;
+	border: 1px solid #a7a7a7;
+	display: block;
+	height: 45px;
+	padding: 3px 5px;
+	text-align: center;
+}
+
+.calBox .day {
+	background: linear-gradient(#fff, #ccc); 
+		background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ffffff), to(#cccccc));
+		background: -webkit-linear-gradient(#fff, #ccc);
+		background: -moz-linear-gradient(#fff, #ccc);
+		background: -ms-linear-gradient(#fff, #ccc);
+		background: -o-linear-gradient(#fff, #ccc);	
+		-pie-background: linear-gradient(#fff, #ccc);
+	border-radius: 8px 8px 0 0;
+		-webkit-border-radius: 8px 8px 0 0;
+		-moz-border-radius: 8px 8px 0 0;	
+	font-family: 'OpenSansCondensedBold';	
+  	font-size: 40px;
+}
+.calBox .month {
+	background: linear-gradient(#ccc, #fff);
+		background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ccc), to(#fff));
+		background: -webkit-linear-gradient(#ccc, #fff);
+		background: -moz-linear-gradient(#ccc, #fff);
+		background: -ms-linear-gradient(#ccc, #fff);
+		background: -o-linear-gradient(#ccc, #fff);
+		-pie-background: linear-gradient(#ccc, #fff);
+	border-radius: 0 0 8px 8px;
+		-webkit-border-radius: 0px 0px 8px 8px;
+		-moz-border-radius: 0px 0px 8px 8px;	
+	border-top-width: 0;
+	font-family: 'OpenSansCondensedLight';
+ 	font-size: 16px;
+}
+
+/* *** Secondary Area Styles (Aside) *** */
+aside {
+	clear: none;
+	float: right;
+	width: 258px; 
+}
+aside .inner { 
+	float: left; 
+	width: 235px;
+}
+
+aside .scrollable {
+	height: 100px;
+	overflow: hidden;
+	overflow-y: scroll;
+	padding-right: 5px;
+}
+
+/* Tabs */
+.tabBox { 
+	border: 1px solid #a7a7a7;
+	border-radius: 8px; 
+		-webkit-border-radius: 8px; 
+		-moz-border-radius: 8px;
+	float: left;
+	margin: 15px 0 0; 
+	padding: 10px 0 0;
+	position: relative; 
+}
+
+ul.tabs {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+.tabs li { 
+	float: left;
+	font-family: 'OpenSansCondensedLight';	
+	font-size: 18px;
+	height: 25px;
+	margin: 0;
+	padding: 5px 5px 0;
+	position: relative;
+	text-align: center;
+	top: 1px;
+	width: 116px;
+}
+
+.tabs h3 { text-indent: 10px; }
+
+.tabs a,
+.tabs a:link,
+.tabs a:visited { 
+	color: #000; 
+	display: block;
+	outline: 0; 
+}
+
+#OurHouseli a,
+#OurHouseli a:link,
+#OurHouseli a:visited { color: #fff; }
+
+.tabs #TheHouseli { 
+	background-color: #d1e9da;
+	border: 1px solid #cacaca;
+	border-bottom: 0;
+	border-radius: 8px 8px 0 0; 
+		-webkit-border-radius: 8px 8px 0 0; 
+		-moz-border-radius: 8px 8px 0 0;
+	box-shadow: #999 0 -1px 1px;	
+		-webkit-box-shadow: #999 0 -1px 1px;
+		-moz-box-shadow: #999 0 -1px 1px;
+}
+.tabs #TheHouseli a { background: transparent url(../images/icons.png) no-repeat 3px -806px; }
+
+.tabs #OurHouseli { 
+	background: #78aea1 none;
+		background: -webkit-gradient(linear, 0 0, 0 bottom, from(#78aea1), to(#082f21));
+		background: -webkit-linear-gradient(#78aea1, #082f21);
+		background: -moz-linear-gradient(#78aea1, #082f21);
+		background: -ms-linear-gradient(#78aea1, #082f21);
+		background: -o-linear-gradient(#78aea1, #082f21);
+		background: linear-gradient(#78aea1, #082f21);
+		-pie-background: linear-gradient(#78aea1, #082f21);
+	color: #fff; 	
+}
+.tabBox .inner {
+	border: 1px solid #cacaca;
+	border-top: 0;
+	border-bottom-color: #030;
+	border-radius: 0 0 8px 8px; 
+		-webkit-border-radius: 0 0 8px 8px; 
+		-moz-border-radius: 0 0 8px 8px;
+	box-shadow: #999 0 2px 1px;	
+		-webkit-box-shadow: #999 0 2px 1px;
+		-moz-box-shadow: #999 0 2px 1px;	
+	clear: both;
+	margin: 0;
+	min-height: 40px;
+	width: 234px;
+}
+.tabBox #TheHouseTab { background-color: #d1e9da; }
+.tabBox #OurHouseTab { 
+	background-color: #fff;
+	border: 1px solid #103829;
+	border-top: 3px solid #103829;	
+}
+
+.contactBox { margin-top: 15px; }
+
+.contactBox p { clear: both; }
+
+.personContacts {
+    float: left;
+    max-height: 230px;
+    margin-bottom: 10px;
+    overflow: auto;
+    width: 100%;
+}
+.personalContactsList {
+	overflow: hidden;
+}
+
+.predefinedContacts {
+    float: left;
+    height: 90px;
+    margin-bottom: 10px;
+    overflow: auto;
+    width: 100%;
+}
+.contactItem{
+	width: 215px;
+	word-wrap: break-word;
+}
+.personContacts .contactItem{
+ 	color: #000;
+ 	width: 215px;
+ 	word-wrap: break-word;
+
+}
+.mannualName { 
+	color: #000;
+	font-weight: bold;
+}
+
+  
+/* Button Override */
+.contactBox a.button[title="Add new contact"],
+.contactBox a.button[title="Manage Contacts"] {
+	color: #fff;
+	position: relative;    
+}

@@ -1,0 +1,160 @@
+﻿.UserProfile {
+    position: relative;
+    right: -20px;
+}
+.UserDisplayName {
+    color:#004d38
+}
+
+.UserPicture img { 	max-width: 200px; }
+
+.profilenameOverlay {
+    width: 180px;
+    top: 336px;
+    color: #fff;
+    padding-top: 7px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    position: absolute;
+    z-index: 1;
+    text-decoration: none;
+    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+/*#s4-leftpanel {
+  display:none;
+}.s4-ca {
+  margin-left:0px!important;
+}*/
+/* TODO Tidy up this code into another stylesheet? */
+
+/* ******* STYLESHEET DETAILS ********************
+Date Created:   25-Jan-2013;
+Last Updated:   21-May-2013;
+Owner:          Parliamentary Service;
+Project:        Intranet Redevelopment;
+Author:         Datacom Wellington;
+Comment:        Used for dynamic table filters;
+************************************************** */
+
+.searchFilter {
+	background-color: #fff;
+	font-family: verdana, arial, sans-serif;
+	margin-top: 20px;
+}
+
+.searchFilter fieldset { border: 0; }
+.searchFilter legend { visibility: hidden; }
+
+.searchFilter label { display: block; }
+
+.searchFilter input[type="text"],
+.searchFilter select { margin-bottom: 10px; }
+
+.searchFilter select { width: 100%; }
+.searchFilter input[type="text"] { width: 130px }
+.searchFilter p { margin: 0 0 10px; }
+
+.searchFilter .button {
+	color: #fff;
+	margin: 0;
+	min-width: 5.2em;
+	padding: 3px 2px;
+}
+.searchFilter .button + .button { margin-left: 10px; }
+
+.filterBox {
+	background-color: #dbe6de;
+	padding: 3px 10px;
+	text-align: right;
+}
+.top { 
+	margin: 5px 0 10px; 
+	padding: 0 10px 0 7px;
+}
+
+.dataTables_info { float: left; }
+.dataTables_length { float: right; }
+
+.dataTables_paginate { text-align: center; }
+.dataTables_paginate a {
+	cursor: pointer;
+	padding-right: 10px;
+}
+.dataTables_paginate .next:after { content: " \203a"; }
+.dataTables_paginate .previous:before { content: "\2039  "; }
+.dataTables_paginate .last:after { content: " \00bb"; }
+.dataTables_paginate .first:before { content: "\00ab  "; }
+
+.filter {
+	border-collapse: collapse;
+	width: 765px;
+}
+
+.filter th,
+.filter td { line-height: .9; }
+
+.filter th {
+	background-color: #1c5d4a;
+	border: 1px solid #b1b1b1;
+	color: #fff;
+	cursor: pointer;
+    font-weight: normal;
+	padding: 9px 7px;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.filter td { 
+	border: 1px solid #b1b1b1; 
+	padding: 5px 7px;
+}
+
+.filter td.break-word {
+	word-break: break-all; 
+	white-space: normal;
+	width:	200px;
+}
+
+.filter tr:nth-of-type(even),
+tr.even td { background-color: #f6f6f2; }
+
+.sorting_desc:after,
+.sorting:after { content: " \0020\25b4 "; }
+.sorting_asc:after { content: " \0020\25bE "; }
+.sorting.noSort:after { content: " \0020 "; }
+
+.filter .icon { padding-left: 20px; }
+.filter .icon.info { padding-left: 0; }
+
+.filter .button { 
+	display: block;
+	margin-top: 5px;
+}
+
+/* Edit Left Nav */
+.ms-core-listMenu-verticalBox {
+	background-color: #fff;
+ 	padding-left: 0;
+ 	width: 200px;
+}
+	.ms-core-listMenu-verticalBox li.static {
+		border-bottom: 1px dashed #d0d0d0;
+		padding: 5px 10px 5px 0;
+	}
+	div.ms-core-listMenu-verticalBox li.static > a.ms-core-listMenu-item  {
+		background-color: transparent;
+		color: #1c5d4a;
+		padding: 0;
+	}
+		div.ms-core-listMenu-verticalBox li.static > a.ms-core-listMenu-item:hover  {
+			color: #000;
+		}
+	.ms-core-listMenu-verticalBox li.static span.menu-item-text {
+		font-family: 'OpenSansCondensedLight', verdana, arial;
+		font-size: 17px;
+		line-height: 1.2;
+	}

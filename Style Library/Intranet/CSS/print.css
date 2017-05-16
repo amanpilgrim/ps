@@ -1,0 +1,68 @@
+﻿/* ******* STYLESHEET DETAILS ********************
+Date Created:   22-Feb-2013;
+Last Updated:   27-June-2013;
+Owner:          Parliamentary Service;
+Project:        Intranet Redevelopment;
+Author:         Datacom Wellington;
+Comment:        For Printing Only;
+************************************************** */
+
+.altNav, .mainNav, .search,
+.breadcrumb, .functions, .newsCarousel,
+.subNav, aside, footer, .backTop, .tools { display: none; }
+
+header { height: 100px; }
+
+div.primary,
+div.narrow.primary {
+	float: none;
+	margin: 0;
+	padding: 0;
+	width: 100%; 
+}
+
+div.primary a,
+div.primary a:link,
+div.primary a:visited { text-decoration: underline; }
+
+div.primary ul li { 
+	background-image: none;
+	list-style-type: disc; 
+}
+
+/* Page Images */
+#summaryArea { 
+	border: 0;
+	clear: both;
+	float: none; 
+}
+#summaryArea figcaption {
+	border: 0;
+	color: #999;
+	font-style: italic;
+	padding: 0;
+}
+
+/* Table styles */
+table.psstyle-rteTable-default { width: auto !important; /* SP inline style override */ }
+
+.psstyle-rteTable-default td,
+.psstyle-rteTable-default th {
+	border: 1px solid #999;
+}
+.psstyle-rteTable-default th {
+	color: #000;
+	font-weight: bold;
+}
+
+/* Article Footer */
+article footer { 
+	display: block; 
+	margin: 20px 0 0 0;
+}
+article footer .meta { margin: 0; }
+article footer .meta li { display: none; }
+article footer .meta li:first-child { 
+	border: 0;
+	display: block; 
+}

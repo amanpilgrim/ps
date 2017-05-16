@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="PlaceHolderFiles" Url="Style Library/Intranet/Images/Placeholders" Path="Placeholders" RootWebOnly="FALSE">
+    <File Path="content-wide.png" Url="content-wide.png" Type="GhostableInLibrary" />
+    <File Path="thumbnail.png" Url="thumbnail.png" Type="GhostableInLibrary" />
+    <File Path="thumbnail2.png" Url="thumbnail2.png" Type="GhostableInLibrary" />
+    <File Path="feature-news.png" Url="feature-news.png" Type="GhostableInLibrary" />
+    <File Path="60By60.gif" Url="60By60.gif" Type="GhostableInLibrary" />
+    <File Path="news-placeholder.png" Url="news-placeholder.png" Type="GhostableInLibrary" />
+    <File Path="news-placeholder2.gif" Url="news-placeholder2.gif" Type="GhostableInLibrary" />
+    <File Path="news-placeholder3.gif" Url="news-placeholder3.gif" Type="GhostableInLibrary" />
+    <File Path="jo.png" Url="jo.png" Type="GhostableInLibrary" />
+    <File Path="jo2.png" Url="jo2.png" Type="GhostableInLibrary" />
+    <File Path="jo3.png" Url="jo3.png" Type="GhostableInLibrary" />
+    <File Path="jo4.png" Url="jo4.png" Type="GhostableInLibrary" />
+    <File Path="jo5.png" Url="jo5.png" Type="GhostableInLibrary" />
+    <File Path="jo6.png" Url="jo6.png" Type="GhostableInLibrary" />
+    <File Path="jo7.png" Url="jo7.png" Type="GhostableInLibrary" />
+    <File Path="metrotile.png" Url="metrotile.png" Type="GhostableInLibrary" />
+</Module>
+</Elements>

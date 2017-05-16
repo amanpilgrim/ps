@@ -1,0 +1,178 @@
+﻿/* ******* STYLESHEET DETAILS ********************
+Date Created:   04-March-2013;
+Last Updated:   16-07-2013;
+Owner:          Parliamentary Service;
+Project:        Intranet Redevelopment;
+Author:         Datacom Wellington;
+Comment:        Meta Data Only;
+************************************************** */
+body { 
+	color: #333;
+	font: normal 12px/1.5 verdana, arial, sans-serif !important /* Override SP */; 
+}
+
+h2 {
+	color: #004d38;
+	font-size: 30px;
+	margin-top: 15px;
+}
+
+p { margin: 0 0 10px; }
+
+a, a:link, a:visited {
+	color: #0167ce;
+	line-height: 1.5;
+	text-decoration: none;
+}
+
+a:hover, a:focus { text-decoration: underline; }
+
+ul, li, span {
+	margin: 0;
+	padding: 0;
+}
+
+body.ms-backgroundImage {
+	border-top: 1px solid #004d38;	
+}
+
+table {
+	margin-top: 15px;
+}
+
+th, td { vertical-align: top; }
+
+th { 
+	text-align: right;
+	white-space: nowrap; 
+}
+
+td { padding-left: 10px; }
+
+.data div {
+	float: left;
+	width: 100%;
+	margin-top: 5px;
+}
+.data .fauxLabel {
+	float: left;
+	font-weight: bold;
+	margin-right: 20px;
+	text-align: right;
+	width: 170px;
+}
+
+.icon.print { 
+	background: url(../images/icons.png) no-repeat -422px -35px; 
+	display: block;
+	float: right; 	
+	height: 15px;
+	margin-top: 5px;
+	width: 22px;
+}
+
+.icon.downloadimg {
+    background: url(../images/icons.png) no-repeat -461px -1520px;
+    line-height: 1.7;
+    padding-left: 43px;
+}
+
+/* Buttons */
+#contentBox button,
+button, #contentBox .button {
+	background: #78aea1;
+		background: -webkit-gradient(linear, 0 0, 0 bottom, from(#78aea1), to(#082f21));
+		background: -webkit-linear-gradient(#78aea1, #082f21);
+		background: -moz-linear-gradient(#78aea1, #082f21);
+		background: -ms-linear-gradient(#78aea1, #082f21);
+		background: -o-linear-gradient(#78aea1, #082f21);
+		background: linear-gradient(#78aea1, #082f21);
+		-pie-background: linear-gradient(#78aea1, #082f21);
+	border: none;
+	border-radius: 4px; 
+		-webkit-border-radius: 4px; 
+		-moz-border-radius: 4px;	
+	color: #fff;
+	cursor: pointer;
+	font: normal 12px/1.5 verdana, arial, sans-serif !important /* Override SP */; 
+	font-size: 12px;
+	margin-top: 20px;
+	overflow: visible;
+	padding: 3px 6px; 
+	text-decoration: none; 
+}
+.container input[type="submit"],
+h2.ms-displayInline a.ms-srchnav-link-selected  {
+	background: #78aea1;
+		background: -webkit-gradient(linear, 0 0, 0 bottom, from(#78aea1), to(#082f21));
+		background: -webkit-linear-gradient(#78aea1, #082f21);
+		background: -moz-linear-gradient(#78aea1, #082f21);
+		background: -ms-linear-gradient(#78aea1, #082f21);
+		background: -o-linear-gradient(#78aea1, #082f21);
+		background: linear-gradient(#78aea1, #082f21);
+		-pie-background: linear-gradient(#78aea1, #082f21);
+	border: none;
+	border-radius: 4px; 
+		-webkit-border-radius: 4px; 
+		-moz-border-radius: 4px;	
+	color: #fff;
+	cursor: pointer;
+	text-decoration: none; 
+    white-space: nowrap;
+}
+.container button:hover, #contentBox .button:hover,
+.container input[type="submit"]:hover,
+h2.ms-displayInline a.ms-srchnav-link-selected:hover {
+	background: #082f21;
+		background: -webkit-gradient(linear, 0 0, 0 bottom, from(#082f21), to(#78aea1));
+		background: -webkit-linear-gradient(#082f21, #78aea1);
+		background: -moz-linear-gradient(#082f21, #78aea1);
+		background: -ms-linear-gradient(#082f21, #78aea1);
+		background: -o-linear-gradient(#082f21, #78aea1);
+		background: linear-gradient(#082f21, #78aea1);
+		-pie-background: linear-gradient(#082f21, #78aea1);
+	color: #fff;	
+	text-decoration: none;
+}
+.container button,
+.container input[type="submit"], .button {
+	height: 24px;
+	margin-left: 1px;
+	overflow: visible;
+	padding: 0 6px 2px; 
+}
+#contentBox button { margin-left: 190px; }
+#contentBox .button + button { margin-left: 10px; }
+#contentBox td button { margin-left: 0; }
+
+#contentBox button:hover,
+button:hover, .button:hover {
+	background: #082f21;
+		background: -webkit-gradient(linear, 0 0, 0 bottom, from(#082f21), to(#78aea1));
+		background: -webkit-linear-gradient(#082f21, #78aea1);
+		background: -moz-linear-gradient(#082f21, #78aea1);
+		background: -ms-linear-gradient(#082f21, #78aea1);
+		background: -o-linear-gradient(#082f21, #78aea1);
+		background: linear-gradient(#082f21, #78aea1);
+		-pie-background: linear-gradient(#082f21, #78aea1);
+	color: #fff;	
+}
+
+ul.functions {
+	float: right;
+	margin-bottom: 5px;
+	list-style-type:none;
+}
+ul.functions li {
+	background-image: none;
+	cursor: pointer;	
+	float: left;
+	height: 15px;
+}
+
+.printOnly { display: none; }
+
+@media print {
+	.printOnly { display: block; }
+	body.ms-backgroundImage { border-top: none;	}
+}

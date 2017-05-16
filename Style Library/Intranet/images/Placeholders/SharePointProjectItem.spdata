@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="Placeholders\" Type="ElementManifest" />
+    <ProjectItemFile Source="content-wide.png" Target="Placeholders\" Type="ElementFile" />
+    <ProjectItemFile Source="thumbnail.png" Target="Placeholders\" Type="ElementFile" />
+    <ProjectItemFile Source="thumbnail2.png" Target="Placeholders\" Type="ElementFile" />
+    <ProjectItemFile Source="feature-news.png" Target="Placeholders\" Type="ElementFile" />
+    <ProjectItemFile Source="60By60.gif" Target="Placeholders\" Type="ElementFile" />
+    <ProjectItemFile Source="news-placeholder.png" Target="Placeholders\" Type="ElementFile" />
+    <ProjectItemFile Source="news-placeholder2.gif" Target="Placeholders\" Type="ElementFile" />
+    <ProjectItemFile Source="news-placeholder3.gif" Target="Placeholders\" Type="ElementFile" />
+    <ProjectItemFile Source="jo.png" Target="Placeholders\" Type="ElementFile" />
+    <ProjectItemFile Source="jo2.png" Target="Placeholders\" Type="ElementFile" />
+    <ProjectItemFile Source="jo3.png" Target="Placeholders\" Type="ElementFile" />
+    <ProjectItemFile Source="jo4.png" Target="Placeholders\" Type="ElementFile" />
+    <ProjectItemFile Source="jo5.png" Target="Placeholders\" Type="ElementFile" />
+    <ProjectItemFile Source="jo6.png" Target="Placeholders\" Type="ElementFile" />
+    <ProjectItemFile Source="jo7.png" Target="Placeholders\" Type="ElementFile" />
+    <ProjectItemFile Source="metrotile.png" Target="Placeholders\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

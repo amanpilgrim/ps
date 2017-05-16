@@ -1,0 +1,160 @@
+﻿/* ******* STYLESHEET DETAILS ********************
+Date Created:   25-Jan-2013;
+Last Updated:   01-July-2013;
+Owner:          Parliamentary Service;
+Project:        Intranet Redevelopment;
+Author:         Datacom Wellington;
+Comment:        Used for dynamic table filters;
+************************************************** */
+
+.searchFilter {
+	background-color: #fff;
+	font-family: verdana, arial, sans-serif;
+	margin-top: 20px;
+}
+
+.searchFilter h3 { margin: 0 0 0 10px; }
+
+.searchFilter fieldset { border: 0; }
+.searchFilter legend { 
+    position: absolute;
+    margin: -9999px;
+}
+
+.searchFilter label { display: block; }
+
+.searchFilter input[type="text"],
+.searchFilter select { margin-bottom: 10px; }
+
+.searchFilter select { width: 100%; }
+.searchFilter input[type="text"] { width: 130px }
+.searchFilter p { margin: 0 0 10px; }
+
+.searchFilter .button {
+	color: #fff;
+	margin: 0;
+	min-width: 5.2em;
+	padding: 3px 2px;
+}
+.searchFilter .button + .button { margin-left: 10px; }
+
+.filterBox {
+	background-color: #b4c6ba;
+    border: 1px solid #518471;
+    float: left;
+    margin-bottom: 1px;
+	padding: 3px 10px;
+	text-align: right;
+    width: 743px;
+}
+.narrow .filterBox { width: 538px; }
+
+.top { 
+	margin: 5px 0 10px; 
+	padding: 0 10px 0 7px;
+}
+.dataTables_filter {
+   float: right;
+   text-align: right;
+}
+.dataTables_info { 
+    float: left; 
+    margin-top: 3px;
+}
+.dataTables_length { float: right; }
+
+.dataTables_paginate { text-align: center; }
+.dataTables_paginate a {
+	cursor: pointer;
+	padding-right: 10px;
+}
+.dataTables_paginate .next:after { content: " \203a"; }
+.dataTables_paginate .previous:before { content: "\2039  "; }
+.dataTables_paginate .last:after { content: " \00bb"; }
+.dataTables_paginate .first:before { content: "\00ab  "; }
+
+.filter {
+	border-collapse: collapse;
+	clear: both;
+	width: 765px;
+}
+
+.filter th,
+.filter td { line-height: .9; }
+
+.filter th {
+	background-color: #1c5d4a;
+	border: 1px solid #b1b1b1;
+	border-color: #000 #b1b1b1;
+	color: #fff;
+	cursor: pointer;
+    font-weight: normal;
+	padding: 9px 7px;
+	text-align: left;
+	white-space: nowrap;
+}
+.filter th:first-child { border-left-color: #000; }
+.filter th:last-child { border-right-color: #000; }
+
+.filter td { 
+	border: 1px solid red; 
+	padding: 5px 7px;
+}
+.filter td p { margin: 0; }
+
+.filter td.break-word {
+	word-break: break-all;
+	word-break: break-word;   
+	white-space: normal;
+	width:	200px;
+}
+.filter td.break-word-Documents {
+    word-wrap: break-word;
+	white-space: normal;
+	width: 100px;
+    padding-left: 30px;
+    color: #0167ce;
+    font-weight: bold; 
+    display:block;
+}
+
+.filter td.break-word-Documents:hover
+{
+  text-decoration: underline;
+  cursor: pointer; 
+ }
+
+td.break-word-Documents > div {
+    position:relative;
+     margin-left: -20px;  
+     width: 12px; 
+     height: 20px; 
+     display: inline;
+    }
+
+.filter tr:nth-of-type(even),
+tr.even td { background-color: #f6f6f2; }
+
+.sorting_desc:after,
+.sorting:after { content: " \0020\25b4 "; }
+.sorting_asc:after { content: " \0020\25bE "; }
+.sorting.noSort:after { content: " \0020 "; }
+
+.filter .icon { padding-left: 20px; }
+.filter .icon.info { padding-left: 0; }
+
+.filter .button { 
+	display: inline-block;
+	margin: 5px 0;
+}
+
+/* Noticeboard styles*/
+.filter.sortableTable td {
+    border: none;
+    border-left: 1px solid #ecede7;
+    line-height: 1.5;
+    vertical-align: top;
+}
+.filter.sortableTable td:first-child { border-width: 0; }
+
+.filter.sortableTable span { margin-left: 30px; }

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="webfonts" Url="Style Library/Intranet/webfonts" Path="webfonts" RootWebOnly="FALSE">
+<File Path="OpenSans-CondBold-webfont.eot" Url="OpenSans-CondBold-webfont.eot" Type="GhostableInLibrary" />
+<File Path="OpenSans-CondBold-webfont.svg" Url="OpenSans-CondBold-webfont.svg" Type="GhostableInLibrary" />
+<File Path="OpenSans-CondBold-webfont.ttf" Url="OpenSans-CondBold-webfont.ttf"  Type="GhostableInLibrary" />
+<File Path="OpenSans-CondBold-webfont.woff" Url="OpenSans-CondBold-webfont.woff" Type="GhostableInLibrary" />
+<File Path="OpenSans-CondLightItalic-webfont.eot" Url="OpenSans-CondLightItalic-webfont.eot" Type="GhostableInLibrary" />
+<File Path="OpenSans-CondLightItalic-webfont.svg" Url="OpenSans-CondLightItalic-webfont.svg" Type="GhostableInLibrary" />
+<File Path="OpenSans-CondLightItalic-webfont.ttf" Url="OpenSans-CondLightItalic-webfont.ttf" Type="GhostableInLibrary" />
+<File Path="OpenSans-CondLightItalic-webfont.woff" Url="OpenSans-CondLightItalic-webfont.woff"  Type="GhostableInLibrary"/>
+<File Path="OpenSans-CondLight-webfont.eot" Url="OpenSans-CondLight-webfont.eot" Type="GhostableInLibrary" />
+<File Path="OpenSans-CondLight-webfont.svg" Url="OpenSans-CondLight-webfont.svg" Type="GhostableInLibrary" />
+<File Path="OpenSans-CondLight-webfont.ttf" Url="OpenSans-CondLight-webfont.ttf" Type="GhostableInLibrary" />
+<File Path="OpenSans-CondLight-webfont.woff" Url="OpenSans-CondLight-webfont.woff" Type="GhostableInLibrary" />
+</Module>
+</Elements>

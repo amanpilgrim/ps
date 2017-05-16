@@ -1,0 +1,336 @@
+/* Override Ribbons */
+.psMaster #s4-ribbonrow { background: #000; }
+.psMaster #s4-ribboncont { background-image: none; }
+
+#suiteBarLeft a,
+#suiteBarLeft a:link,
+#suiteBarLeft a:visited { color: #fff; }
+
+.psMaster .ms-cui-TabRowRight { display: block !important; }
+
+/* Containers */
+.s4-ca { background-color: transparent; }
+
+/* Main Nav */
+.menu-item-text { margin-right: 20px; }
+
+/* Override links */
+.link-item a:link {
+	color: #0167ce;
+	font-family: verdana, arial, sans-serif;
+}
+
+div a[id$="item_hoverFollow"] {   
+    display: none;   
+}
+
+div a[id$="item_hoverParentLink"] {   
+    display: none;   
+}
+
+.ms-WPBorder { 
+	border: 0; 
+	padding-bottom: 10px;
+}
+
+.ms-cui-tts-scale-2 .ms-cui-tt-a { width: auto; }
+
+/* Main containers */
+#s4-workspace { /*  Set to full width to prevent horizontal scroll, override dynamic inline SP style */
+	width: 100% !important; 
+	z-index: 0;
+}
+#s4-bodyContainer { padding-bottom: 0; }
+
+/* Welcome Bar */
+#welcomeMenuBox { float: left; }
+.ie7 #welcomeMenuBox { margin-top: 6px; }
+
+#suiteBar { 
+	position: absolute;
+	right: 0;
+	z-index: 999;
+}
+#suiteBarRight { padding-right: 0; }
+
+#suiteBarRight .ms-core-menu-root:hover,
+#suiteBarRight .ms-menu-althov,
+#suiteBarRight .ms-welcome-hover { color: #000; }
+
+#suiteBarRight .ms-menu-althov .ms-core-menu-root { color: #fff; }
+
+.ms-core-menu-box { z-index: 999 !important; }
+
+/* Edit Ribbon */
+.ms-cui-topBar2,
+.ms-core-deltaSuiteBarRight	{ background-color : #000; }
+
+.ms-cui-topBar2 { 
+	border: 0;
+	height: 35px; 
+}
+
+.ms-cui-TabRowRight .ms-promotedActionButton-text,
+.ms-cui-tt-a > span.ms-cui-tt-span,
+.ms-browseTab.ms-cui-tt-s .ms-cui-tt-a > span.ms-cui-tt-span { color: #fff !important; }
+
+.ms-cui-tt-s .ms-cui-tt-a > span.ms-cui-tt-span { color: #000 !important; }
+
+#pageStatusBar { 
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important; 
+}
+
+/* Hide Sp 2013 Elements */
+#MyLinksMenuRoot,
+#DeltaSuiteLinks,
+#fullscreenmodebox,
+#site_follow_button,
+.ms-cui-TabRowRight a:first-child,
+#suiteBarLeft { display: none !important; }
+
+/* Edit Containers */
+.ps-usereditor { width: auto; }
+
+/* Spelling Lists */
+ul.ms-core-menu-list li.ms-core-menu-item {
+	background-image: none;
+	margin: 0;
+	padding: 0;
+}
+#s4-workspace ul.ms-core-menu-list,
+#s4-workspace ul.ms-core-menu-list li.ms-core-menu-item div { width: auto; }
+
+/* WYSIWYG Style Overides */
+h2.psstyle-rteElement-HeadingTwo { -ms-name: "Heading Two"; }
+h3.psstyle-rteElement-HeadingThree { -ms-name: "Heading Three"; }
+h4.psstyle-rteElement-HeadingFour { -ms-name: "Heading Four"; }
+h5.psstyle-rteElement-HeadingFive { -ms-name: "Heading Five"; }
+p.psstyle-rteElement-Normal { -ms-name: "Normal"; }
+img.psstyle-rteImage-ImgLeft { -ms-name: "Image On Left"; }
+img.psstyle-rteImage-ImgRight { -ms-name: "Image On Right"; }
+table.psstyle-rteTable-default { -ms-name: "With Borders"; }
+table.psstyle-rteTable-NoBorder { -ms-name: "No Borders"; }
+
+
+h2.psstyle-rteElement-HeadingTwo,
+h3.psstyle-rteElement-HeadingThree,
+h5.psstyle-rteElement-HeadingFive {      
+	color: #333; 
+	font-family: 'OpenSansCondensedLight';
+	font-weight: normal; 
+}
+h2.psstyle-rteElement-HeadingTwo  { 
+	color: #004d38;
+	font-size: 30px;
+}
+h3.psstyle-rteElement-HeadingThree { font-size: 22px; }
+
+h4.psstyle-rteElement-HeadingFour { 
+	color: #333;   
+	font: bold 14px verdana, arial, sans-serif; 
+}
+
+h5.psstyle-rteElement-HeadingFive { font-size: 16px; }
+
+p.psstyle-rteElement-Normal {
+	color: #333;       
+	font: normal 12px/18px verdana, arial, sans-serif;	
+	margin-bottom: 10px; 
+}
+
+.psstyle-rteTable-default,
+.psstyle-rteTable-NoBorder {	border-collapse: collapse; }
+
+.psstyle-rteTable-default th,
+.psstyle-rteTable-default td,
+.psstyle-rteTable-NoBorder th,
+.psstyle-rteTable-NoBorder td { 
+	border: 1px solid #999;	
+	padding: 5px;
+}
+.psstyle-rteTable-NoBorder th,
+.psstyle-rteTable-NoBorder td { border: 0;	}
+
+.psstyle-rteTableHeaderRow-default th,
+th.psstyle-rteTableFirstCol-default,
+.psstyle-rteTableHeaderRow-NoBorder th,
+th.psstyle-rteTableFirstCol-NoBorder th {
+	background-color: #004d38;
+	color: #fff;
+	text-align: left;
+}
+.psstyle-rteTableOddRow-default,
+.psstyle-rteTableOddRow-NoBorder { background-color: #f6f6f2; }
+
+.psstyle-rteTableFooterRow-default td,
+td.psstyle-rteTableLastCol-default,
+.psstyle-rteTableFooterRow-NoBorder td,
+td.psstyle-rteTableLastCol-NoBorder {
+	background-color: #dbe6de;
+	font-weight: bold;
+}
+th.psstyle-rteTableFooterFirstCol-default,
+th.psstyle-rteTableFooterFirstCol-NoBorder { 
+	background-color: #629689;
+	color: #fff;
+	text-align: left;	 
+}
+
+th.psstyle-rteTableHeaderLastCol-default,
+td.psstyle-rteTableFooterLastCol-default,
+td.psstyle-rteTableLastCol-default,
+th.psstyle-rteTableHeaderLastCol-NoBorder,
+td.psstyle-rteTableFooterLastCol-NoBorder,
+td.psstyle-rteTableLastCol-NoBorder { text-align: right; }
+
+.psstyle-rteImage-ImgLeft {
+	float: left;
+	margin-right: 10px;
+}
+.psstyle-rteImage-ImgRight {
+	float: right;
+	margin-left: 10px;
+}
+/* Search Results page */
+    /* Ribbon is set to "display: none" by inbeded  code. */
+#s4-ribbonrow {
+	display: block !important;
+	min-height: 35px;
+}
+.ms-searchCenter {
+    clear: both;
+}
+
+.ms-srch-item-summary {
+    clear: both;
+    display: block;
+}
+
+/*Scroll bars added to "Edit Web Part" menu, edit page.*/
+.ms-ToolPaneOuter {
+    display: block;
+    max-height: 923px;
+    min-width: 350px;
+    overflow: auto;
+}
+	/*Edit page */
+.ms-webpart-zone {
+    display: block;
+}
+.ms-webpart-cell-vertical {
+    display: block;
+}
+.ms-webpart-chrome-vertical {
+    display: block;
+}
+.ms-calloutLink:link, a.ms-calloutLink:visited, .ms-calloutLinkDisabled,
+.ms-srch-sbLarge > input {	
+	font-family: verdana, arial, sans-serif ;
+}
+.ms-metadata,
+.ms-metadata .ms-srch-hover-filetype span {
+	color: #333;
+	font-family: 'OpenSansCondensedLight';
+	font-size: 16px;
+	
+}
+
+/* WebPart Zones */
+.ms-SPZoneLabel {
+	clear: both;
+	margin-top: 10px;
+}
+
+/***** Overwrite Sharepoint Search Site ****/
+div.ms-dialogHidden.ms-forceWrap.ms-noList { 
+	clear: both;
+	float: left;
+	margin-right: 30px;
+	width: 165px;
+}
+
+.srch-advancedtable {
+    display: block;
+}
+
+
+#searchIcon,
+hr.ms-srch-people-item-separator { display: none; }
+  
+h2.ms-displayInline { font-size: 16px; }
+
+.ms-core-navigation,
+.ms-commandLink,
+.ms-displayInlineBlock.ms-ref-ellipsis,
+h2.ms-displayInline a.ms-srchnav-link { 
+	color: #0167ce;
+	font: normal 12px/1.5 verdana, arial, sans-serif;
+}
+
+.ms-commandLink:hover,
+.ms-displayInlineBlock.ms-ref-ellipsis:hover,
+h2.ms-displayInline a.ms-srchnav-link:hover { text-decoration: underline; }
+
+.ms-ref-unsel-toggle.ms-commandLink { 
+	text-align: right;
+	text-decoration: none;
+}
+.ms-ref-unsel-toggle.ms-commandLink:after {
+	color: #333;
+	content:"\00a0\00bb"; 
+}
+
+h3.ms-srch-ellipsis {
+	font-size: 16px;
+	margin: 0px;
+}
+h3.ms-soften {
+	font-size: 16px;
+    margin: 0;
+}
+
+div.ms-srch-ellipsis.ms-textLarge,
+.ms-ref-refinername:link, 
+.ms-ref-refinername:visited,
+.ms-dlg-heading, h2.ms-dlg-heading  {
+	font-family: 'OpenSansCondensedLight';
+	font-size: 22px;
+    text-align: left;
+}
+.ms-dlg-heading, 
+h2.ms-dlg-heading { color: #333; }
+
+.ms-srch-people-item #Heading a {
+    font-family: 'OpenSansCondensedLight';
+    font-size: 16px;
+}
+
+#AdvancedLink {
+	float: left;
+	margin-top: 10px;
+}
+
+/* Jira PSTSIR-652 Width of page content in all page layouts
+ The following are changes for Content that are inheriting the full primary width of 765px,
+ to be 520px in width, as per design and best practice of body of text width.
+Reasigned Jira for confirmation of change of design, as this could have repurcussions for look and feel 
+of current design.
+
+
+div.primary div.ms-rtestate-field,
+div.primary div.ms-rtestate-field > *,
+div.primary div.ms-rtestate-field div,
+div.primary div.ms-rtestate-field p,
+div.primary div.ms-rtestate-field h3,
+div.primary div.ms-rtestate-field ul,
+div.primary div.ms-rtestate-field div.section {width: 520px;}*/
+
+div.primary.narrow div.ms-rtestate-field p {width: 560px;}
+
+
+
+/* Hide About Me Link */
+/* ReSharper disable UnknownHtmlAttribute */
+.ms-core-menu-list li[text='About Me']{display: none}
+/* ReSharper restore UnknownHtmlAttribute */

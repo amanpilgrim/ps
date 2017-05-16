@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="webfonts\" Type="ElementManifest" />
+    <ProjectItemFile Source="OpenSans-CondBold-webfont.eot" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="OpenSans-CondBold-webfont.svg" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="OpenSans-CondBold-webfont.ttf" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="OpenSans-CondBold-webfont.woff" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="OpenSans-CondLightItalic-webfont.eot" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="OpenSans-CondLightItalic-webfont.svg" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="OpenSans-CondLightItalic-webfont.ttf" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="OpenSans-CondLightItalic-webfont.woff" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="OpenSans-CondLight-webfont.eot" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="OpenSans-CondLight-webfont.svg" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="OpenSans-CondLight-webfont.ttf" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="OpenSans-CondLight-webfont.woff" Target="webfonts\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

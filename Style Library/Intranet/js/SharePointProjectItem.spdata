@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="js\" Type="ElementManifest" />
+    <ProjectItemFile Source="plugins.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="script.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="PIE.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="respond.min.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery.cookie.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-ui-1.8.24.custom.min.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery.mousewheel.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery.jscrollpane.min.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-1.8.2.min.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-ui.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery.print.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="modernizr-2.5.3.min.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery.colorbox.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="MicrosoftAjax.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="UXScript.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery.dataTables.min.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="dataTables.dataSourcePlugins.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="dataTables.fileSizeSort.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="dataTables.fileSizeTypeDetect.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="modernizr.custom.37436.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery.scrollTo-1.4.3.1-min.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="textext.core.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="textext.plugin.ajax.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="textext.plugin.arrow.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="textext.plugin.autocomplete.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="textext.plugin.clear.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="textext.plugin.filter.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="textext.plugin.focus.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="textext.plugin.prompt.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="textext.plugin.suggestions.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="textext.plugin.tags.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery.dataTables.columnFilter.js" Target="js\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

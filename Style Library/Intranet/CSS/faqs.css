@@ -1,0 +1,73 @@
+﻿/* ******* STYLESHEET DETAILS ********************
+Date Created:   01-Nov-2012;
+Last Updated:   27-June-2013;
+Owner:          Parliamentary Service;
+Project:        Intranet Redevelopment;
+Author:         Datacom Wellington;
+Comment:        FAQs Only;
+************************************************** */
+dl, dt, dd {
+	margin: 0;
+	padding: 0;
+}
+dl { 
+	float: left;
+	margin: 10px 0 0 20px; 
+	width: 100%;
+}
+dt { 
+	background: url(../images/icons.png) no-repeat -485px -695px;
+	clear: both;
+	cursor: pointer;
+	margin-bottom: 5px; 
+	padding: 5px 0  0 12px;
+}
+dt.open { background-position: -493px -1185px; }
+
+dt h3 { 
+	margin: 0;
+	width: 95%; 
+}
+
+dd { 
+	background-color: #dbe6de;
+	clear: both;
+	float: left;
+	line-height: 1.6;
+	padding: 10px 10px 0;
+	width: 90%;
+}
+dd p { margin: 10px 0 0; }
+dd p:first-child { margin: 0; }
+dd .floatRight { padding-bottom: 10px; }
+
+.sectionBox { margin-bottom: 20px; }
+
+.sectionBox .printable { 
+	clear: both; 
+	float: left;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.sectionBox h2 {
+	background: url(../images/icons.png) no-repeat -483px -773px;
+	cursor: pointer;
+	float: left;
+	margin: 0;
+	padding-left: 20px;
+	width: 410px;
+}
+.sectionBox h2.open { background-position: 0 -1085px; }
+
+.sectionBox .functions { float: none; }
+
+aside .fancyScroll { height: 400px; }
+
+.suggest {
+	float: left;
+	margin-top: 20px;
+	padding: 10px;
+	width: 140px;
+}
+.suggest p { margin: 0; }

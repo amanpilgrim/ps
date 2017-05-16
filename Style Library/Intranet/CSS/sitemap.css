@@ -1,0 +1,39 @@
+﻿/* ******* STYLESHEET DETAILS ********************
+Date Created:   29-Jan-2013;
+Last Updated:   18-Feb-2013;
+Owner:          Parliamentary Service;
+Project:        Intranet Redevelopment;
+Author:         Datacom Wellington;
+Comment:        Sitemap specific;
+************************************************** */
+
+div.primary { width: 100%; }
+
+ul.col {
+	float: left;
+	margin-left: 15px;
+	width: 32%;
+}
+ul.col:first-child { margin-left: 0; }
+
+div.primary ul.col,
+div.primary ul.col li {
+	background-image: none;
+	padding: 0;
+}
+div.primary ul.col li {
+	font-family: "OpenSansCondensedLight", verdana, arial, sans-serif;
+	font-size: 18px;
+	margin: 0;
+}
+div.primary ul.col li li li { font-size: 14px; }
+
+.col li li a:before { content: "\2013\00a0"; }
+
+ul.col h2 {
+	font-size: 22px;
+	margin: 0;
+}
+
+.col a { color: #1c5d4a; }
+.col li li a { color: #000; }

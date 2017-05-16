@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="Images\" Type="ElementManifest" />
+    <ProjectItemFile Source="active-bullet.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="bullet.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="edit-pencil.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="fgimg.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="gallery-controls.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="loading.gif" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="loading-bg.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="flag-icon.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="footer-bg.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="Intranet-Logo.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="Koru-bg.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="news-bullet.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="news-placeholder.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="nzgovt-logo.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="people-icon.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="search-icon.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="Temp-Image1.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="icons.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="Temp-image2.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="logo-parltv.jpg" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="favicon.ico" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-icons_222222_256x240.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-icons_454545_256x240.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-bg_flat_0_aaaaaa_40x100.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-bg_flat_75_ffffff_40x100.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-bg_glass_55_fbf9ee_1x400.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-bg_glass_65_ffffff_1x400.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-bg_glass_75_dadada_1x400.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-bg_glass_75_e6e6e6_1x400.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-bg_glass_95_fef1ec_1x400.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-bg_highlight-soft_75_cccccc_1x100.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-icons_2e83ff_256x240.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-icons_888888_256x240.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="ui-icons_cd0a0a_256x240.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="bg-relatedInfo.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="icon-pause.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="icon-pause.cur" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="help-dark.png" Target="Images\" Type="ElementFile" />
+  </Files>
+</ProjectItem>
