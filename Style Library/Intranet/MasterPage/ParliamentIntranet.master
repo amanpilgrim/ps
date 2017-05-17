@@ -66,7 +66,8 @@
 		
 		<!-- ===== STARTER: Custom CSS  =================================================================================================== -->
         <SharePoint:CssRegistration ID="CssRegistration2" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/css/normalize.css?Rev=2017.05.11 %&gt;" runat="server" after="SharepointCssFile"/>
-		<SharePoint:CssRegistration ID="CssRegistration3" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/css/main.css?Rev=2017.05.11 %&gt;" runat="server" after="SharepointCssFile"/>
+		<SharePoint:CssRegistration ID="CssRegistration5" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/css/font-awesome/css/font-awesome.min.css?Rev=2017.05.11 %&gt;" runat="server" after="SharepointCssFile"/>
+        <SharePoint:CssRegistration ID="CssRegistration3" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/css/main.css?Rev=2017.05.11 %&gt;" runat="server" after="SharepointCssFile"/>
         <SharePoint:CssRegistration ID="CssRegistration4" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/css/pscore.css %&gt;" runat="server" after="SharepointCssFile"/>	
         <link href="/Style Library/Intranet/css/print.css" rel="stylesheet" type="text/css" media="print" />
 
@@ -140,7 +141,7 @@
 				<!-- ===== STARTER: style.css adds width and margin =========================================================================================== -->
 					<div class="customWidth">					
 						<!-- START PS Header -->
-						<header>
+						<header id="header">
 							<div class="container noindex">
 								<div class="logoSearch">
 									<!-- ===== STARTER: Site Logo with link to root ======================================================================= -->
@@ -170,16 +171,19 @@
 										</div>
 									</div>
 								</div>
+
+                <div class="breadcrumb noindex">
+						    	<asp:ContentPlaceHolder id="PlaceHolderBreadcrumb" runat="server">
+									<b>You are here:</b><asp:sitemappath ID="Sitemappath1" PathSeparator="&#160;&#47;&#160;" runat="server" sitemapproviders="SPSiteMapProvider,SPXmlContentMapProvider"  endercurrentnodeaslink="false" hideinteriorrootnodes="true" /></asp:ContentPlaceHolder >	
+                </div>
+
+                <h1><span class="requiredfield">Page title goes here</span></h1>
 							</div>
 						</header>
 						<!-- END PS Header -->
 					
 						<!-- ===== STARTER: Body Area (includes left nav and body) ==================================================================== -->
 						<div class="container">
-		                    <div class="breadcrumb noindex">
-						    	<asp:ContentPlaceHolder id="PlaceHolderBreadcrumb" runat="server">
-									<b>You are here:</b><a href="/" class="icon home"><span class="hidden">Link to home</span></a><asp:sitemappath ID="Sitemappath1" PathSeparator="&nbsp;&raquo;&nbsp;" runat="server" sitemapproviders="SPSiteMapProvider,SPXmlContentMapProvider"  endercurrentnodeaslink="false" hideinteriorrootnodes="true" /></asp:ContentPlaceHolder >	
-							</div>
 							
 							<!-- ===== STARTER: Current navigation =========================================================================================== -->
 							<div class="ms-dialogHidden ms-forceWrap ms-noList">
@@ -391,8 +395,10 @@
 						    <footer id="footer" class="noindex">
 							    <nav>
 								    <ul>
+                      <li class="noindex"><a class="noindex" href="http://ourhouse.parliament.nz/" title="Home"><img src="/Style%20Library/Intranet/Images/nz-parliament.png" alt="New Zealand Govt Website link. " /></a></li>
 									    <PS:NavigationTermSetFooter id="navigationTermSetFooter" runat="server" />
-									    <li class="last"><a href="http://newzealand.govt.nz" title="Open the New Zealand Government website in a new window. " target="_blank"><img src="/Style Library/Intranet/images/nzgovt-logo.png" alt="New Zealand Govt Website link. " /></a></li>
+									    <!--<li class="last"><a href="http://newzealand.govt.nz" title="Open the New Zealand Government website in a new window. " target="_blank"><img src="/Style Library/Intranet/images/nzgovt-logo.png" alt="New Zealand Govt Website link. " /></a></li>-->
+                      <li><a id="govt" href="https://www.govt.nz" title="govt.nz - Connecting you to New Zealand central &amp; local government services" rel="external">www.govt.nz</a></li>
 								    </ul>
 							    </nav>
 						    </footer>

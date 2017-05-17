@@ -12,12 +12,13 @@
 .s4-ca { background-color: transparent; }
 
 /* Main Nav */
-.menu-item-text { margin-right: 20px; }
+.menu-item-text {
+  
+}
 
 /* Override links */
 .link-item a:link {
-	color: #0167ce;
-	font-family: verdana, arial, sans-serif;
+	color: #157a6b;
 }
 
 div a[id$="item_hoverFollow"] {   
@@ -243,12 +244,12 @@ td.psstyle-rteTableLastCol-NoBorder { text-align: right; }
 }
 
 /***** Overwrite Sharepoint Search Site ****/
-div.ms-dialogHidden.ms-forceWrap.ms-noList { 
+/*div.ms-dialogHidden.ms-forceWrap.ms-noList { 
 	clear: both;
 	float: left;
 	margin-right: 30px;
 	width: 165px;
-}
+}*/
 
 .srch-advancedtable {
     display: block;
@@ -264,8 +265,8 @@ h2.ms-displayInline { font-size: 16px; }
 .ms-commandLink,
 .ms-displayInlineBlock.ms-ref-ellipsis,
 h2.ms-displayInline a.ms-srchnav-link { 
-	color: #0167ce;
-	font: normal 12px/1.5 verdana, arial, sans-serif;
+	/*color: #0167ce;
+	font: normal 12px/1.5 verdana, arial, sans-serif;*/
 }
 
 .ms-commandLink:hover,

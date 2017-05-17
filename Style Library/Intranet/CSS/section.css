@@ -1,44 +1,47 @@
 ﻿/* ******* STYLESHEET DETAILS ********************
 Date Created:   23-Oct-2012;
-Last Updated:   27-May-2014;
+Last Updated:   17-May-2017;
 Owner:          Parliamentary Service;
 Project:        Intranet Redevelopment;
-Author:         Datacom Wellington;
+Author:         Pikselin;
 Comment:        For Section Landing (incl. News And Events Landing Page), Section Overview, Section Listings Templates;
 ************************************************** */
 
-.primary header h1 { border: 0; }
+.primary header h1 {
 
-.primary ul { margin-left: 0; }
+}
 
 .row { 
 	clear: both; 
 	float: left;
-	 width: 100%; 
+	width: 100%; 
 }
 
 /* Blocks */ 
 .block {
 	float: left;
-	margin: 10px 40px 30px 0;
-	width: 340px;
+	padding: 0 30px 30px 0;
+	width: 33.33%;
+	box-sizing: border-box;
 }
 
 .block .inner { 
-	border-bottom: 1px solid #004d38; 
-	float: left;
-	padding: 0 0 10px;
+	background: #ebebeb;
+}
+
+.block img {
+	display: block;
 	width: 100%;
+	height: auto;
 }
 
-.block img { 
-	float: left; 
-	margin-right: 10px;
+.block h2 {
+	font-size: 2em;
+	line-height: 1.25;
+  	margin: 0;
 }
 
-.block h2 { margin: 0; }
-
-.block h2:after {
+/*.block h2:after {
 	color: #333;
 	content:"\00a0\00bb"; 
 }
@@ -84,12 +87,12 @@ Comment:        For Section Landing (incl. News And Events Landing Page), Sectio
 .block .alignRight {
 	background-image: none;
 	font-weight: bold;
-}
+}*/
 
-/* Blocks - Wide (Section Overview) */ 
+/* Blocks - Wide (Section Overview) *
 .block.wide {
 	margin-right: 0;
-	width: 777px; 
+	width: 777px;
 }
 
 .block.wide .box { 
@@ -126,4 +129,4 @@ Comment:        For Section Landing (incl. News And Events Landing Page), Sectio
 .block.wide ul { 
 	margin: 0 0 0 20px;
 	width: 100%; 
-}
+}*/

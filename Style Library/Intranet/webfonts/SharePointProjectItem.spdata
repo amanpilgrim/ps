@@ -2,22 +2,20 @@
 <ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
   <Files>
     <ProjectItemFile Source="Elements.xml" Target="webfonts\" Type="ElementManifest" />
-    <ProjectItemFile Source="OpenSans-CondBold-webfont.eot" Target="webfonts\" Type="ElementFile" />
-    <ProjectItemFile Source="OpenSans-CondBold-webfont.svg" Target="webfonts\" Type="ElementFile" />
-    <ProjectItemFile Source="OpenSans-CondBold-webfont.ttf" Target="webfonts\" Type="ElementFile" />
-    <ProjectItemFile Source="OpenSans-CondBold-webfont.woff" Target="webfonts\" Type="ElementFile" />
-    <ProjectItemFile Source="OpenSans-CondLightItalic-webfont.eot" Target="webfonts\" Type="ElementFile" />
-    <ProjectItemFile Source="OpenSans-CondLightItalic-webfont.svg" Target="webfonts\" Type="ElementFile" />
-    <ProjectItemFile Source="OpenSans-CondLightItalic-webfont.ttf" Target="webfonts\" Type="ElementFile" />
-    <ProjectItemFile Source="OpenSans-CondLightItalic-webfont.woff" Target="webfonts\" Type="ElementFile" />
-    <ProjectItemFile Source="OpenSans-CondLight-webfont.eot" Target="webfonts\" Type="ElementFile" />
-    <ProjectItemFile Source="OpenSans-CondLight-webfont.svg" Target="webfonts\" Type="ElementFile" />
-    <ProjectItemFile Source="OpenSans-CondLight-webfont.ttf" Target="webfonts\" Type="ElementFile" />
-    <ProjectItemFile Source="OpenSans-CondLight-webfont.woff" Target="webfonts\" Type="ElementFile" />
     <ProjectItemFile Source="Open-Sans-regular.eot" Target="webfonts\" Type="ElementFile" />
     <ProjectItemFile Source="Open-Sans-regular.svg" Target="webfonts\" Type="ElementFile" />
     <ProjectItemFile Source="Open-Sans-regular.ttf" Target="webfonts\" Type="ElementFile" />
     <ProjectItemFile Source="Open-Sans-regular.woff" Target="webfonts\" Type="ElementFile" />
     <ProjectItemFile Source="Open-Sans-regular.woff2" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="Open-Sans-600.eot" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="Open-Sans-600.svg" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="Open-Sans-600.ttf" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="Open-Sans-600.woff" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="Open-Sans-600.woff2" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="Open-Sans-700.eot" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="Open-Sans-700.svg" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="Open-Sans-700.ttf" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="Open-Sans-700.woff" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="Open-Sans-700.woff2" Target="webfonts\" Type="ElementFile" />
   </Files>
 </ProjectItem>

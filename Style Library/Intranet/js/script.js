@@ -2,7 +2,7 @@
     $(document).ready(function () {
 
         // Code addressing pressing enter while using site search in body of homepage
-        
+
         $("#ctl00_PlaceHolderMain_ctl00_searchTextBox").keypress(function (event) {
 
             var keycode = (event.keyCode ? event.keyCode : event.which);
@@ -11,12 +11,12 @@
             }
 
         });
-        
+
         var nameWidth = $("#zz5_Menu").width();
         var nameWidthzz4 = $("#zz4_Menu").width();
         var CalculatedRightString = "";
         var CalculatedRightInt = 100;
-        
+
         if (nameWidth) {
             CalculatedRightInt = CalculatedRightInt + nameWidth;
             CalculatedRightString = CalculatedRightInt + "px";
@@ -89,9 +89,43 @@
         menuItems.each(function (index) {
             if ($(this).children('ul').length > 0) {
                 $(this).addClass('hasChildren');
+                var faClass = ($(this).hasClass('selected') || $(this).find('li.selected').length > 0) ? 'fa-minus-circle' : 'fa-plus-circle';
+                $(this).append('<span class="fa ' + faClass + '"></span>');
             }
             $('.selected').parents('li.hasChildren').addClass('open');
         });
+        $('.selected').parents('li.hasChildren').addClass('open');
+
+        // listen for updates to the menu toggle
+        $('#toggle').on('click', function () {
+            var $toggle = $(this).children('.fa');
+            if ($toggle.hasClass('fa-bars')) {
+                $('body').removeClass('nav-closed').addClass('nav-open');
+                $toggle.removeClass('fa-bars').addClass('fa-close');
+            } else {
+                //var navWidth = $('#navbar').width();
+                $toggle.removeClass('fa-close').addClass('fa-bars');
+                $('body').removeClass('nav-open').addClass('nav-closed');
+            }
+        });
+
+        // show/hide menu items
+        $('.mainNav, .subNav').on('click', '.fa-plus-circle', function (e) {
+            e.stopPropagation();
+            $(this).parent().siblings('li').children('.fa-minus-circle').trigger('click');
+            $(this).siblings('ul').slideDown();
+            $(this).removeClass('fa-plus-circle').addClass('fa-minus-circle');
+            return false;
+        });
+
+        $('.mainNav, .subNav').on('click', '.fa-minus-circle', function (e) {
+            e.stopPropagation();
+            $(this).siblings('ul').slideUp();
+            $(this).removeClass('fa-minus-circle').addClass('fa-plus-circle');
+            return false;
+        });
+
+
 
         /* Text Editor Overrides */
         $(".ms-rtestate-write").attr({
@@ -239,7 +273,7 @@
                                     $("#cboxGalleryDate").hide();
 
                                 $("#cboxGalleryName").text(galleryname);
-                                                                
+
                                 var divMetadata = $("#cboxMetadata");
                                 var onclickvalue = "return OpenDialog('" + metadataUrl + "', 'Image')";
 
@@ -251,7 +285,7 @@
                 });
             }
         }
-        
+
         var method;
         var noop = function () { };
         var methods = [
