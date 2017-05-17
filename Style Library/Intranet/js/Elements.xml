@@ -33,5 +33,9 @@
     <File Path="textext.plugin.prompt.js" Url="textext.plugin.prompt.js" Type="GhostableInLibrary" />
     <File Path="textext.plugin.suggestions.js" Url="textext.plugin.suggestions.js" Type="GhostableInLibrary" />
     <File Path="textext.plugin.tags.js" Url="textext.plugin.tags.js" Type="GhostableInLibrary" />
+    <File Path="jquery.js" Url="js/jquery.js" Type="GhostableInLibrary" />
+    <File Path="jquery.easy-autocomplete.js" Url="js/jquery.easy-autocomplete.js" />
+    <File Path="jquery.easy-autocomplete.min.js" Url="js/jquery.easy-autocomplete.min.js" />
+    <File Path="awesomplete.js" Url="js/awesomplete.js" />
   </Module>
 </Elements>

@@ -34,5 +34,9 @@
     <ProjectItemFile Source="textext.plugin.suggestions.js" Target="js\" Type="ElementFile" />
     <ProjectItemFile Source="textext.plugin.tags.js" Target="js\" Type="ElementFile" />
     <ProjectItemFile Source="jquery.dataTables.columnFilter.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery.easy-autocomplete.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery.easy-autocomplete.min.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="awesomplete.js" Target="js\" Type="ElementFile" />
   </Files>
 </ProjectItem>
