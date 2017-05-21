@@ -26,6 +26,16 @@
     <ProjectItemFile Source="textext.plugin.prompt.css" Target="CSS\" Type="ElementFile" />
     <ProjectItemFile Source="textext.plugin.tags.css" Target="CSS\" Type="ElementFile" />
     <ProjectItemFile Source="Peoplesearch.css" Target="CSS\" Type="ElementFile" />
+    <ProjectItemFile Source="font-awesome\css\font-awesome.min.css" Target="CSS\font-awesome\css\" Type="ElementFile" />
+    <ProjectItemFile Source="font-awesome\fonts\fontawesome-webfont.eot" Target="CSS\font-awesome\fonts\" Type="ElementFile" />
+    <ProjectItemFile Source="font-awesome\fonts\fontawesome-webfont.svg" Target="CSS\font-awesome\fonts\" Type="ElementFile" />
+    <ProjectItemFile Source="font-awesome\fonts\fontawesome-webfont.ttf" Target="CSS\font-awesome\fonts\" Type="ElementFile" />
+    <ProjectItemFile Source="font-awesome\fonts\fontawesome-webfont.woff" Target="CSS\font-awesome\fonts\" Type="ElementFile" />
+    <ProjectItemFile Source="font-awesome\fonts\fontawesome-webfont.woff2" Target="CSS\font-awesome\fonts\" Type="ElementFile" />
+    <ProjectItemFile Source="font-awesome\fonts\FontAwesome.otf" Target="CSS\font-awesome\fonts\" Type="ElementFile" />
+    <ProjectItemFile Source="awesomplete.css" Target="CSS\" Type="ElementFile" />
+    <ProjectItemFile Source="style.DbvFvg.css" Target="CSS\" Type="ElementFile" />
     <ProjectItemFile Source="normalize.css" Target="CSS\" Type="ElementFile" />
+    <ProjectItemFile Source="responsive.css" Target="CSS\" Type="ElementFile" />
   </Files>
 </ProjectItem>

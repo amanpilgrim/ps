@@ -13,6 +13,11 @@
 <%@ Register TagPrefix="PS" TagName="TodaysEvents" Src="~/_controltemplates/15/HomepageTodaysEvents/TodaysEvents.ascx" %>
 <%@ Register TagPrefix="PS" TagName="HomepageNewsCarousel" Src="~/_controltemplates/15/HomepageNewsCarousel/HomepageNewsCarousel.ascx" %>
 <%@ Register TagPrefix="PS" TagName="OurHouseandPeople" Src="~/_controltemplates/15/OurHouseandPeople/OurHouseandPeople.ascx" %>
+<%@ Register TagPrefix="PS" TagName="Twitter" Src="../../_controltemplates/15/UserProfile/Twitter.ascx" %>
+
+<%@ Register TagPrefix="PS" TagName="DidYouKnow" Src="~/_controltemplates/15/DidYouKnow/DidYouKnow.ascx" %>
+<%@ Register TagPrefix="PS" TagName="FeatureLink" Src="~/_controltemplates/15/FeatureLink/FeatureLink.ascx" %>
+
 <asp:Content ContentPlaceholderID="PlaceHolderAdditionalPageHead" runat="server">
 	<SharePointWebControls:CssRegistration ID="CssRegistration1" name="<% $SPUrl:~sitecollection/Style Library/~language/Themable/Core Styles/pagelayouts15.css %>" runat="server"/>
 	<SharePointWebControls:CssRegistration ID="PSHome" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/css/home.css%>" after="main.css" runat="server"/>	
@@ -28,40 +33,66 @@
 <asp:Content ContentPlaceHolderId="PlaceHolderBreadcrumb" runat="server" Visible="false" />
 
 <asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server">
-	<!-- START Main Content Area -->
-	<div class="primary">
-	    <!-- START News Carousel -->
+    <!-- START Main Content Area -->
+    <div class="row">
+        <!-- START News Carousel -->
         <PS:HomepageNewsCarousel id="HomepageNewsCarousel" runat="server"/>	
-        <!-- END News Carousel -->	    
-        
-        <!-- START Our House and People -->
-        <div class="column">
-		    <PS:OurHouseandPeople id="OurHouseandPeople" runat="server"/>
-		    <WebPartPages:WebPartZone runat="server" Title="Main Left" ID="MainLeft"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
-	    </div>
-        <!-- End Our House and People -->
-	
-	    <div class="column">	
+        <!-- END News Carousel -->
+
+        <aside>
+            <PS:FindPeople runat="server"/>
+            <WebPartPages:WebPartZone runat="server" Title="Right Top" ID="WebPartZone2" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
+            <PS:QuickLinks id="QuickLinks1" runat="server"/>
+            <WebPartPages:WebPartZone runat="server" Title="Right Middle" ID="WebPartZone3" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
+	    </aside>
+    </div>
+
+    <div class="row">
+        <div class="column">	
             <div class="box"><h2>Today's events</h2></div>  
             <PS:HouseNextSits runat="server" id="TodaysEvents1"/>        
 	        <PS:TodaysEvents runat="server" id="TodaysEvents"/>	   
 	        <WebPartPages:WebPartZone runat="server" Title="Main Middle" ID="MainMiddle"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
-	    </div>			    
-	    <div class="column narrow">
-	    	<div class="onParliament narrowRoundedCShadow">
+	    </div>
+	    <div class="column">
+	    	<div class="onParliament">
 		        <h3><a href="http://www.parliament.nz" target="_blank">On www.parliament.nz</a></h3>
 		        <div class="inner">
 		            <PS:ParliamentPanel id="ParliamentPanel" runat="server"/>
 		        </div>
 	        </div>
 			<WebPartPages:WebPartZone runat="server" Title="Main Right" ID="WebPartZone1"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>			
-	    </div>	    
+	    </div>
+
+        <aside>
+            <div class="contactBox noindex">
+                <h2>Useful Contacts</h2> 
+                <PS:HomepageContact id="HomepageContact1" runat="server"/>
+            </div>
+            <WebPartPages:WebPartZone runat="server" Title="Right Bottom" ID="WebPartZone7" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
+	    </aside>
+    </div>
+
+    <div class="row">
+        <!-- START Our House and People -->
+        <div class="column">
+		    <PS:OurHouseandPeople id="OurHouseandPeople" runat="server"/>
+		    <WebPartPages:WebPartZone runat="server" Title="Main Left" ID="MainLeft"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
+	    </div>
+        <!-- End Our House and People -->
+
+        <aside>
+            <PS:Twitter id="Twitter1" runat="server"></PS:Twitter>
+            <WebPartPages:WebPartZone runat="server" Title="Right Middle" ID="WebPartZone5" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
+        </aside>
+    </div>
+	
+	<div class="primary">
+        <PS:DidYouKnow id="DidYouKnow1" runat="server"/>
+        <PS:FeatureLink id="FeatureLink1" runat="server"/>   
 	</div>
 	<!-- END Main Content Area -->
-	<aside><PS:FindPeople runat="server"/><WebPartPages:WebPartZone runat="server" Title="Right Top" ID="RightTop" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone><PS:QuickLinks id="QuickLink" runat="server"/><WebPartPages:WebPartZone runat="server" Title="Right Middle" ID="RightMiddle" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone><div class="contactBox roundedCorner inner noindex"><h2>Useful Contacts</h2> 
-                <PS:HomepageContact id="HomepageContact" runat="server"/>
-           </div>
-            <WebPartPages:WebPartZone runat="server" Title="Right Bottom" ID="RightBottom" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone></aside>	
+
 	
 	<PublishingWebControls:EditModePanel ID="EditModePanel2" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
 		<span class="requiredfield"><SharePoint:FileField ID="FileField1" FieldName="FileLeafRef" runat="server" /></span>

@@ -24,7 +24,16 @@
     <File Path="textext.plugin.focus.css" Url="textext.plugin.focus.css" Type="GhostableInLibrary" />
     <File Path="textext.plugin.prompt.css" Url="textext.plugin.prompt.css" Type="GhostableInLibrary" />
     <File Path="textext.plugin.tags.css" Url="textext.plugin.tags.css" Type="GhostableInLibrary" />
-    <File Path="Peoplesearch.css" Url="Peoplesearch.css"  Type="GhostableInLibrary"/>
-    <File Path="normalize.css" Url="normalize.css" Type="GhostableInLibrary"/>
+    <File Path="Peoplesearch.css" Url="Peoplesearch.css" Type="GhostableInLibrary"/>
+    <File Path="normalize.css" Url="normalize.css" Type="GhostableInLibrary" />
+    <File Path="responsive.css" Url="responsive.css" Type="GhostableInLibrary" />
+    <File Path="font-awesome\css\font-awesome.min.css" Url="font-awesome/css/font-awesome.min.css" Type="GhostableInLibrary" /> 
+    <File Path="font-awesome\fonts\fontawesome-webfont.eot" Url="font-awesome/fonts/fontawesome-webfont.eot" Type="GhostableInLibrary" />
+    <File Path="font-awesome\fonts\fontawesome-webfont.svg" Url="font-awesome/fonts/fontawesome-webfont.svg" Type="GhostableInLibrary" />
+    <File Path="font-awesome\fonts\fontawesome-webfont.ttf" Url="font-awesome/fonts/fontawesome-webfont.ttf" Type="GhostableInLibrary" />
+    <File Path="font-awesome\fonts\fontawesome-webfont.woff" Url="font-awesome/fonts/fontawesome-webfont.woff" Type="GhostableInLibrary" />
+    <File Path="font-awesome\fonts\fontawesome-webfont.woff2" Url="font-awesome/fonts/fontawesome-webfont.woff2" Type="GhostableInLibrary" />
+    <File Path="font-awesome\fonts\FontAwesome.otf" Url="font-awesome/fonts/FontAwesome.otf" Type="GhostableInLibrary" />
+    <File Path="style.DbvFvg.css" Url="style.DbvFvg.css" Type="GhostableInLibrary" />
   </Module>
 </Elements>

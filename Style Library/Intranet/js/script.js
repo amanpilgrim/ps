@@ -96,9 +96,10 @@
         });
         $('.selected').parents('li.hasChildren').addClass('open');
 
+
         // listen for updates to the menu toggle
         $('#toggle').on('click', function () {
-            var $toggle = $(this).children('.fa');
+            var $toggle = $(this);
             if ($toggle.hasClass('fa-bars')) {
                 $('body').removeClass('nav-closed').addClass('nav-open');
                 $toggle.removeClass('fa-bars').addClass('fa-close');

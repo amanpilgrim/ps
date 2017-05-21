@@ -39,16 +39,28 @@ var EasyAutocomplete = (function(scope){
 
 			list: {
 				sort: {
-					enabled: false,
-					method: function(a, b) {
-						a = defaults.getValue(a);
-						b = defaults.getValue(b);
-						//if (a < b) {
-						//	return -1;
-					    //}
-						if (a == b) {
-						    return 1;
-						}
+					enabled: true,
+					method: function (a, b) {
+                        a = defaults.getValue(a);
+                        b = defaults.getValue(b);
+                        lastnameSort = b.substr(b.indexOf(' ') + 1);
+                        firstnameSort = a.substr(0, a.indexOf(' '));
+                      //  debugger;
+
+                        //if (firstnameSort < lastnameSort)
+                        //{
+                        //    return -1;
+                        //}
+                        //if (firstnameSort > lastnameSort)
+                        //{
+                        //    return 1;
+                        //}
+                        //if (firstnameSort1 != '') {
+                        //    return 1;
+                        //}
+						if (a < b) {
+							return -1;
+					    }
 						if (a > b) {
 							return 1;
 						}
@@ -56,29 +68,28 @@ var EasyAutocomplete = (function(scope){
 					}
 				},
 
-				maxNumberOfElements: 6,
+				maxNumberOfElements: 5,
 
 				hideOnEmptyPhrase: true,
 
 				match: {
-					enabled: false,
+					enabled: true,
 					caseSensitive: false,
 					method: function(element, phrase) {
-					    
+					  //  debugger;
 
 					    lastname = element.substr(element.indexOf(' ') + 1);
 					    firstname = element.substr(0, element.indexOf(' '));
-					    
-					   // alert(testt);
-
+					  //  debugger;
+					   
 					    //if (element.search(phrase) > -1) {
 					    
 					    if (element.search(phrase) == 0) {
 							return true;
 					    }
-					    else if (lastname.search(phrase) == 0) {
-					        return true;
-					    }
+					    //else if (lastname.search(phrase) == 0) {
+					    //    return true;
+					    //}
 					    else {
 							return false;
 						}
@@ -176,6 +187,7 @@ var EasyAutocomplete = (function(scope){
 
 
 		prepareDefaults();
+		Preparelastname();
 
 		mergeOptions();
 
@@ -186,7 +198,10 @@ var EasyAutocomplete = (function(scope){
 		addAjaxSettings();
 
 		processAfterMerge();
+
+		
 		function prepareDefaults() {
+		  //  debugger;
 
 			if (options.dataType === "xml") {
 				
@@ -211,38 +226,71 @@ var EasyAutocomplete = (function(scope){
 				options.list.sort.method = function(a, b) {
 					a = options.getValue(a);
 					b = options.getValue(b);
-					if (a < b) {
-						return -1;
+
+					lastnameSort1 = b.substr(b.indexOf(' ') + 1);
+					firstnameSort1 = a.substr(0, a.indexOf(' '));
+					//debugger;
+
+					//if (firstnameSort1 < lastnameSort1) {
+					//    return -1;
+					//}
+					//if (firstnameSort1 > lastnameSort1) {
+					//    return 1;
+				    //}
+					if (firstnameSort1 != '')
+					{
+					    return 1;
 					}
-					if (a > b) {
-						return 1;
-					}
+					
+					//if (a < b) {
+					//	return -1;
+					//}
+					//if (a > b) {
+					//	return 1;
+					//}
 					return 0;
 				};
 
 				if (!options.list.match) {
-					options.list.match = {};
+				    alert("name not match");
+				  options.list.match = {};
 				}
 
+                
 				options.list.match.method = function (element, phrase) {
-				    
+				   // debugger;
 				    lastname = element.substr(element.indexOf(' ') + 1);
 				    firstname = element.substr(0, element.indexOf(' '));
-				    
+				    //debugger;
 				    
 				    //if (element.search(phrase) > -1) {
 				    if (element.search(phrase) == 0) {
 				   
 						return true;
 				    }
-				    else if (lastname.search(phrase) == 0) {
-				        return true;
-				    }
+				   
 				    else {
 						return false;
 					}
 				};
+				//options.list.match1.method = function (element, phrase) {
+				//    debugger;
 
+				//    lastname = element.substr(element.indexOf(' ') + 1);
+				//    firstname = element.substr(0, element.indexOf(' '));
+				//    //debugger;
+
+				//    //if (element.search(phrase) > -1) {
+				//    if (lastname.search(phrase) == 0) {
+
+				//        return true;
+				//    }
+
+				//    else {
+				//        return false;
+				//    }
+				//};
+				
 			}
 			if (options.categories !== undefined && options.categories instanceof Array) {
 
@@ -264,8 +312,107 @@ var EasyAutocomplete = (function(scope){
 
 				options.categories = categories;
 			}
-		}
 
+			
+			//Preparelastname();
+		}
+		function Preparelastname() {
+		    {
+		      //  debugger;
+
+		        if (options.dataType === "xml") {
+
+		            if (!options.getValue) {
+
+		                options.getValue = function (element) {
+		                    return $(element).text();
+		                };
+		            }
+
+
+		            if (!options.list) {
+
+		                options.list = {};
+		            }
+
+		            if (!options.list.sort) {
+		                options.list.sort = {};
+		            }
+
+
+		            options.list.sort.method = function (a, b) {
+		                a = options.getValue(a);
+		                b = options.getValue(b);
+
+		                lastnameSort1 = b.substr(b.indexOf(' ') + 1);
+		                firstnameSort1 = a.substr(0, a.indexOf(' '));
+		               // debugger;
+
+		                //if (firstnameSort1 < lastnameSort1) {
+		                //    return -1;
+		                //}
+		                //if (firstnameSort1 > lastnameSort1) {
+		                //    return 1;
+		                //}
+		                if (lastnameSort1 != '') {
+		                    return 1;
+		                }
+
+		                //if (a < b) {
+		                //	return -1;
+		                //}
+		                //if (a > b) {
+		                //	return 1;
+		                //}
+		                return 0;
+		            };
+
+		            if (!options.list.match1) {
+
+		                options.list.match1 = {};
+		            }
+
+
+		            options.list.match1.method = function (element, phrase) {
+
+		                lastname = element.substr(element.indexOf(' ') + 1);
+		                firstname = element.substr(0, element.indexOf(' '));
+		               // debugger;
+
+		                //if (element.search(phrase) > -1) {
+		                if (lastname.search(phrase) == 0) {
+
+		                    return true;
+		                }
+
+		                else {
+		                    return false;
+		                }
+		            };
+
+		        }
+		        if (options.categories !== undefined && options.categories instanceof Array) {
+
+		            var categories = [];
+
+		            for (var i = 0, length = options.categories.length; i < length; i += 1) {
+
+		                var category = options.categories[i];
+
+		                for (var property in defaults.categories[0]) {
+
+		                    if (category[property] === undefined) {
+		                        category[property] = defaults.categories[0][property];
+		                    }
+		                }
+
+		                categories.push(category);
+		            }
+
+		            options.categories = categories;
+		        }
+		    }
+		}
 		function mergeOptions() {
 
 			defaults = mergeObjects(defaults, options);
@@ -476,7 +623,8 @@ var EasyAutocomplete = (function(scope) {
 			return listBuilder;
 		};
 
-		this.processData = function(listBuilder, inputPhrase) {
+		this.processData = function (listBuilder, inputPhrase) {
+		   // debugger;
 
 			for(var i = 0, length = listBuilder.length; i < length; i+=1) {
 				listBuilder[i].data = proccessResponseData(configuration, listBuilder[i], inputPhrase);
@@ -634,10 +782,13 @@ var EasyAutocomplete = (function(scope) {
 
 		scope.proccess.match = match;
 
-		var list = listBuilder.data,
-			inputPhrase = phrase;//TODO REFACTOR
+	    var list = listBuilder.data,
+	    	inputPhrase = phrase;//TODO REFACTOR
+	    var list1 = listBuilder.data;
+	    
 
-		list = findMatch(list, inputPhrase);
+	    list = findMatch(list, inputPhrase);
+	   // list1 = findMatch1(list1, inputPhrase);
 		list = reduceElementsInList(list);
 		list = sort(list);
 
@@ -648,24 +799,76 @@ var EasyAutocomplete = (function(scope) {
 		    
 			var preparedList = [],
 				value = "";
-
+			//debugger;
 			if (config.get("list").match.enabled) {
 
 				for(var i = 0, length = list.length; i < length; i += 1) {
 
-					value = config.get("getValue")(list[i]);
+				    value = config.get("getValue")(list[i]);
+				    //lastname = element.substr(element.indexOf(' ') + 1);
+				    firstname = value.substr(0, value.indexOf(' '));
 					
-					if (match(value, phrase)) {
+				    if (match(firstname, phrase)) {
 						preparedList.push(list[i]);	
 					}
 					
 				}
+				
 
 			} else {
 				preparedList = list;
 			}
+			//debugger;
+			if (preparedList.length < 1)
+			{
+			    //findMatch1(list, phrase);
+			    var preparedList = [],
+				value = "";
+			   // debugger;
+			    if (config.get("list").match.enabled) {
 
+			        for (var i = 0, length = list.length; i < length; i += 1) {
+
+			            value = config.get("getValue")(list[i]);
+			            lastname = value.substr(value.indexOf(' ') + 1);
+
+
+			            if (match(lastname, phrase)) {
+			                preparedList.push(list[i]);
+			            }
+
+			        }
+
+			    } else {
+			        preparedList = list;
+			    }
+			}
 			return preparedList;
+		}
+		function findMatch1(list, phrase) {
+		    
+		    var preparedList = [],
+				value = "";
+		  //  debugger;
+		    if (config.get("list").match.enabled) {
+
+		         for (var i = 0, length = list.length; i < length; i += 1) {
+
+		             value = config.get("getValue")(list[i]);
+		             lastname = value.substr(value.indexOf(' ') + 1);
+
+
+		             if (match(lastname, phrase)) {
+		                preparedList.push(list[i]);
+		            }
+
+		        }
+
+		    } else {
+		        preparedList = list;
+		    }
+
+		    return preparedList;
 		}
 
 		function match(value, phrase) {
@@ -684,6 +887,22 @@ var EasyAutocomplete = (function(scope) {
 				return false;
 			}
 		}
+		function match1(value, phrase) {
+
+		    if (!config.get("list").match.caseSensitive) {
+
+		        if (typeof value === "string") {
+		            value = value.toLowerCase();
+		        }
+
+		        phrase = phrase.toLowerCase();
+		    }
+		    if (config.get("list").match.method(value, phrase)) {
+		        return true;
+		    } else {
+		        return false;
+		    }
+		}
 
 		function reduceElementsInList(list) {
 			if (listBuilder.maxNumberOfElements !== undefined && list.length > listBuilder.maxNumberOfElements) {
@@ -697,7 +916,7 @@ var EasyAutocomplete = (function(scope) {
 			if (config.get("list").sort.enabled) {
 				list.sort(config.get("list").sort.method);
 			}
-
+		
 			return list;
 		}
 		
@@ -1349,7 +1568,7 @@ var EasyAutocomplete = (function(scope) {
 
 					function loadData(inputPhrase) {
 
-
+					   // debugger;
 						if (inputPhrase.length < config.get("minCharNumber")) {
 							return;
 						}

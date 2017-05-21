@@ -1,0 +1,263 @@
+/* responsive images */
+.img-responsive {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+/* For use with divs that have responsive background images */
+.responsive-4-3,
+.responsive-16-9 {
+  height: 0;
+  padding-bottom: 75%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.responsive-16-9 {
+  padding-bottom: 56%;
+}
+
+@media screen and (min-width: 320px) {
+
+}
+@media screen and (min-width: 560px) {
+  img.left {
+    float: left;
+    width: auto;
+  }
+  img.right {
+    float: right;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12 {
+    display: inline;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .alpha {
+    padding-left: 0;
+  }
+  .omega {
+    padding-right: 0;
+  }
+  .container .grid_6 {
+    width: 50%;
+  }
+  .container .grid_4 {
+    width: 33.33%;
+  }
+  .container .grid_3 {
+    width: 25%;
+  }
+  .container .grid_9 {
+    width: 75%;
+  }
+  .container .container {
+    margin: 0 -15px;
+    padding: 0;
+  }
+
+  body.sidebar-first #content {
+    width: 75%;
+    margin-left: 25%;
+    padding-left: 100px;
+    padding-right: 0;
+  }
+  #sidebar-first {
+    margin-top: 0;
+    margin-left: -100%;
+    padding-left: 0;
+  }
+  body.sidebar-second #content {
+    width: 75%;
+    padding-right: 100px;
+  }
+
+  input[type="text"], input[type="email"], input[type="password"], input[type="number"], select, textarea {
+    width: 100%;
+  }
+
+  #logo {
+    float: left;
+    width: 327px;
+    height: 73px;
+    background-size: 327px;
+    margin-bottom: 20px;
+  }
+
+  #title-region {
+    padding: 50px 0;
+  }
+
+}
+@media screen and (min-width: 1024px) {
+
+  #toggle {
+    /*display: none;*/
+  }
+
+  /* dropdown */
+  .mainNav ul.root > li {
+    
+  }
+  .mainNav ul.root > li > a {
+    font-size: 2.57142857142857em; /* 36 */
+    line-height: 1.25;
+  }
+  
+  #nav > ul > li {
+    float: left;
+    position: relative;
+    margin: 0 30px 0 0;
+  }
+
+  #nav > ul > .active > a, #nav > ul > .active-trail > a, #nav > ul > .parent:hover > a {
+    color: #fff;
+    padding-bottom: 9px;
+    border-bottom: solid 6px #6eb33c;
+  }
+
+  #nav li ul {
+    position: absolute;
+    width: 240px;
+    left: -999em;
+  }
+
+  #nav li:hover ul {
+    left: auto;
+  }
+
+  #nav li li {
+    width: 100%;
+  }
+
+  #nav > ul > li > a > span {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+
+}
+
+@media screen and (min-width: 1440px) {
+
+}
+
+@media screen and (min-width: 1600px) {
+
+}
+
+/**
+ * OLD STYLE
+ * - reverse enhancement
+ */
+@media screen and (max-width: 1440px) {
+
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 1023px) {
+
+  .slideout {
+    width: 300px;
+    height: 100%;
+    padding: 0 15px;
+    background: #262262;
+    position: fixed;
+    top: 0;
+    left: -310px;
+    overflow-y: auto;
+    z-index: 29;
+    transition: .1s;
+
+    -webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.5);
+  }
+  .nav-open .slideout {
+    left: 0;
+  }
+  .slideout {
+    padding-top: 54px;
+  }
+  .slideout .search input[type="search"] {
+    width: 234px;
+  }
+
+  #nav {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.9);
+    position: fixed;
+    top: 0;
+    left: -110%;
+    overflow-y: auto;
+    z-index: 29;
+    transition: .1s;
+
+    -webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.5);
+  }
+  .nav-open #nav {
+    left: 0;
+    right: 50px;
+    width: auto;
+  }
+
+  #nav > ul > li > a {
+    padding: 15px;
+  }
+  #nav > ul > li > a.parent {
+    padding-right: 40px;
+  }
+  #nav > ul > li > a > span {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: inline-block;
+    width: 20px;
+    background: rgba(255,255,255,.5);
+    color: #262262;
+    text-align: center;
+    border-radius: 10px;
+  }
+  #nav > ul > li > a > span.fa-caret-down {
+    padding: 2px 0;
+  }
+  #nav > ul > li > a > span.fa-caret-up {
+    padding: 0 0 4px;
+  }
+  #nav ul ul {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 767px) and (orientation : portrait) {
+
+}
+
+@media screen and (max-width: 767px) {
+  
+}

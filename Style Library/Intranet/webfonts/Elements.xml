@@ -16,5 +16,10 @@
     <File Path="Open-Sans-700.ttf" Url="Open-Sans-700.ttf" Type="GhostableInLibrary"/>
     <File Path="Open-Sans-700.woff" Url="Open-Sans-700.woff" Type="GhostableInLibrary"/>
     <File Path="Open-Sans-700.woff2" Url="Open-Sans-700.woff2" Type="GhostableInLibrary"/>
+    <File Path="Open-Sans-300.eot" Url="Open-Sans-300.eot" Type="GhostableInLibrary"/>
+    <File Path="Open-Sans-300.svg" Url="Open-Sans-300.svg" Type="GhostableInLibrary"/>
+    <File Path="Open-Sans-300.ttf" Url="Open-Sans-300.ttf" Type="GhostableInLibrary"/>
+    <File Path="Open-Sans-300.woff" Url="Open-Sans-300.woff" Type="GhostableInLibrary"/>
+    <File Path="Open-Sans-300.woff2" Url="Open-Sans-300.woff2" Type="GhostableInLibrary"/>
   </Module>
 </Elements>

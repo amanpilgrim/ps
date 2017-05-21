@@ -68,7 +68,8 @@
         <SharePoint:CssRegistration ID="CssRegistration2" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/css/normalize.css?Rev=2017.05.11 %&gt;" runat="server" after="SharepointCssFile"/>
 		<SharePoint:CssRegistration ID="CssRegistration5" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/css/font-awesome/css/font-awesome.min.css?Rev=2017.05.11 %&gt;" runat="server" after="SharepointCssFile"/>
         <SharePoint:CssRegistration ID="CssRegistration3" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/css/main.css?Rev=2017.05.11 %&gt;" runat="server" after="SharepointCssFile"/>
-        <SharePoint:CssRegistration ID="CssRegistration4" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/css/pscore.css %&gt;" runat="server" after="SharepointCssFile"/>	
+        <SharePoint:CssRegistration ID="CssRegistration4" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/css/pscore.css %&gt;" runat="server" after="SharepointCssFile"/>
+        <SharePoint:CssRegistration ID="CssRegistration6" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/css/responsive.css?Rev=2017.05.19 %&gt;" runat="server" after="SharepointCssFile"/>	
         <link href="/Style Library/Intranet/css/print.css" rel="stylesheet" type="text/css" media="print" />
 
 		<!-- ===== STARTER: Additional header placeholder - overridden by asp:Content on pages or page layouts  =========================== -->
@@ -143,38 +144,45 @@
 						<!-- START PS Header -->
 						<header id="header">
 							<div class="container noindex">
-								<div class="logoSearch">
-									<!-- ===== STARTER: Site Logo with link to root ======================================================================= -->
-									<div class="ms-dialogHidden logo">
-										<SharePoint:SPLinkButton ID="SPLinkButton1" runat="server" NavigateUrl="~sitecollection/">
-											<SharePoint:SiteLogoImage ID="x63829de2201a4365a3904788f682d0a3" LogoImageUrl="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/images/Intranet-Logo.png %&gt;" AlternateText="Back to Home" runat="server" />
-										</SharePoint:SPLinkButton>
-									</div>
+                                <!-- ===== STARTER: Site Logo with link to root ======================================================================= -->
+								<div class="ms-dialogHidden logo">
+									<SharePoint:SPLinkButton ID="SPLinkButton1" runat="server" NavigateUrl="~sitecollection/">
+										<!--<SharePoint:SiteLogoImage ID="x63829de2201a4365a3904788f682d0a3" LogoImageUrl="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/images/Intranet-Logo.png %&gt;" AlternateText="Back to Home" runat="server" />-->
+                                        <a href="/">
+                                            <span>Our House</span>
+                                            <i>Tō Tātou Whare</i>
+                                        </a>
+									</SharePoint:SPLinkButton>
+								</div>
 
-									<!-- ===== STARTER: Search Control ==================================================================================== -->
-									<div class="search ms-dialogHidden">
-										<asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server">
-											<SharePoint:DelegateControl ID="DelegateControl4" runat="server" ControlId="SmallSearchInputBox" Version="4"/>
-										</asp:ContentPlaceHolder>
-									</div>
+								<div id="menu" class="logoSearch">
+                                    <span id="toggle" class="fa fa-bars"></span>
 
-                                    <!-- ===== Tools Control ==================================================================================== -->
-                                    <PS:ToolsDropDown runat="server" ID="ToolsDropDown" />  
+                                    <div id="slideout">
+                                            <!-- ===== STARTER: Search Control ==================================================================================== -->
+									    <div class="search ms-dialogHidden">
+										    <asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server">
+											    <SharePoint:DelegateControl ID="DelegateControl4" runat="server" ControlId="SmallSearchInputBox" Version="4"/>
+										    </asp:ContentPlaceHolder>
+									    </div>
+
+                                        <!-- ===== Tools Control ==================================================================================== -->
+                                        <PS:ToolsDropDown runat="server" ID="ToolsDropDown" />
 									
-									<!-- ===== STARTER: Global navigation ================================================================================= -->
-									<div class="ms-dialogHidden mainNav">
-										<div class="ms-displayInline ms-core-navigation ms-dialogHidden">
-											<PublishingNavigation:PortalSiteMapDataSource ID="topSiteMap" runat="server" EnableViewState="false" SiteMapProvider="GlobalNavigationSwitchableProvider" StartFromCurrentNode="true" StartingNodeOffset="0" ShowStartingNode="false" TrimNonCurrentTypes="Heading" />
-											<SharePoint:AspMenu ID="TopNavigationMenu" runat="server" EnableViewState="false" DataSourceID="topSiteMap" AccessKey="&lt;%$Resources:wss,navigation_accesskey%&gt;" UseSimpleRendering="true" UseSeparateCss="false" Orientation="Horizontal" StaticDisplayLevels="1" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="1" SkipLinkText="" />	
-                                            <%--<SharePoint:DelegateControl ID="DelegateControl3"  runat="server" ControlId="ToolsDropDown" />	--%>
-                                            											
-										</div>
-									</div>
+									    <!-- ===== STARTER: Global navigation ================================================================================= -->
+									    <div class="ms-dialogHidden mainNav">
+										    <div class="ms-displayInline ms-core-navigation ms-dialogHidden">
+											    <PublishingNavigation:PortalSiteMapDataSource ID="topSiteMap" runat="server" EnableViewState="false" SiteMapProvider="GlobalNavigationSwitchableProvider" StartFromCurrentNode="true" StartingNodeOffset="0" ShowStartingNode="false" TrimNonCurrentTypes="Heading" />
+											    <SharePoint:AspMenu ID="TopNavigationMenu" runat="server" EnableViewState="false" DataSourceID="topSiteMap" AccessKey="&lt;%$Resources:wss,navigation_accesskey%&gt;" UseSimpleRendering="true" UseSeparateCss="false" Orientation="Horizontal" StaticDisplayLevels="1" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="1" SkipLinkText="" />	
+                                                <%--<SharePoint:DelegateControl ID="DelegateControl3"  runat="server" ControlId="ToolsDropDown" />	--%>
+										    </div>
+									    </div>
+                                    </div>
 								</div>
 
                 <div class="breadcrumb noindex">
-						    	<asp:ContentPlaceHolder id="PlaceHolderBreadcrumb" runat="server">
-									<b>You are here:</b><asp:sitemappath ID="Sitemappath1" PathSeparator="&#160;&#47;&#160;" runat="server" sitemapproviders="SPSiteMapProvider,SPXmlContentMapProvider"  endercurrentnodeaslink="false" hideinteriorrootnodes="true" /></asp:ContentPlaceHolder >	
+                    <asp:ContentPlaceHolder id="PlaceHolderBreadcrumb" runat="server">
+                    <b>You are here:</b><asp:sitemappath ID="Sitemappath1" PathSeparator="&#160;&#47;&#160;" runat="server" sitemapproviders="SPSiteMapProvider,SPXmlContentMapProvider"  endercurrentnodeaslink="false" hideinteriorrootnodes="true" /></asp:ContentPlaceHolder >	
                 </div>
 
                 <h1><span class="requiredfield">Page title goes here</span></h1>

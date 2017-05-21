@@ -17,5 +17,10 @@
     <ProjectItemFile Source="Open-Sans-700.ttf" Target="webfonts\" Type="ElementFile" />
     <ProjectItemFile Source="Open-Sans-700.woff" Target="webfonts\" Type="ElementFile" />
     <ProjectItemFile Source="Open-Sans-700.woff2" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="Open-Sans-300.eot" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="Open-Sans-300.svg" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="Open-Sans-300.ttf" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="Open-Sans-300.woff" Target="webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="Open-Sans-300.woff2" Target="webfonts\" Type="ElementFile" />
   </Files>
 </ProjectItem>

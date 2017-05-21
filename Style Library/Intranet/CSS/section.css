@@ -11,22 +11,36 @@ Comment:        For Section Landing (incl. News And Events Landing Page), Sectio
 
 }
 
-.row { 
+.grid {
+	display: table;
+	border-spacing: 30px;
+	margin: 0 -30px;
+}
+.grid .row {
+	display: table-row;
+}
+.grid .block {
+	display: table-cell;
+	width: 33.33%;
+}
+
+/*.row { 
 	clear: both; 
 	float: left;
 	width: 100%; 
-}
+}*/
 
 /* Blocks */ 
 .block {
-	float: left;
+	/*float: left;
 	padding: 0 30px 30px 0;
-	width: 33.33%;
+	width: 33.33%;*/
+	background: #ebebeb;
 	box-sizing: border-box;
 }
 
 .block .inner { 
-	background: #ebebeb;
+	padding: 30px;
 }
 
 .block img {
