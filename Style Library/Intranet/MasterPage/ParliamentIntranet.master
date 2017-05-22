@@ -148,10 +148,8 @@
 								<div class="ms-dialogHidden logo">
 									<SharePoint:SPLinkButton ID="SPLinkButton1" runat="server" NavigateUrl="~sitecollection/">
 										<!--<SharePoint:SiteLogoImage ID="x63829de2201a4365a3904788f682d0a3" LogoImageUrl="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/images/Intranet-Logo.png %&gt;" AlternateText="Back to Home" runat="server" />-->
-                                        <a href="/">
-                                            <span>Our House</span>
-                                            <i>Tō Tātou Whare</i>
-                                        </a>
+                    <span>Our House</span>
+                    <i>Tō Tātou Whare</i>
 									</SharePoint:SPLinkButton>
 								</div>
 

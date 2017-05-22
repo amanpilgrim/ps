@@ -10,19 +10,79 @@ h1 { color: #000; }
 
 .mainContainer { padding-top: 20px; }
 
-div.primary { 
+div.primary {
 	margin-right: 30px;
 	width: 672px; 
 }
-.primary ul { margin-left: 0; }
+/*.primary ul { margin-left: 0; }*/
+
+.row {
+  margin-bottom: 80px;
+}
+.row .grid {
+  float: left;
+  width: 80%;
+}
+.row .grid .widget {
+  width: 50%;
+}
+
+.widget h2 {
+  font: 2em/1.2 OpenSansLight, sans-serif;
+  margin: 0 0 20px;
+}
 
 /* News Carousel */
+#carousel {
+  float: left;
+  width: 80%;
+}
+#carousel .slide {
+  z-index: 10;
+}
+#carousel .slide-image {
+  height: 0;
+  width: 100%;
+  padding-top: 52%;
+  position: relative;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+#carousel .slide-image h2 {
+  color: #fff;
+  padding: 30px;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+#carousel p {
+  margin: 1em 150px 0 0;
+}
+#carousel .fa {
+  font-size: 30px;
+  color: #ccc;
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+  cursor: pointer;
+  z-index: 11;
+}
+#carousel .fa-chevron-left {
+  right: 100px;
+}
+#carousel .fa:hover {
+  color: #000;
+}
+
+
 div.carousel { 
 	float: left; 
 	height: 300px;
 	padding: 0;
 	position: relative;
 	width: 665px;
+  width: 80%;
 }
 .carousel .button { 
 	float: left; 
@@ -184,13 +244,22 @@ ul.carouselNav {
 
 /* *** Secondary Area Styles (Aside) *** */
 aside {
-	clear: none;
+/*	clear: none;
 	float: right;
-	width: 258px; 
+	width: 258px; */
+  float: right;
+  width: 20%; /*calc(720/3400); 21.176470588235% */
 }
+
+aside h2 {
+  font-size: 2em;
+  font-weight: 300;
+  font-family: OpenSansLight, 'Open Sans', sans-serif;
+  margin: 0 0 20px;
+}
+
 aside .inner { 
-	float: left; 
-	width: 236px;
+	padding: 30px;
 }
 
 aside .scrollable {
@@ -200,7 +269,120 @@ aside .scrollable {
 	padding-right: 5px;
 }
 
-/* Tabs */
+/* Links */
+.links {
+  padding: 30px;
+  background: #efefef;
+}
+.links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.14285714285714em; /* 16 */
+  line-height: 1.5;
+}
+.links li {
+  padding-left: 15px;
+  position: relative;
+}
+.links li:before {
+  list-style: none;
+  display: inline-block;
+  font: normal normal normal 14px/1.5 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f054";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Useful Contacts */
+.contactBox {
+  padding: 0 30px 0 15px;
+  border-left: solid 5px #d15a49;
+}
+.contactBox ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font: 1.42857142857143em/1.2 OpenSansLight, sans-serif;
+}
+.contactBox a {
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+/* Documents */
+#documents {
+  padding: 30px;
+  background: #efefef;
+}
+#documents ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.42857142857143em;
+  line-height: 1.2;
+  font-weight: 600;
+}
+#documents li {
+  padding: 15px 0 0 0;
+  border-top: solid 2px #ccc;
+  margin: 15px 0 0;
+  position: relative;
+}
+#documents a {
+  display: block;
+  padding-left: 80px;
+  min-height: 60px;
+}
+#documents .icon {
+  font-size: 60px;
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+
+/* Editable Promos */
+.promos {
+  background: #ddd;
+  padding: 30px;
+}
+
+#my-promos ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#my-promos li {
+  padding-left: 200px;
+  position: relative;
+  min-height: 190px;
+}
+#my-promos img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 190px;
+  height: auto;
+}
+#my-promos h3 {
+  color: #157a6b;
+}
+#my-promos p {
+  color: #000;
+  font-size: 1.14285714285714em; /* 16 */
+}
+#my-promos a:hover {
+  text-decoration: none !important;
+}
+
+
+/* Tabs *
 .tabBox { 
 	border: 1px solid #a7a7a7;
 	border-radius: 8px; 
@@ -325,7 +507,7 @@ ul.tabs {
 .mannualName { 
 	color: #000;
 	font-weight: bold;
-}
+}*/
 
   
 /* Button Override */

@@ -64,7 +64,9 @@ div a[id$="item_hoverParentLink"] {
 
 /* Edit Ribbon */
 .ms-cui-topBar2,
-.ms-core-deltaSuiteBarRight	{ background-color : #000; }
+.ms-core-deltaSuiteBarRight	{
+  background-color: #000;
+}
 
 .ms-cui-topBar2 { 
 	border: 0;
@@ -73,9 +75,13 @@ div a[id$="item_hoverParentLink"] {
 
 .ms-cui-TabRowRight .ms-promotedActionButton-text,
 .ms-cui-tt-a > span.ms-cui-tt-span,
-.ms-browseTab.ms-cui-tt-s .ms-cui-tt-a > span.ms-cui-tt-span { color: #fff !important; }
+.ms-browseTab.ms-cui-tt-s .ms-cui-tt-a > span.ms-cui-tt-span {
+  color: #fff !important;
+}
 
-.ms-cui-tt-s .ms-cui-tt-a > span.ms-cui-tt-span { color: #000 !important; }
+.ms-cui-tt-s .ms-cui-tt-a > span.ms-cui-tt-span {
+  color: #000 !important;
+}
 
 #pageStatusBar { 
 	margin-bottom: 0 !important;

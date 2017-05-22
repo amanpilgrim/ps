@@ -125,8 +125,20 @@
             $(this).removeClass('fa-minus-circle').addClass('fa-plus-circle');
             return false;
         });
-
-
+        
+        // initialise slideshow  
+        $('#carousel').each(function(){
+            $(this).slick({
+              speed: 300,
+              slidesToShow: 1,
+              autoplay: true,
+              autoplaySpeed: 5000,
+              nextArrow: '<span class="fa fa-chevron-right"></span>',
+              prevArrow: '<span class="fa fa-chevron-left"></span>',
+              dots: false
+          });
+        });
+        
 
         /* Text Editor Overrides */
         $(".ms-rtestate-write").attr({

@@ -15,6 +15,20 @@
 }
 
 @font-face {
+  font-family: 'OpenSansLight';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../webfonts/Open-Sans-300.eot');
+  src: url('../webfonts/Open-Sans-300.eot?#iefix') format('embedded-opentype'),
+       local('Open Sans Light'),
+       local('Open-Sans-300'),
+       url('../webfonts/Open-Sans-300.woff2') format('woff2'),
+       url('../webfonts/Open-Sans-300.woff') format('woff'),
+       url('../webfonts/Open-Sans-300.ttf') format('truetype'),
+       url('../webfonts/Open-Sans-300.svg#OpenSans') format('svg');
+}
+
+@font-face {
   font-family: 'Open Sans';
   font-weight: 400;
   font-style: normal;
@@ -55,6 +69,9 @@
     url('../webfonts/Open-Sans-700.ttf') format('truetype'),
     url('../webfonts/Open-Sans-700.svg#OpenSans') format('svg');
 }
+
+/* helper classes */
+.clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0} .clearfix:before,.clearfix:after,.container:before,.container:after{content:'.';display:block;overflow:hidden;visibility:hidden;font-size:0;line-height:0;width:0;height:0} .clearfix:after,.container:after{clear:both} .clearfix,.container{zoom:1} .ir{display:block;border:0;text-indent:-999em;overflow:hidden;background-color:transparent;background-repeat:no-repeat;text-align:left;direction:ltr;line-height:0} .ir br{display:none} .hidden{display:none!important;visibility:hidden} .visuallyhidden{border:0;clip:rect(0000);height:1px;overflow:hidden;position:absolute;width:1px;margin:-1px;padding:0} .visuallyhidden.focusable:active,.visuallyhidden.focusable:focus{clip:auto;height:auto;overflow:visible;position:static;width:auto;margin:0} .invisible{visibility:hidden}
 
 /**
  * SEMANTICS
@@ -147,7 +164,8 @@ blockquote {
   font-size: 2.14285714285714em; /* 30 */
   line-height: 1.26666666666667; /* 38 */
   font-style: italic;
-  padding: 0 0 0 170px;
+  padding: 0 0 0 140px;
+  margin: 1em 0;
   position: relative;
 }
 blockquote:before {
@@ -407,8 +425,30 @@ figcaption {
     padding: 0;
     width: 960px;*/
 }
-header .container {
+#header .container {
+  padding: 0;
+  min-height: 270px;
+  position: relative;
   z-index: 999;
+}
+
+.grid {
+	display: table;
+	border-spacing: 30px;
+	margin: -30px;
+}
+.grid .row {
+	display: table-row;
+}
+.grid .block {
+	display: table-cell;
+	width: 33.33%;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.widget h2 {
+  
 }
 
 /* *** Header Section Styles *** */
@@ -416,8 +456,7 @@ header .container {
   background: #3a3a3a url(../images/bg-header.jpg) 50% 50% no-repeat;
   background-size: cover;
   color: #fff;
-  width: 100%;
-  min-height: 270px;
+  padding: 0 15px;
   margin-bottom: 70px;
   position: relative;
   z-index: 10;
@@ -427,7 +466,11 @@ header .container {
 }
 
 .altNav {
-  background: #3a3a3a;
+  background: #000;
+}
+#header .altNav {
+  background: transparent;
+  float: right;
 }
 .altNav ul, .altNav li {
   list-style: none;
@@ -531,6 +574,7 @@ header .container {
   font-size: 2em;
   line-height: 1.25;
   font-weight: 300;
+  font-family: OpenSansLight, 'Open Sans', sans-serif;
   padding: 2px 0;
   border: 0;
   border-bottom: solid 2px #999;
@@ -563,21 +607,78 @@ header .container {
 .find-people {
   background: #f6bd14;
   color: #000;
-  padding: 20px 75px 20px 30px;
+  padding: 30px;
   position: relative;
 }
+.find-people h2 {
+  font-size: 2em;
+  font-weight: 300;
+  font-family: OpenSansLight, 'Open Sans', sans-serif;
+  margin: 0 0 20px;
+}
+.find-people h2 span.people {
+  margin-right: 10px;
+  position: relative;
+}
+.find-people h2 span.people span {
+  background: #fce9b1;
+  margin: 2px 5px 2px 2px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
 .find-people input[type="text"] {
+  background: #fff;
+  color: #000;
+  font-size: 1.14285714285714em; /* 16 */
+  line-height: 30px;
+  padding: 5px 15px;
+  border: 0;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+.find-people input[type="radio"] {
+  margin-right: 4px;
+}
+.find-people input[type="submit"] {
+  display: inline-block;
+    font: normal normal normal 2em/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-width: 28px;
+    margin: 0;
+    background: #fff;
+    color: #000;
+    padding: 5px 6px;
+    border: solid 4px #000;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+.find-people .advanced {
+  display: block;
+}
+
+#menu .find-people {
+  padding: 20px 75px 20px 30px;
+}
+#menu .find-people input[type="text"] {
   width: auto;
   background: #f8d466;
   color: #000;
   font-size: 1.28571428571429em; /* 18 */
-  line-height: 30px;
+/*  line-height: 30px;
   padding: 5px 15px;
   border: 0;
   border-radius: 4px;
   
-  vertical-align: middle;
+  vertical-align: middle;*/
 }
+
 #menu .find-people input[type="submit"] {
   color: #000;
 }
@@ -611,6 +712,7 @@ header .container {
   font-size: 2em;
   line-height: 40px;
   font-weight: 300;
+  font-family: OpenSansLight, 'Open Sans', sans-serif;
 }
 #tools a {
   color: #000;
@@ -792,14 +894,21 @@ ul.dynamic {
 /* Breadcrumbs */
 .breadcrumb {
   color: #999;
+  
+  width: 25%;
+  padding: 15px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 
-  clear: left;
+/*  clear: left;
   float: left;
   display: inline;
   width: 285px;
   margin-right: 50px;
   position: relative;
-  z-index: 0;
+  z-index: 0;*/
 }
 .breadcrumb b {
   display: inline-block;
@@ -957,7 +1066,7 @@ div.primary {
   margin-bottom: 20px;
   position: relative;
   overflow: visible; /*hidden;  To show 2013 Callout popups, under related infromation*/
-  z-index: 0;
+  z-index: 11;
 }
 div.primary.narrow {
 /*  margin-right: 40px;
@@ -1218,13 +1327,18 @@ aside h3 { margin: 0; }
 #footer ul {
   list-style: none;
   margin: 0 auto;
+  padding: 0;
   width: auto;
   text-align: right;
 }
 #footer li {
   display: inline-block;
+  line-height: 42px;
   vertical-align: middle;
-  margin: 0 30px;
+  margin: 0 15px;
+}
+#footer li:first-child {
+  float: left;
 }
 #footer a,
 #footer a:link,
@@ -1390,11 +1504,11 @@ a.disable:focus { text-decoration: none; }
 }
 
 .people {
-  /*background-position: 0 0;*/
-  padding-left: 35px;
+/*  background-position: 0 0;
+  padding-left: 35px;*/
 }
 .people:before {
-  content: "\f007";
+  content: "\f2b9";
 }
 .edit {
   /*background-position: right -398px;*/
@@ -1447,6 +1561,7 @@ a.disable:focus { text-decoration: none; }
 }
 .pdf:before {
   content: "\f1c1";
+  color: #bc1902;
 }
 .obr:before {
   content: "\f016";
@@ -1459,6 +1574,7 @@ a.disable:focus { text-decoration: none; }
 }
 .doc:before, .docx:before {
   content: "\f1c2";
+  color: #3497e4;
 }
 .jpg:before, .gif:before, .png:before {
   content: "\f1c5";
@@ -1558,7 +1674,7 @@ article a.button { padding: 4px 10px 6px; }
   text-align: right;
 }
 
-/* Corneres and Gradients */
+/* Corneres and Gradients *
 .roundedCorner {
   border: 1px solid #a7a7a7;
   border-radius: 8px;
@@ -1618,7 +1734,7 @@ article a.button { padding: 4px 10px 6px; }
   -pie-background: linear-gradient(#78aea1, #082f21);
   height: 19px;
   padding: 4px;
-}
+}*/
 
 .requiredfield .ms-formfieldlabel:after {
   content: " *";

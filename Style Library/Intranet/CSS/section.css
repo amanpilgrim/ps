@@ -11,7 +11,16 @@ Comment:        For Section Landing (incl. News And Events Landing Page), Sectio
 
 }
 
-.grid {
+.hero {
+  margin-top: -270px;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+/*.grid {
 	display: table;
 	border-spacing: 30px;
 	margin: 0 -30px;
@@ -22,7 +31,8 @@ Comment:        For Section Landing (incl. News And Events Landing Page), Sectio
 .grid .block {
 	display: table-cell;
 	width: 33.33%;
-}
+  box-sizing: border-box;
+}*/
 
 /*.row { 
 	clear: both; 
@@ -50,9 +60,21 @@ Comment:        For Section Landing (incl. News And Events Landing Page), Sectio
 }
 
 .block h2 {
+  color: #157a6b;
 	font-size: 2em;
 	line-height: 1.25;
-  	margin: 0;
+  margin: 0;
+}
+
+.block p {
+  margin-bottom: 0;
+}
+
+.block a {
+  color: #000;
+}
+.block a:hover {
+  text-decoration: none;
 }
 
 /*.block h2:after {
