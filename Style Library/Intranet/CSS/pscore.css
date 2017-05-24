@@ -38,7 +38,9 @@ div a[id$="item_hoverParentLink"] {
 
 /* Main containers */
 #s4-workspace { /*  Set to full width to prevent horizontal scroll, override dynamic inline SP style */
-	width: 100% !important; 
+	width: 100% !important;
+  height: 100% !important;
+  overflow: visible;
 	z-index: 0;
 }
 #s4-bodyContainer { padding-bottom: 0; }
@@ -48,11 +50,16 @@ div a[id$="item_hoverParentLink"] {
 .ie7 #welcomeMenuBox { margin-top: 6px; }
 
 #suiteBar { 
-	position: absolute;
-	right: 0;
-	z-index: 999;
+/*	position: absolute;
+	right: 0;*/
+  float: right;
+	z-index: 102;
 }
-#suiteBarRight { padding-right: 0; }
+#suiteBarRight {
+  background-color: transparent;
+  color: #acacac;
+  padding-right: 0;
+}
 
 #suiteBarRight .ms-core-menu-root:hover,
 #suiteBarRight .ms-menu-althov,
@@ -65,12 +72,12 @@ div a[id$="item_hoverParentLink"] {
 /* Edit Ribbon */
 .ms-cui-topBar2,
 .ms-core-deltaSuiteBarRight	{
-  background-color: #000;
+  background-color: transparent;
 }
 
 .ms-cui-topBar2 { 
 	border: 0;
-	height: 35px; 
+/*	height: 35px; */
 }
 
 .ms-cui-TabRowRight .ms-promotedActionButton-text,
@@ -86,6 +93,12 @@ div a[id$="item_hoverParentLink"] {
 #pageStatusBar { 
 	margin-bottom: 0 !important;
 	padding-bottom: 0 !important; 
+}
+
+#globalNavBox, .ms-clientcontrol-chromeheader {
+  background-color: transparent;
+  width: 100%;
+  height: auto;
 }
 
 /* Hide Sp 2013 Elements */
@@ -204,6 +217,10 @@ td.psstyle-rteTableLastCol-NoBorder { text-align: right; }
 #s4-ribbonrow {
 	display: block !important;
 	min-height: 35px;
+  float: right;
+}
+#s4-ribbonrow a {
+  margin-top: 0;
 }
 .ms-searchCenter {
     clear: both;

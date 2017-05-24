@@ -10,21 +10,60 @@ h1 { color: #000; }
 
 .mainContainer { padding-top: 20px; }
 
-div.primary {
+/*div.primary {
 	margin-right: 30px;
 	width: 672px; 
 }
-/*.primary ul { margin-left: 0; }*/
+.primary ul { margin-left: 0; }*/
 
-.row {
+.PSHomePageLayout #header {
+  height: 50px;
+  overflow: visible;
+}
+.PSHomePageLayout #header .container {
+  min-height: auto;
+}
+
+.grid {
   margin-bottom: 80px;
 }
-.row .grid {
-  float: left;
-  width: 80%;
+.block aside {
+  float: none;
+  width: auto;
 }
-.row .grid .widget {
+#grid1 {
+  width: 100%;
+  table-layout: fixed;
+  border-spacing: 0;
+  margin: 0 0 50px 0;
+}
+#grid1 .carousel {
+  width: 80%;
+  position: relative;
+}
+#grid1 .aside {
+  width: 20%;
+  background: #efefef;
+}
+#grid2 {
+  width: 100%;
+  table-layout: fixed;
+  margin: 0 0 50px 0;
+}
+#grid2 .block {
+  width: 40%;
+}
+#grid2 .aside {
+  width: 20%;
+  border-left: solid 5px #d15a49;
+}
+/*.row .grid .widget {
   width: 50%;
+}*/
+
+#grid3 {
+  background: #ddd;
+  margin: 0;
 }
 
 .widget h2 {
@@ -32,10 +71,14 @@ div.primary {
   margin: 0 0 20px;
 }
 
+.block h3 {
+  margin: 0 0 5px;
+}
+
 /* News Carousel */
 #carousel {
-  float: left;
-  width: 80%;
+/*  float: left;
+  width: 80%;*/
 }
 #carousel .slide {
   z-index: 10;
@@ -57,7 +100,7 @@ div.primary {
   bottom: 0;
 }
 #carousel p {
-  margin: 1em 150px 0 0;
+  margin: 1em 150px 0 30px;
 }
 #carousel .fa {
   font-size: 30px;
@@ -76,7 +119,7 @@ div.primary {
 }
 
 
-div.carousel { 
+/*div.carousel { 
 	float: left; 
 	height: 300px;
 	padding: 0;
@@ -90,7 +133,7 @@ div.carousel {
 }
 
 .feature {
-	/*cursor: url(/_layouts/15/pause.cur), pointer !important;*/
+	cursor: url(/_layouts/15/pause.cur), pointer !important;
     height: 200px;
 	overflow: hidden;
 }
@@ -145,7 +188,7 @@ ul.carouselNav {
 	font-weight: bold;
 }
 
-/* Columns */
+ Columns 
 .column a.button {
 	display: inline-block;
 	margin-top: 10px;
@@ -240,7 +283,7 @@ ul.carouselNav {
 	border-top-width: 0;
 	font-family: 'OpenSansCondensedLight';
  	font-size: 16px;
-}
+}*/
 
 /* *** Secondary Area Styles (Aside) *** */
 aside {
@@ -299,10 +342,116 @@ aside .scrollable {
   left: 0;
 }
 
+/* Events */
+#nextSitting {
+  display: table;
+  width: 100%;
+  margin: 0 0 8px;
+  border-spacing: 0;
+}
+#nextSitting .block {
+  width: 50%;
+  padding: 15px;
+  background: #1bcba5;
+}
+#nextSitting .parliament {
+  background: url(../images/nz-parliament-chamber.jpg) 50% 50%;
+  background-size: cover;
+}
+#nextSitting h3 {
+  font-size: 1.42857142857143em; /* 20 */
+}
+#nextSitting a {
+  font-style: italic;
+  color: #000;
+}
+
+#upcomingEvents {
+  background: #000;
+  color: #fff;
+  padding: 30px;
+  position: relative;
+  table-layout: fixed;
+}
+#upcomingEvents h2 {
+  color: #fff;
+  padding-bottom: 16px;
+  border-bottom: solid 2px #555;
+}
+#upcomingEvents .view-all {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #fff;
+  font-style: italic;
+}
+#upcomingEvents .grid {
+  margin: -30px 0;
+/*  border-spacing: 0;
+  margin: 0;*/
+}
+#upcomingEvents .slick-track:before,
+#upcomingEvents .slick-track:after {
+  display: inline;
+}
+#upcomingEvents .block {
+  width: 50%;
+}
+#upcomingEvents h3 {
+  color: #fff;
+}
+#upcomingEvents h3 a {
+  color: #fff;
+}
+#upcomingEvents .time {
+  font-weight: bold;
+  font-size: 1.28571428571429em; /* 18 */
+  margin: .5em 0;
+}
+#upcomingEvents img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1px;
+}
+#upcomingEvents .date {
+  background: #1bcba5;
+  padding: 0 5px;
+  font-size: 3.42857142857143em; /* 48 */
+  line-height: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+}
+#upcomingEvents .date span {
+  font-family: OpenSansLight;
+  font-weight: 300;
+}
+#upcomingEvents a:hover {
+  text-decoration: none;
+}
+#upcomingEvents .fa {
+  font-size: 30px;
+  color: #ccc;
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  margin-top: -15px;
+  cursor: pointer;
+  z-index: 11;
+}
+#upcomingEvents .fa-chevron-right {
+  left: auto;
+  right: -15px;
+}
+#upcomingEvents .fa:hover {
+  color: #fff;
+}
+
 /* Useful Contacts */
 .contactBox {
   padding: 0 30px 0 15px;
-  border-left: solid 5px #d15a49;
+/*  border-left: solid 5px #d15a49;*/
 }
 .contactBox ul {
   list-style: none;
@@ -359,9 +508,10 @@ aside .scrollable {
   padding: 0;
 }
 #my-promos li {
-  padding-left: 200px;
+  padding-left: 210px;
   position: relative;
   min-height: 190px;
+  margin: 0 0 30px;
 }
 #my-promos img {
   position: absolute;

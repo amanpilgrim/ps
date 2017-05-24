@@ -139,6 +139,18 @@
           });
         });
         
+        $('#upcomingEvents .carousel').each(function(){
+            $(this).slick({
+              speed: 300,
+              slidesToShow: 1,
+              autoplay: false,
+              autoplaySpeed: 5000,
+              nextArrow: '<span class="fa fa-chevron-right"></span>',
+              prevArrow: '<span class="fa fa-chevron-left"></span>',
+              dots: false
+          });
+        });
+        
 
         /* Text Editor Overrides */
         $(".ms-rtestate-write").attr({

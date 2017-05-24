@@ -1,4 +1,4 @@
-﻿@charset "utf-8";
+@charset "utf-8";
 
 @font-face {
   font-family: 'Open Sans';
@@ -80,6 +80,7 @@ html, body {
   width: 100%;
   height: 100%;
   /*  overflow-x: hidden;*/
+  
 }
 body {
   background: #000;
@@ -90,9 +91,9 @@ body {
   font-weight: 400;
   margin: 0;
   padding: 0 0 0 120px;
-  width: 100%;
   min-width: 320px;
   box-sizing: border-box;
+  overflow-y: scroll;
 }
 body > form {
   background: #fff;
@@ -158,6 +159,9 @@ a.button:hover, a.button:active, a.button:focus {
   background: #157a6b;
   border: 1px solid #157a6b;
   color: #fff;
+}
+a.more {
+  white-space: nowrap;
 }
 blockquote {
   color: #666;
@@ -452,21 +456,39 @@ figcaption {
 }
 
 /* *** Header Section Styles *** */
-#s4-bodyContainer > div > header {
-  background: #3a3a3a url(../images/bg-header.jpg) 50% 50% no-repeat;
-  background-size: cover;
+#header {
+  background: #3a3a3a url(../images/bg-header.jpg) 50% -13% no-repeat;
+  background-size: 100%;
   color: #fff;
   padding: 0 15px;
-  margin-bottom: 70px;
+/*  margin-top: -35px;*/
   position: relative;
   z-index: 10;
+/*  position: fixed;
+  top: 0;
+  left: 120px;
+  right: 0;*/
 }
-#s4-bodyContainer > div > header h1 {
+#header h1 {
   color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  padding: 15px 30px;
 }
 
 .altNav {
-  background: #000;
+/*  background: #000;*/
+  background: #3a3a3a url(../images/bg-header.jpg) 50% 0 no-repeat;
+  background-size: 100%;
+  position: fixed;
+  top: 0;
+  left: 120px;
+  right: 0;
+  z-index: 100;
+}
+.altNav nav {
+  float: right;
 }
 #header .altNav {
   background: transparent;
@@ -503,11 +525,19 @@ figcaption {
 
 /* Logo */
 .logo {
-  float: left;
+/*  float: left;*/
   background: #252525;
-  padding: 25px 30px;
+  /*padding: 25px 30px;*/
+  position: fixed;
+  top: 0;
+  left: 120px;
+  z-index: 103;
 }
-.logo a {
+.logo img {
+  height: 120px;
+  width: auto;
+}
+/*.logo a {
   display: inline-block;
   border-left: solid 2px #555;
   padding-left: 20px;
@@ -517,12 +547,14 @@ figcaption {
 }
 .logo a span {
   display: block;
-  font-size: 36px;
+  font-size: 55px;
   color: #fff;
 }
 .logo a i {
+  font-family: OpenSansLight, 'Open Sans', sans-serif;;
+  font-size: 1.71428571428571em;  24 
   font-style: italic;
-}
+}*/
 
 /* Navigation */
 #menu {
@@ -534,7 +566,7 @@ figcaption {
   height: 100%;
   overflow: visible;
   background: #292929;
-  z-index: 100;
+  z-index: 104;
   transition: .3s ease-in-out;
 }
 #toggle {
@@ -661,6 +693,11 @@ figcaption {
 }
 .find-people .advanced {
   display: block;
+  margin-top: 1em;
+  font-weight: 600;
+}
+.find-people .advanced a {
+  color: #000;
 }
 
 #menu .find-people {
@@ -957,6 +994,7 @@ ul.dynamic {
   min-height: 300px;
   padding: 0 15px;
   box-sizing: border-box;
+  margin-top: 70px;
 }
 .subNav ul,
 .subNav li {
@@ -1063,6 +1101,7 @@ div.primary {
   width: 75%;
   padding: 0 30px;
   box-sizing: border-box;
+  margin-top: 70px;
   margin-bottom: 20px;
   position: relative;
   overflow: visible; /*hidden;  To show 2013 Callout popups, under related infromation*/
