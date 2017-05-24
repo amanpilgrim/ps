@@ -36,6 +36,7 @@
 <link id="CssRegistration1" rel="stylesheet" type="text/css" href="/Style%20Library/en-US/Themable/Core%20Styles/pagelayouts15.css"/>
 <link id="CssRegistration2" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/css/normalize.css?Rev=2017.05.11"/>
 <link id="CssRegistration5" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/css/font-awesome/css/font-awesome.min.css?Rev=2017.05.11"/>
+<link rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/css/slick.css"/>
 <link id="CssRegistration3" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/css/main.css?Rev=2017.05.11"/>
 <link id="CssRegistration4" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/css/pscore.css"/>
 <link id="CssRegistration6" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/css/responsive.css?Rev=2017.05.19"/>
@@ -116,7 +117,7 @@
 
 	</head>
 	
-	<body>
+	<body class="PSHomePageLayout">
 		<!-- ===== STARTER: SP IDs / Prefetch SP images / SP Form  =========================================================================== -->
 		
 		<div id="imgPrefetch" style="display:none">
@@ -467,6 +468,13 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 				</div>
 			</div>
 			<!-- ===== STARTER: Ribbon Code Ends Here  ======================================================================================== -->
+      
+      <!-- ===== STARTER: Site Logo with link to root ======================================================================= -->
+								<div class="ms-dialogHidden logo">
+									<a id="ctl00_SPLinkButton1" href="/">
+										<img id="ctl00_x63829de2201a4365a3904788f682d0a3" src="/Style%20Library/Intranet/images/Intranet-Logo.png" alt="Our House | Tō Tātou Whare" />
+									</a>
+								</div>
 			
 			<!-- ===== STARTER: Authentication / Login link hidden for everyone by anonymous users  =========================================== -->
 			
@@ -476,20 +484,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 				<div id="s4-bodyContainer">
 
 				<!-- ===== STARTER: style.css adds width and margin =========================================================================================== -->
-					<div class="customWidth">					
+					<div class="customWidth">
+            
 						<!-- START PS Header -->
 						<header id="header">
 							<div class="container noindex">
-                                <!-- ===== STARTER: Site Logo with link to root ======================================================================= -->
-								<div class="ms-dialogHidden logo">
-									<a id="ctl00_SPLinkButton1" href="/">
-										<!--<img id="ctl00_x63829de2201a4365a3904788f682d0a3" src="/Style%20Library/Intranet/images/Intranet-Logo.png" alt="Back to Home" />-->
-                                        <a href="/">
-                                            <span>Our House</span>
-                                            <i>Tō Tātou Whare</i>
-                                        </a>
-									</a>
-								</div>
 
 								<div id="menu" class="logoSearch">
                                     <span id="toggle" class="fa fa-bars"></span>
@@ -648,17 +647,17 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                                     </div>
 								</div>
 
-                <div class="breadcrumb noindex">
+                <!--<div class="breadcrumb noindex">
                     	
                 </div>
 
-                <h1><span class="requiredfield">Page title goes here</span></h1>
+                <h1><span class="requiredfield">Page title goes here</span></h1>-->
 							</div>
 						</header>
 						<!-- END PS Header -->
 					
 						<!-- ===== STARTER: Body Area (includes left nav and body) ==================================================================== -->
-						<div class="container">
+						<div class="container_">
 							
 							<!-- ===== STARTER: Current navigation =========================================================================================== -->
 							<div class="ms-dialogHidden ms-forceWrap ms-noList">
@@ -669,7 +668,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 							<!-- ===== STARTER: Main Placeholder gets replaced with content of the page ======================================= -->																							
 							
     <!-- START Main Content Area -->
-    <div class="row">
+    <div id="grid1" class="grid">
+        <div class="row">
+            <div class="block carousel">
+
         <!-- START News Carousel -->
         <input type="hidden" name="ctl00$PlaceHolderMain$HomepageNewsCarousel$TimeDelayhidden" id="ctl00_PlaceHolderMain_HomepageNewsCarousel_TimeDelayhidden" value="9000" />
 
@@ -727,8 +729,23 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 
 </script>
 
+<div id="carousel">
+  <div class="slide">
+    <div class="slide-image" style="background-image: url(/assets/carousel.jpg);">
+      <h2>Next staff orientation tour</h2>
+    </div>
+    <p>Are you new to Parliament or not sure where to go? Visitor Services invite new and existing staff on a special 75-minute orientation tour of the parliamentary precinct on Monday 22 June at 9am. <a class="more" href="http://dev04-ourhouse.campus.services/NewsAndEvents/News/Pages/Next-staff-orientation-tour.aspx">Read More</a></p>
+  </div>
+  <div class="slide">
+    <div class="slide-image" style="background-image: url(/assets/carousel.jpg);">
+      <h2>Accessibility update</h2>
+    </div>
+    <p>You may have noticed little buttons have sprung up on some floor areas around the precincts, namely at the bottom of the staircase in the Executive Wing as well as the Northwest corridor and the internal ramp between Parliament House and the... <a class="more" href="http://dev04-ourhouse.campus.services/NewsAndEvents/News/Pages/Accessibility-update.aspx">Read More</a></p>
+  </div>
+</div>
 
-<!-- START News Carousel -->
+
+<!-- START News Carousel --
 <div class="carousel noindex">
     <h1>LATEST NEWS</h1>
     
@@ -803,19 +820,22 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 </div>
 	
         <!-- END News Carousel -->
+            </div>
+            <div class="block aside">
 
         <aside>
             
 <script src="/Style Library/Intranet/js/jquery.easy-autocomplete.js"></script>
 
-<div class="roundedCorner inner noindex"><h2 class="icon people">Find Person</h2>
+<div class="widget find-people noindex">
+  <h2><span class="icon people"><!--<span></span>--></span>Find a Person</h2>
  
-      <input name="ctl00$PlaceHolderMain$ctl00$searchTextBox" type="text" id="ctl00_PlaceHolderMain_ctl00_searchTextBox" placeholder="Name/number" style="width: 180px;" />
-    <br/><input id="ctl00_PlaceHolderMain_ctl00_rdperson" type="radio" name="ctl00$PlaceHolderMain$ctl00$FindPerson" value="rdperson" checked="checked" /><label for="ctl00_PlaceHolderMain_ctl00_rdperson">Find Person</label>
-    <input id="ctl00_PlaceHolderMain_ctl00_rdbusiness" type="radio" name="ctl00$PlaceHolderMain$ctl00$FindPerson" value="rdbusiness" /><label for="ctl00_PlaceHolderMain_ctl00_rdbusiness">Find Business Unit</label>
-    <br/><input type="submit" name="ctl00$PlaceHolderMain$ctl00$searchPeopleButton" value="Go" id="ctl00_PlaceHolderMain_ctl00_searchPeopleButton" title="find people" />
+      <input name="ctl00$PlaceHolderMain$ctl00$searchTextBox" type="text" id="ctl00_PlaceHolderMain_ctl00_searchTextBox" placeholder="Name/number" />
+    <input id="ctl00_PlaceHolderMain_ctl00_rdperson" type="radio" name="ctl00$PlaceHolderMain$ctl00$FindPerson" value="rdperson" checked="checked" /><label for="ctl00_PlaceHolderMain_ctl00_rdperson">Find Person</label>
+    <label for="ctl00_PlaceHolderMain_ctl00_rdbusiness"><input id="ctl00_PlaceHolderMain_ctl00_rdbusiness" type="radio" name="ctl00$PlaceHolderMain$ctl00$FindPerson" value="rdbusiness" />Find Business Unit</label>
+    <input type="submit" name="ctl00$PlaceHolderMain$ctl00$searchPeopleButton" value="&#xf002;" id="ctl00_PlaceHolderMain_ctl00_searchPeopleButton" title="find people" />
    
-    <span><a id="ctl00_PlaceHolderMain_ctl00_searchAdvancedPeopleSearchButton" href="javascript:__doPostBack(&#39;ctl00$PlaceHolderMain$ctl00$searchAdvancedPeopleSearchButton&#39;,&#39;&#39;)">Advanced people search</a> &raquo;</span>
+    <span class="advanced"><a id="ctl00_PlaceHolderMain_ctl00_searchAdvancedPeopleSearchButton" href="javascript:__doPostBack(&#39;ctl00$PlaceHolderMain$ctl00$searchAdvancedPeopleSearchButton&#39;,&#39;&#39;)">Use Advanced Search</a></span>
 </div>
   
 
@@ -939,49 +959,109 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
             
 
 
-<div class="tabBox" id="tabs">
-    <h3>Quick Links</h3>
-    <ul>
-        
-    </ul>
+<div class="links" id="quicklinks">
+  <h2>Quick Links</h2>
+  <ul>
+    <li><a href="/">Link 1</a></li>
+    <li><a href="/">Link 2 goes over many, many lines and wraps</a></li>
+  </ul>
 </div>
 
             
 	    </aside>
     </div>
-
-    <div class="row">
-        <div class="column">	
-            <div class="box"><h2>Today's events</h2></div>  
-            
-
-<div class="sitting">
-    <p class="roundedCorner">The sitting calendar is unavailable</p>
-    <ul>
-        
-
-        
-    </ul>
+  </div>
 </div>
 
+    <div id="grid2" class="grid">
+        <div class="row">
+          <div id="events" class="block widget">
+            
+            <div id="nextSitting" class="grid">
+              <div class="row">
+                <div class="block parliament"></div>
+                <div class="block">
+                  <h3>The House next meets Tuesday, 4 April 2017</h3>
+                  <a href="/">View Sitting Calendar</a>
+                </div>
+              </div>
+            </div>
+            
+            <div id="upcomingEvents">
+              <h2>Upcoming Events</h2>
+              <a href="/" class="view-all">View All Events</a>
+              
+              <div class="carousel">
+                <div class="event">
+                  <div class="grid">
+                    <div class="row">
+                      <div class="block">
+                        <a href="/">
+                          <img src="/assets/event.jpg" alt="180x180" />
+                          <div class="date"><span>APR</span> 30</div>
+                        </a>
+                      </div>
+                      <div class="block">
+                        <h3><a href="/">Title of Event goes here and here</a></h3>
+                        <div class="time">6:00pm - 8:00pm</div>
+                        <p>'Come on!' cried the Gryphon, and, taking Alice by the hand, it hurried off, without waiting ...</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-        
-	        
-        <hr />
-        <div class="floatLeft">
-	        <div class="calBox">
-	            <span class="day">19</span>
-	            <span class="month">May 2017</span>	
-	        </div>
+                <div class="event">
+                  <div class="grid">
+                    <div class="row">
+                      <div class="block">
+                        <a href="/">
+                          <img src="/assets/event.jpg" alt="180x180" />
+                          <div class="date"><span>APR</span> 30</div>
+                        </a>
+                      </div>
+                      <div class="block">
+                        <h3><a href="/">Title of Event goes here and here</a></h3>
+                        <div class="time">6:00pm - 8:00pm</div>
+                        <p>'Come on!' cried the Gryphon, and, taking Alice by the hand, it hurried off, without waiting ...</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                
+            </div>
+          </div>
+          
+          <div id="documents" class="block widget">
+            <h2>Document Search</h2>
+            <ul>
+              <li><a href="/"><span class="icon pdf"></span>Name of Document goes here</a></li>
+              <li><a href="/"><span class="icon doc"></span>Name of Document goes here. It could be on two lines</a></li>
+            </ul>
+          </div>
+          
+          <div class="block aside">
+            <aside>
+              <div class="contactBox noindex">
+                <h2>Useful Contacts</h2> 
+
+                <link rel="stylesheet" href="/Style Library/Intranet/CSS/jquery-ui.css">
+                <script src="/Style Library/Intranet/js/jquery-ui.js"></script>
+
+                <div class="personContacts" id="predefinedContactsContainer">
+                  <ul class="personalContactsList">
+                    <li class="contactItem">Emergency <a href="tel:04 817 7777-up">04 817 7777-up</a></li>
+                    <li class="contactItem">ICT Service Desk <a href="tel:*300">*300</a></li>
+                    <li class="contactItem">ICT Service Desk <a href="tel:0800 801 007">0800 801 007</a></li>
+                  </ul>
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
-        
-    	
-
-
-	   
-	        
-	    </div>
-	    <div class="column">
+      </div>
+          
+	    <!--<div class="column">
 	    	<div class="onParliament">
 		        <h3><a href="http://www.parliament.nz" target="_blank">On www.parliament.nz</a></h3>
 		        <div class="inner">
@@ -1035,129 +1115,81 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 		        </div>
 	        </div>
 						
-	    </div>
+	    </div>-->
 
-        <aside>
-            <div class="contactBox noindex">
-                <h2>Useful Contacts</h2> 
-                
-
-<link rel="stylesheet" href="/Style Library/Intranet/CSS/jquery-ui.css">
-<script src="/Style Library/Intranet/js/jquery-ui.js"></script>
-
-<hr />
-<div class="personContacts" id="predefinedContactsContainer">
-    
-            <ul class="personalContactsList">
-                
-            <li class="contactItem">Emergency <a href="tel:04 817 7777-up">04 817 7777-up</a></li>
-        
-            <li class="contactItem">ICT Service Desk <a href="tel:*300">*300</a></li>
-        
-            <li class="contactItem">ICT Service Desk <a href="tel:0800 801 007">0800 801 007</a></li>
-        
+      
+    <div id="grid3" class="grid">
+        <div class="row">
+          <div id="my-promos" class="block widget">
+            <h2 class="visuallyhidden">Our House and people</h2>
+            <ul>
+              <li>
+                <a href="http://dev04-ourhouse.campus.services/NewsAndEvents/News/Pages/$10-home-Microsoft-Office-products.aspx">
+                  <img src="/assets/copperfields.jpg" alt="190x190" />
+                  <h3>Big success is recognised of the Desks move for Business Solutions team</h3>
+                  <p>The Microsoft Home Use Program enables you to get a licensed copy of most Microsoft Office products.</p>
+                </a>
+              </li>
+              <li>
+                <a href="http://dev04-ourhouse.campus.services/PrecinctFacilities/CateringAndFood/Pages/Copperfields-daily-menu.aspx">
+                  <img src="/assets/copperfields.jpg" alt="" />
+                  <h3>Copperfield's Cafe Daily Menu</h3>
+                  <p>
+                      Check out the menu for 15-19
+                  </p>
+                </a>
+              </li>
+              <li>
+                <a href="http://dev04-ourhouse.campus.services/BusinessServices/IST/Pages/default.aspx">
+                  <img src="/assets/copperfields.jpg" alt="" />
+                  <h3>Careers and Opportunities</h3>
+                  <p>
+                      Access payroll info, payslips and leave.
+                  </p>
+                </a>
+              </li>
             </ul>
-        
-    
-</div>
+          </div>
+          
+          <div class="block widget">
+            
+          </div>
 
+          <div id="twitter" class="block widget">
+            <script src="../../../Style Library/Intranet/CSS/style.DbvFvg.css"></script>
+            <div class="twitter-pod">
+              <div class="twitter-pod__header">
+                <h4 class="twitter-pod__heading">NZ Parliament Tweets</h4>
+                <a href="https://twitter.com/nzparliament" class="twitter-pod__link theme__link">@nzparliament</a>
+                <a href="https://twitter.com/intent/follow?screen_name=nzparliament" class="twitter-pod__follow twitter-follow"><span class="twitter-follow__icon iconf-twitter" aria-hidden="true"></span> <span class="twitter-follow__text">Follow</span>
+
+                </a>
+              </div>
+              <a class="twitter-timeline js-display" href='' data-widget-id="638836314142474241" data-screen-name="nzparliament" data-chrome="noheader">''</a>
+              <script>
+                  !function (d, s, id) {
+                      var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                      if (!d.getElementById(id)) {
+                          js = d.createElement(s);
+                          js.id = id;
+                          js.src = p + "://platform.twitter.com/widgets.js";
+                          fjs.parentNode.insertBefore(js, fjs);
+                      }
+                  }(document, "script", "twitter-wjs");
+              </script>
             </div>
+          </div>
+        </div>
+      </div>
+      
+      <!--<div id="did-you-know">
+        <div class="carousel">
+          <div class="slide">
             
-	    </aside>
-    </div>
+          </div>
+        </div>
+      </div>-->
 
-    <div class="row">
-        <!-- START Our House and People -->
-        <div class="column">
-		    
-
-
-		
-<div class="box"><h2>Our House and people</h2></div>
-
-
-        
-        <a class="floatRight" href="http://dev04-ourhouse.campus.services/NewsAndEvents/News/Pages/$10-home-Microsoft-Office-products.aspx">
-            <h3>Big success is recognised of the Desks move for Business Solutions team</h3>
-            <img src="/ResourceCentre/PublishingImages/News%20and%20Events/News/Office.JPG?RenditionID=6" class="floatLeft" alt="" title="" style="" />
-	        <p style="word-break: break-all">
-	            The Microsoft Home Use Program enables you to get a licensed copy of most Microsoft Office products.
-	        </p>
-	    </a>
-    
-        <a class="floatRight" href="http://dev04-ourhouse.campus.services/PrecinctFacilities/CateringAndFood/Pages/Copperfields-daily-menu.aspx">
-            <h3>Copperfield's Cafe Daily Menu</h3>
-            <img src="/ResourceCentre/PublishingImages/Precinct%20Facilities/Catering%20and%20food/Picture-013.jpg?RenditionID=6" class="floatLeft" alt="" title="" style="" />
-	        <p style="word-break: break-all">
-	            Check out the menu for 15-19
-	        </p>
-	    </a>
-    
-        <a class="floatRight" href="http://dev04-ourhouse.campus.services/BusinessServices/IST/Pages/default.aspx">
-            <h3>Careers and Opportunities</h3>
-            <img src="/ResourceCentre/PublishingImages/Business%20Services/Information%20and%20Communication%20Technology/Devices.jpg?RenditionID=6" class="floatLeft" alt="" title="" style="" />
-	        <p style="word-break: break-all">
-	            
-	        </p>
-	    </a>
-    
-        <a class="floatRight" href="http://dev04-ourhouse.campus.services/People/PayAndLeave/Pages/Employment-Information-Kiosk.aspx">
-            <h3>Employment Information Kiosk</h3>
-            <img src="/ResourceCentre/PublishingImages/News%20and%20Events/News/Parliamentary%20Service%20crest.JPG?RenditionID=6" class="floatLeft" alt="" title="" style="" />
-	        <p style="word-break: break-all">
-	            Access payroll info, payslips and leave.
-	        </p>
-	    </a>
-    
-    
-
-		    
-	    </div>
-        <!-- End Our House and People -->
-
-        <aside>
-            
-<script src="../../../Style Library/Intranet/CSS/style.DbvFvg.css"></script>
-
-
-   <div class="twitter-pod">
-			<div class="twitter-pod__header">
-				<h4 class="twitter-pod__heading">NZ Parliament Tweets</h4>
-				<a href="https://twitter.com/nzparliament" class="twitter-pod__link theme__link">@nzparliament</a>
-				<a href="https://twitter.com/intent/follow?screen_name=nzparliament" class="twitter-pod__follow twitter-follow"><span class="twitter-follow__icon iconf-twitter" aria-hidden="true"></span> <span class="twitter-follow__text">Follow</span>
-                    
-				</a>
-			</div>
-			<a class="twitter-timeline js-display" href='' data-widget-id="638836314142474241" data-screen-name="nzparliament" data-chrome="noheader">''</a>
-			<script>
-			    !function (d, s, id) {
-			        var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-			        if (!d.getElementById(id)) {
-			            js = d.createElement(s);
-			            js.id = id;
-			            js.src = p + "://platform.twitter.com/widgets.js";
-			            fjs.parentNode.insertBefore(js, fjs);
-			        }
-			    }(document, "script", "twitter-wjs");
-			</script>
-		</div>
-
-
-
-
-
-
-
- 
-
-            
-        </aside>
-    </div>
-	
-	<div class="primary">
-        
-           
-	</div>
 	<!-- END Main Content Area -->
 
 	
@@ -1168,7 +1200,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 if(typeof(MSOLayout_MakeInvisibleIfEmpty) == "function") {MSOLayout_MakeInvisibleIfEmpty();}// ]]>
 </script>
 <div style='display:none' id='hidZone'></div>
-                            <div class="backTop"><a id="backTopLink" href="#top">Back to top &#94;</a></div>	
+                            <!--<div class="backTop"><a id="backTopLink" href="#top">Back to top &#94;</a></div>-->
 						</div>
 						
                         <div class="noindex">
@@ -1422,6 +1454,7 @@ g_QuickLaunchControlIds.push("zz11_TopNavigationMenu");_spBodyOnLoadFunctionName
 		
 		
 		<!-- Custom script -->
+    <script src="/Style Library/Intranet/js/slick.min.js"></script>
 		<script src="/Style Library/Intranet/js/script.js"></script>
 
 	</body>
