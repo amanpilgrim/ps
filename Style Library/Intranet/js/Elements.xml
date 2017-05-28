@@ -35,5 +35,7 @@
     <File Path="textext.plugin.tags.js" Url="textext.plugin.tags.js" Type="GhostableInLibrary" />
     <File Path="jquery.js" Url="jquery.js" Type="GhostableInLibrary" />
     <File Path="jquery.easy-autocomplete.js" Url="jquery.easy-autocomplete.js" Type="GhostableInLibrary" />
+    <File Path="slick.min.js" Url="slick.min.js" Type="GhostableInLibrary" />
+    <File Path="widgets.js" Url="widgets.js" Type="GhostableInLibrary" />
   </Module>
 </Elements>

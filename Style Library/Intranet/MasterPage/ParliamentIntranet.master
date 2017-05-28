@@ -9,6 +9,8 @@
 <%@Register TagPrefix="PS" TagName="NavigationTermSetHeader" Src="~/_controltemplates/15/NavigationTermSet/Header/Header.ascx" %>
 <%@Register TagPrefix="PS" TagName="NavigationTermSetFooter" Src="~/_controltemplates/15/NavigationTermSet/Footer/Footer.ascx" %>
 <%@Register TagPrefix="PS" TagName="ToolsDropDown" Src="~/_controltemplates/15/ToolsDropDown/ToolsDropDown.ascx" %>
+<%@Register TagPrefix="PS" TagName="FindAPerson" Src="~/_controltemplates/15/SitePeopleSearchBox/FindPeople.ascx" %>
+<%@Register TagPrefix="PS" TagName="CurrentPageLayout" Src="~/_controltemplates/15/CurrentPageLayout/CurrentPageLayout.ascx" %>
 <!DOCTYPE HTML>
 <!--[if lt IE 7]> <html class="ie6 oldie" lang="en"> <![endif]-->
 <!--[if IE 7]> <html class="ie7 oldie" lang="en"> <![endif]-->
@@ -42,6 +44,8 @@
          <script src="/Style Library/Intranet/js/jquery.jscrollpane.min.js"></script>
          <script src="/Style Library/Intranet/js/jquery.print.js"></script>
          <script src="/Style Library/Intranet/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+         <script src="/Style Library/Intranet/js/slick.min.js"></script>
+
          
         <!--[if lt IE 10]>
             <script type="text/javascript" src="/Style Library/Intranet/js/PIE.js"></script>
@@ -56,8 +60,7 @@
 		<SharePoint:ScriptLink ID="ScriptLink3" language="javascript" name="callout.js" LoadAfterUI="true" runat="server" Localizable="false" />
 		<SharePoint:ScriptLink ID="ScriptLink4" language="javascript" name="sharing.js" OnDemand="true" runat="server" Localizable="false" />
 		<SharePoint:ScriptLink ID="ScriptLink5" language="javascript" name="suitelinks.js" OnDemand="true" runat="server" Localizable="false" />
-        <SharePoint:ScriptLink ID="ScriptLink6" language="javascript" Name="sp.ui.dialog.js" LoadAfterUI="true" Localizable="false" runat="server" />        
-        
+        <SharePoint:ScriptLink ID="ScriptLink6" language="javascript" name="sp.ui.dialog.js" LoadAfterUI="true" Localizable="false" runat="server" />
 		<SharePoint:CustomJSUrl ID="CustomJSUrl1" runat="server" />
 		<SharePoint:SoapDiscoveryLink ID="SoapDiscoveryLink1" runat="server" />	
 		
@@ -67,6 +70,7 @@
 		<!-- ===== STARTER: Custom CSS  =================================================================================================== -->
         <SharePoint:CssRegistration ID="CssRegistration2" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/css/normalize.css?Rev=2017.05.11 %&gt;" runat="server" after="SharepointCssFile"/>
 		<SharePoint:CssRegistration ID="CssRegistration5" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/css/font-awesome/css/font-awesome.min.css?Rev=2017.05.11 %&gt;" runat="server" after="SharepointCssFile"/>
+		<SharePoint:CssRegistration ID="CssRegistration7" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/css/slick.css %&gt;" runat="server" after="SharepointCssFile"/>
         <SharePoint:CssRegistration ID="CssRegistration3" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/css/main.css?Rev=2017.05.11 %&gt;" runat="server" after="SharepointCssFile"/>
         <SharePoint:CssRegistration ID="CssRegistration4" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/css/pscore.css %&gt;" runat="server" after="SharepointCssFile"/>
         <SharePoint:CssRegistration ID="CssRegistration6" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/css/responsive.css?Rev=2017.05.19 %&gt;" runat="server" after="SharepointCssFile"/>	
@@ -106,6 +110,7 @@
 	</head>
 	
 	<body>
+        <PS:CurrentPageLayout runat="server" ID="CurrentPageLayout" />
 		<!-- ===== STARTER: SP IDs / Prefetch SP images / SP Form  =========================================================================== -->
 		<SharePoint:SPClientIDGenerator ID="SPClientIDGenerator1" runat="server" ServerControlID="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent"/>
 		<SharePoint:ImageLink ID="ImageLink1" runat="server"/>
@@ -129,6 +134,13 @@
 				</div>
 			</div>
 			<!-- ===== STARTER: Ribbon Code Ends Here  ======================================================================================== -->
+
+            <!-- ===== STARTER: Site Logo with link to root ======================================================================= -->
+			<div class="ms-dialogHidden logo">
+				<SharePoint:SPLinkButton ID="SPLinkButton1" runat="server" NavigateUrl="~sitecollection/">
+					<SharePoint:SiteLogoImage ID="x63829de2201a4365a3904788f682d0a3" LogoImageUrl="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/images/Intranet-Logo.png %&gt;" AlternateText="Back to Home" runat="server" />
+				</SharePoint:SPLinkButton>
+			</div>
 			
 			<!-- ===== STARTER: Authentication / Login link hidden for everyone by anonymous users  =========================================== -->
 			<SharePoint:SPSecurityTrimmedControl ID="SPSecurityTrimmedControl2" runat="server" AuthenticationRestrictions="AnonymousUsersOnly">
@@ -144,29 +156,35 @@
 						<!-- START PS Header -->
 						<header id="header">
 							<div class="container noindex">
-                                <!-- ===== STARTER: Site Logo with link to root ======================================================================= -->
-								<div class="ms-dialogHidden logo">
-									<SharePoint:SPLinkButton ID="SPLinkButton1" runat="server" NavigateUrl="~sitecollection/">
-										<!--<SharePoint:SiteLogoImage ID="x63829de2201a4365a3904788f682d0a3" LogoImageUrl="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/images/Intranet-Logo.png %&gt;" AlternateText="Back to Home" runat="server" />-->
-                    <span>Our House</span>
-                    <i>Tō Tātou Whare</i>
-									</SharePoint:SPLinkButton>
-								</div>
 
-								<div id="menu" class="logoSearch">
+				                <div class="breadcrumb noindex">
+				                    <asp:ContentPlaceHolder id="PlaceHolderBreadcrumb" runat="server">
+									<b>You are here:</b><asp:sitemappath ID="Sitemappath1" PathSeparator="&#160;&#47;&#160;" runat="server" sitemapproviders="SPSiteMapProvider,SPXmlContentMapProvider"  endercurrentnodeaslink="false" hideinteriorrootnodes="true" /></asp:ContentPlaceHolder >	
+				                </div>
+				
+				                <h1><span class="requiredfield">Page title goes here</span></h1>
+							</div>
+						</header>
+						<!-- END PS Header -->
+						
+						<div id="menu" class="logoSearch">
                                     <span id="toggle" class="fa fa-bars"></span>
 
                                     <div id="slideout">
                                             <!-- ===== STARTER: Search Control ==================================================================================== -->
 									    <div class="search ms-dialogHidden">
 										    <asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server">
-											    <SharePoint:DelegateControl ID="DelegateControl4" runat="server" ControlId="SmallSearchInputBox" Version="4"/>
+												<SharePoint:DelegateControl ID="DelegateControl4" runat="server" ControlId="SmallSearchInputBox" Version="4"/>
 										    </asp:ContentPlaceHolder>
 									    </div>
 
+                                        <!-- ===== Find a Person Control ==================================================================================== -->
+                                        <PS:FindAPerson runat="server" ID="FindAPerson" />
+									
                                         <!-- ===== Tools Control ==================================================================================== -->
                                         <PS:ToolsDropDown runat="server" ID="ToolsDropDown" />
-									
+
+
 									    <!-- ===== STARTER: Global navigation ================================================================================= -->
 									    <div class="ms-dialogHidden mainNav">
 										    <div class="ms-displayInline ms-core-navigation ms-dialogHidden">
@@ -177,19 +195,9 @@
 									    </div>
                                     </div>
 								</div>
-
-                <div class="breadcrumb noindex">
-                    <asp:ContentPlaceHolder id="PlaceHolderBreadcrumb" runat="server">
-                    <b>You are here:</b><asp:sitemappath ID="Sitemappath1" PathSeparator="&#160;&#47;&#160;" runat="server" sitemapproviders="SPSiteMapProvider,SPXmlContentMapProvider"  endercurrentnodeaslink="false" hideinteriorrootnodes="true" /></asp:ContentPlaceHolder >	
-                </div>
-
-                <h1><span class="requiredfield">Page title goes here</span></h1>
-							</div>
-						</header>
-						<!-- END PS Header -->
 					
 						<!-- ===== STARTER: Body Area (includes left nav and body) ==================================================================== -->
-						<div class="container">
+						<div id="main" class="container">
 							
 							<!-- ===== STARTER: Current navigation =========================================================================================== -->
 							<div class="ms-dialogHidden ms-forceWrap ms-noList">
@@ -217,32 +225,77 @@
 													CssClass="ms-quicklaunch-navmgr">
 													<div class="noindex">
 														<SharePoint:DelegateControl ID="DelegateControl5" runat="server" ControlId="QuickLaunchDataSource">
+														
+														
+														
+														
+														
 																<Template_Controls>
 																<asp:SiteMapDataSource SiteMapProvider="SPNavigationProvider" ShowStartingNode="False" id="QuickLaunchSiteMap" StartingNodeUrl="sid:1025" runat="server" />
 															</Template_Controls>
 														</SharePoint:DelegateControl>
 														<SharePoint:UIVersionedContent ID="UIVersionedContent2" UIVersion="3" runat="server">
+														
+														
+														
+														
+														
 															<ContentTemplate>
 																<SharePoint:AspMenu id="QuickLaunchMenu" runat="server" DataSourceId="QuickLaunchSiteMap" Orientation="Vertical" StaticDisplayLevels="2" ItemWrap="true" MaximumDynamicDisplayLevels="0" StaticSubMenuIndent="0" SkipLinkText="" CssClass="s4-die">
+																
+																
+																
+																
+																
 																	<LevelMenuItemStyles>
 																		<asp:menuitemstyle CssClass="ms-navheader" />
 																		<asp:menuitemstyle CssClass="ms-navitem" />
 																	</LevelMenuItemStyles>
+																
+																
+																
+																
+																
 																	<LevelSubMenuStyles>
 																		<asp:submenustyle CssClass="ms-navSubMenu1" />
 																		<asp:submenustyle CssClass="ms-navSubMenu2" />
 																	</LevelSubMenuStyles>
+																
+																
+																
+																
+																
 																	<LevelSelectedStyles>
 																		<asp:menuitemstyle CssClass="ms-selectednavheader" />
 																		<asp:menuitemstyle CssClass="ms-selectednav" />
 																	</LevelSelectedStyles>
+																
+																
+																
+																
+																
 																</SharePoint:AspMenu>
 															</ContentTemplate>
+														
+														
+														
+														
+														
 													</SharePoint:UIVersionedContent>
 														<SharePoint:UIVersionedContent ID="UIVersionedContent3" UIVersion="4" runat="server">
+														
+														
+														
+														
+														
 															<ContentTemplate>
 																<SharePoint:AspMenu id="V4QuickLaunchMenu" runat="server" EnableViewState="false" DataSourceId="QuickLaunchSiteMap" UseSimpleRendering="true" UseSeparateCss="false" Orientation="Vertical" StaticDisplayLevels="2" MaximumDynamicDisplayLevels="0" SkipLinkText="" CssClass="s4-ql" />
 															</ContentTemplate>
+														
+														
+														
+														
+														
 														</SharePoint:UIVersionedContent>
 													</div>
 												</Sharepoint:SPNavigationManager>
@@ -394,7 +447,7 @@
 							</div>	
 							<!-- ===== STARTER: Main Placeholder gets replaced with content of the page ======================================= -->																							
 							<asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server" />
-                            <div class="backTop"><a id="backTopLink" href="#top">Back to top &#94;</a></div>	
+                            <!--<div class="backTop"><a id="backTopLink" href="#top">Back to top &#94;</a></div>-->
 						</div>
 						
                         <div class="noindex">
@@ -433,7 +486,7 @@
 		
 		<!-- Custom script -->
 		<script src="/Style Library/Intranet/js/script.js"></script>
-
+        </div> <!-- closing div for PS:CurrentPageLayout -->
 	</body>
 	
 	<!-- Created from Starter SP2013 Master Page originally by Randy Drisgill (http://blog.drisgill.com) - Oct. 29, 2012 -->

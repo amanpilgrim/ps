@@ -241,13 +241,7 @@ var EasyAutocomplete = (function(scope){
 					{
 					    return 1;
 					}
-					
-					//if (a < b) {
-					//	return -1;
-					//}
-					//if (a > b) {
-					//	return 1;
-					//}
+										
 					return 0;
 				};
 
@@ -273,23 +267,7 @@ var EasyAutocomplete = (function(scope){
 						return false;
 					}
 				};
-				//options.list.match1.method = function (element, phrase) {
-				//    debugger;
-
-				//    lastname = element.substr(element.indexOf(' ') + 1);
-				//    firstname = element.substr(0, element.indexOf(' '));
-				//    //debugger;
-
-				//    //if (element.search(phrase) > -1) {
-				//    if (lastname.search(phrase) == 0) {
-
-				//        return true;
-				//    }
-
-				//    else {
-				//        return false;
-				//    }
-				//};
+			
 				
 			}
 			if (options.categories !== undefined && options.categories instanceof Array) {
@@ -819,10 +797,10 @@ var EasyAutocomplete = (function(scope) {
 				preparedList = list;
 			}
 			//debugger;
-			if (preparedList.length < 1)
+			if (preparedList.length < 5)
 			{
 			    //findMatch1(list, phrase);
-			    var preparedList = [],
+			   // var preparedList1 = [],
 				value = "";
 			   // debugger;
 			    if (config.get("list").match.enabled) {
@@ -1211,7 +1189,8 @@ var EasyAutocomplete = (function(scope) {
 
 
 			prepareField();
-			bindEvents();	
+			bindEvents();
+			
 
 		}
 		function prepareField() {
@@ -1458,14 +1437,16 @@ var EasyAutocomplete = (function(scope) {
 				if (checkParam("autocompleteOff", true)) {
 					removeAutocomplete();
 				}
-
+				//debugger;
 				bindFocusOut();
 				bindKeyup();
 				bindKeydown();
 				bindKeypress();
 				bindFocus();
 				bindBlur();
-			}
+			
+				
+			} 
 
 			function bindFocusOut() {
 				$field.focusout(function () {
@@ -1476,7 +1457,7 @@ var EasyAutocomplete = (function(scope) {
 					if (!config.get("list").match.caseSensitive) {
 						fieldValue = fieldValue.toLowerCase();
 					}
-
+					
 					for (var i = 0, length = elementsList.length; i < length; i += 1) {
 
 						phrase = config.get("getValue")(elementsList[i]);
@@ -1489,9 +1470,11 @@ var EasyAutocomplete = (function(scope) {
 							selectElement(selectedElement);
 							return;
 						}
+						var inputPhrase = $field.val();
+					
 					}
 				});
-			}
+			} //(EasyAutocomplete || {});
 
 			function bindKeyup() {
 				$field
@@ -1836,7 +1819,7 @@ var EasyAutocomplete = (function(scope) {
 	};
 
 	$.fn.getItems = function () {
-
+	    //debugger;
 		var inputId = $(this).attr("id");
 
 		if (inputId !== undefined) {
@@ -1847,7 +1830,7 @@ var EasyAutocomplete = (function(scope) {
 	};
 
 	$.fn.getItemData = function(index) {
-
+	    //debugger;
 		var inputId = $(this).attr("id");
 
 		if (inputId !== undefined && index > -1) {

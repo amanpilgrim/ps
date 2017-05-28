@@ -13,7 +13,7 @@
 <%@ Register TagPrefix="PS" TagName="HomepageNewsCarousel" Src="~/_controltemplates/15/HomepageNewsCarousel/HomepageNewsCarousel.ascx" %>
 <%@ Register TagPrefix="PS" TagName="HomePageDocumentSearch" Src="~/_controltemplates/15/HomePageDocument/HomePageDocumentSearch.ascx" %>
 <%@ Register TagPrefix="PS" TagName="OurHouseandPeople" Src="~/_controltemplates/15/OurHouseandPeople/OurHouseandPeople.ascx" %>
-<%@ Register TagPrefix="PS" TagName="Twitter" Src="../../_controltemplates/15/UserProfile/Twitter.ascx" %>
+<%@ Register TagPrefix="PS" TagName="Twitter" Src="~/_controltemplates/15/Twitter/Twitter.ascx" %>
 <%@ Register TagPrefix="PS" TagName="DidYouKnow" Src="~/_controltemplates/15/DidYouKnow/DidYouKnow.ascx" %>
 <%@ Register TagPrefix="PS" TagName="FeatureLink" Src="~/_controltemplates/15/FeatureLink/FeatureLink.ascx" %>
 <%@ Register TagPrefix="PS" TagName="ChoiceSurvey" Src="~/_controltemplates/15/Survey/ChoiceSurvey.ascx" %>
@@ -55,19 +55,22 @@
 
     <div id="grid2" class="grid">
         <div class="row">
-            <div class="block">
+            <div class="block widget">
                 <PS:HouseNextSits runat="server" id="TodaysEvents1"/>
                 <PS:EventsCalendar id="EventsCalendar" runat="server"/>
 
 	            <WebPartPages:WebPartZone runat="server" Title="Main Middle" ID="MainMiddle"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>                
             </div>
-            <div class="block">
+
+            <div id="documents" class="block widget">
                <PS:HomePageDocumentSearch runat="server" id="HomePageDocumentSearch1"/>
             </div>
+
             <div class="block aside">
                 <aside>
                     <div class="contactBox noindex">
-                        <h2>Useful Contacts</h2> 
+                        <h2>Useful Contacts</h2>
+                        <span class="icon edit">Edit</span>
                         <PS:HomepageContact id="HomepageContact1" runat="server"/>
                     </div>
                     <WebPartPages:WebPartZone runat="server" Title="Right Bottom" ID="WebPartZone7" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
@@ -78,26 +81,25 @@
 
     <div id="grid3" class="grid">
         <div class="row">
-            <div class="block">
+            <div id="my-promos" class="block widget">
                 <!-- START Our House and People -->
 		        <PS:OurHouseandPeople id="OurHouseandPeople" runat="server"/>
 		        <WebPartPages:WebPartZone runat="server" Title="Main Left" ID="MainLeft"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
                 <!-- End Our House and People -->
             </div>
             <div class="block">
-                <PS:FeatureLink id="FeatureLink1" runat="server"/>
                 <PS:ChoiceSurvey id="ChoiceSurvey1" runat="server"/>
+                <PS:FeatureLink id="FeatureLink1" runat="server"/>
+                
             </div>
-            <div class="block aside">
+            <div id="twitter" class="block">
                 <PS:Twitter id="Twitter1" runat="server"></PS:Twitter>
                 <WebPartPages:WebPartZone runat="server" Title="Right Middle" ID="WebPartZone5" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
             </div>
         </div>
     </div>
     
-	<div class="primary">
     <PS:DidYouKnow id="DidYouKnow1" runat="server"/>
-	</div>
 	<!-- END Main Content Area -->
 
 	

@@ -43,5 +43,6 @@
     <ProjectItemFile Source="new-zealand-government.png" Target="Images\" Type="ElementFile" />
     <ProjectItemFile Source="nz-parliament.png" Target="Images\" Type="ElementFile" />
     <ProjectItemFile Source="bg-header.jpg" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="nz-parliament-chamber.jpg" Target="Images\" Type="ElementFile" />
   </Files>
 </ProjectItem>

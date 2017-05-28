@@ -37,5 +37,7 @@
     <ProjectItemFile Source="jquery.easy-autocomplete.js" Target="js\" Type="ElementFile" />
     <ProjectItemFile Source="jquery.easy-autocomplete.min.js" Target="js\" Type="ElementFile" />
     <ProjectItemFile Source="Elements.xml" Target="js\" Type="ElementManifest" />
+    <ProjectItemFile Source="slick.min.js" Target="js\" Type="ElementFile" />
+    <ProjectItemFile Source="widgets.js" Target="js\" Type="ElementFile" />
   </Files>
 </ProjectItem>

@@ -126,7 +126,7 @@
             return false;
         });
         
-        // initialise slideshow  
+        // initialise slideshows
         $('#carousel').each(function(){
             $(this).slick({
               speed: 300,
@@ -138,17 +138,17 @@
               dots: false
           });
         });
-        
-        $('#upcomingEvents .carousel').each(function(){
+
+        $('#upcomingEvents .carousel').each(function () {
             $(this).slick({
-              speed: 300,
-              slidesToShow: 1,
-              autoplay: false,
-              autoplaySpeed: 5000,
-              nextArrow: '<span class="fa fa-chevron-right"></span>',
-              prevArrow: '<span class="fa fa-chevron-left"></span>',
-              dots: false
-          });
+                speed: 300,
+                slidesToShow: 1,
+                autoplay: false,
+                autoplaySpeed: 5000,
+                nextArrow: '<span class="fa fa-chevron-right"></span>',
+                prevArrow: '<span class="fa fa-chevron-left"></span>',
+                dots: false
+            });
         });
         
 

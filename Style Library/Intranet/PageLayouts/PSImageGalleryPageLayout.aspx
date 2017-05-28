@@ -13,8 +13,6 @@
 <%@Register TagPrefix="PS" TagName="PrintCurrentPage" Src="~/_controltemplates/15/PrintPage/PrintPage.ascx" %>
 <%@Register TagPrefix="PS" TagName="PageFooter" Src="~/_controltemplates/15/PageFooter/PageFooter.ascx" %>
 <%@Register TagPrefix="PS" TagName="ShowRelatedInformation" Src="~/_controltemplates/15/RelatedInformation/ShowRelatedInformation.ascx" %>
-<%@Register TagPrefix="PS" TagName="RelatedInformationContacts" Src="~/_controltemplates/15/RelatedInformation/Contacts/RelatedInformationContacts.ascx" %>
-<%@Register TagPrefix="PS" TagName="RelatedInformationLinks" Src="~/_controltemplates/15/RelatedInformation/Links/RelatedInformationLinks.ascx" %>
 <%@Register TagPrefix="PS" TagName="ImageGallery" Src="~/_controltemplates/15/ImageGallery/ImageGallery.ascx" %>
 
 <asp:Content ContentPlaceholderID="PlaceHolderAdditionalPageHead" runat="server">

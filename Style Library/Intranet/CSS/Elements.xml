@@ -35,5 +35,6 @@
     <File Path="font-awesome\fonts\fontawesome-webfont.woff2" Url="font-awesome/fonts/fontawesome-webfont.woff2" Type="GhostableInLibrary" />
     <File Path="font-awesome\fonts\FontAwesome.otf" Url="font-awesome/fonts/FontAwesome.otf" Type="GhostableInLibrary" />
     <File Path="style.DbvFvg.css" Url="style.DbvFvg.css" Type="GhostableInLibrary" />
+    <File Path="slick.css" Url="slick.css" Type="GhostableInLibrary" />
   </Module>
 </Elements>

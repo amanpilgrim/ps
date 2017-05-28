@@ -24,6 +24,10 @@ h1 { color: #000; }
   min-height: auto;
 }
 
+.PSHomePageLayout #main {
+  padding: 0;
+}
+
 .grid {
   margin-bottom: 80px;
 }
@@ -75,6 +79,10 @@ h1 { color: #000; }
   margin: 0 0 5px;
 }
 
+#grid3 .block .widget:first-child {
+  margin-bottom: 30px;
+}
+
 /* News Carousel */
 #carousel {
 /*  float: left;
@@ -83,7 +91,7 @@ h1 { color: #000; }
 #carousel .slide {
   z-index: 10;
 }
-#carousel .slide-image {
+#carousel .slide-image, #carousel .slide-video {
   height: 0;
   width: 100%;
   padding-top: 52%;
@@ -91,8 +99,13 @@ h1 { color: #000; }
   background-position: 50% 50%;
   background-size: cover;
 }
-#carousel .slide-image h2 {
+#carousel .slide-video {
+  padding-top: 56.65%; /* 56.25 16:9 */
+}
+
+#carousel .slide-image h2, #carousel .slide-video h2 {
   color: #fff;
+  text-shadow: 1px 2px 1px rgba(0,0,0,.8);
   padding: 30px;
   margin: 0;
   position: absolute;
@@ -117,6 +130,24 @@ h1 { color: #000; }
 #carousel .fa:hover {
   color: #000;
 }
+
+.slide-video > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mediaPlayerContainer {
+  position: relative;
+  float: none;
+}
+.slide-video video {
+  width: 100%;
+  height: 100%;
+}
+
 
 
 /*div.carousel { 
@@ -365,6 +396,11 @@ aside .scrollable {
 #nextSitting h3 {
   font-size: 1.42857142857143em; /* 20 */
 }
+#nextSitting ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 #nextSitting a {
   font-style: italic;
   color: #000;
@@ -400,7 +436,12 @@ aside .scrollable {
 }
 #upcomingEvents .block {
   width: 50%;
+  position: relative;
 }
+#upcomingEvents .block a {
+  position: relative;
+}
+
 #upcomingEvents h3 {
   color: #fff;
 }
@@ -413,13 +454,13 @@ aside .scrollable {
   margin: .5em 0;
 }
 #upcomingEvents img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   margin-bottom: 1px;
 }
 #upcomingEvents .date {
   background: #1bcba5;
-  padding: 0 5px;
+  padding: 6px 5px;
   font-size: 3.42857142857143em; /* 48 */
   line-height: 1;
   font-weight: 600;
@@ -428,6 +469,7 @@ aside .scrollable {
   color: #000;
 }
 #upcomingEvents .date span {
+  display: inline-block;
   font-family: OpenSansLight;
   font-weight: 300;
 }
@@ -487,8 +529,10 @@ aside .scrollable {
   font-size: 1.28571428571429em; /* 18 */
   line-height: 1;
   text-transform: uppercase;
+  margin: 10px 0;
 }
 #documents ul {
+  clear: both;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -501,6 +545,7 @@ aside .scrollable {
   border-top: solid 2px #ccc;
   margin: 15px 0 0;
   position: relative;
+  overflow: hidden;
 }
 #documents a {
   display: block;
@@ -514,6 +559,7 @@ aside .scrollable {
   left: 0;
 }
 #documents .search {
+  float: right;
   display: inline-block;
   min-width: 180px;
   padding: 0 50px 0 0;
@@ -523,10 +569,9 @@ aside .scrollable {
   white-space: nowrap;
 }
 #documents input[type="text"] {
-  font-size: 16px;
-  line-height: 38px;
+  font-size: 1.14285714285714em; /* 16 */
   color: #000;
-  padding: 0 0 0 10px;
+  padding: 8px 0 8px 10px;
   border-bottom: 0;
 }
 #documents input[type="submit"] {
@@ -559,16 +604,16 @@ aside .scrollable {
   padding: 0;
 }
 #my-promos li {
-  padding-left: 210px;
+  padding-left: 170px;
   position: relative;
-  min-height: 190px;
+  min-height: 150px;
   margin: 0 0 30px;
 }
 #my-promos img {
   position: absolute;
   left: 0;
   top: 0;
-  width: 190px;
+  width: 150px;
   height: auto;
 }
 #my-promos h3 {

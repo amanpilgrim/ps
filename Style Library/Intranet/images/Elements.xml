@@ -42,5 +42,6 @@
     <File Path="new-zealand-government.png" Url="new-zealand-government.png" Type="GhostableInLibrary" />
     <File Path="nz-parliament.png" Url="nz-parliament.png" Type="GhostableInLibrary" />
     <File Path="bg-header.jpg" Url="bg-header.jpg" Type="GhostableInLibrary" />
+    <File Path="nz-parliament-chamber.jpg" Url="nz-parliament-chamber.jpg" Type="GhostableInLibrary" />
   </Module>
 </Elements>

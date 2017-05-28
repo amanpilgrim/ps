@@ -10,8 +10,6 @@
 
 <%@Register TagPrefix="PS" TagName="SubSection" Src="~/_controltemplates/15/SubSection/SubSection.ascx" %>
 <%@Register TagPrefix="PS" TagName="ShowRelatedInformation" Src="~/_controltemplates/15/RelatedInformation/ShowRelatedInformation.ascx" %>
-<%@Register TagPrefix="PS" TagName="RelatedInformationContacts" Src="~/_controltemplates/15/RelatedInformation/Contacts/RelatedInformationContacts.ascx" %>
-<%@Register TagPrefix="PS" TagName="RelatedInformationLinks" Src="~/_controltemplates/15/RelatedInformation/Links/RelatedInformationLinks.ascx" %>
 <%@Register TagPrefix="PS" Namespace="PS.Intranet.SiteElements.CustomFieldControls" Assembly="PS.Intranet.SiteElements, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4acf9d96094f0c6f" %>
 <%@Register TagPrefix="PS" TagName="PageImage" Src="~/_controltemplates/15/PageImage/PageImage.ascx" %>
 
@@ -34,6 +32,7 @@
 			<header>
 				<h1><span class="requiredfield"><SharePoint:TextField ID="TextField2" runat="server" FieldName="Title"></SharePoint:TextField></span></h1>
                 <h2><SharePoint:TextField ID="TextField1" runat="server" FieldName="PSSubheading"></SharePoint:TextField></h2>
+                <p class="translation">[Translation placeholder]</p>
 			</header>
             
             <PublishingWebControls:EditModePanel ID="EditModePanel9" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
@@ -45,12 +44,12 @@
                 <SharePointWebControls:FieldDescription ID="FieldDescription1" FieldName="PSPageImage" runat="server"/>
             </PublishingWebControls:EditModePanel>
 
-			<div class="clear">
+			<div class="content">
 				<PublishingWebControls:RichHtmlField ID="PSContent" FieldName="PSContent" HasInitialFocus="True" runat="server"/>
 			</div>
             
             <PublishingWebControls:EditModePanel ID="EditModePanel2" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
-		        <PS:SubSection id="subSection"	runat="server"/>			
+		        <PS:SubSection id="subSection"	runat="server"/>
 	 		</PublishingWebControls:EditModePanel>
             
             <PublishingWebControls:EditModePanel ID="EditModePanel3" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">                

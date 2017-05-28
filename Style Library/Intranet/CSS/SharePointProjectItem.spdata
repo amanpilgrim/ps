@@ -37,5 +37,6 @@
     <ProjectItemFile Source="style.DbvFvg.css" Target="CSS\" Type="ElementFile" />
     <ProjectItemFile Source="normalize.css" Target="CSS\" Type="ElementFile" />
     <ProjectItemFile Source="responsive.css" Target="CSS\" Type="ElementFile" />
+    <ProjectItemFile Source="slick.css" Target="CSS\" Type="ElementFile" />
   </Files>
 </ProjectItem>

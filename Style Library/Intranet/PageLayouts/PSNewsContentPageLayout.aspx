@@ -13,10 +13,9 @@
 <%@Register TagPrefix="PS" TagName="PrintCurrentPage" Src="~/_controltemplates/15/PrintPage/PrintPage.ascx" %>
 <%@Register TagPrefix="PS" TagName="PageFooter" Src="~/_controltemplates/15/PageFooter/PageFooter.ascx" %>
 <%@Register TagPrefix="PS" TagName="ShowRelatedInformation" Src="~/_controltemplates/15/RelatedInformation/ShowRelatedInformation.ascx" %>
-<%@Register TagPrefix="PS" TagName="RelatedInformationContacts" Src="~/_controltemplates/15/RelatedInformation/Contacts/RelatedInformationContacts.ascx" %>
-<%@Register TagPrefix="PS" TagName="RelatedInformationLinks" Src="~/_controltemplates/15/RelatedInformation/Links/RelatedInformationLinks.ascx" %>
 <%@Register TagPrefix="PS" TagName="NewsImageCarousel" Src="~/_controltemplates/15/News/NewsImageCarousel.ascx" %>
 <%@Register TagPrefix="PS" TagName="LatestNews" Src="~/_controltemplates/15/News/LatestNews.ascx" %>
+<%@Register TagPrefix="PS" TagName="Video" Src="~/_controltemplates/15/News/Video.ascx" %>
 
 <asp:Content ContentPlaceholderID="PlaceHolderAdditionalPageHead" runat="server">
 	<SharePointWebControls:CssRegistration ID="CssRegistration1" name="<% $SPUrl:~sitecollection/Style Library/~language/Themable/Core Styles/pagelayouts15.css %>" runat="server"/>
@@ -26,7 +25,24 @@
 		<SharePointWebControls:CssRegistration ID="CssRegistration3" name="<% $SPUrl:~sitecollection/Style Library/~language/Themable/Core Styles/editmode15.css %>"
 			After="<% $SPUrl:~sitecollection/Style Library/~language/Themable/Core Styles/pagelayouts15.css %>" runat="server"/>
 		<SharePointWebControls:CssRegistration ID="PSEditMode" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/css/psedit.css%>" after="main.css" runat="server"/>
-	</PublishingWebControls:EditModePanel>
+    </PublishingWebControls:EditModePanel>
+
+   <script type="text/javascript">
+       function validate() {
+           // check that page is in edit mode                   
+           if (SP.Ribbon.PageState.Handlers.isInEditMode()) {
+               if (jQuery('input[id*="_PSVideoSelectorControl_"]').val() != "" && jQuery('input[id*="_PSGalleryLocationSelectorControl_"]').val() != "") {
+                   alert('You can only select either a video or a folder of the page image carousel!');
+                   // prevent page postback                               
+                   return false;
+               }
+           }
+
+           return true;
+       }
+	</script>	
+
+
 </asp:Content>
 
 
@@ -50,6 +66,7 @@
 			
 	        <PublishingWebControls:EditModePanel ID="EditModePanel2" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
 	           	<!--News Content Carousel begins-->
+                <PS:Video id="Video1" runat="server"/> 
 	            <PS:NewsImageCarousel id="NewsImageCarousel" runat="server"/>            
 	            <!--End News Content Carousel-->
 			</PublishingWebControls:EditModePanel>
@@ -69,6 +86,7 @@
 			<PublishingWebControls:RichHtmlField ID="PSContent" FieldName="PSContent" HasInitialFocus="True" runat="server"/></span>
 	
 	            <PublishingWebControls:EditModePanel ID="EditModePanel3" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
+                    <PS:Video id="Video2" runat="server"/> 
 	                <PublishingWebControls:RichImageField ID="PSPageImage" FieldName="PSPageImage" runat="server" />
 	                <span class="ms-metadata">Insert image for display as thumbnail on news and events landing page and news listing page. This image will not display in the image carousel.</span>
 	                <span class="requiredfield"><SharePointWebControls:TextField ID="PSSummaryDescription" FieldName="PSSummaryDescription" runat="server"></SharePointWebControls:TextField></span>
@@ -99,7 +117,8 @@
 					<Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl5" FieldName="PSNewsTopic" runat="server" />
 					<Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl6"  FieldName="PSBusinessFunctions" runat="server" />
 	                <Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl7"  FieldName="PSEventType" runat="server" />
-	                <PS:EnhancedUrlSelectorControl ID="EnhancedUrlSelectorControl1" FieldName="PSGalleryLocation" runat="server" />		
+	                <PS:EnhancedUrlSelectorControl ID="PSVideoSelectorControl" FieldName="PSVideo" runat="server" />
+	                <PS:EnhancedUrlSelectorControl ID="PSGalleryLocationSelectorControl" FieldName="PSGalleryLocation" runat="server" />		
 	                <span class="ms-metadata">Select a folder of the page image carousel.</span>
 				</PublishingWebControls:EditModePanel>
 			</article>
