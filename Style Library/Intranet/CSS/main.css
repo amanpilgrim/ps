@@ -83,7 +83,7 @@ html, body {
   
 }
 body {
-  background: #000;
+  background: #fff;
   color: #000;
   font-family: 'Open Sans', sans-serif !important;
   font-size: 14px;
@@ -95,10 +95,10 @@ body {
   box-sizing: border-box;
   overflow-y: scroll;
 }
-body > form {
+/*body > form {
   background: #fff;
   color: #000;
-}
+}*/
 h1 {
   font-size: 3.42857142857143em; /* 48 */
   line-height: 1.2;
@@ -450,9 +450,101 @@ figcaption {
   box-sizing: border-box;
   vertical-align: top;
 }
-
+.block .edit, .block .fa-edit {
+  font-size: 32px;
+  width: 28px;
+  height: 32px;
+  overflow: hidden;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+.block .edit:before {
+  display: inline-block;
+  width: 28px;
+  height: 32px;
+  overflow: hidden;
+  text-align: center;
+}
+.widget {
+  position: relative;
+}
 .widget h2 {
   
+}
+.widget.promo {
+  padding: 30px 30px 30px 50%;
+  background: #d15a49;
+  color: #fff;
+  position: relative;
+  min-height: 190px;
+  margin: 0 0 30px;
+}
+.widget.promo img {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  width: 35%;
+  height: auto;
+}
+.promo a {
+  color: #fff;
+  text-decoration: none;
+}
+.promo h2 {
+  color: #fff;
+  margin: 0 0 10px;
+}
+.promo p {
+  margin: 10px 0;
+}
+.promo .more {
+  display: block;
+  font-size: 1.14285714285714em;
+  font-weight: 600;
+}
+
+.widget.poll {
+  padding: 30px 30px 75px;
+  background: #f5bc11;
+}
+.poll label {
+  display: block;
+}
+.poll input[type="radio"] {
+  margin-right: 6px;
+}
+.poll input[type="submit"] {
+  background: #fff;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 1.14285714285714em; /* 16 */
+  padding: 5px 6px;
+  border: solid 4px #000;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+
+/* Did You Know */
+#did-you-know {
+  background: #363636;
+  color: #fff;
+  border-spacing: 0;
+  margin: 0;
+}
+#did-you-know .content {
+  width: 35%;
+  padding: 30px 60px;
+}
+#did-you-know .image {
+  width: 65%;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+#did-you-know h2 {
+  color: #fff;
 }
 
 /* *** Header Section Styles *** */
@@ -1096,6 +1188,11 @@ li > a.ms-core-listMenu-item:active {
 }
 
 /* **** Main Content Area *** */
+#main {
+  background: #fff;
+  color: #000;
+}
+
 div.primary {
   float: left;
   width: 75%;
@@ -1550,12 +1647,13 @@ a.disable:focus { text-decoration: none; }
   content: "\f2b9";
 }
 .edit {
-  /*background-position: right -398px;*/
+/*  background-position: right -398px;
+  padding-right: 25px;*/
   cursor: pointer;
-  padding-right: 25px;
 }
 .edit:before {
-  content: "\f044";
+  content: "\f14b";
+  color: rgba(0,0,0,.38);
 }
 
 .flag {

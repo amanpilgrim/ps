@@ -343,11 +343,15 @@ aside .scrollable {
 }
 
 /* Events */
+#events {
+  background: #000;
+}
 #nextSitting {
   display: table;
   width: 100%;
-  margin: 0 0 8px;
   border-spacing: 0;
+  margin: 0;
+  border-bottom: solid 8px #fff;
 }
 #nextSitting .block {
   width: 50%;
@@ -452,6 +456,7 @@ aside .scrollable {
 .contactBox {
   padding: 0 30px 0 15px;
 /*  border-left: solid 5px #d15a49;*/
+  position: relative;
 }
 .contactBox ul {
   list-style: none;
@@ -464,11 +469,24 @@ aside .scrollable {
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
 }
+.contactBox .edit {
+  top: 0;
+  right: 0;
+}
 
 /* Documents */
 #documents {
   padding: 30px;
   background: #efefef;
+}
+#documents h2 {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+#documents h3 {
+  font-size: 1.28571428571429em; /* 18 */
+  line-height: 1;
+  text-transform: uppercase;
 }
 #documents ul {
   list-style: none;
@@ -494,6 +512,39 @@ aside .scrollable {
   position: absolute;
   top: 15px;
   left: 0;
+}
+#documents .search {
+  display: inline-block;
+  min-width: 180px;
+  padding: 0 50px 0 0;
+  margin-bottom: 10px;
+  background: #fff;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+#documents input[type="text"] {
+  font-size: 16px;
+  line-height: 38px;
+  color: #000;
+  padding: 0 0 0 10px;
+  border-bottom: 0;
+}
+#documents input[type="submit"] {
+    display: inline-block;
+    font: normal normal normal 2em/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-width: 28px;
+    margin: 0;
+    background: transparent;
+    color: #000;
+    padding: 5px 11px;
+/*    border: solid 4px #000;*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
 }
 
 /* Editable Promos */

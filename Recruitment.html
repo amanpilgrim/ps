@@ -346,25 +346,16 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 </div>
 
 					<nav class="noindex" id="CustomHeaderNavigation">
-						<ul>
-						    
-
-<li class="last"><a href = 'http://www.parliament.nz/en-NZ/AboutParl/SeeHear/PTV/'><img src="/Style Library/Intranet/images/logo-parltv.jpg" alt="Parliament TV link. " /></a></li>
-
-        
-        
-        <li class="noindex">
-           <a class="noindex" href="http://www.parliament.nz/">www.parliament.nz</a> 
-        </li>
-    
-        <li class="noindex">
-           <a class="noindex" href="/ResourceCentre/aboutIntranet/Pages/About-this-site.aspx">Contact Us</a> 
-        </li>
-                				
-    
-
-						</ul>
-					</nav>
+            <ul>
+              <li class="last"><a href = 'http://www.parliament.nz/en-NZ/AboutParl/SeeHear/PTV/'><span class="fa fa-play-circle-o"></span>Parliament TV</a></li>
+              <li class="noindex">
+                 <a class="noindex highlight" href="http://www.parliament.nz/">Election 2017</a> 
+              </li>
+              <li class="noindex">
+                 <a class="noindex" href="/ResourceCentre/aboutIntranet/Pages/About-this-site.aspx">Contact Us</a> 
+              </li>
+            </ul>
+          </nav>
 				</div>
 			</div>
 			<!-- ===== STARTER: Ribbon Code Ends Here  ======================================================================================== -->
@@ -381,16 +372,25 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 						<!-- START PS Header -->
 						<header id="header">
 							<div class="container noindex">
+                
                                 <!-- ===== STARTER: Site Logo with link to root ======================================================================= -->
 								<div class="ms-dialogHidden logo">
 									<a id="ctl00_SPLinkButton1" href="/">
 										<!--<img id="ctl00_x63829de2201a4365a3904788f682d0a3" src="/Style%20Library/Intranet/images/Intranet-Logo.png" alt="Back to Home" />-->
-                                        <a href="/">
-                                            <span>Our House</span>
-                                            <i>Tō Tātou Whare</i>
-                                        </a>
+                    <span>Our House</span>
+                    <i>Tō Tātou Whare</i>
 									</a>
 								</div>
+                                
+                <div class="breadcrumb noindex">
+                    
+                    <b>You are here:</b><span id="ctl00_PlaceHolderBreadcrumb_Sitemappath1" sitemapproviders="SPSiteMapProvider,SPXmlContentMapProvider" endercurrentnodeaslink="false" hideinteriorrootnodes="true"><a href="#ctl00_PlaceHolderBreadcrumb_Sitemappath1_SkipLink"><img alt="Skip Navigation Links" src="/WebResource.axd?d=ruuHC9DELf5lzfkUjQArx3H_1BTxv3iVgNh8K3Vc3W5wLzLrlmzQD4R1KvYYEbXIE0U5cizDpDyzeCr4y4Y3GMR8_Q_02lYNv7XqiZ5Iio41&amp;t=636065610560204723" width="0" height="0" style="border-width:0px;" /></a><span><a title="Our House Intranet" href="/Pages/default.aspx">Our House Intranet</a></span><span>&#160;/&#160;</span><span><a href="/People/Pages/default.aspx">People</a></span><span>&#160;/&#160;</span><span>Recruitment</span><a id="ctl00_PlaceHolderBreadcrumb_Sitemappath1_SkipLink"></a></span>	
+                </div>
+
+                <!--<h1><span class="requiredfield">Page title goes here</span></h1>-->
+							</div>
+						</header>
+						<!-- END PS Header -->
 
 								<div id="menu" class="logoSearch">
                                     <span id="toggle" class="fa fa-bars"></span>
@@ -549,16 +549,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                                     </div>
 								</div>
 
-                <div class="breadcrumb noindex">
-                    
-                    <b>You are here:</b><span id="ctl00_PlaceHolderBreadcrumb_Sitemappath1" sitemapproviders="SPSiteMapProvider,SPXmlContentMapProvider" endercurrentnodeaslink="false" hideinteriorrootnodes="true"><a href="#ctl00_PlaceHolderBreadcrumb_Sitemappath1_SkipLink"><img alt="Skip Navigation Links" src="/WebResource.axd?d=ruuHC9DELf5lzfkUjQArx3H_1BTxv3iVgNh8K3Vc3W5wLzLrlmzQD4R1KvYYEbXIE0U5cizDpDyzeCr4y4Y3GMR8_Q_02lYNv7XqiZ5Iio41&amp;t=636065610560204723" width="0" height="0" style="border-width:0px;" /></a><span><a title="Our House Intranet" href="/Pages/default.aspx">Our House Intranet</a></span><span>&#160;/&#160;</span><span><a href="/People/Pages/default.aspx">People</a></span><span>&#160;/&#160;</span><span>Recruitment</span><a id="ctl00_PlaceHolderBreadcrumb_Sitemappath1_SkipLink"></a></span>	
-                </div>
-
-                <h1><span class="requiredfield">Page title goes here</span></h1>
-							</div>
-						</header>
-						<!-- END PS Header -->
-					
 						<!-- ===== STARTER: Body Area (includes left nav and body) ==================================================================== -->
 						<div class="container">
 							
@@ -640,6 +630,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 	<div id="top" class="primary">
 		<article>
 			<header>
+        <div class="hero">
+          <img src="/assets/hero.jpg" alt="1270x600" />
+        </div>
 				<h1><span class="requiredfield">Recruitment</span></h1>
                 <h2>&#160;</h2>
 			</header>
@@ -665,11 +658,12 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
        <div class="row">
           
         <div class="block">
-            
-            
+          <a href="http://dev04-ourhouse.campus.services/People/Recruitment/Forms/Pages/default.aspx">
+            <img src="/assets/grid.jpg" alt="500x250" />
             <div class="inner">
-                <h2><a href="http://dev04-ourhouse.campus.services/People/Recruitment/Forms/Pages/default.aspx">Forms for Members Support Staff</a></h2>
-                <h3><a href=""></a></h3>
+                <h2>Forms for Members Support Staff</h2>
+                <p>This is the intro text for this subsection. The thunder storm had passed. The towers of the Oriental College and the pine trees.</p>
+                <!--<h3><a href=""></a></h3>
                 <p></p>
 
                 <span class="view-all">
@@ -690,8 +684,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
                             <a style='display: none' href="http://dev04-ourhouse.campus.services/People/Recruitment/Forms/Pages/default.aspx">All Forms for Members Support Staff</a>
                         </li>
                     </ul>
-                </div>
+                </div>-->
             </div>
+          </a>
         </div>
     
         <div class="block">
@@ -757,6 +752,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
        </div>
     
         </div>
+              
+              <blockquote>
+                Department positioning statement could go here lorem ipsum dolor velumptat duis inum eras a vas consequat inum dolores pumpkin soup with rosemary is always a good idea.
+              </blockquote>
     
 
         <ul class="listing">
