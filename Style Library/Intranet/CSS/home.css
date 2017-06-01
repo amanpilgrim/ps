@@ -139,10 +139,10 @@ h1 { color: #000; }
   height: 100%;
 }
 
-.mediaPlayerContainer {
+/*.mediaPlayerContainer {
   position: relative;
   float: none;
-}
+}*/
 .slide-video video {
   width: 100%;
   height: 100%;
@@ -609,6 +609,9 @@ aside .scrollable {
   min-height: 150px;
   margin: 0 0 30px;
 }
+#my-promos ul li:last-child {
+  margin: 0;
+}
 #my-promos img {
   position: absolute;
   left: 0;
@@ -623,8 +626,14 @@ aside .scrollable {
   color: #000;
   font-size: 1.14285714285714em; /* 16 */
 }
+#my-promos a {
+  display: block;
+}
 #my-promos a:hover {
-  text-decoration: none !important;
+  text-decoration: none;
+}
+#my-promos a:hover h3 {
+  text-decoration: underline;
 }
 
 

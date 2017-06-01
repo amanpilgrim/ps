@@ -350,8 +350,10 @@ div.primary div.ms-rtestate-field h3,
 div.primary div.ms-rtestate-field ul,
 div.primary div.ms-rtestate-field div.section {width: 520px;}*/
 
-div.primary.narrow div.ms-rtestate-field p {width: 560px;}
-
+/*div.primary.narrow div.ms-rtestate-field p {width: 560px;}*/
+.ms-rtestate-field p {
+  margin: 1em 0;
+}
 
 
 /* Hide About Me Link */
