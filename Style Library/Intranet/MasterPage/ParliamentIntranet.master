@@ -162,7 +162,9 @@
 									<b>You are here:</b><asp:sitemappath ID="Sitemappath1" PathSeparator="&#160;&#47;&#160;" runat="server" sitemapproviders="SPSiteMapProvider,SPXmlContentMapProvider"  endercurrentnodeaslink="false" hideinteriorrootnodes="true" /></asp:ContentPlaceHolder >	
 				                </div>
 				
-				                <h1><span class="requiredfield">Page title goes here</span></h1>
+				                <asp:ContentPlaceHolder id="PlaceHolderPageHeaderTitle" runat="server">
+                                    <h1><SharePoint:ProjectProperty ID="ProjectProperty2" Property="Title" runat="server" /></h1>
+				                </asp:ContentPlaceHolder>
 							</div>
 						</header>
 						<!-- END PS Header -->
@@ -204,6 +206,7 @@
 								<div class="ms-core-navigation">
 									<asp:ContentPlaceHolder id="PlaceHolderLeftNavBar" runat="server">
 										<div class="ms-quicklaunchouter subNav">
+                                            <div class="title">[Section name]</div>
 											<div class="ms-quickLaunch noindex">
 												<asp:ContentPlaceHolder id="PlaceHolderQuickLaunchTop" runat="server">
 													<SharePoint:UIVersionedContent ID="UIVersionedContent1" UIVersion="3" runat="server">

@@ -29,20 +29,19 @@
 	<!-- START Main Content Area -->
 	<div id="top" class="primary">
 		<article>
-			<header>
-				<h1><span class="requiredfield"><SharePoint:TextField ID="TextField2" runat="server" FieldName="Title"></SharePoint:TextField></span></h1>
-                <h2><SharePoint:TextField ID="TextField1" runat="server" FieldName="PSSubheading"></SharePoint:TextField></h2>
-                <p class="translation">[Translation placeholder]</p>
-			</header>
-            
             <PublishingWebControls:EditModePanel ID="EditModePanel9" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
-                <PS:PageImage ID="PageImage" FieldName="PSPageImage" ImageRenditionName="Section Image" runat="server" />	
+                <PS:PageImage ID="PageImage" FieldName="PSPageImage" ImageRenditionName="Section Image" runat="server" />
 			</PublishingWebControls:EditModePanel>
             
             <PublishingWebControls:EditModePanel ID="EditModePanel10" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
                 <PublishingWebControls:RichImageField ID="RichImageField2" FieldName="PSPageImage" runat="server" />
                 <SharePointWebControls:FieldDescription ID="FieldDescription1" FieldName="PSPageImage" runat="server"/>
             </PublishingWebControls:EditModePanel>
+
+			<header>
+				<%--<h1><span class="requiredfield"><SharePoint:TextField ID="TextField2" runat="server" FieldName="Title"></SharePoint:TextField></span></h1> --%>
+                <p class="translation"><SharePoint:TextField ID="TextField1" runat="server" FieldName="PSSubheading"></SharePoint:TextField></p>
+			</header>
 
 			<div class="content">
 				<PublishingWebControls:RichHtmlField ID="PSContent" FieldName="PSContent" HasInitialFocus="True" runat="server"/>
@@ -60,11 +59,9 @@
 				<Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl3" FieldName="PSBusinessGroups" runat="server" />
 				<Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl4" FieldName="PSOrganisation" runat="server" />
 				<SharePoint:DateTimeField ID="DateTimeField1" FieldName="PSPublishedDate" runat="server" />	
-                		
-              
 			</PublishingWebControls:EditModePanel>
 
-			<PS:ShowRelatedInformation ID="ShowRelatedInformation" runat="server"/>				
+			<PS:ShowRelatedInformation ID="ShowRelatedInformation" runat="server"/>
             
             <script language="javascript">if (typeof (MSOLayout_MakeInvisibleIfEmpty) == "function") { MSOLayout_MakeInvisibleIfEmpty(); }</script>
 		</article>

@@ -96,7 +96,7 @@ div a[id$="item_hoverParentLink"] {
 }
 
 #globalNavBox, .ms-clientcontrol-chromeheader {
-  background-color: transparent;
+  background-color: #000; /*transparent*/
   width: 100%;
   height: auto;
 }

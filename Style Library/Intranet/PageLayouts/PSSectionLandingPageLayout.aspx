@@ -16,6 +16,16 @@
 <asp:Content ContentPlaceholderID="PlaceHolderAdditionalPageHead" runat="server">
 	<SharePointWebControls:CssRegistration ID="CssRegistration1" name="<% $SPUrl:~sitecollection/Style Library/~language/Themable/Core Styles/pagelayouts15.css %>" runat="server"/>
 	<SharePointWebControls:CssRegistration ID="PSSection" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/css/section.css%>" after="main.css" runat="server"/>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            
+            if ($('#sublandingPagePullQuote') && $('#sublandingPagePullQuote').text().trim().length === 0) {
+                $('#sublandingPagePullQuote').hide();
+            }
+                
+        });
+      
+    </script>
 	<PublishingWebControls:EditModePanel ID="EditModePanel1" runat="server">
 		<!-- Styles for edit mode only-->
 		<SharePointWebControls:CssRegistration ID="CssRegistration3" name="<% $SPUrl:~sitecollection/Style Library/~language/Themable/Core Styles/editmode15.css %>"
@@ -23,6 +33,8 @@
         <SharePointWebControls:CssRegistration ID="PSEditMode" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/css/psedit.css%>" after="editmode15.css" runat="server"/>
 	</PublishingWebControls:EditModePanel>
 </asp:Content>
+
+<asp:Content ContentPlaceHolderId="PlaceHolderPageHeaderTitle" runat="server"></asp:Content>
 
 <asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server">
 	<!-- START Main Content Area -->
@@ -39,15 +51,25 @@
 
 			<header>
 				<h1><span class="requiredfield"><SharePoint:TextField ID="TextField2" runat="server" FieldName="Title"></SharePoint:TextField></span></h1>
-                <p class="translation">[Translation placeholder]</p>
+			    <PublishingWebControls:EditModePanel ID="EditModePanel4" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
+                
+			   </PublishingWebControls:EditModePanel>
+               <%--   <PublishingWebControls:EditModePanel ID="EditModePanel5" runat="server" PageDisplayMode="Display"  >
+			        <p class="translation">[TRANSLATION]</p>
+			    </PublishingWebControls:EditModePanel>--%>
 			</header>
+            
+		   
+		    <PublishingWebControls:EditModePanel ID="EditModePanel7" runat="server" PageDisplayMode="Display">
+                <div class="content">
+                    <PublishingWebControls:RichHtmlField ID="PSContent" FieldName="PSContent" HasInitialFocus="True" runat="server"/>
+                </div>
+		        <blockquote id="sublandingPagePullQuote">
+		            <SharePoint:TextField ID="TextField1" runat="server" FieldName="PSPullQuote" />
+		        </blockquote> 
+		    </PublishingWebControls:EditModePanel>
+           
 
-            <blockquote>[This is the blockquote example that needs to be dynamically replaced.]</blockquote>
-
-			<div class="content">
-                <PublishingWebControls:RichHtmlField ID="PSContent" FieldName="PSContent" HasInitialFocus="True" runat="server"/>
-            </div>
-			
 			<PublishingWebControls:EditModePanel ID="EditModePanel2" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
 				<PS:Section id="Section" runat="server"/>
 			</PublishingWebControls:EditModePanel>	

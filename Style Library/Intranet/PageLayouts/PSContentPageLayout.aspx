@@ -29,6 +29,18 @@
 	<!-- START Main Content Area -->
 	<div id="top" class="primary">
 		<article>
+
+            <PublishingWebControls:EditModePanel ID="EditModePanel2" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
+			    <PS:PageImage ID="PageImage" FieldName="PSPageImage" ImageRenditionName="Content Image" DisplayImageCaption="True" runat="server" />				                    
+            </PublishingWebControls:EditModePanel>
+            
+            <PublishingWebControls:EditModePanel ID="EditModePanel3" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
+                <PublishingWebControls:RichImageField ID="RichImageField2" FieldName="PSPageImage" runat="server" />
+                <span class="ms-metadata">Insert image for display at top of page and for display as thumbnail on section pages.</span>
+                <SharePointWebControls:TextField ID="TextField1" FieldName="PSPageImageCaption" runat="server" />
+                <SharePointWebControls:FieldDescription ID="FieldDescription2" FieldName="PSPageImageCaption" runat="server"/>
+            </PublishingWebControls:EditModePanel>
+
 			<header>
 				<h1><span class="requiredfield">
 		<SharePoint:TextField ID="TextField2" runat="server" FieldName="Title"></SharePoint:TextField></span></h1>
@@ -43,17 +55,6 @@
               	</ul>
                </PublishingWebControls:EditModePanel>									
 			</header>
-            
-            <PublishingWebControls:EditModePanel ID="EditModePanel2" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
-			    <PS:PageImage ID="PageImage" FieldName="PSPageImage" ImageRenditionName="Content Image" DisplayImageCaption="True" runat="server" />				                    
-            </PublishingWebControls:EditModePanel>
-            
-            <PublishingWebControls:EditModePanel ID="EditModePanel3" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
-                <PublishingWebControls:RichImageField ID="RichImageField2" FieldName="PSPageImage" runat="server" />
-                <span class="ms-metadata">Insert image for display at top of page and for display as thumbnail on section pages.</span>
-                <SharePointWebControls:TextField ID="TextField1" FieldName="PSPageImageCaption" runat="server" />
-                <SharePointWebControls:FieldDescription ID="FieldDescription2" FieldName="PSPageImageCaption" runat="server"/>
-            </PublishingWebControls:EditModePanel>
 
             <div class="content">	
 			    <span class="requiredfield">

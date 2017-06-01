@@ -69,8 +69,6 @@
             <div class="block aside">
                 <aside>
                     <div class="contactBox noindex">
-                        <h2>Useful Contacts</h2>
-                        <span class="icon edit">Edit</span>
                         <PS:HomepageContact id="HomepageContact1" runat="server"/>
                     </div>
                     <WebPartPages:WebPartZone runat="server" Title="Right Bottom" ID="WebPartZone7" Orientation="Vertical"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>

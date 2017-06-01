@@ -19,6 +19,7 @@ h1 { color: #000; }
 .PSHomePageLayout #header {
   height: 50px;
   overflow: visible;
+  background-position: 50% 0;
 }
 .PSHomePageLayout #header .container {
   min-height: auto;
@@ -84,71 +85,6 @@ h1 { color: #000; }
 }
 
 /* News Carousel */
-#carousel {
-/*  float: left;
-  width: 80%;*/
-}
-#carousel .slide {
-  z-index: 10;
-}
-#carousel .slide-image, #carousel .slide-video {
-  height: 0;
-  width: 100%;
-  padding-top: 52%;
-  position: relative;
-  background-position: 50% 50%;
-  background-size: cover;
-}
-#carousel .slide-video {
-  padding-top: 56.65%; /* 56.25 16:9 */
-}
-
-#carousel .slide-image h2, #carousel .slide-video h2 {
-  color: #fff;
-  text-shadow: 1px 2px 1px rgba(0,0,0,.8);
-  padding: 30px;
-  margin: 0;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-#carousel p {
-  margin: 1em 150px 0 30px;
-}
-#carousel .fa {
-  font-size: 30px;
-  color: #ccc;
-  position: absolute;
-  bottom: 0;
-  right: 30px;
-  cursor: pointer;
-  z-index: 11;
-}
-#carousel .fa-chevron-left {
-  right: 100px;
-}
-#carousel .fa:hover {
-  color: #000;
-}
-
-.slide-video > div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/*.mediaPlayerContainer {
-  position: relative;
-  float: none;
-}*/
-.slide-video video {
-  width: 100%;
-  height: 100%;
-}
-
-
 
 /*div.carousel { 
 	float: left; 

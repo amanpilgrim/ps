@@ -1,4 +1,4 @@
-/* ******* STYLESHEET DETAILS ********************
+﻿/* ******* STYLESHEET DETAILS ********************
 Date Created:   03-Oct-2012;
 Last Updated:   27-May-2014;
 Owner:          Parliamentary Service;
@@ -6,7 +6,117 @@ Project:        Intranet Redevelopment;
 Author:         Datacom Wellington;
 Comment:        News layouts;
 ************************************************** */
+.primary.narrow + .primary {
+    clear: both;
+    float: right;
+}
 
+.newsCarousel {  
+	/*float: left;
+	width: 100%;*/
+	background: #fff;
+	position: relative;
+}
+
+figure {
+    margin: 5px 0 0;
+    width: 100%;
+}
+
+.newsfeature,
+.newsremove { display: none; }
+
+.newsfeature.newscurrent { display: block; }
+
+figure img {
+    /*border-bottom: 1px solid #000;   
+    float: left;
+    max-height: 504px;
+    max-width: 763px;*/
+}
+figcaption {
+    border: 0;
+    /*float: left;
+    padding: 10px;
+    width: 550px;*/
+    padding: 10px 200px 10px 10px;
+    margin: 0;
+}
+figcaption p { margin: 0; }
+
+.carouselFooter { 
+	bottom: 10px;
+	max-width: 181px;	
+	position: absolute;
+	right: 10px;
+}
+.carouselFooter ul,
+.carouselFooter ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;    
+}
+.carouselFooter li { float: left; }
+
+/* *** News And Events Section Overview *** */
+.feature { 
+	float: left;
+	margin-bottom: 10px;
+	width: 100%;
+}
+.feature h3 { 
+	float: left;
+	margin-bottom: 5px; 
+	width: 100%;
+}
+	.feature img + p { 
+		float: right;
+		width: 255px;
+	}
+
+.galleryBox h3 a,
+.feature a,
+.notices.inner a,
+.more .inner a {
+	float: left;
+	width: 75%;
+}
+
+.galleryBox h3 span,
+.feature h3 span,
+.notices span,
+.more span { float: right; }
+
+.notices ul li,
+.more ul li {
+	background-image: none;
+	float: left;
+	padding: 0;
+	width: 100%;
+}
+
+.block.wide .notices ul {
+	margin: 0;
+	padding-right: 20px;
+}
+
+
+.more + p.alignRight { margin-right: 15px; }
+
+.block.wide .event { 
+	float: left;
+	margin-right: 50px;
+	width: 360px
+}
+.event h3 { margin-bottom: 5px; }
+
+.block.wide .event ul { 
+	margin-left: 70px;
+	width: 300px;
+}
+
+
+/* 2017 */
 #recent {
   clear: both;
   background: #ebebeb;
@@ -21,7 +131,7 @@ Comment:        News layouts;
   margin: 0;
 }
 .recent li {
-  margin: 0 0 30px;
+  margin: 30px 0 0;
 }
 .recent a {
   display: block;
@@ -45,21 +155,15 @@ Comment:        News layouts;
 .recent p {
   margin: 1em 0 0;
 }
-/*.recent a:hover {
-  text-decoration: none;
-  background: #157a6b;
-  color: #fff;
-}*/
 .recent a:hover h3 {
   text-decoration: underline;
 }
-
 .recent .meta {
     margin: 1em 0;
     padding-left: 10px;
     border-left: solid 5px #2ebcc5;
 }
 .recent a:hover .category {
-  color: #000;
-  border-right-color: #000;
+	color: #000;
+	border-right-color: #000;
 }
