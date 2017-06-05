@@ -40,7 +40,7 @@
 	<!-- START Main Content Area -->
 	<div class="primary">
 		<article>
-            <PublishingWebControls:EditModePanel ID="EditModePanel9" runat="server" CssClass="hero edit-mode-panel" PageDisplayMode="Display">
+            <PublishingWebControls:EditModePanel ID="EditModePanel9" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
                 <PS:PageImage ID="PageImage" FieldName="PSPageImage" ImageRenditionName="Section Image" runat="server" />
 			</PublishingWebControls:EditModePanel>
             
@@ -52,40 +52,40 @@
 			<header>
 				<h1><span class="requiredfield"><SharePoint:TextField ID="TextField2" runat="server" FieldName="Title"></SharePoint:TextField></span></h1>
 			    <PublishingWebControls:EditModePanel ID="EditModePanel4" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
-                
 			   </PublishingWebControls:EditModePanel>
                <%--   <PublishingWebControls:EditModePanel ID="EditModePanel5" runat="server" PageDisplayMode="Display"  >
 			        <p class="translation">[TRANSLATION]</p>
 			    </PublishingWebControls:EditModePanel>--%>
 			</header>
+		  
+            <div class="content">
+                <PublishingWebControls:RichHtmlField ID="PSContent" FieldName="PSContent" HasInitialFocus="True" runat="server"/>
             
+	            <PublishingWebControls:EditModePanel ID="EditModePanel7" runat="server" PageDisplayMode="Display">    
+		            <blockquote id="sublandingPagePullQuote">
+		                <SharePointWebControls:TextField ID="TextField3" runat="server" FieldName="PSPullQuote" />
+		            </blockquote> 
+                </PublishingWebControls:EditModePanel>
 		   
-		    <PublishingWebControls:EditModePanel ID="EditModePanel7" runat="server" PageDisplayMode="Display">
-                <div class="content">
-                    <PublishingWebControls:RichHtmlField ID="PSContent" FieldName="PSContent" HasInitialFocus="True" runat="server"/>
-                </div>
-		        <blockquote id="sublandingPagePullQuote">
-		            <SharePoint:TextField ID="TextField1" runat="server" FieldName="PSPullQuote" />
-		        </blockquote> 
-		    </PublishingWebControls:EditModePanel>
-           
-
-			<PublishingWebControls:EditModePanel ID="EditModePanel2" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
-				<PS:Section id="Section" runat="server"/>
-			</PublishingWebControls:EditModePanel>	
+                <PublishingWebControls:EditModePanel ID="EditModePanel5" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
+	                <span class="requiredfield"><SharePointWebControls:TextField ID="TextField1" runat="server" FieldName="PSPullQuote" /></span>
+                </PublishingWebControls:EditModePanel>
+             
+			    <PublishingWebControls:EditModePanel ID="EditModePanel2" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
+				    <PS:Section id="Section" runat="server"/>
+			    </PublishingWebControls:EditModePanel>	
 			
-			<PublishingWebControls:EditModePanel ID="EditModePanel3" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
-			    <span class="requiredfield"><SharePoint:FileField ID="FileField1" FieldName="FileLeafRef" runat="server" /></span>
-				<span class="requiredfield"><Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl1" FieldName="PSContentOwner" runat="server" /></span>
-				<span class="requiredfield"><Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControlAudience" FieldName="PSTargetAudiences" runat="server" /></span>
-				<Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl2" FieldName="PSKeywords" runat="server" />
-				<Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl3" FieldName="PSBusinessGroups" runat="server" />
-				<Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl4" FieldName="PSOrganisation" runat="server" />
-				<SharePoint:DateTimeField ID="DateTimeField1" FieldName="PSPublishedDate" runat="server" />	
-                			
-			</PublishingWebControls:EditModePanel>
-			
-            <PS:ShowRelatedInformation ID="ShowRelatedInformation" runat="server"/>	
+			    <PublishingWebControls:EditModePanel ID="EditModePanel3" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
+			        <span class="requiredfield"><SharePoint:FileField ID="FileField1" FieldName="FileLeafRef" runat="server" /></span>
+				    <span class="requiredfield"><Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl1" FieldName="PSContentOwner" runat="server" /></span>
+				    <span class="requiredfield"><Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControlAudience" FieldName="PSTargetAudiences" runat="server" /></span>
+				    <Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl2" FieldName="PSKeywords" runat="server" />
+				    <Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl3" FieldName="PSBusinessGroups" runat="server" />
+				    <Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl4" FieldName="PSOrganisation" runat="server" />
+				    <SharePoint:DateTimeField ID="DateTimeField1" FieldName="PSPublishedDate" runat="server" />
+			    </PublishingWebControls:EditModePanel>
+			 </div>
+            <PS:ShowRelatedInformation ID="ShowRelatedInformation" runat="server" />
             
             <script language="javascript">if (typeof (MSOLayout_MakeInvisibleIfEmpty) == "function") { MSOLayout_MakeInvisibleIfEmpty(); }</script>
 		</article>

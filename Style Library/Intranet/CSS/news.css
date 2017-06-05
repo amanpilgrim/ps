@@ -167,3 +167,11 @@ figcaption p { margin: 0; }
 	color: #000;
 	border-right-color: #000;
 }
+header .meta {
+    margin: 1em 0;
+    padding-left: 10px;
+    border-left: solid 5px #2ebcc5;
+}
+header .meta .date {
+    padding-left: 6px;
+}

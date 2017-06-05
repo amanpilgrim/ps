@@ -110,7 +110,19 @@ div a[id$="item_hoverParentLink"] {
 #suiteBarLeft { display: none !important; }
 
 /* Edit Containers */
-.ps-usereditor { width: auto; }
+.ps-usereditor {
+	width: auto;
+	margin: 0;
+}
+.ps-usereditor td {
+	padding: 0;
+}
+.ps-usereditor table {
+	margin: 0;
+}
+.ps-usereditor img {
+	display: inline;
+}
 
 /* Spelling Lists */
 ul.ms-core-menu-list li.ms-core-menu-item {

@@ -17,6 +17,7 @@
 <%@Register TagPrefix="PS" TagName="RecentNewsStories" Src="~/_controltemplates/15/News/RecentNewsStories.ascx" %>
 <%@Register TagPrefix="PS" TagName="Video" Src="~/_controltemplates/15/News/Video.ascx" %>
 <%@Register TagPrefix="PS" TagName="Twitter" Src="~/_controltemplates/15/Twitter/Twitter.ascx" %>
+<%@Register TagPrefix="PS" TagName="NewsCategorySection" Src="~/_controltemplates/15/News/NewsCategorySection.ascx" %>
 
 <asp:Content ContentPlaceholderID="PlaceHolderAdditionalPageHead" runat="server">
 	<SharePointWebControls:CssRegistration ID="CssRegistration1" name="<% $SPUrl:~sitecollection/Style Library/~language/Themable/Core Styles/pagelayouts15.css %>" runat="server"/>
@@ -66,6 +67,7 @@
 			    <SharePoint:TextField ID="TextField1" runat="server" FieldName="Title"></SharePoint:TextField></span></h1>
 	
 			    <PublishingWebControls:EditModePanel ID="EditModePanel8" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
+                    <PS:NewsCategorySection id="NewsCategorySection" runat="server"/>
 				    <ul class="functions">
 			            <PS:PrintCurrentPage id="printPage" runat="server"/>
 					    <PS:PageEmailLink id="pageEmailLink" runat="server"/>
@@ -81,7 +83,6 @@
 			    <PublishingWebControls:RichHtmlField ID="PSContent" FieldName="PSContent" HasInitialFocus="True" runat="server"/></span>
 	
 	            <PublishingWebControls:EditModePanel ID="EditModePanel3" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
-                    <PS:Video id="Video2" runat="server"/> 
 	                <PublishingWebControls:RichImageField ID="PSPageImage" FieldName="PSPageImage" runat="server" />
 	                <span class="ms-metadata">Insert image for display as thumbnail on news and events landing page and news listing page. This image will not display in the image carousel.</span>
 	                <span class="requiredfield"><SharePointWebControls:TextField ID="PSSummaryDescription" FieldName="PSSummaryDescription" runat="server"></SharePointWebControls:TextField></span>
@@ -118,7 +119,9 @@
 			    </PublishingWebControls:EditModePanel>
 		    </article>
 
-            <PS:PageFooter id="pageLastUpdated" runat="server"/>
+            <PublishingWebControls:EditModePanel ID="EditModePanel4" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
+                <PS:PageFooter id="pageLastUpdated" runat="server"/>
+            </PublishingWebControls:EditModePanel>
 	    </div>
         <!--
         <aside class="sidebar">
@@ -139,10 +142,11 @@
                         </a>
                     </li>
                 </ul>
-                <PS:ShowRelatedInformation ID="ShowRelatedInformation" runat="server" />
             </div>
         </aside>
         -->
+        <PS:ShowRelatedInformation ID="ShowRelatedInformation" runat="server" />
+
         <!-- START Lastest News Links-->
 	    <PublishingWebControls:EditModePanel ID="EditModePanel10" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
             <div id="recent" class="grid">
