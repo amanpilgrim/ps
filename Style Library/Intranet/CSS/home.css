@@ -50,6 +50,9 @@ h1 { color: #000; }
   width: 20%;
   background: #efefef;
 }
+aside .widget {
+  margin-bottom: 0;
+}
 #grid2 {
   width: 100%;
   table-layout: fixed;
@@ -277,36 +280,6 @@ aside .scrollable {
 	overflow: hidden;
 	overflow-y: scroll;
 	padding-right: 5px;
-}
-
-/* Links */
-.links {
-  padding: 30px;
-  background: #efefef;
-}
-.links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 1.14285714285714em; /* 16 */
-  line-height: 1.5;
-}
-.links li {
-  padding-left: 15px;
-  position: relative;
-}
-.links li:before {
-  list-style: none;
-  display: inline-block;
-  font: normal normal normal 14px/1.5 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "\f054";
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 /* Events */

@@ -137,7 +137,7 @@ h2.psstyle-rteElement-HeadingTwo,
 h3.psstyle-rteElement-HeadingThree,
 h5.psstyle-rteElement-HeadingFive {      
 	color: #333; 
-	font-family: 'OpenSansCondensedLight';
+	font-family: OpenSansLight, sans-serif;
 	font-weight: normal; 
 }
 h2.psstyle-rteElement-HeadingTwo  { 
@@ -255,7 +255,7 @@ td.psstyle-rteTableLastCol-NoBorder { text-align: right; }
 .ms-metadata,
 .ms-metadata .ms-srch-hover-filetype span {
 	color: #333;
-	font-family: 'OpenSansCondensedLight';
+	font-family: OpenSansLight, sans-serif;
 	font-size: 16px;
 	
 }
@@ -318,16 +318,16 @@ div.ms-srch-ellipsis.ms-textLarge,
 .ms-ref-refinername:link, 
 .ms-ref-refinername:visited,
 .ms-dlg-heading, h2.ms-dlg-heading  {
-	font-family: 'OpenSansCondensedLight';
+	font-family: OpenSansLight, sans-serif;
 	font-size: 22px;
-    text-align: left;
+  text-align: left;
 }
 .ms-dlg-heading, 
 h2.ms-dlg-heading { color: #333; }
 
 .ms-srch-people-item #Heading a {
-    font-family: 'OpenSansCondensedLight';
-    font-size: 16px;
+  font-family: OpenSansLight, sans-serif;
+  font-size: 16px;
 }
 
 #AdvancedLink {

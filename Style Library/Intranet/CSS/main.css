@@ -623,6 +623,9 @@ figcaption {
   font-weight: bold;
   font-size: 12px;
 }
+.twitter-timeline-rendered {
+  width: 100% !important;
+}
 
 .related h2 {
   font: bold 1.28571428571429em 'Open Sans', sans-serif; /* 18 */
@@ -688,6 +691,48 @@ article .meta {
   margin: 1em 0;
   padding-left: 10px;
   border-left: solid 5px #2ebcc5;
+}
+
+/* Links */
+.links {
+  padding: 30px;
+  background: #efefef;
+}
+.links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.14285714285714em; /* 16 */
+  line-height: 1.5;
+}
+.links li {
+  padding-left: 15px;
+  margin: .5em 0 0;
+  position: relative;
+}
+.links li:before {
+  list-style: none;
+  display: inline-block;
+  font: normal normal normal 14px/1.5 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f054";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Contacts */
+.contacts {
+  border-left: solid 5px #d15a49;
+  padding: 0 0 0 15px;
+}
+.contacts ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* News Carousel */
@@ -756,24 +801,24 @@ article .meta {
 }
 
 
-/* NEWS GRID */
-#news-grid .block {
+/* NEWS AND TILE GRIDS */
+.tiles .block {
   background: #ebebeb;
 }
-#news-grid .block:hover {
+.tiles .block:hover {
   background: #1bcaa4;
 }
-#news-grid .block a {
+.tiles .block a {
   display: block;
   color: #000;
 }
-#news-grid .block:hover a {
+.tiles .block:hover a {
   color: #fff;
 }
-#news-grid .block:hover h2, #news-grid .block:hover p {
+.tiles .block:hover h2, .tiles .block:hover p {
   color: #fff;
 }
-#news-grid .block:hover .category {
+.tiles .block:hover .category {
   border-right-color: #fff;
 }
 .load-more {
@@ -1655,6 +1700,9 @@ ul.carouselNav li {
 }*/
 
 /* Hero */
+.hero {
+  margin: 0 0 50px;
+}
 .PSNewsContentPageLayout .hero,
 .PSNewsListingPageLayout .hero,
 .PSSectionLandingPageLayout .hero {
@@ -1778,6 +1826,9 @@ aside {
   overflow: visible; /* hidden; To show 2013 Callout popups, under related infromation */
   position: relative;
   width: 25%;
+}
+aside .widget {
+  margin-bottom: 50px;
 }
 /*article aside {
   clear: both;
@@ -1987,7 +2038,7 @@ a.disable:focus { text-decoration: none; }
 .print:before {
   content: "\f02f";
 }
-.email:before {
+.email:before, .msg:before {
   content: "\f0e0";
 }
 .alert:before {
@@ -2087,7 +2138,7 @@ a.disable:focus { text-decoration: none; }
 .ppt:before, .pptx:before {
   content: "\f1c4";
 }
-.doc:before, .docx:before {
+.doc:before, .docx:before, .dot:before, .dotx:before {
   content: "\f1c2";
   color: #3497e4;
 }
@@ -2259,7 +2310,6 @@ article a.button { padding: 4px 10px 6px; }
 
 /*  Meta Data Pop Up (Heading is still govern by overall page) */
 h1.ms-dlgTitleText.ms-accentText.ms-dlg-heading {
-  color: #004d38;
   font-size: 46px;
 }
 
@@ -2275,6 +2325,52 @@ h1.ms-dlgTitleText.ms-accentText.ms-dlg-heading {
   float: left;
   margin-left: 2.5em;
 }
+
+/* Sortable lists */
+.userDialog {
+  
+}
+
+.userDialog ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.userDialog li {
+  padding-left: 15px;
+  margin: .5em 0 0;
+  position: relative;
+}
+.userDialog li:before {
+  list-style: none;
+  display: inline-block;
+  font: normal normal normal 14px/1.5 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -10px;
+  content: '\f047';
+  cursor: pointer;
+}
+.userDialog .ui-sortable-handle:before {
+  
+}
+.userDialog input[type="text"] {
+  width: 49%;
+  margin: 0 0 0 1%;
+  padding: 5px 10px;
+}
+.userDialog .add {
+  display: inline-block;
+}
+.userDialog input[type=button] {
+  margin: 10px 0 0;
+}
+
 
 .ms-signInLink {
   display: none !important;
