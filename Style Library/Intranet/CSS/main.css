@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 
 @font-face {
   font-family: 'Open Sans';
@@ -819,7 +819,7 @@ article div.meta {
   height: 100%;
 }
 
-/* Often viewed */
+/* Document links */
 .widget.documents {
   background: #efefef;
   padding: 30px;
@@ -1874,6 +1874,9 @@ ul.carouselNav li {
   padding: 5px 0;
 }
 ul.mediaPlayerAdditionalControls li { background-image: none; }
+ul.mediaPlayerAdditionalControls li a img {
+  width: auto;
+}
 
 /* *** Secondary Area Styles (Aside) *** */
 aside {
@@ -2153,12 +2156,12 @@ a.disable:focus { text-decoration: none; }
   content: "\f0c6";/* info f05a; paperclip f0c6 */
 }
 
-#relatedInfo .library {
+/*#relatedInfo .library {
   background-image: none;
   padding-left: 0;
 }
 
-/*.externalLink { background-position:  -487px -901px; }
+.externalLink { background-position:  -487px -901px; }
 .parliament { background-position: -1px -950px; }
 
 .pdf { background-position: -489px -950px; }
@@ -2386,7 +2389,6 @@ h1.ms-dlgTitleText.ms-accentText.ms-dlg-heading {
 .ms-dlgContent .userDialog {
   display: block;
 }
-
 .userDialog ul {
   list-style: none;
   padding: 0;

@@ -47,8 +47,6 @@
 
 </asp:Content>
 
-<asp:Content ContentPlaceHolderId="PlaceHolderPageHeaderTitle" runat="server"></asp:Content>
-
 <asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server">
 
     <div id="top" class="primary">
@@ -62,25 +60,30 @@
 	
 	    <div class="primary narrow">
             <!-- START Top Content Area -->
-		    <header>
-			    <h1><span class="requiredfield">
-			    <SharePoint:TextField ID="TextField1" runat="server" FieldName="Title"></SharePoint:TextField></span></h1>
-	
-			    <PublishingWebControls:EditModePanel ID="EditModePanel8" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
-                    <PS:NewsCategorySection id="NewsCategorySection" runat="server"/>
-				    <ul class="functions">
-			            <PS:PrintCurrentPage id="printPage" runat="server"/>
-					    <PS:PageEmailLink id="pageEmailLink" runat="server"/>
-	                    <PS:PageAlert id="pageAlert" runat="server"/>
-	          	    </ul>	
-	            </PublishingWebControls:EditModePanel>								
-		    </header>
+		    <PublishingWebControls:EditModePanel ID="EditModePanel8" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
+			    <header>
+			    	<h1><span class="requiredfield"><SharePoint:TextField ID="TextField21" runat="server" FieldName="Title"></SharePoint:TextField></span></h1>
+				    				    
+	                <PS:NewsCategorySection id="NewsCategorySection" runat="server"/>
+					<ul class="functions">
+				        <PS:PrintCurrentPage id="printPage" runat="server"/>
+						<PS:PageEmailLink id="pageEmailLink" runat="server"/>
+		                <PS:PageAlert id="pageAlert" runat="server"/>
+		          	</ul>	
+			    </header>
+	        </PublishingWebControls:EditModePanel>	
 		    <!-- END Top Content Area -->
 		
 		    <!-- START Main Content Area -->
 		    <article>
-			    <span class="requiredfield">
-			    <PublishingWebControls:RichHtmlField ID="PSContent" FieldName="PSContent" HasInitialFocus="True" runat="server"/></span>
+		        <PublishingWebControls:EditModePanel ID="EditModePanel9" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
+                    <span class="requiredfield">
+		                <SharePoint:TextField ID="TextField1" runat="server" FieldName="Title"></SharePoint:TextField>
+                    </span>
+		        </PublishingWebControls:EditModePanel>	
+                <span class="requiredfield">
+			        <PublishingWebControls:RichHtmlField ID="PSContent" FieldName="PSContent" HasInitialFocus="True" runat="server"/>
+                </span>
 	
 	            <PublishingWebControls:EditModePanel ID="EditModePanel3" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
 	                <PublishingWebControls:RichImageField ID="PSPageImage" FieldName="PSPageImage" runat="server" />
@@ -112,7 +115,6 @@
 	                <SharePoint:DateTimeField ID="DateTimeField2" FieldName="PSNewsDate" runat="server" />
 				    <Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl5" FieldName="PSNewsTopic" runat="server" />
 				    <Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl6"  FieldName="PSBusinessFunctions" runat="server" />
-	                <Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl7"  FieldName="PSEventType" runat="server" />
 	                <PS:EnhancedUrlSelectorControl ID="PSVideoSelectorControl" FieldName="PSVideo" runat="server" />
 	                <PS:EnhancedUrlSelectorControl ID="PSGalleryLocationSelectorControl" FieldName="PSGalleryLocation" runat="server" />		
 	                <span class="ms-metadata">Select a folder of the page image carousel.</span>

@@ -34,8 +34,6 @@
 	</PublishingWebControls:EditModePanel>
 </asp:Content>
 
-<asp:Content ContentPlaceHolderId="PlaceHolderPageHeaderTitle" runat="server"></asp:Content>
-
 <asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server">
 	<!-- START Main Content Area -->
 	<div class="primary">
@@ -49,16 +47,17 @@
                 <SharePointWebControls:FieldDescription FieldName="PSPageImage" runat="server"/>
             </PublishingWebControls:EditModePanel>
 
-			<header>
-				<h1><span class="requiredfield"><SharePoint:TextField ID="TextField2" runat="server" FieldName="Title"></SharePoint:TextField></span></h1>
-			    <PublishingWebControls:EditModePanel ID="EditModePanel4" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
-			   </PublishingWebControls:EditModePanel>
-               <%--   <PublishingWebControls:EditModePanel ID="EditModePanel5" runat="server" PageDisplayMode="Display"  >
-			        <p class="translation">[TRANSLATION]</p>
-			    </PublishingWebControls:EditModePanel>--%>
-			</header>
+			<PublishingWebControls:EditModePanel ID="EditModePanel8" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
+				<header>		    
+			        <h1><SharePoint:TextField ID="TextField5" runat="server" FieldName="Title"></SharePoint:TextField></h1>
+			        <!--<p class="translation">[TRANSLATION]</p>-->
+				</header>
+		    </PublishingWebControls:EditModePanel>
 		  
-            <div class="content">
+            <div class="content">                
+                <PublishingWebControls:EditModePanel ID="EditModePanel4" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
+			        <span class="requiredfield"><SharePoint:TextField ID="TextField2" runat="server" FieldName="Title"></SharePoint:TextField></span>
+			   </PublishingWebControls:EditModePanel>
                 <PublishingWebControls:RichHtmlField ID="PSContent" FieldName="PSContent" HasInitialFocus="True" runat="server"/>
             
 	            <PublishingWebControls:EditModePanel ID="EditModePanel7" runat="server" PageDisplayMode="Display">    
@@ -84,11 +83,13 @@
 				    <Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl4" FieldName="PSOrganisation" runat="server" />
 				    <SharePoint:DateTimeField ID="DateTimeField1" FieldName="PSPublishedDate" runat="server" />
 			    </PublishingWebControls:EditModePanel>
-			 </div>
-            <PS:ShowRelatedInformation ID="ShowRelatedInformation" runat="server" />
+			</div>
+        </article>
             
-            <script language="javascript">if (typeof (MSOLayout_MakeInvisibleIfEmpty) == "function") { MSOLayout_MakeInvisibleIfEmpty(); }</script>
-		</article>
+        <PS:ShowRelatedInformation ID="ShowRelatedInformation" runat="server" />
+            
+        <script language="javascript">if (typeof (MSOLayout_MakeInvisibleIfEmpty) == "function") { MSOLayout_MakeInvisibleIfEmpty(); }</script>
+		
 	</div>
 	<!-- END Main Content Area -->
 </asp:Content>

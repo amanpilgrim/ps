@@ -127,16 +127,16 @@
         });
         
         // initialise slideshows
-        $('#carousel').each(function(){
+        $('#carousel').each(function () {
             $(this).slick({
-              speed: 300,
-              slidesToShow: 1,
-              autoplay: true,
-              autoplaySpeed: 5000,
-              nextArrow: '<span class="fa fa-chevron-right"></span>',
-              prevArrow: '<span class="fa fa-chevron-left"></span>',
-              dots: false
-          });
+                speed: 300,
+                slidesToShow: 1,
+                autoplay: true,
+                autoplaySpeed: 8000,
+                nextArrow: '<span class="fa fa-chevron-right"></span>',
+                prevArrow: '<span class="fa fa-chevron-left"></span>',
+                dots: false
+            });
         });
 
         $('#upcomingEvents .carousel').each(function () {
@@ -150,6 +150,30 @@
                 dots: false
             });
         });
+
+        $("#carousel").on("beforeChange", function () {
+            $("#carousel video").each(function () {
+                this.pause();
+            });
+
+            console.debug('carousel has changed!');
+        });
+
+        $("#carousel video").on('play', function () {
+            $('#carousel').slick('slickPause');
+            console.debug('Video has started!');
+        });
+
+        $('#carousel video').on('ended', function () {
+            $('#carousel').slick('slickPlay');
+            console.debug('Video has ended!');
+        });
+
+        $("#carousel video").on("pause", function (e) {
+            $('#carousel').slick('slickPlay');
+            console.debug("Video paused. Current time of videoplay: " + e.target.currentTime);
+        });
+
         
 
         /* Text Editor Overrides */

@@ -163,7 +163,6 @@
 				                </div>
 				
 				                <asp:ContentPlaceHolder id="PlaceHolderPageHeaderTitle" runat="server">
-                                    <h1><SharePoint:ProjectProperty ID="ProjectProperty2" Property="Title" runat="server" /></h1>
 				                </asp:ContentPlaceHolder>
 							</div>
 						</header>

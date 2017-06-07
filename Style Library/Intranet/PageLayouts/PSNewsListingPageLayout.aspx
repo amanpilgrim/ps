@@ -22,31 +22,33 @@
 	</PublishingWebControls:EditModePanel>
 </asp:Content>
 
-<asp:Content ContentPlaceHolderId="PlaceHolderPageHeaderTitle" runat="server"></asp:Content>
-
 <asp:Content contentplaceholderid="PlaceHolderMain" runat="server">
 	<!-- START Main Content Area -->
 	<div id="top" class="primary noindex">
-        <div class="hero">
-            <PS:HomepageNewsCarousel id="HomepageNewsCarousel" runat="server"/>
-        </div>
+        <PublishingWebControls:EditModePanel ID="EditModePanel19" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
+	        <div class="hero">
+	            <PS:HomepageNewsCarousel id="HomepageNewsCarousel" runat="server"/>
+	        </div>
+		</PublishingWebControls:EditModePanel>
 
         <PublishingWebControls:EditModePanel ID="EditModePanel9" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
             <PS:PageImage ID="PageImage" FieldName="PSPageImage" ImageRenditionName="Section Image" runat="server" />
         </PublishingWebControls:EditModePanel>
             
         <PublishingWebControls:EditModePanel ID="EditModePanel10" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
+            <span class="requiredfield"><SharePoint:TextField ID="TextField1" runat="server" FieldName="Title"></SharePoint:TextField></span>
             <PublishingWebControls:RichImageField ID="RichImageField2" FieldName="PSPageImage" runat="server" />
             <SharePointWebControls:FieldDescription ID="FieldDescription1" FieldName="PSPageImage" runat="server"/>
         </PublishingWebControls:EditModePanel>
 
 		<article>
-			<header>
-				<h1 class="noBorder"><span class="requiredfield">
-		        <SharePoint:TextField ID="TextField2" runat="server" FieldName="Title"></SharePoint:TextField></span></h1>
-
-                <p class="translation">Pitopito kōrero</p>
-			</header>
+            <PublishingWebControls:EditModePanel ID="EditModePanel4" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
+			    <header>
+			        <h1 class="noBorder"><span class="requiredfield">
+		            <SharePoint:TextField ID="TextField2" runat="server" FieldName="Title"></SharePoint:TextField></span></h1>
+                    <p class="translation">Pitopito kōrero</p>
+			    </header>
+            </PublishingWebControls:EditModePanel>
             
             <div class="clear">
 				<PublishingWebControls:RichHtmlField ID="PSContent" FieldName="PSContent" HasInitialFocus="True" runat="server"/>

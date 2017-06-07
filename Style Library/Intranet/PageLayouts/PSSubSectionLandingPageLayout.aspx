@@ -25,6 +25,12 @@
 	</PublishingWebControls:EditModePanel>
 </asp:Content>
 
+<asp:Content ContentPlaceHolderId="PlaceHolderPageHeaderTitle" runat="server">
+    <PublishingWebControls:EditModePanel ID="EditModePanel6" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
+        <h1><SharePoint:TextField ID="TextField4" runat="server" FieldName="Title"></SharePoint:TextField></h1>
+    </PublishingWebControls:EditModePanel>
+</asp:Content>
+
 <asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server">
 	<!-- START Main Content Area -->
 	<div id="top" class="primary">
@@ -33,6 +39,7 @@
 		</PublishingWebControls:EditModePanel>
             
         <PublishingWebControls:EditModePanel ID="EditModePanel10" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
+            <span class="requiredfield"><SharePoint:TextField ID="TextField2" runat="server" FieldName="Title"></SharePoint:TextField></span>
             <PublishingWebControls:RichImageField ID="RichImageField2" FieldName="PSPageImage" runat="server" />
             <SharePointWebControls:FieldDescription ID="FieldDescription1" FieldName="PSPageImage" runat="server"/>
         </PublishingWebControls:EditModePanel>
@@ -46,7 +53,7 @@
 
 			    <div class="content">
 			        <PublishingWebControls:EditModePanel ID="EditModePanel5" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">   
-			            <SharePointWebControls:TextField ID="TextField3" runat="server" FieldName="PSSummaryDescription"></SharePointWebControls:TextField>
+			            <span class="requiredfield"><SharePointWebControls:TextField ID="TextField3" runat="server" FieldName="PSSummaryDescription"></SharePointWebControls:TextField></span>
 			            <PublishingWebControls:RichHtmlField ID="RichHtmlField1" FieldName="PSContent" HasInitialFocus="True" runat="server"/>
                     </PublishingWebControls:EditModePanel>
 

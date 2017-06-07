@@ -23,6 +23,11 @@
         <SharePointWebControls:CssRegistration ID="PSEditMode" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/css/psedit.css%>" after="editmode15.css" runat="server"/>
 	</PublishingWebControls:EditModePanel>
 </asp:Content>
+<asp:Content ContentPlaceHolderId="PlaceHolderPageHeaderTitle" runat="server">
+    <PublishingWebControls:EditModePanel ID="EditModePanel6" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
+        <h1><SharePoint:TextField ID="TextField3" runat="server" FieldName="Title"></SharePoint:TextField></h1>
+    </PublishingWebControls:EditModePanel>
+</asp:Content>
 
 <asp:Content contentplaceholderid="PlaceHolderMain" runat="server">
 	<!-- START Main Content Area -->
@@ -34,7 +39,7 @@
                 </PublishingWebControls:EditModePanel>
             
                 <PublishingWebControls:EditModePanel ID="EditModePanel10" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
-                     <h1><span class="requiredfield"><SharePoint:TextField ID="TextField2" runat="server" FieldName="Title"></SharePoint:TextField></span></h1>		
+                     <span class="requiredfield"><SharePoint:TextField ID="TextField2" runat="server" FieldName="Title"></SharePoint:TextField></span>
                     <PublishingWebControls:RichImageField ID="RichImageField2" FieldName="PSPageImage" runat="server" />
                     <SharePointWebControls:FieldDescription ID="FieldDescription1" FieldName="PSPageImage" runat="server"/>
                 </PublishingWebControls:EditModePanel>
@@ -58,10 +63,9 @@
                 
 	            </PublishingWebControls:EditModePanel>
             </article>
-            </div>
-   
+        </div>
 
-            <PS:ShowRelatedInformation ID="ShowRelatedInformation" runat="server"/>	
+        <PS:ShowRelatedInformation ID="ShowRelatedInformation" runat="server"/>	
 																	
 	    <script language="javascript">if (typeof (MSOLayout_MakeInvisibleIfEmpty) == "function") { MSOLayout_MakeInvisibleIfEmpty(); }</script>
 		

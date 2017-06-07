@@ -24,67 +24,72 @@
         <SharePointWebControls:CssRegistration ID="PSEditMode" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/css/psedit.css%>" after="editmode15.css" runat="server"/>
 	</PublishingWebControls:EditModePanel>
 </asp:Content>
+<asp:Content ContentPlaceHolderId="PlaceHolderPageHeaderTitle" runat="server">
+    <PublishingWebControls:EditModePanel ID="EditModePanel6" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
+        <h1><SharePoint:TextField ID="TextField3" runat="server" FieldName="Title"></SharePoint:TextField></h1>
+    </PublishingWebControls:EditModePanel>
+</asp:Content>
 
 <asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server">
 	<!-- START Main Content Area -->
 	<div id="top" class="primary">
-		<article>
-
-            <PublishingWebControls:EditModePanel ID="EditModePanel2" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
-			    <PS:PageImage ID="PageImage" FieldName="PSPageImage" ImageRenditionName="Content Image" DisplayImageCaption="True" runat="server" />				                    
-            </PublishingWebControls:EditModePanel>
+	    <div class="primary narrow">
+		    <article>
+                <PublishingWebControls:EditModePanel ID="EditModePanel2" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
+			        <PS:PageImage ID="PageImage" FieldName="PSPageImage" ImageRenditionName="Content Image" DisplayImageCaption="True" runat="server" />				                    
+                </PublishingWebControls:EditModePanel>
             
-            <PublishingWebControls:EditModePanel ID="EditModePanel3" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
-                <PublishingWebControls:RichImageField ID="RichImageField2" FieldName="PSPageImage" runat="server" />
-                <span class="ms-metadata">Insert image for display at top of page and for display as thumbnail on section pages.</span>
-                <SharePointWebControls:TextField ID="TextField1" FieldName="PSPageImageCaption" runat="server" />
-                <SharePointWebControls:FieldDescription ID="FieldDescription2" FieldName="PSPageImageCaption" runat="server"/>
-            </PublishingWebControls:EditModePanel>
+                <PublishingWebControls:EditModePanel ID="EditModePanel3" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
+                    <span class="requiredfield"><SharePoint:TextField ID="TextField2" runat="server" FieldName="Title"></SharePoint:TextField></span>
+                    <PublishingWebControls:RichImageField ID="RichImageField2" FieldName="PSPageImage" runat="server" />
+                    <span class="ms-metadata">Insert image for display at top of page and for display as thumbnail on section pages.</span>
+                    <SharePointWebControls:TextField ID="TextField1" FieldName="PSPageImageCaption" runat="server" />
+                    <SharePointWebControls:FieldDescription ID="FieldDescription2" FieldName="PSPageImageCaption" runat="server"/>
+                </PublishingWebControls:EditModePanel>
 
-			<header>
-				<h1><span class="requiredfield">
-		<SharePoint:TextField ID="TextField2" runat="server" FieldName="Title"></SharePoint:TextField></span></h1>
-                <PublishingWebControls:EditModePanel ID="EditModePanel8" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
-				<ul class="functions">
-			        <PS:PrintCurrentPage id="printPage" runat="server"/>
-					<PS:PageEmailLink id="pageEmailLink" runat="server"/>
-                    <PS:PageAlert id="pageAlert" runat="server"/>
-                    <!--
-                    <li><SharePointPortalControls:AverageRatingFieldControl ID="AverageRatingFieldControl1" FieldName="AverageRating" runat="server" /></li>
-                    -->
-              	</ul>
-               </PublishingWebControls:EditModePanel>									
-			</header>
+			    <header>
+                    <PublishingWebControls:EditModePanel ID="EditModePanel8" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
+				        <ul class="functions">
+			                <PS:PrintCurrentPage id="printPage" runat="server"/>
+					        <PS:PageEmailLink id="pageEmailLink" runat="server"/>
+                            <PS:PageAlert id="pageAlert" runat="server"/>
+                            <!--
+                            <li><SharePointPortalControls:AverageRatingFieldControl ID="AverageRatingFieldControl1" FieldName="AverageRating" runat="server" /></li>
+                            -->
+              	        </ul>
+                   </PublishingWebControls:EditModePanel>									
+			    </header>
 
-            <div class="content">	
-			    <span class="requiredfield">
-				<PublishingWebControls:RichHtmlField ID="PSContent" FieldName="PSContent" HasInitialFocus="True" runat="server"/></span>
-            </div>
-			
-			<PublishingWebControls:EditModePanel ID="EditModePanel4" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
+                <div class="content">	
+			        <span class="requiredfield">
+				        <PublishingWebControls:RichHtmlField ID="PSContent" FieldName="PSContent" HasInitialFocus="True" runat="server"/>
+			        </span>
+			        <PublishingWebControls:EditModePanel ID="EditModePanel4" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
 			    
-			    <span class="requiredfield"><SharePointWebControls:TextField ID="PSSummaryDescription" FieldName="PSSummaryDescription" runat="server"></SharePointWebControls:TextField></span>
-                <SharePointWebControls:FieldDescription ID="FieldDescription1" FieldName="PSSummaryDescription" runat="server"/>
-			    <span class="requiredfield"><SharePoint:FileField ID="FileField1" FieldName="FileLeafRef" runat="server" /></span>
-				<span class="requiredfield"><Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl1" FieldName="PSContentOwner" runat="server" /></span>
-				<span class="requiredfield"><Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControlAudience" FieldName="PSTargetAudiences" runat="server" /></span>
-				<Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl2" FieldName="PSKeywords" runat="server" />
-				<Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl3" FieldName="PSBusinessGroups" runat="server" />
-				<Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl4" FieldName="PSOrganisation" runat="server" />
-				<SharePoint:DateTimeField ID="DateTimeField1" FieldName="PSPublishedDate" runat="server" />
+			            <span class="requiredfield"><SharePointWebControls:TextField ID="PSSummaryDescription" FieldName="PSSummaryDescription" runat="server"></SharePointWebControls:TextField></span>
+                        <SharePointWebControls:FieldDescription ID="FieldDescription1" FieldName="PSSummaryDescription" runat="server"/>
+			            <span class="requiredfield"><SharePoint:FileField ID="FileField1" FieldName="FileLeafRef" runat="server" /></span>
+				        <span class="requiredfield"><Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl1" FieldName="PSContentOwner" runat="server" /></span>
+				        <span class="requiredfield"><Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControlAudience" FieldName="PSTargetAudiences" runat="server" /></span>
+				        <Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl2" FieldName="PSKeywords" runat="server" />
+				        <Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl3" FieldName="PSBusinessGroups" runat="server" />
+				        <Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl4" FieldName="PSOrganisation" runat="server" />
+				        <SharePoint:DateTimeField ID="DateTimeField1" FieldName="PSPublishedDate" runat="server" />
 
-				<Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl5" FieldName="PSLibraryCategory" runat="server" />
-				<Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl6"  FieldName="PSBusinessFunctions" runat="server" />
-				<SharePoint:DateTimeField ID="DateTimeField2" FieldName="PSNextReviewDate" runat="server" />
-			</PublishingWebControls:EditModePanel>
-            
-		    <PS:ShowRelatedInformation ID="ShowRelatedInformation" runat="server"/>	
-			            
+				        <Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl5" FieldName="PSLibraryCategory" runat="server" />
+				        <Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl6"  FieldName="PSBusinessFunctions" runat="server" />
+				        <SharePoint:DateTimeField ID="DateTimeField2" FieldName="PSNextReviewDate" runat="server" />
+			        </PublishingWebControls:EditModePanel>
+                </div>
+
+                <PS:PageFooter id="pageLastUpdated" runat="server"/>
+            </article>
+	    </div>
+
+        <PS:ShowRelatedInformation ID="ShowRelatedInformation" runat="server"/>
 			
-            <PS:PageFooter id="pageLastUpdated" runat="server"/>		
-			
-            <script language="javascript">if (typeof (MSOLayout_MakeInvisibleIfEmpty) == "function") { MSOLayout_MakeInvisibleIfEmpty(); }</script>
-		</article>
-	</div>
+        <script language="javascript">if (typeof (MSOLayout_MakeInvisibleIfEmpty) == "function") { MSOLayout_MakeInvisibleIfEmpty(); }</script>
+	  
 	<!-- END Main Content Area -->
+    </div>
 </asp:Content>
