@@ -8,62 +8,114 @@ Comment:        Used for dynamic table filters;
 ************************************************** */
 
 .searchFilter {
-	background-color: #fff;
-	font-family: verdana, arial, sans-serif;
-	margin-top: 20px;
+	background-color: #1bcba5;
+  color: #fff;
+  padding: 20px 80px 20px 30px;
+  position: relative;
 }
 
-.searchFilter h3 { margin: 0 0 0 10px; }
-
-.searchFilter fieldset { border: 0; }
 .searchFilter legend { 
     position: absolute;
     margin: -9999px;
 }
 
-.searchFilter label { display: block; }
+.searchFilter .field {
+  display: inline-block;
+  width: 33%;
+  padding-right: 5px;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.searchFilter label {
+  display: block;
+  text-transform: uppercase;
+}
 
 .searchFilter input[type="text"],
-.searchFilter select { margin-bottom: 10px; }
+.searchFilter select {
+/*  margin-bottom: 10px;*/
+  font-size: 18px;
+  line-height: 20px;
+}
 
-.searchFilter select { width: 100%; }
-.searchFilter input[type="text"] { width: 130px }
-.searchFilter p { margin: 0 0 10px; }
+.searchFilter .select {
+  border: 0;
+}
+
+.searchFilter select {
+/*  width: 100%;*/
+}
+.searchFilter input[type="text"] {
+/*  width: 130px;*/
+}
+.searchFilter p {
+/*  margin: 0 0 10px;*/
+}
 
 .searchFilter .button {
-	color: #fff;
-	margin: 0;
-	min-width: 5.2em;
-	padding: 3px 2px;
+  display: inline-block;
+  font: normal normal normal 2em/36px FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 36px;
+  width: 40px;
+  margin: 0;
+  background: #000;
+  color: #fff;
+  padding: 2px 0;
+  border: 0;
+  border-radius: 0;
+  position: absolute;
+  top: 44px;
+  right: 30px;
+  cursor: pointer;
 }
-.searchFilter .button + .button { margin-left: 10px; }
+.searchFilter .button:hover {
+  background: #000;
+  color: #fff;
+}
+.searchFilter .button + .button {
+  margin-left: 10px;
+}
+
+.searchFilter .advanced {
+  margin: 20px -50px 0 0;
+  text-align: right;
+}
+.searchFilter .advanced a {
+  color: #000;
+  font-weight: 600;
+}
 
 .filterBox {
-	background-color: #b4c6ba;
-    border: 1px solid #518471;
-    float: left;
-    margin-bottom: 1px;
-	padding: 3px 10px;
-	text-align: right;
-    width: 743px;
+/*  background-color: #b4c6ba;
+  border: 1px solid #518471;
+  margin-bottom: 1px;
+  padding: 3px 10px;
+  text-align: right;*/
+  padding: 20px 0;
 }
-.narrow .filterBox { width: 538px; }
 
 .top { 
 	margin: 5px 0 10px; 
 	padding: 0 10px 0 7px;
 }
 .dataTables_filter {
-   float: right;
+/*   float: right;
    text-align: right;
+   */display: none;
 }
 .dataTables_info { 
-    float: left; 
-    margin-top: 3px;
+/*    float: left; 
+    margin-top: 3px;*/
 }
 .dataTables_length { float: right; }
 
-.dataTables_paginate { text-align: center; }
+.dataTables_paginate {
+  text-align: center;
+}
 .dataTables_paginate a {
 	cursor: pointer;
 	padding-right: 10px;
@@ -74,31 +126,32 @@ Comment:        Used for dynamic table filters;
 .dataTables_paginate .first:before { content: "\00ab  "; }
 
 .filter {
-	border-collapse: collapse;
+/*	border-collapse: collapse;
 	clear: both;
-	width: 765px;
+	width: 765px;*/
+  margin-top: 0;
 }
 
-.filter th,
-.filter td { line-height: .9; }
+/*.filter th,
+.filter td { line-height: .9; }*/
 
 .filter th {
-	background-color: #1c5d4a;
-	border: 1px solid #b1b1b1;
-	border-color: #000 #b1b1b1;
-	color: #fff;
+	background-color: transparent;
+	border: 0;
+	color: #000;
 	cursor: pointer;
-    font-weight: normal;
-	padding: 9px 7px;
+  font-weight: 600;
+  text-transform: none;
+	padding: 10px 10px;
 	text-align: left;
 	white-space: nowrap;
 }
-.filter th:first-child { border-left-color: #000; }
-.filter th:last-child { border-right-color: #000; }
+/*.filter th:first-child { border-left-color: #000; }
+.filter th:last-child { border-right-color: #000; }*/
 
 .filter td { 
 	border: 1px solid red; 
-	padding: 5px 7px;
+	padding: 5px 10px;
 }
 .filter td p { margin: 0; }
 
@@ -106,42 +159,63 @@ Comment:        Used for dynamic table filters;
 	word-break: break-all;
 	word-break: break-word;   
 	white-space: normal;
-	width:	200px;
+/*	width:	200px;*/
 }
 .filter td.break-word-Documents {
-    word-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
 	white-space: normal;
-	width: 100px;
-    padding-left: 30px;
-    color: #0167ce;
-    font-weight: bold; 
-    display:block;
+/*	width: 100px;
+  padding-left: 30px;*/
+  color: #157a6b;
+  font-weight: bold; 
+/*  display: block;*/
 }
 
-.filter td.break-word-Documents:hover
-{
+.filter td.break-word-Documents:hover {
   text-decoration: underline;
   cursor: pointer; 
- }
+}
 
-td.break-word-Documents > div {
-    position:relative;
-     margin-left: -20px;  
-     width: 12px; 
-     height: 20px; 
-     display: inline;
-    }
+/*td.break-word-Documents > div {
+  position:relative;
+  margin-left: -20px;  
+  width: 12px; 
+  height: 20px; 
+  display: inline;
+}
 
 .filter tr:nth-of-type(even),
-tr.even td { background-color: #f6f6f2; }
+tr.even td { background-color: #f6f6f2; }*/
 
-.sorting_desc:after,
-.sorting:after { content: " \0020\25b4 "; }
-.sorting_asc:after { content: " \0020\25bE "; }
-.sorting.noSort:after { content: " \0020 "; }
+/*.sorting:after { content: " \0020\25b5"; }
+.sorting_asc:after { content: " \0020\25b4"; }
+.sorting_desc:after { content: " \0020\25be"; }
+.sorting.noSort:after { content: " \0020"; }*/
 
-.filter .icon { padding-left: 20px; }
-.filter .icon.info { padding-left: 0; }
+.sorting:after,
+.sorting_asc:after,
+.sorting_desc:after {
+/*  display: inline-block;*/
+  font: normal normal normal 16px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f0d8";
+  color: #ccc;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.sorting_asc:after { color: #000; }
+.sorting_desc:after { content: "\f0d7"; color: #000; }
+.sorting.noSort:after { content: ""; }
+
+/*.filter .icon { padding-left: 20px; }
+.filter .icon.info { padding-left: 0; }*/
+.filter .icon {
+  display: block;
+  font-size: 32px;
+}
 
 .filter .button { 
 	display: inline-block;
@@ -150,11 +224,11 @@ tr.even td { background-color: #f6f6f2; }
 
 /* Noticeboard styles*/
 .filter.sortableTable td {
-    border: none;
-    border-left: 1px solid #ecede7;
+    border: 1px solid #ccc;
+    border-width: 1px 0 1px 0;
     line-height: 1.5;
     vertical-align: top;
 }
-.filter.sortableTable td:first-child { border-width: 0; }
+/*.filter.sortableTable td:first-child { border-width: 0; }
 
-.filter.sortableTable span { margin-left: 30px; }
+.filter.sortableTable span { margin-left: 30px; }*/
