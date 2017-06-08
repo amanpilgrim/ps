@@ -29,74 +29,65 @@
 	</PublishingWebControls:EditModePanel>
 </asp:Content>
 
-<asp:Content ContentPlaceHolderId="PlaceHolderQuickLaunchBottom" runat="server">
-	<PublishingWebControls:EditModePanel ID="EditModePanel3" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
-        <PS:DocumentFilter runat="server" ID="DocumentFilter" />
-    </PublishingWebControls:EditModePanel>
-</asp:Content>
-
 <asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server">
 	<!-- START Main Content Area -->
-	<div id="top" class="primary noMargin">
-		<article>
-			<header>
-				<h1 class="noBorder"><span class="requiredfield"><SharePoint:TextField ID="TextField2" runat="server" FieldName="Title"></SharePoint:TextField></span></h1>								
-			</header>
-			<PublishingWebControls:EditModePanel ID="EditModePanel2" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
-			    <table>				    
-					<tr>
-						<td style="vertical-align:top;">
-							<span class="requiredfield"><SharePointWebControls:TextField ID="PSSummaryDescription" FieldName="PSSummaryDescription" runat="server"></SharePointWebControls:TextField></span>
-							<span class="ms-metadata">Enter a max 100 character summary for display on the Resource Centre page.</span>
-							<PublishingWebControls:RichHtmlField ID="PSContent" FieldName="PSContent" HasInitialFocus="True" runat="server"/>
-							<span class="requiredfield"><SharePoint:FileField ID="FileField1" FieldName="FileLeafRef" runat="server" /></span>
-							<span class="requiredfield"><Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl1" FieldName="PSContentOwner" runat="server" /></span>
-							<span class="requiredfield"><Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControlAudience" FieldName="PSTargetAudiences" runat="server" /></span>
-							<Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl2" FieldName="PSKeywords" runat="server" />
-							<Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl3" FieldName="PSBusinessGroups" runat="server" />
-							<Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl4" FieldName="PSOrganisation" runat="server" />
-							<SharePoint:DateTimeField ID="DateTimeField1" FieldName="PSPublishedDate" runat="server" />
-						</td>
-						<td class="DocCenterRightPanel">
-							<WebPartPages:WebPartZone id="WebPartZone1" runat="server" title="RightPanel">
-								<ZoneTemplate>
-								</ZoneTemplate>
-							</WebPartPages:WebPartZone>
-						</td>
-					</tr>
-			    </table>
-			</PublishingWebControls:EditModePanel>
+	<div id="top" class="primary">
+	    <div class="primary narrow">
+	        <article>
+			    <header>
+				    <h1 class="noBorder"><span class="requiredfield"><SharePoint:TextField ID="TextField2" runat="server" FieldName="Title"></SharePoint:TextField></span></h1>								
+			    </header>
+			    <PublishingWebControls:EditModePanel ID="EditModePanel2" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
+			        <table>				    
+					    <tr>
+						    <td style="vertical-align:top;">
+							    <span class="requiredfield"><SharePointWebControls:TextField ID="PSSummaryDescription" FieldName="PSSummaryDescription" runat="server"></SharePointWebControls:TextField></span>
+							    <span class="ms-metadata">Enter a max 100 character summary for display on the Resource Centre page.</span>
+							    <PublishingWebControls:RichHtmlField ID="PSContent" FieldName="PSContent" HasInitialFocus="True" runat="server"/>
+							    <span class="requiredfield"><SharePoint:FileField ID="FileField1" FieldName="FileLeafRef" runat="server" /></span>
+							    <span class="requiredfield"><Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl1" FieldName="PSContentOwner" runat="server" /></span>
+							    <span class="requiredfield"><Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControlAudience" FieldName="PSTargetAudiences" runat="server" /></span>
+							    <Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl2" FieldName="PSKeywords" runat="server" />
+							    <Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl3" FieldName="PSBusinessGroups" runat="server" />
+							    <Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl4" FieldName="PSOrganisation" runat="server" />
+							    <SharePoint:DateTimeField ID="DateTimeField1" FieldName="PSPublishedDate" runat="server" />
+						    </td>
+						    <td class="DocCenterRightPanel">
+							    <WebPartPages:WebPartZone id="WebPartZone1" runat="server" title="RightPanel">
+								    <ZoneTemplate>
+								    </ZoneTemplate>
+							    </WebPartPages:WebPartZone>
+						    </td>
+					    </tr>
+			        </table>
+			    </PublishingWebControls:EditModePanel>
+                
+	            <PublishingWebControls:EditModePanel ID="EditModePanel4" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
+	                <PublishingWebControls:RichHtmlField ID="RichHtmlField2" FieldName="PSContent" HasInitialFocus="True" runat="server"/>								        
+	            </PublishingWebControls:EditModePanel>
 			
-		</article>
-	</div>
-	
-    <PublishingWebControls:EditModePanel ID="EditModePanel6" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
-        <PS:DocumentMostViewed runat="server" ID="DocumentMostViewed" />
-	</PublishingWebControls:EditModePanel>
-	
-	<div class="primary narrow">
-		<article>         
-		    <PublishingWebControls:EditModePanel ID="EditModePanel5" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
-		        <table>
-			        <tr>
-				        <td style="vertical-align:top;">
-							<div>
-								<PublishingWebControls:RichHtmlField ID="RichHtmlField1" FieldName="PSContent" HasInitialFocus="True" runat="server"/>
-							</div>
-
-            				<PS:DocumentList runat="server" ID="DocumentList" />					        
-				        </td>
-						<td class="DocCenterRightPanel">
-							<WebPartPages:WebPartZone id="WebPartZone2" runat="server" title="RightPanel">
-								<ZoneTemplate>
-								</ZoneTemplate>
-							</WebPartPages:WebPartZone>							
-						</td>
-			        </tr>
-		        </table>
-
-			</PublishingWebControls:EditModePanel>
-		</article>
+		    </article>
+            
+	          <PublishingWebControls:EditModePanel ID="EditModePanel3" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
+	                <PS:DocumentFilter runat="server" ID="DocumentFilter" />
+	          </PublishingWebControls:EditModePanel>
+            
+	        <PublishingWebControls:EditModePanel ID="EditModePanel5" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
+	            <PS:DocumentList runat="server" ID="DocumentList" />					        
+	        </PublishingWebControls:EditModePanel>
+	    </div>
+        
+        <aside class="sidebar">
+            <PublishingWebControls:EditModePanel ID="EditModePanel6" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
+                <WebPartPages:WebPartZone id="WebPartZone2" runat="server" title="RightPanel">
+                    <ZoneTemplate>
+                    </ZoneTemplate>
+                </WebPartPages:WebPartZone>
+                
+              <%--  <PS:DocumentMostViewed runat="server" ID="DocumentMostViewed" />--%>
+	        </PublishingWebControls:EditModePanel>
+        </aside>
+		
 	</div>
 	<!-- END Main Content Area -->
 </asp:Content>

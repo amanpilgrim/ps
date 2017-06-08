@@ -37,14 +37,15 @@
 		</SharePoint:PageTitle>
 		
 		<!-- ===== STARTER: SP Scripts =========================================================================================== -->
-		 <script src="/Style Library/Intranet/js/jquery-1.8.2.min.js"></script>    
-         <script src="/Style Library/Intranet/js/jquery.cookie.js"></script>    
-         <script src="/Style Library/Intranet/js/modernizr.custom.37436.js"></script>
-         <script src="/Style Library/Intranet/js/jquery.mousewheel.js"></script>
-         <script src="/Style Library/Intranet/js/jquery.jscrollpane.min.js"></script>
-         <script src="/Style Library/Intranet/js/jquery.print.js"></script>
-         <script src="/Style Library/Intranet/js/jquery.scrollTo-1.4.3.1-min.js"></script>
-         <script src="/Style Library/Intranet/js/slick.min.js"></script>
+		<script src="/Style Library/Intranet/js/jquery-1.8.2.min.js"></script>    
+        <script src="/Style Library/Intranet/js/jquery.cookie.js"></script>    
+        <script src="/Style Library/Intranet/js/modernizr.custom.37436.js"></script>
+        <script src="/Style Library/Intranet/js/jquery.mousewheel.js"></script>
+        <script src="/Style Library/Intranet/js/jquery.jscrollpane.min.js"></script>
+        <script src="/Style Library/Intranet/js/jquery.print.js"></script>
+        <script src="/Style Library/Intranet/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+        <script src="/Style Library/Intranet/js/slick.min.js"></script>
+        <script src="/Style Library/Intranet/js/jquery.simplemodal.min.js"></script>
 
          
         <!--[if lt IE 10]>

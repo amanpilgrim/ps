@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 
 @font-face {
   font-family: 'Open Sans';
@@ -2437,7 +2437,7 @@ h1.ms-dlgTitleText.ms-accentText.ms-dlg-heading {
   top: 50%;
   margin-top: -10px;
   cursor: pointer;
-  color: #c00;
+  color: #bc1902;
 }
 .userDialog .ui-sortable-handle:before {
   
@@ -2461,12 +2461,16 @@ h1.ms-dlgTitleText.ms-accentText.ms-dlg-heading {
   margin: 30px 0 0;
   cursor: pointer;
 }
+.userDialog input.dialogClose {
+  float: right;
+}
 .userDialog input.dialogSubmit {
   background: #666;
   color: #fff;
   border-color: #666;
   float: right;
   width: auto;
+  margin-left: 10px;
 }
 
 

@@ -67,7 +67,7 @@
                 </PublishingWebControls:EditModePanel>
 		   
                 <PublishingWebControls:EditModePanel ID="EditModePanel5" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
-	                <span class="requiredfield"><SharePointWebControls:TextField ID="TextField1" runat="server" FieldName="PSPullQuote" /></span>
+	                <SharePointWebControls:TextField ID="TextField1" runat="server" FieldName="PSPullQuote" />
                 </PublishingWebControls:EditModePanel>
              
 			    <PublishingWebControls:EditModePanel ID="EditModePanel2" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
