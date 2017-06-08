@@ -1038,7 +1038,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
   <h2>Quick Links</h2>
   <p>Drag each item into your preferred order. A maximum of eight links are allowed.</p>
   <div class="message"></div>
-  <ul></ul>
+  <div class="content"></div>
   <div class="add"><input class="addLink" type="button" value="Add" /></div>
   <input class="dialogSubmit" type="button" value="Update" onclick="submitQuickLinks();" />
   <input class="dialogClose" type="button" value="Close" />
@@ -1061,14 +1061,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
         var currentFields = getCurrentFields();
 
         // recreate the field list
-        $('#quicklinksDialog ul').html(currentFields);
+        $('#quicklinksDialog .content').html(currentFields);
 
         // make the list sortable
-//        if ($('#quicklinksDialog ul').hasClass('ui-sortable')) {
-//          $('#quicklinksDialog ul').sortable('destroy');
-//        }
         $('#quicklinksDialog ul').sortable();
-        $('#quicklinksDialog ul').sortable('refresh');
         
         // reset the message
         $('#quicklinksDialog .message').html('');
@@ -1114,7 +1110,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
       
       $.modal.close();
       
-      $('#quicklinksDialog ul').sortable('destroy');
+      //$('#quicklinksDialog ul').remove();
     });
     
     function updateQuickLinks() {
@@ -1127,10 +1123,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
     }
     
     function getCurrentFields() {
-      var output = '';
+      var output = '<ul>';
       for (var i in quickLinksJson) {
         output += getUrlFields(quickLinksJson[i].Title, quickLinksJson[i].Url);
       }
+      output += '</ul>';
       return output;
     }
     
