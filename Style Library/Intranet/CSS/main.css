@@ -2382,17 +2382,34 @@ h1.ms-dlgTitleText.ms-accentText.ms-dlg-heading {
   margin-left: 2.5em;
 }
 
+/* Modal dialog */
+#simplemodal-overlay {
+  background: rgba(0,0,0,.5);
+  opacity: 1;
+}
+#simplemodal-container {
+  background: #fff;
+  padding: 20px 30px 30px;
+  width: 600px;
+  min-height: 300px;
+  height: auto !important;
+  box-shadow: 4px 4px 5px #aaa, -1px -1px 1px #eee; 
+}
+
 /* Sortable lists */
 .userDialog {
   display: none;
 }
-.ms-dlgContent .userDialog {
-  display: block;
+.userDialog h2 {
+  margin: 0 0 20px;
+}
+.userDialog .message {
+  font-weight: bold;
 }
 .userDialog ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 1em 0 0;
 }
 .userDialog li {
   padding: 0 15px;
@@ -2444,7 +2461,7 @@ h1.ms-dlgTitleText.ms-accentText.ms-dlg-heading {
   margin: 30px 0 0;
   cursor: pointer;
 }
-.userDialog #quickSubmit {
+.userDialog input.dialogSubmit {
   background: #666;
   color: #fff;
   border-color: #666;

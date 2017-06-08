@@ -28,6 +28,7 @@
          <script src="/Style Library/Intranet/js/jquery.print.js"></script>
          <script src="/Style Library/Intranet/js/jquery.scrollTo-1.4.3.1-min.js"></script>
          <script src="/Style Library/Intranet/js/slick.min.js"></script>
+         <script src="/Style Library/Intranet/js/jquery.simplemodal.min.js"></script>
 
          
         <!--[if lt IE 10]>
@@ -1029,50 +1030,91 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
           <a href="http://bing.com">Link 2</a>
       </li>
     </ul>
-    <span class="icon edit" onclick="openQuickLinksDialog();">Edit</span>
+    <!--<span class="icon edit" onclick="openQuickLinksDialog();">Edit</span>-->
+    <span class="icon edit">Edit</span>
+    
 </div>
 <div id="quicklinksDialog" class="userDialog">
+  <h2>Quick Links</h2>
   <p>Drag each item into your preferred order. A maximum of eight links are allowed.</p>
+  <div class="message"></div>
   <ul></ul>
-  <div class="add"><input id="addLink" type="button" value="Add" /></div>
-  <input id="quickSubmit" type="button" value="Update" onclick="submitQuickLinks();" />
-  <input id="closeDialog" type="button" value="Close" onclick="closeDialog();" />
+  <div class="add"><input class="addLink" type="button" value="Add" /></div>
+  <input class="dialogSubmit" type="button" value="Update" onclick="submitQuickLinks();" />
+  <input class="dialogClose" type="button" value="Close" />
 </div>
 <script type="text/javascript">
     var quickLinksJson = [{"Title":"Link 1","Url":"http://google.com","SortOrder":1},{"Title":"Link 2","Url":"http://bing.com","SortOrder":2}];
     var userPreferenceId = 3;
     var currentUser;
     
-    
-    $(document).ready(function(){
+    // make sure everything loaded
+    jQuery(document).ready(function($){
+      
       // load QuickLinks from current json object
       updateQuickLinks();
       
+      // Simple Modal dialog  
+      $('#quicklinks .edit').on('click', function() {
+
+        // get the input fields
+        var currentFields = getCurrentFields();
+
+        // recreate the field list
+        $('#quicklinksDialog ul').html(currentFields);
+
+        // make the list sortable
+//        if ($('#quicklinksDialog ul').hasClass('ui-sortable')) {
+//          $('#quicklinksDialog ul').sortable('destroy');
+//        }
+        $('#quicklinksDialog ul').sortable();
+        $('#quicklinksDialog ul').sortable('refresh');
+        
+        // reset the message
+        $('#quicklinksDialog .message').html('');
+        
+        // open the modal
+        $('#quicklinksDialog').modal();
+        
+      });
+      
     });
     
-    $('#quicklinksDialog').on('click', '.add input', function(e){
+    // listen for Add clicks
+    $(document).on('click', '#quicklinksDialog .add input', function(e){
       e.preventDefault();
-      
+
       var clone = getUrlFields('', '');
       $('#quicklinksDialog ul').append(clone);
       $('#quicklinksDialog ul').sortable();
-      //var $clone = $(this).siblings('ul').find('li:first-child').clone();
-      
+
       if ($('#quicklinksDialog li').length > 7) {
         $('#quicklinksDialog .add').hide();
       }
+
+      $.modal.setPosition();
     });
     
-    $('#quicklinksDialog').on('click', 'li .fa-close', function(e){
+    // remove a quicklink
+    $(document).on('click', '#quicklinksDialog li .fa-close', function(e){
       e.preventDefault();
       
       $(this).parent().remove();
       
-      console.log($('#quicklinksDialog li').length);
-      
       if ($('#quicklinksDialog li').length < 8) {
         $('#quicklinksDialog .add').show();
       }
+      
+      $.modal.setPosition();
+    });
+    
+    // close the modal  
+    $(document).on('click', '.dialogClose', function(e){
+      e.preventDefault();
+      
+      $.modal.close();
+      
+      $('#quicklinksDialog ul').sortable('destroy');
     });
     
     function updateQuickLinks() {
@@ -1093,7 +1135,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
     }
     
     function getUrlFields(title, url) {
-      return '<li><input type="text" name="title[]" value="' + title + '" placeholder="Title" /><input type="text" name="url[]" value="' + url + '" placeholder="URL" /><span class="fa fa-close"></span></li>';
+      return '<li><input type="text" name="title[]" value="' + title + '" placeholder="Title" maxlength="75" /><input type="text" name="url[]" value="' + url + '" placeholder="URL" /><span class="fa fa-close"></span></li>';
     }
     
     // listen for submissions
@@ -1102,50 +1144,44 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
       // update the json
       quickLinksJson = [];
       count = 1;
+      var error = false;
       
       $('#quicklinksDialog li').each(function(){
         var title = $(this).children('input[name="title[]"]').val();
         var url = $(this).children('input[name="url[]"]').val();
         
         // rebuild the json array
-        quickLinksJson.push({"Title": title, "Url": url, "SortOrder": count});
-        count++;
+        if (title == '' && url == '') {
+          //continue;
+        }
+        else if (title == '' || url == '') {
+          setDialogMessage('Title and URL are required for each link.');
+          error = true;
+        }
+        else {
+          quickLinksJson.push({"Title": title, "Url": url, "SortOrder": count});
+          count++;
+        }
+          
       });
       
-      // update the display
-      updateQuickLinks();
+      if (!error) {
+        // update the display
+        updateQuickLinks();
 
-      // submit the results
-      //createOrUpdateQuickLinks(false);
+        setDialogMessage('Quick Links have been updated!');
+
+        // submit the results
+        //createOrUpdateQuickLinks(false);
+      }
     }
 
-    function openQuickLinksDialog() {
-        // get the input fields
-        var currentFields = getCurrentFields();
-        // append to the dialog list
-        $('#quicklinksDialog ul').html(currentFields);
-        // make the list sortable
-        $('#quicklinksDialog ul').sortable();
-      
-        var quicklinksDialogDiv = document.getElementById('quicklinksDialog');
-        
-        var options = {
-            title: "Quick Links",
-            width: 600,
-            height: 600,
-            //dialogReturnValueCallback: RefreshOnDialogClose,
-            //html: quicklinksDialogDiv.cloneNode(true),
-            html: quicklinksDialogDiv
-        };
-        SP.UI.ModalDialog.showModalDialog(options).autoSize();
+    function setDialogMessage(msg) {
+      $('#simplemodal-container .message').html(msg);
     }
 	
     SP.SOD.executeFunc('sp.js', 'SP.ClientContext', sharePointReadyQuickLinks);
     
-    function closeDialog() {
-      SP.UI.ModalDialog.commonModalDialogClose(SP.UI.DialogResult.Cancel);
-    }
-
     function sharePointReadyQuickLinks() {
         getCurrentUser();
     }
@@ -1166,7 +1202,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 
     function onCurrentUserFailed(sender, args) {
         var msg = args.get_message();
-        alert(msg);
+        setDialogMessage(msg);
     }
 	
     function createOrUpdateQuickLinks(isNew)
@@ -1208,7 +1244,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
     }
 	
     function onSuccessQuickLinks(sender, args) {
-        alert('Quick Links have been updated!');
+      setDialogMessage('Quick Links have been updated!');
     }
         
     function onFailureQuickLinks(sender, args) {
@@ -1219,7 +1255,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
             createOrUpdateQuickLinks(true);
         }
         else
-            alert(msg);
+          setDialogMessage(msg);
     }
 </script>
 
