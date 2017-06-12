@@ -1,4 +1,4 @@
-﻿@charset "utf-8";
+@charset "utf-8";
 
 @font-face {
   font-family: 'Open Sans';
@@ -249,15 +249,15 @@ table {
   margin: 1.5em 0;
 /*  font-size: 0.92857142857143em;  13 */
   font-size: 1em;
+  border-bottom: solid 5px #000;
 }
 th, tr, td {
   vertical-align: middle;
 }
 thead th {
-  background: #1bcba5;
+  background: #666;
   color: #fff;
   padding: 5px 10px;
-  text-transform: uppercase;
   text-align: left;
   vertical-align: bottom;
 }
@@ -270,10 +270,10 @@ td, tbody th {
 tbody th {
   font-weight: bold;
 }
-/*tbody tr:nth-child(even) td,
+tbody tr:nth-child(even) td,
 tbody tr:nth-child(even) th {
-  background: #efefef;
-}*/
+  background: #f2f2f2;
+}
 td ul {
   margin: 0;
 }
@@ -338,6 +338,9 @@ fieldset {
   padding: 0;
   border: 0;
 }
+input {
+  font-family: 'Open Sans', sans-serif;
+}
 input[type="text"], input[type="email"], input[type="password"], input[type="number"], select, textarea {
   width: 100%;
   padding: 9px 14px;
@@ -392,6 +395,31 @@ input[type=button], input[type=reset], input[type=submit], button {
 }
 .dropdown .select select:focus {
   outline: none;
+}
+.dropdown .select select::-ms-expand {
+  display: none;
+}
+/* IE 10/11+ - This hides native dropdown button arrow so it will have the custom appearance. Targeting media query hack via http://browserhacks.com/#hack-28f493d247a12ab654f6c3637f6978d5 - looking for better ways to achieve this targeting */
+/* The second rule removes the odd blue bg color behind the text in the select button in IE 10/11 and sets the text color to match the focus style's - fix via http://stackoverflow.com/questions/17553300/change-ie-background-color-on-unopened-focused-select-box */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+	.custom-select select::-ms-expand {
+		display: none;
+	}
+	.custom-select select:focus {
+		border-color: #aaa; /* Match-03 */
+	}
+	.custom-select select:focus::-ms-value {
+		background: transparent;
+		color: #222; /* Match-02*/
+	}
+	.custom-select select {
+		padding-right: 2em; /* Match-01 */
+		background: none; /* Match-04 */
+		border: 1px solid transparent; /* Match-05 */
+	}
+	.custom-select::after {
+		display: block;
+	}
 }
 
 
@@ -1156,20 +1184,20 @@ article div.meta {
 }
 .find-people input[type="submit"] {
   display: inline-block;
-    font: normal normal normal 2em/1 FontAwesome;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    min-width: 28px;
-    margin: 0;
-    background: #fff;
-    color: #000;
-    padding: 5px 6px;
-    border: solid 4px #000;
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    cursor: pointer;
+  font: normal normal normal 2em/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 28px;
+  margin: 0;
+  background: #fff;
+  color: #000;
+  padding: 5px 6px;
+  border: solid 4px #000;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
 }
 .find-people .advanced {
   display: block;
@@ -1249,9 +1277,6 @@ article div.meta {
 .easy-autocomplete-container li div:hover {
   
 }
-
-
-
 
 /* Tools menu */
 #tools {
@@ -2484,21 +2509,17 @@ h1.ms-dlgTitleText.ms-accentText.ms-dlg-heading {
   vertical-align: top;
 }
 #dataTable_wrapper tfoot {
-/*  display: table-header-group;*/
-  display: none;
+  display: table-header-group;
+}
+#dataTable_wrapper tfoot th {
+  padding: 0px;
 }
 #dataTable_wrapper tfoot span {
-  padding: 0px;
-  margin-left: 0px;
+  display: block;
+  padding: 0 2px 4px;
 }
-/*#dataTable_wrapper tfoot th {
-  padding: 0px;
-}*/
-
 #dataTable_wrapper tfoot span input {
-  width: 95%;
-  padding: 0px;
-  font-size: 11px;
+  padding: 4px 7px;
 }
 #dataTable_wrapper input::-ms-clear {
   display: none;

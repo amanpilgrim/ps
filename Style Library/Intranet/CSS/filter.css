@@ -21,7 +21,7 @@ Comment:        Used for dynamic table filters;
 
 .searchFilter .field {
   display: inline-block;
-  width: 33%;
+  width: 32.667%;
   padding-right: 5px;
   box-sizing: border-box;
   vertical-align: top;
@@ -224,10 +224,11 @@ tr.even td { background-color: #f6f6f2; }*/
 
 /* Noticeboard styles*/
 .filter.sortableTable td {
-    border: 1px solid #ccc;
-    border-width: 1px 0 1px 0;
-    line-height: 1.5;
-    vertical-align: top;
+  background: transparent;
+  border: 1px solid #ccc;
+  border-width: 1px 0 1px 0;
+  line-height: 1.5;
+  vertical-align: top;
 }
 /*.filter.sortableTable td:first-child { border-width: 0; }
 

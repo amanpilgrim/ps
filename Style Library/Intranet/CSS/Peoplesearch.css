@@ -1,5 +1,5 @@
-﻿@charset "utf-8";
-@font-face {
+@charset "utf-8";
+/*@font-face {
     font-family: 'OpenSansCondensedLight';
     src: url('../webfonts/OpenSans-CondLight-webfont.eot');
     src: url('../webfonts/OpenSans-CondLight-webfont.eot?#iefix') format('embedded-opentype'),
@@ -13,10 +13,253 @@
 
 body { 
 	color: #333;
-	font: normal 12px/1.5 verdana, arial, sans-serif !important /* Override SP */; 
+	font: normal 12px/1.5 verdana, arial, sans-serif !important  Override SP ; 
 }
 
 .ms-srch-item-highlightedText {
 
    background-color:yellow !important;
+}*/
+
+/* People search */
+.ms-searchCenter-refinement {
+  display: block;
+  float: left;
+  width: 25%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  margin-top: 70px;
 }
+.ms-searchCenter-refinement a.ms-ref-refinername {
+  display: block;
+  font-size: 1.71428571428571em;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.ms-searchCenter-refinement .ms-ref-selSec,
+.ms-searchCenter-refinement .ms-ref-unselSec {
+  border-left: solid 5px #1bcba5;
+  padding-left: 15px;
+}
+.ms-searchCenter-refinement #Value {
+  border-bottom: solid 2px #d7d7d7;
+}
+.ms-searchCenter-refinement #Value:first-child {
+  border-top: solid 2px #d7d7d7;
+}
+.ms-searchCenter-refinement .ms-ref-name {
+  font-size: 1.28571428571429em;
+  line-height: 1.22222222222222;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  padding: 10px 0;
+  display: block;
+  color: #666;
+}
+/* main body area */
+.ms-searchCenter-result-main {
+  float: left;
+  width: 75%;
+  box-sizing: border-box;
+  position: relative;
+  overflow: visible;
+  z-index: 11;
+  padding: 0 30px;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+/* hide the filters */
+#MSOZoneCell_WebPartWPQ3 {
+  display: none;
+}
+#WebPartWPQ4 {
+  background: #f6bd14;
+  color: #000;
+  padding: 30px 229px 30px 30px; /* 156 + 10 + 48 + 15 */
+  position: relative;
+}
+#WebPartWPQ4 #SearchBox {
+  float: none;
+}
+#WebPartWPQ4 .ms-srch-sb-border {
+  border: 0;
+}
+#WebPartWPQ4 #SearchBox input {
+  font-size: 16px;
+  line-height: 1.25;
+  padding: 14px 10px;
+  background: #f8d466;
+  color: #000;
+  border: 0;
+  border-radius: 5px;
+}
+#WebPartWPQ4 .ms-srch-sb-searchLink {
+  display: inline-block;
+  font: normal normal normal 2em/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 28px;
+  text-align: center;
+  margin: 0;
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  border: 0;
+  position: absolute;
+  top: 30px;
+  right: 166px;
+  cursor: pointer;
+  text-decoration: none;
+}
+#WebPartWPQ4 .ms-srch-sb-searchLink:before {
+  content: '\f002';
+}
+#searchImg {
+  display: none;
+}
+
+#WebPartWPQ4 #AdvancedLink {
+  float: none;
+  margin: 0;
+  
+  background: #fff;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 1.14285714285714em;
+  line-height: 1.25;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 15px;
+  border: solid 4px #000;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  min-width: 0;
+}
+
+/* Sort by */
+#ResultHeader {
+  float: right;
+}
+#ResultHeader label {
+  display: inline-block;
+  color: #000;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+#ResultHeader ul, #ResultHeader li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+#ResultHeader #Actions li {
+  border: solid 1px #ccc;
+  overflow: hidden;
+  background: #fff;
+  position: relative;
+}
+#ResultHeader #Actions li:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  margin-top: -1.5px;
+  right: 7px;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: #ccc;
+}
+#ResultHeader #Actions li select {
+  width: 100%;
+  padding: 10px 20px 10px 15px;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+#ResultHeader #Actions li select:focus {
+  outline: none;
+}
+#ResultHeader #Actions li select::-ms-expand {
+  display: none;
+}
+
+
+#people-results {
+  font-size: 1em; /* 16 */
+  line-height: 1.333;
+}
+#people-results ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#people-results > ul > li {
+  position: relative;
+  padding-left: 20%;
+  /*min-height: 250px;*/
+  background: #ebebeb;
+  margin: 30px 0;
+}
+#people-results img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+}
+#people-results h2 {
+  font-size: 2em;
+  color: inherit;
+  margin: 0;
+}
+#people-results .title {
+  font-size: 1.28571428571429em; /* 18 */
+  font-style: italic;
+}
+#people-results .detail {
+  padding: 10px 15px;
+}
+#people-results a.detail {
+  display: block;
+  background: #666;
+  color: #fff;
+  position: relative;
+}
+#people-results a.detail:hover {
+  background: #1bcba5;
+  color: #000;
+}
+#people-results .dataset {
+  float: left;
+  width: 50%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+#people-results a.detail ul.dataset {
+  padding-right: 40px;
+}
+#people-results .fa {
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+  right: 15px;
+}
+
+#people-results label {
+  display: inline;
+  font-weight: bold;
+  margin-right: 6px;
+  vertical-align: baseline;
+}
+

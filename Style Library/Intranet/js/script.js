@@ -173,6 +173,9 @@
             $('#carousel').slick('slickPlay');
             console.debug("Video paused. Current time of videoplay: " + e.target.currentTime);
         });
+        
+        /* People Search */
+        $('.ms-srch-result #Actions').before('<label>Sort by</label>')
 
         
 

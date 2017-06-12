@@ -1,3 +1,9 @@
+/* Core Styles */
+h2, h3, .ms-h2, .ms-h3, .ms-headerFont {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
 /* Override Ribbons */
 .psMaster #s4-ribbonrow { background: #000; }
 .psMaster #s4-ribboncont { background-image: none; }
@@ -262,14 +268,12 @@ td.psstyle-rteTableLastCol-NoBorder { text-align: right; }
 }
 .ms-calloutLink:link, a.ms-calloutLink:visited, .ms-calloutLinkDisabled,
 .ms-srch-sbLarge > input {	
-	font-family: verdana, arial, sans-serif ;
+	font-family: inherit;
 }
 .ms-metadata,
 .ms-metadata .ms-srch-hover-filetype span {
-	color: #333;
-	font-family: OpenSansLight, sans-serif;
-	font-size: 16px;
-	
+	font-family: inherit;
+	font-size: 1em;
 }
 
 /* WebPart Zones */
@@ -327,8 +331,8 @@ h3.ms-soften {
 }
 
 div.ms-srch-ellipsis.ms-textLarge,
-.ms-ref-refinername:link, 
-.ms-ref-refinername:visited,
+/*.ms-ref-refinername:link, 
+.ms-ref-refinername:visited,*/
 .ms-dlg-heading, h2.ms-dlg-heading  {
 	font-family: OpenSansLight, sans-serif;
 	font-size: 22px;
@@ -342,10 +346,10 @@ h2.ms-dlg-heading { color: #333; }
   font-size: 16px;
 }
 
-#AdvancedLink {
+/*#AdvancedLink {
 	float: left;
 	margin-top: 10px;
-}
+}*/
 
 /* Jira PSTSIR-652 Width of page content in all page layouts
  The following are changes for Content that are inheriting the full primary width of 765px,

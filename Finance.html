@@ -827,7 +827,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 							
 	<!-- START Main Content Area -->
 	<div id="top" class="primary">
-		<article>
+  
             <div id="ctl00_PlaceHolderMain_EditModePanel9" class="edit-mode-panel">
 	
                 
@@ -842,9 +842,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
             
 
 		   
-
+    <div class="primary narrow">
+        <article>
 			<header>
-				<h1><span class="requiredfield">Finance</span></h1>
+				<!--<h1><span class="requiredfield">Finance</span></h1>-->
                 <h2>Something new is coming</h2>
 		
 			</header>
@@ -853,11 +854,12 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 			    this is the summary description
 				<div id="ctl00_PlaceHolderMain_PSContent_label" style='display:none'>Content</div><div id="ctl00_PlaceHolderMain_PSContent__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_PSContent_label"><p>Working with content - text, graphics or video - is as easy as working in any word processing application, such as Microsoft Word. Use the Rich Text Editor to enhance the formatting of content, apply styles to text, reorganize or spell check your content, insert and format tables, and embed graphics or video. You can do all these things without leaving the wiki page.​</p></div>
 			</div>
+          </article>
             
             <div id="ctl00_PlaceHolderMain_EditModePanel2" class="edit-mode-panel">
 	
 		        
-        <div class="grid">
+        <div class="grid tiles">
                   
        <div class="row">
           
@@ -947,45 +949,33 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 
 	 		
 </div>
+  </div>
             
             
 
 			
             <aside id="relatedInfo">
-				<div class="box noindex">
-					
-				</div>
 				
-				
-				<div class="column contact">
+				<div class="column_ contact">
 					<div id="ctl00_PlaceHolderMain_ShowRelatedInformation_EditModePanel6" class="edit-mode-panel">
 	
                         
 
-<div class="keyContacts" id="keyContactsContainer" style="overflow: auto">
-    
-            <h3>Key Contacts</h3>
-            <ul class="keyContactsList" style="overflow:auto">
-                    
-            <li class="contactItem">
-              <a href="http://dev01-ourhouse.campus.services/Pages/userprofile.aspx?personid=31057">  Linda Watkins</a>
-                <div id="ctl00_PlaceHolderMain_ShowRelatedInformation_EditModePanel6_KeyContacts_keyContactsList_ctrl0_div1" class="contactJobTitle">Manager Business Solutions</div>
-                <div id="ctl00_PlaceHolderMain_ShowRelatedInformation_EditModePanel6_KeyContacts_keyContactsList_ctrl0_div2" class="contactWorkPhone"><strong>P:</strong> (04) 817 8476</div>
-                <div id="ctl00_PlaceHolderMain_ShowRelatedInformation_EditModePanel6_KeyContacts_keyContactsList_ctrl0_div3" class="contactMobile"><strong>M:</strong> 021 471 907</div>
-                <div id="ctl00_PlaceHolderMain_ShowRelatedInformation_EditModePanel6_KeyContacts_keyContactsList_ctrl0_div4" class="contactEmail"> <a href="mailto:Linda.Watkins@parliament.govt.nz">Linda.Watkins@parliament.govt.nz</a></div>
-            </li>
-        
-            <li class="contactItem">
-              <a href="http://dev01-ourhouse.campus.services/Pages/userprofile.aspx?personid=">  Jeremy Knowles</a>
-                
-                
-                
-                
-            </li>
-        
-            </ul>
-        
-</div>
+            <div class="widget contacts" id="keyContactsContainer">
+              <h2>Key Contacts</h2>
+              <ul>
+                <li>
+                  <a href="http://dev01-ourhouse.campus.services/Pages/userprofile.aspx?personid=31057">  Linda Watkins</a>
+                    <div id="ctl00_PlaceHolderMain_ShowRelatedInformation_EditModePanel6_KeyContacts_keyContactsList_ctrl0_div1" class="contactJobTitle">Manager Business Solutions</div>
+                    <div id="ctl00_PlaceHolderMain_ShowRelatedInformation_EditModePanel6_KeyContacts_keyContactsList_ctrl0_div2" class="contactWorkPhone"><strong>P:</strong> (04) 817 8476</div>
+                    <div id="ctl00_PlaceHolderMain_ShowRelatedInformation_EditModePanel6_KeyContacts_keyContactsList_ctrl0_div3" class="contactMobile"><strong>M:</strong> 021 471 907</div>
+                    <div id="ctl00_PlaceHolderMain_ShowRelatedInformation_EditModePanel6_KeyContacts_keyContactsList_ctrl0_div4" class="contactEmail"> <a href="mailto:Linda.Watkins@parliament.govt.nz">Linda.Watkins@parliament.govt.nz</a></div>
+                </li>
+                <li>
+                  <a href="http://dev01-ourhouse.campus.services/Pages/userprofile.aspx?personid=">  Jeremy Knowles</a>
+                </li>
+              </ul>
+            </div>
        
 	
 					
@@ -1009,7 +999,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 	</ie:menuitem>
 </menu>
 				</div>				
-                <div class="column">
+                <div class="column_">
 					<div id="ctl00_PlaceHolderMain_ShowRelatedInformation_EditModePanel4" class="edit-mode-panel">
 	
 						
@@ -1025,17 +1015,14 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
         });// close doc ready	
     })(jQuery);
 </script>
-
-<ul class="bullets">
-    
-            <h3>Related Links</h3>    
-            
-            <li><a href="http://dev01-ourhouse.campus.services/Lists/OurHouseandPeople/DispForm.aspx?ID=82" class="icon " target="_blank">cafe</a></li>
-        
-            <li><a href="http://dev01-ourhouse.campus.services/Lists/OurHouseandPeople/DispForm.aspx?ID=83" class="icon " target="_blank">house</a></li>
-        
-        	    			
-</ul>		
+<div class="widget links">
+  <h2>Related Links</h2>
+  <ul>
+    <li><a href="http://dev01-ourhouse.campus.services/Lists/OurHouseandPeople/DispForm.aspx?ID=82" target="_blank">cafe</a></li>
+    <li><a href="http://dev01-ourhouse.campus.services/Lists/OurHouseandPeople/DispForm.aspx?ID=83" target="_blank">house</a></li>
+  </ul>
+</div>
+	
 
 					
 </div>
@@ -1045,7 +1032,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 				
             
             <script language="javascript">if (typeof (MSOLayout_MakeInvisibleIfEmpty) == "function") { MSOLayout_MakeInvisibleIfEmpty(); }</script>
-		</article>
+		
 	</div>
 	<!-- END Main Content Area -->
 <div style='display:none' id='hidZone'></div>
