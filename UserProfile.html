@@ -37,17 +37,13 @@
 
         <link id="CssRegistration1" rel="stylesheet" type="text/css" href="/_layouts/15/1033/styles/Themable/corev15.css?rev=DHzjGJKbtAsTIA4uW3YOqA%3D%3D"/>
 <link id="CssRegistration1" rel="stylesheet" type="text/css" href="/Style%20Library/en-US/Themable/Core%20Styles/pagelayouts15.css"/>
-<link rel="stylesheet" type="text/css" href="/_layouts/15/1033/styles/controls15.css?rev=GF%2Fpek4jNA7LfT%2Ffzc2JQA%3D%3D"/>
 <link id="CssRegistration2" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/CSS/normalize.css?Rev=2017.05.11"/>
 <link id="CssRegistration5" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/CSS/font-awesome/css/font-awesome.min.css?Rev=2017.05.11"/>
 <link id="CssRegistration7" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/CSS/slick.css"/>
 <link id="CssRegistration3" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/CSS/main.css?Rev=2017.05.11"/>
 <link id="CssRegistration4" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/CSS/pscore.css"/>
 <link id="CssRegistration6" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/CSS/responsive.css?Rev=2017.05.19"/>
-<link id="PSHome" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/CSS/home.css"/>
 <script type="text/javascript" src="/_layouts/15/init.js?rev=RIl4brNTuKjQszVd%2Bc1CnQ%3D%3D"></script>
-<script type="text/javascript" src="/_layouts/15/ScriptResx.ashx?culture=en%2Dus&amp;name=SP%2EPublishing%2EResources&amp;rev=Wzy1bSeygPIkuVShJwoI7g%3D%3D"></script>
-<script type="text/javascript" src="/_layouts/15/mediaplayer.js?rev=YyqTLoWJZuIG93N00x4YTw%3D%3D"></script>
 <script type="text/javascript" src="/ScriptResource.axd?d=YWikJi2__BU1_2pMnk8OcdBn-5lUhBvVGrdV95zQ8CDoEEByD4Fi2Mb5EaNZ0fTKq9Pd3rbuqfqlPV6wgP170uY7zTntx23jk5qaG4CmFW7OnziEUHs1L-4zUoaycfD8nyKOEJeNGN7MqmNp0VzG3OzLEW2KqhRcY0qAYUlRCXOIsN_npEHA9nPcTGlBnU1g0&amp;t=4794f07b"></script>
 <script type="text/javascript" src="/_layouts/15/blank.js?rev=ZaOXZEobVwykPO9g8hq%2F8A%3D%3D"></script>
 <script type="text/javascript" src="/ScriptResource.axd?d=IpVLDukecVy_xgecUbvXqBG3anUd7elfvm-80an-0uVhW_2K1UnnDoJTWh1TI1TUaBQfkfPH831BBAhxcD_uDTVcnV69i7xODolSZzzSiVv4fZbBqR5apk405c2NCvBcOBCP7BxwyrUR1Zrlqc3yycC7tOKmjrkCOHUoYRVDmYsefVPBpDkENvHbznPz8Wdf0&amp;t=4794f07b"></script>
@@ -88,10 +84,12 @@
 
 		<!-- ===== STARTER: Additional header placeholder - overridden by asp:Content on pages or page layouts  =========================== -->
 		
+    	<script src="/Style Library/Intranet/js/jquery.dataTables.min.js"></script>	
+    <script src="/Style Library/Intranet/js/dataTables.dataSourcePlugins.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Style Library/Intranet/css/userprofile.css" ms-design-css-conversion="no" />
 	
-		
 	
-<link rel="canonical" href="http://dev04-ourhouse.campus.services:80/Pages/default.aspx" />
+<link rel="canonical" href="http://dev04-ourhouse.campus.services:80/pages/userprofile.aspx?personid=21807" />
 		
 
 		<!-- ===== STARTER: Web Part Manager  ============================================================================================= -->
@@ -126,7 +124,7 @@
 	
 	<body>
         
-<div class='PSHomePageLayout'>
+<div class='PSUserProfilePageLayout'>
 
 		<!-- ===== STARTER: SP IDs / Prefetch SP images / SP Form  =========================================================================== -->
 		
@@ -136,7 +134,7 @@
 <img src="/Style Library/Intranet/images/Intranet-Logo.png?rev=23" />
 </div>
 
-		<form method="post" action="./default.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+		<form method="post" action="./userprofile.aspx?personid=21807" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
 <div class="aspNetHidden">
 <input type="hidden" name="_wpcmWpid" id="_wpcmWpid" value="" />
 <input type="hidden" name="wpcmVal" id="wpcmVal" value="" />
@@ -149,7 +147,7 @@
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xC02B04909D1CAE2D3FC9ECB31E719AE0D76BC5E07B1B7940B1C0C59FF1E1530580D015A201604F5ED94090ABAAEC62C920804E5B2A834655E680091246DE95D1,12 Jun 2017 23:59:09 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x247448CE4AF1481EF044B4145ECB1E22E29A51F2970CA29754A3FD71CCE6063A43A09B0392AFE20E25111B8915F8A663B9C0014C7DD31A358A78D32CAAA62549,12 Jun 2017 23:59:06 -0000" />
 <input type="hidden" name="MSOAuthoringConsole_FormContext" id="MSOAuthoringConsole_FormContext" value="" />
 <input type="hidden" name="MSOAC_EditDuringWorkflow" id="MSOAC_EditDuringWorkflow" value="" />
 <input type="hidden" name="InputComments" id="InputComments" value="" />
@@ -164,7 +162,7 @@
 <input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
 <input type="hidden" name="MSOSPWebPartManager_EndWebPartEditing" id="MSOSPWebPartManager_EndWebPartEditing" value="false" />
 <input type="hidden" name="_maintainWorkspaceScrollPosition" id="_maintainWorkspaceScrollPosition" value="0" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUINzE2OTYyOTgPZBYCZg9kFgICAQ9kFgQCAQ9kFgICJA9kFgJmD2QWAmYPPCsABgBkAgkPZBYMAgQPZBYCAgIPZBYGAgMPZBYCAgEPZBYCZg8PFgIeB1Zpc2libGVoZGQCBQ9kFgICAw9kFgJmD2QWBAICD2QWCgIBDxYGHhNDbGllbnRPbkNsaWNrU2NyaXB0BW1FbnN1cmVTY3JpcHRGdW5jKCdzaGFyaW5nLmpzJywgJ0Rpc3BsYXlTaGFyZWRXaXRoRGlhbG9nJywgZnVuY3Rpb24gKCkgeyBEaXNwbGF5U2hhcmVkV2l0aERpYWxvZygnXHUwMDJmJyk7IH0pHihDbGllbnRPbkNsaWNrU2NyaXB0Q29udGFpbmluZ1ByZWZpeGVkVXJsBW1FbnN1cmVTY3JpcHRGdW5jKCdzaGFyaW5nLmpzJywgJ0Rpc3BsYXlTaGFyZWRXaXRoRGlhbG9nJywgZnVuY3Rpb24gKCkgeyBEaXNwbGF5U2hhcmVkV2l0aERpYWxvZygnXHUwMDJmJyk7IH0pHhhDbGllbnRPbkNsaWNrTmF2aWdhdGVVcmxkZAIDDxYIHwBoHwEFendpbmRvdy5sb2NhdGlvbiA9ICdqYXZhc2NyaXB0OkVuc3VyZUNoZWNrb3V0QW5kQ2hhbmdlTGF5b3V0TW9kZVRvRWRpdChcJzc2MDA4NjExLTYxMTQtNGJkNy05MmZjLTU3MWMxMDgxMjFlZFwnLDMsZmFsc2UpOyc7HwJkHwMFZWphdmFzY3JpcHQ6RW5zdXJlQ2hlY2tvdXRBbmRDaGFuZ2VMYXlvdXRNb2RlVG9FZGl0KFwnNzYwMDg2MTEtNjExNC00YmQ3LTkyZmMtNTcxYzEwODEyMWVkXCcsMyxmYWxzZSk7ZAIFDxYCHwBoZAILDxYCHwBoZAIRD2QWAmYPDxYGHhxQcmV2aW91c0F1dGhvcmluZ0l0ZW1WZXJzaW9uBQI2Nx4aUHJldmlvdXNBdXRob3JpbmdJdGVtT3duZXIFATMeHFByZXZpb3VzQXV0aG9yaW5nQ29udHJvbE1vZGULKYgBTWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViQ29udHJvbHMuU1BDb250cm9sTW9kZSwgTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTUuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwFkZAIDDw8WAh4JQWNjZXNzS2V5BQEvZGQCBw9kFgICAQ9kFgICAQ9kFggCAQ8PFgQeBF8hU0ICAh4IQ3NzQ2xhc3MFF21zLXByb21vdGVkQWN0aW9uQnV0dG9uZGQCAw9kFgJmDw8WBB8IAgIfCQUXbXMtcHJvbW90ZWRBY3Rpb25CdXR0b25kZAIFDw8WBh8AaB8IAgIfCQUXbXMtcHJvbW90ZWRBY3Rpb25CdXR0b25kZAIHDxYCHwBoZAIGD2QWAmYPFCsAAg8WBB4LXyFEYXRhQm91bmRnHgtfIUl0ZW1Db3VudAICZGQWAmYPZBYEAgEPZBYCZg8VAhlodHRwOi8vd3d3LnBhcmxpYW1lbnQubnovEXd3dy5wYXJsaWFtZW50Lm56ZAICD2QWAmYPFQI4L1Jlc291cmNlQ2VudHJlL2Fib3V0SW50cmFuZXQvUGFnZXMvQWJvdXQtdGhpcy1zaXRlLmFzcHgKQ29udGFjdCBVc2QCEg9kFgJmDw9kFgIeC3BsYWNlaG9sZGVyBQtOYW1lL051bWJlcmQCFA9kFgJmDxQrAAIPFgQfCmcfCwIQZGQWAmYPZBYgAgEPZBYCZg8VAitodHRwczovL3d3dy5mbGV4aXB1cmNoYXNlLmNvbS9hY2NvdW50L2xvZ2luDUZsZXhpUHVyY2hhc2VkAgIPZBYCZg8VAh1odHRwOi8vb2N2d2ViMDMvZXN1Ym1pc3Npb25zMgxlU3VibWlzc2lvbnNkAgMPZBYCZg8VAhlodHRwOi8vb2N2d2ViMDMvZXllbGxvd3MvCGVZZWxsb3dzZAIED2QWAmYPFQIxaHR0cDovL3F3YS5jYW1wdXMuc2VydmljZXMvbWV0YXN0b3JtL2RlZmF1bHQuYXNweBxRdWVzdGlvbnMgZm9yIFdyaXR0ZW4gQW5zd2VyZAIFD2QWAmYPFQJEaHR0cDovL3N5c3Rlc3QtY3BkLmNhbXB1cy5zZXJ2aWNlcy9jb3JlcGFybGlhbWVudGFyeWRhdGEvaHRtbGNsaWVudC8dQ29yZSBQYXJsaWFtZW50YXJ5IERhdGEgKENQRClkAgYPZBYCZg8VAhNodHRwOi8vb2N2d2ViMDMvYWxwE0F1ZGl0IGxvZyBQcm9jZXNzb3JkAgcPZBYCZg8VAhhodHRwOi8vb2N2d2ViMDMvbWVtYmlsbHMhUHJvcG9zZWQgbWVtYmVycyBiaWxscyBwdWJsaXNoaW5nZAIID2QWAmYPFQIYaHR0cDovL29jdndlYjAzL2hwc3Rvd2ViCEhQU3RvV2ViZAIJD2QWAmYPFQImaHR0cDovL2Rwd3ByZC5wc2ludGVybmV0LnBhcmxpYW1lbnQubnoeTlpQIERvY3VtZW50IFB1Ymxpc2hpbmcgV2l6YXJkZAIKD2QWAmYPFQJAaHR0cDovL3BvcnRhbC5jYW1wdXMuc2VydmljZXMvU2l0ZVBhZ2VzL091dGFnZU5vdGlmaWNhdGlvbnMuYXNweBRPdXRhZ2Ugbm90aWZpY2F0aW9uc2QCCw9kFgJmDxUCNWh0dHA6Ly9saWJyYXJ5LmNhbXB1cy5zZXJ2aWNlcy9Jbm1hZ2ljR2VuaWUvb3BhYy5hc3B4H1BhcmxpYW1lbnRhcnkgTGlicmFyeSBDYXRhbG9ndWVkAgwPZBYCZg8VAiBodHRwczovL3RoZWNsZXJrLmNvbXBseXdpdGgubmV0LwpDb21wbHlXaXRoZAIND2QWAmYPFQJGaHR0cDovL2NvbXBseXdpdGguY2FtcHVzLnNlcnZpY2VzL2xvZ2luLmFzcHg/UmV0dXJuVXJsPSUyZkRlZmF1bHQuYXNweCRDb21wbHlXaXRoIGZvciBQYXJsaWFtZW50YXJ5IFNlcnZpY2VkAg4PZBYCZg8VAkRodHRwOi8vc3lzdGVzdC1zZWxlY3Rjb21taXR0ZWVzLmNhbXB1cy5zZXJ2aWNlcy9zaXRlcGFnZXMvaW5kZXguYXNweBFTZWxlY3QgQ29tbWl0dGVlc2QCDw9kFgJmDxUCMWh0dHA6Ly9zeXN0ZXN0LW91cmhvdXNlLmNhbXB1cy5zZXJ2aWNlcy9zaXRlcy92ZWIkVkVCIChWZW51ZSBhbmQgRXZlbnQgQm9va2luZykgc3lzdGVtZAIQD2QWAmYPFQJ4aHR0cDovL3N5c3Rlc3Qtb3VyaG91c2UuY2FtcHVzLnNlcnZpY2VzL1Blb3BsZS9JbmZvcm1hdGlvbkZvck1lbWJlcnMvVXNlZnVsSW5mb3JtYXRpb24vUGFnZXMvUHJvcG9zZWQtTWVtYmVycy1iaWxscy5hc3B4F1Byb3Bvc2VkIE1lbWJlcnMnIEJpbGxzZAIcD2QWDAIBD2QWBAICDw8WAh8AaGRkAgQPFCsAAg8WBB8KZx8LAgVkZBYCZg9kFgoCAQ9kFgYCAQ9kFgJmDxUCaXN0eWxlID0gImJhY2tncm91bmQtaW1hZ2U6IHVybCgvUmVzb3VyY2VDZW50cmUvUHVibGlzaGluZ0ltYWdlcy9QcmVjaW5jdCUyMEZhY2lsaXRpZXMvUGFya2luZy9ST1NTLmpwZyk7IhtOZXh0IHN0YWZmIG9yaWVudGF0aW9uIHRvdXJkAgMPFgIfAGgWAgICDxUBG05leHQgc3RhZmYgb3JpZW50YXRpb24gdG91cmQCBA8VAsEBQXJlIHlvdSBuZXcgdG8gUGFybGlhbWVudCBvciBub3Qgc3VyZSB3aGVyZSB0byBnbz8gVmlzaXRvciBTZXJ2aWNlcyBpbnZpdGUgbmV3IGFuZCBleGlzdGluZyBzdGFmZiBvbiBhIHNwZWNpYWwgNzUtbWludXRlIG9yaWVudGF0aW9uIHRvdXIgb2YgdGhlIHBhcmxpYW1lbnRhcnkgcHJlY2luY3Qgb24gTW9uZGF5IDIyIEp1bmUgYXQgOWFtLl9odHRwOi8vZGV2MDQtb3VyaG91c2UuY2FtcHVzLnNlcnZpY2VzL05ld3NBbmRFdmVudHMvTmV3cy9QYWdlcy9OZXh0LXN0YWZmLW9yaWVudGF0aW9uLXRvdXIuYXNweGQCAg9kFgYCAQ9kFgJmDxUChAFzdHlsZSA9ICJiYWNrZ3JvdW5kLWltYWdlOiB1cmwoL1Jlc291cmNlQ2VudHJlL1B1Ymxpc2hpbmdJbWFnZXMvQnVzaW5lc3MlMjBTZXJ2aWNlcy9QYXJsaWFtZW50YXJ5JTIwU2VydmljZS9iYWxjb255LXZpZXctY3JvcC5qcGcpOyIUQWNjZXNzaWJpbGl0eSB1cGRhdGVkAgMPFgIfAGgWAgICDxUBFEFjY2Vzc2liaWxpdHkgdXBkYXRlZAIEDxUC9wHigItZb3UgbWF5IGhhdmUgbm90aWNlZCBsaXR0bGUgYnV0dG9ucyBoYXZlIHNwcnVuZyB1cCBvbiBzb21lIGZsb29yIGFyZWFzIGFyb3VuZCB0aGUgcHJlY2luY3RzLCBuYW1lbHkgYXQgdGhlIGJvdHRvbSBvZiB0aGUgc3RhaXJjYXNlIGluIHRoZSBFeGVjdXRpdmUgV2luZyBhcyB3ZWxsIGFzIHRoZSBOb3J0aHdlc3QgY29ycmlkb3IgYW5kIHRoZSBpbnRlcm5hbCByYW1wIGJldHdlZW4gUGFybGlhbWVudCBIb3VzZSBhbmQgdGhlLi4uWGh0dHA6Ly9kZXYwNC1vdXJob3VzZS5jYW1wdXMuc2VydmljZXMvTmV3c0FuZEV2ZW50cy9OZXdzL1BhZ2VzL0FjY2Vzc2liaWxpdHktdXBkYXRlLmFzcHhkAgMPZBYGAgEPFgIfAGgWAmYPFQJ0c3R5bGUgPSAiYmFja2dyb3VuZC1pbWFnZTogdXJsKC9SZXNvdXJjZUNlbnRyZS9QdWJsaXNoaW5nSW1hZ2VzL05ld3MlMjBhbmQlMjBFdmVudHMvTmV3cy81MDAwLVBvcHBpZXMtUHJvamVjdC5qcGcpOyIfNTAwMCBwb3BwaWVzIGZvciBBbnphYyBEYXkgMjAxNWQCAw9kFgICAg8VAR81MDAwIHBvcHBpZXMgZm9yIEFuemFjIERheSAyMDE1ZAIEDxUCsgFBcyBwYXJ0IG9mIHRoZSBXb3JsZCBXYXIgSSBjb21tZW1vcmF0aW9ucywgdGhlIDUwMDAgUG9wcGllcyBQcm9qZWN0IGlzIGFpbWluZyB0byBrbml0LCBjcm9jaGV0IGFuZCBzZXcgcG9wcGllcyBmb3IgYSBkaXNwbGF5IGF0IHRoZSBXaWdyYW0gQWlyIEZvcmNlIE11c2V1bSBvbiBBbnphYyBEYXkgaW4gMjAxNS4gWGh0dHA6Ly9kZXYwNC1vdXJob3VzZS5jYW1wdXMuc2VydmljZXMvTmV3c0FuZEV2ZW50cy9OZXdzL1BhZ2VzLzUwMDAtUG9wcGllcy1Qcm9qZWN0LmFzcHhkAgQPZBYGAgEPZBYCZg8VAmVzdHlsZSA9ICJiYWNrZ3JvdW5kLWltYWdlOiB1cmwoL1Jlc291cmNlQ2VudHJlL1B1Ymxpc2hpbmdJbWFnZXMvTmV3cyUyMGFuZCUyMEV2ZW50cy9OZXdzL01hZ25hLmpwZyk7IiQ4MDB0aCBhbm5pdmVyc2FyeSBvZiB0aGUgTWFnbmEgQ2FydGFkAgMPFgIfAGgWAgICDxUBJDgwMHRoIGFubml2ZXJzYXJ5IG9mIHRoZSBNYWduYSBDYXJ0YWQCBA8VAssB4oCLVGhpcyB3ZWVrIG1hcmtzIDgwMCB5ZWFycyBzaW5jZSB0aGUgTWFnbmEgQ2FydGEgd2FzIHNlYWxlZCBvbiB0aGUgYmFua3Mgb2YgdGhlIFJpdmVyIFRoYW1lcyBvbiAxNSBKdW5lIDEyMTUuIE1hZ25hIENhcnRhIG1lYW5zIHRoZSBHcmVhdCBDaGFydGVyLCBhbmQgaXQgZm9ybXMgdGhlIGZvdW5kYXRpb24gb2YgcmlnaHRzIHdlIGVuam95IHRvZGF5LiBoaHR0cDovL2RldjA0LW91cmhvdXNlLmNhbXB1cy5zZXJ2aWNlcy9OZXdzQW5kRXZlbnRzL05ld3MvUGFnZXMvODAwdGgtYW5uaXZlcnNhcnktb2YtdGhlLU1hZ25hLUNhcnRhLmFzcHhkAgUPZBYGAgEPZBYCZg8VAm1zdHlsZSA9ICJiYWNrZ3JvdW5kLWltYWdlOiB1cmwoL1Jlc291cmNlQ2VudHJlL1B1Ymxpc2hpbmdJbWFnZXMvTmV3cyUyMGFuZCUyMEV2ZW50cy9OZXdzL21hdGFyaWtpLnB1YjEuanBnKTsiJ01hdGFyaWtpIENlbGVicmF0aW9uIGluIENvcHBlcmZpZWxk4oCZc2QCAw8WAh8AaBYCAgIPFQEnTWF0YXJpa2kgQ2VsZWJyYXRpb24gaW4gQ29wcGVyZmllbGTigJlzZAIEDxUCZOKAi1BsZWFzZSBjb21lIGFuZCBqb2luIHVzIG9uIFRodXJzZGF5LCAxOHRoIG9mIEp1bmUgZm9yIE1hdGFyaWtpIENlbGVicmF0aW9uIGluIENvcHBlcmZpZWxk4oCZc+KAiy5raHR0cDovL2RldjA0LW91cmhvdXNlLmNhbXB1cy5zZXJ2aWNlcy9OZXdzQW5kRXZlbnRzL05ld3MvUGFnZXMvTWF0YXJpa2ktQ2VsZWJyYXRpb24taW4tQ29wcGVyZmllbGTigJlzLmFzcHhkAgMPZBYCZg8PZBYCHwwFC05hbWUvTnVtYmVyZAIHD2QWAmYPFCsAAg8WBB8KZx8LZmRkZAIND2QWAgIBDxQrAAIPFgQfCmcfC2ZkZGQCEw9kFgRmDxQrAAIPFgQfCmcfCwIDZGQWAmYPZBYGAgEPZBYCZg8VAwlFbWVyZ2VuY3kOMDQgODE3IDc3NzctdXAOMDQgODE3IDc3NzctdXBkAgIPZBYCZg8VAxFTZXJqZWFudC1hdC1Bcm1zIAswNCA4MTcgOTgyMwswNCA4MTcgOTgyM2QCAw9kFgJmDxUDH1NlY3VyaXR5IEFkbWluaXN0cmF0aW9uIE9mZmljZSALMDQgODE3IDk0OTYLMDQgODE3IDk0OTZkAgEPFCsAAg8WBB8KZx8LAgNkZBYCZg9kFgYCAQ9kFgJmDxUDBVZ1b25nCHNsZGtmanNkCHNsZGtmanNkZAICD2QWAmYPFQMFUmVuZHQIc2xka2Zqc2QIc2xka2Zqc2RkAgMPZBYCZg8VAwRBbWFuBTEyMzQ1BTEyMzQ1ZAIXD2QWBAIBDw8WAh8AaGRkAgMPFCsAAg8WBB8KZx8LAgNkZBYCZg9kFgYCAQ9kFgJmDxUEZmh0dHA6Ly9kZXYwNC1vdXJob3VzZS5jYW1wdXMuc2VydmljZXMvTmV3c0FuZEV2ZW50cy9OZXdzL1BhZ2VzLyQxMC1ob21lLU1pY3Jvc29mdC1PZmZpY2UtcHJvZHVjdHMuYXNweGc8aW1nIHNyYz0iL1Jlc291cmNlQ2VudHJlL1B1Ymxpc2hpbmdJbWFnZXMvTmV3cyUyMGFuZCUyMEV2ZW50cy9OZXdzL09mZmljZS5KUEc/UmVuZGl0aW9uSUQ9NiIgYWx0PSIiIC8+R0JpZyBzdWNjZXNzIGlzIHJlY29nbmlzZWQgb2YgdGhlIERlc2tzIG1vdmUgZm9yIEJ1c2luZXNzIFNvbHV0aW9ucyB0ZWFtZFRoZSBNaWNyb3NvZnQgSG9tZSBVc2UgUHJvZ3JhbSBlbmFibGVzIHlvdSB0byBnZXQgYSBsaWNlbnNlZCBjb3B5IG9mIG1vc3QgTWljcm9zb2Z0IE9mZmljZSBwcm9kdWN0cy5kAgIPZBYCZg8VBGtodHRwOi8vZGV2MDQtb3VyaG91c2UuY2FtcHVzLnNlcnZpY2VzL1ByZWNpbmN0RmFjaWxpdGllcy9DYXRlcmluZ0FuZEZvb2QvUGFnZXMvQ29wcGVyZmllbGRzLWRhaWx5LW1lbnUuYXNweH88aW1nIHNyYz0iL1Jlc291cmNlQ2VudHJlL1B1Ymxpc2hpbmdJbWFnZXMvUHJlY2luY3QlMjBGYWNpbGl0aWVzL0NhdGVyaW5nJTIwYW5kJTIwZm9vZC9QaWN0dXJlLTAxMy5qcGc/UmVuZGl0aW9uSUQ9NiIgYWx0PSIiIC8+HUNvcHBlcmZpZWxkJ3MgQ2FmZSBEYWlseSBNZW51HENoZWNrIG91dCB0aGUgbWVudSBmb3IgMTUtMTlkAgMPZBYCZg8VBE1odHRwOi8vZGV2MDQtb3VyaG91c2UuY2FtcHVzLnNlcnZpY2VzL0J1c2luZXNzU2VydmljZXMvSVNUL1BhZ2VzL2RlZmF1bHQuYXNweJIBPGltZyBzcmM9Ii9SZXNvdXJjZUNlbnRyZS9QdWJsaXNoaW5nSW1hZ2VzL0J1c2luZXNzJTIwU2VydmljZXMvSW5mb3JtYXRpb24lMjBhbmQlMjBDb21tdW5pY2F0aW9uJTIwVGVjaG5vbG9neS9EZXZpY2VzLmpwZz9SZW5kaXRpb25JRD02IiBhbHQ9IiIgLz4ZQ2FyZWVycyBhbmQgT3Bwb3J0dW5pdGllcwBkAh4PZBYCZg8UKwACDxYEHwpnHwsCBGRkFgJmD2QWCAIBD2QWAmYPFQMeaHR0cDovL291cmhvdXNlLnBhcmxpYW1lbnQubnovBEhvbWUESG9tZWQCAg9kFgJmDxUDMC9SZXNvdXJjZUNlbnRyZS9hYm91dEludHJhbmV0L1BhZ2VzL1NpdGVtYXAuYXNweAdTaXRlbWFwB1NpdGVtYXBkAgMPZBYCZg8VAzYvUmVzb3VyY2VDZW50cmUvYWJvdXRJbnRyYW5ldC9QYWdlcy9BY2Nlc3NpYmlsaXR5LmFzcHgNQWNjZXNzaWJpbGl0eQ1BY2Nlc3NpYmlsaXR5ZAIED2QWAmYPFQM4L1Jlc291cmNlQ2VudHJlL2Fib3V0SW50cmFuZXQvUGFnZXMvQWJvdXQtdGhpcy1zaXRlLmFzcHgPQWJvdXQgdGhpcyBzaXRlD0Fib3V0IHRoaXMgc2l0ZWQYCgVBY3RsMDAkUGxhY2VIb2xkZXJNYWluJE91ckhvdXNlYW5kUGVvcGxlJE91ckhvdXNlQW5kUGVvcGxlTGlzdFZpZXcPFCsADmRkZGRkZGQUKwADZGRkAgNkZGRmAv////8PZAUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgYFGmN0bDAwJEZpbmRBUGVyc29uJHJkcGVyc29uBRxjdGwwMCRGaW5kQVBlcnNvbiRyZGJ1c2luZXNzBRxjdGwwMCRGaW5kQVBlcnNvbiRyZGJ1c2luZXNzBSRjdGwwMCRQbGFjZUhvbGRlck1haW4kY3RsMDAkcmRwZXJzb24FJmN0bDAwJFBsYWNlSG9sZGVyTWFpbiRjdGwwMCRyZGJ1c2luZXNzBSZjdGwwMCRQbGFjZUhvbGRlck1haW4kY3RsMDAkcmRidXNpbmVzcwU7Y3RsMDAkbmF2aWdhdGlvblRlcm1TZXRIZWFkZXIkTmF2aWdhdGlvblRlcm1IZWFkZXJzTGlzdFZpZXcPFCsADmRkZGRkZGQUKwACZGQCAmRkZGYC/////w9kBTtjdGwwMCRQbGFjZUhvbGRlck1haW4kSG9tZXBhZ2VDb250YWN0MSRwZXJzb25hbENvbnRhY3RzTGlzdA8UKwAOZGRkZGRkZBQrAANkZGQCA2RkZGYC/////w9kBT1jdGwwMCRQbGFjZUhvbGRlck1haW4kSG9tZXBhZ2VDb250YWN0MSRwcmVkZWZpbmVkQ29udGFjdHNMaXN0DxQrAA5kZGRkZGRkFCsAA2RkZAIDZGRkZgL/////D2QFO2N0bDAwJG5hdmlnYXRpb25UZXJtU2V0Rm9vdGVyJE5hdmlnYXRpb25UZXJtRm9vdGVyc0xpc3RWaWV3DxQrAA5kZGRkZGRkPCsABAACBGRkZGYC/////w9kBTRjdGwwMCRQbGFjZUhvbGRlck1haW4kUXVpY2tMaW5rczEkcXVpY2tMaW5rc0xpc3RWaWV3DzwrAA4DCGYMZg0C/////w9kBSVjdGwwMCRUb29sc0Ryb3BEb3duJFRvb2xzRHJvcERvd25MaXN0DxQrAA5kZGRkZGRkPCsAEAACEGRkZGYC/////w9kBUdjdGwwMCRQbGFjZUhvbGRlck1haW4kSG9tZXBhZ2VOZXdzQ2Fyb3VzZWwkSG9tZXBhZ2VOZXdzQ2Fyb3VzZWxMaXN0Vmlldw8UKwAOZGRkZGRkZDwrAAUAAgVkZGRmAv////8PZAUzY3RsMDAkUGxhY2VIb2xkZXJNYWluJEV2ZW50c0NhbGVuZGFyJGV2ZW50c0xpc3RWaWV3DzwrAA4DCGYMZg0C/////w9kidvmfvDZWB3nf2i3TvFInKEj1/LAbPMYmpJdX9RmkTk=" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNDA3NzQ3NDE3D2QWAmYPZBYCAgEPZBYEAgEPZBYCAiQPZBYCZg9kFgJmDzwrAAYAZAIJD2QWDAIED2QWAgICD2QWBgIDD2QWAgIBD2QWAmYPDxYCHgdWaXNpYmxlaGRkAgUPZBYCAgMPZBYCZg9kFgQCAg9kFgoCAQ8WBh4TQ2xpZW50T25DbGlja1NjcmlwdAVtRW5zdXJlU2NyaXB0RnVuYygnc2hhcmluZy5qcycsICdEaXNwbGF5U2hhcmVkV2l0aERpYWxvZycsIGZ1bmN0aW9uICgpIHsgRGlzcGxheVNoYXJlZFdpdGhEaWFsb2coJ1x1MDAyZicpOyB9KR4oQ2xpZW50T25DbGlja1NjcmlwdENvbnRhaW5pbmdQcmVmaXhlZFVybAVtRW5zdXJlU2NyaXB0RnVuYygnc2hhcmluZy5qcycsICdEaXNwbGF5U2hhcmVkV2l0aERpYWxvZycsIGZ1bmN0aW9uICgpIHsgRGlzcGxheVNoYXJlZFdpdGhEaWFsb2coJ1x1MDAyZicpOyB9KR4YQ2xpZW50T25DbGlja05hdmlnYXRlVXJsZGQCAw8WCB8AaB8BBXp3aW5kb3cubG9jYXRpb24gPSAnamF2YXNjcmlwdDpFbnN1cmVDaGVja291dEFuZENoYW5nZUxheW91dE1vZGVUb0VkaXQoXCc3NjAwODYxMS02MTE0LTRiZDctOTJmYy01NzFjMTA4MTIxZWRcJyw1LGZhbHNlKTsnOx8CZB8DBWVqYXZhc2NyaXB0OkVuc3VyZUNoZWNrb3V0QW5kQ2hhbmdlTGF5b3V0TW9kZVRvRWRpdChcJzc2MDA4NjExLTYxMTQtNGJkNy05MmZjLTU3MWMxMDgxMjFlZFwnLDUsZmFsc2UpO2QCBQ8WAh8AaGQCCw8WAh8AaGQCEQ9kFgJmDw8WBh4cUHJldmlvdXNBdXRob3JpbmdJdGVtVmVyc2lvbgUBOB4aUHJldmlvdXNBdXRob3JpbmdJdGVtT3duZXIFATUeHFByZXZpb3VzQXV0aG9yaW5nQ29udHJvbE1vZGULKYgBTWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViQ29udHJvbHMuU1BDb250cm9sTW9kZSwgTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTUuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwFkZAIDDw8WAh4JQWNjZXNzS2V5BQEvZGQCBw9kFgICAQ9kFgICAQ9kFggCAQ8PFgQeBF8hU0ICAh4IQ3NzQ2xhc3MFF21zLXByb21vdGVkQWN0aW9uQnV0dG9uZGQCAw9kFgJmDw8WBB8IAgIfCQUXbXMtcHJvbW90ZWRBY3Rpb25CdXR0b25kZAIFDw8WBh8AaB8IAgIfCQUXbXMtcHJvbW90ZWRBY3Rpb25CdXR0b25kZAIHDxYCHwBoZAIGD2QWAmYPFCsAAg8WBB4LXyFEYXRhQm91bmRnHgtfIUl0ZW1Db3VudAICZGQWAmYPZBYEAgEPZBYCZg8VAhlodHRwOi8vd3d3LnBhcmxpYW1lbnQubnovEXd3dy5wYXJsaWFtZW50Lm56ZAICD2QWAmYPFQI4L1Jlc291cmNlQ2VudHJlL2Fib3V0SW50cmFuZXQvUGFnZXMvQWJvdXQtdGhpcy1zaXRlLmFzcHgKQ29udGFjdCBVc2QCEg9kFgJmDw9kFgIeC3BsYWNlaG9sZGVyBQtOYW1lL051bWJlcmQCFA9kFgJmDxQrAAIPFgQfCmcfCwIQZGQWAmYPZBYgAgEPZBYCZg8VAitodHRwczovL3d3dy5mbGV4aXB1cmNoYXNlLmNvbS9hY2NvdW50L2xvZ2luDUZsZXhpUHVyY2hhc2VkAgIPZBYCZg8VAh1odHRwOi8vb2N2d2ViMDMvZXN1Ym1pc3Npb25zMgxlU3VibWlzc2lvbnNkAgMPZBYCZg8VAhlodHRwOi8vb2N2d2ViMDMvZXllbGxvd3MvCGVZZWxsb3dzZAIED2QWAmYPFQIxaHR0cDovL3F3YS5jYW1wdXMuc2VydmljZXMvbWV0YXN0b3JtL2RlZmF1bHQuYXNweBxRdWVzdGlvbnMgZm9yIFdyaXR0ZW4gQW5zd2VyZAIFD2QWAmYPFQJEaHR0cDovL3N5c3Rlc3QtY3BkLmNhbXB1cy5zZXJ2aWNlcy9jb3JlcGFybGlhbWVudGFyeWRhdGEvaHRtbGNsaWVudC8dQ29yZSBQYXJsaWFtZW50YXJ5IERhdGEgKENQRClkAgYPZBYCZg8VAhNodHRwOi8vb2N2d2ViMDMvYWxwE0F1ZGl0IGxvZyBQcm9jZXNzb3JkAgcPZBYCZg8VAhhodHRwOi8vb2N2d2ViMDMvbWVtYmlsbHMhUHJvcG9zZWQgbWVtYmVycyBiaWxscyBwdWJsaXNoaW5nZAIID2QWAmYPFQIYaHR0cDovL29jdndlYjAzL2hwc3Rvd2ViCEhQU3RvV2ViZAIJD2QWAmYPFQImaHR0cDovL2Rwd3ByZC5wc2ludGVybmV0LnBhcmxpYW1lbnQubnoeTlpQIERvY3VtZW50IFB1Ymxpc2hpbmcgV2l6YXJkZAIKD2QWAmYPFQJAaHR0cDovL3BvcnRhbC5jYW1wdXMuc2VydmljZXMvU2l0ZVBhZ2VzL091dGFnZU5vdGlmaWNhdGlvbnMuYXNweBRPdXRhZ2Ugbm90aWZpY2F0aW9uc2QCCw9kFgJmDxUCNWh0dHA6Ly9saWJyYXJ5LmNhbXB1cy5zZXJ2aWNlcy9Jbm1hZ2ljR2VuaWUvb3BhYy5hc3B4H1BhcmxpYW1lbnRhcnkgTGlicmFyeSBDYXRhbG9ndWVkAgwPZBYCZg8VAiBodHRwczovL3RoZWNsZXJrLmNvbXBseXdpdGgubmV0LwpDb21wbHlXaXRoZAIND2QWAmYPFQJGaHR0cDovL2NvbXBseXdpdGguY2FtcHVzLnNlcnZpY2VzL2xvZ2luLmFzcHg/UmV0dXJuVXJsPSUyZkRlZmF1bHQuYXNweCRDb21wbHlXaXRoIGZvciBQYXJsaWFtZW50YXJ5IFNlcnZpY2VkAg4PZBYCZg8VAkRodHRwOi8vc3lzdGVzdC1zZWxlY3Rjb21taXR0ZWVzLmNhbXB1cy5zZXJ2aWNlcy9zaXRlcGFnZXMvaW5kZXguYXNweBFTZWxlY3QgQ29tbWl0dGVlc2QCDw9kFgJmDxUCMWh0dHA6Ly9zeXN0ZXN0LW91cmhvdXNlLmNhbXB1cy5zZXJ2aWNlcy9zaXRlcy92ZWIkVkVCIChWZW51ZSBhbmQgRXZlbnQgQm9va2luZykgc3lzdGVtZAIQD2QWAmYPFQJ4aHR0cDovL3N5c3Rlc3Qtb3VyaG91c2UuY2FtcHVzLnNlcnZpY2VzL1Blb3BsZS9JbmZvcm1hdGlvbkZvck1lbWJlcnMvVXNlZnVsSW5mb3JtYXRpb24vUGFnZXMvUHJvcG9zZWQtTWVtYmVycy1iaWxscy5hc3B4F1Byb3Bvc2VkIE1lbWJlcnMnIEJpbGxzZAIcD2QWAgIFD2QWEAIBDxYCHgRUZXh0BRBBYm91dCBBbmR5IEJyb3duZAIDDxYCHw0FywM8c3Bhbj48c3BhbiBjbGFzcz0nbXMtaW1uU3Bhbic+IDxhIGhyZWY9JyMnIG9uY2xpY2s9J0lNTkltYWdlT25DbGljayhldmVudCk7cmV0dXJuIGZhbHNlOycgY2xhc3M9J21zLWltbmxpbmsgbXMtc3BpbW4tcHJlc2VuY2VMaW5rJyA+PHNwYW4gY2xhc3M9J21zLXNwaW1uLXByZXNlbmNlV3JhcHBlciBtcy1pbW5JbWcgbXMtc3BpbW4taW1nU2l6ZS0xMHgxMCc+PGltZyBuYW1lPSdpbW5tYXJrJyB0aXRsZT0nJyBTaG93T2ZmbGluZVBhd249JzEnIGNsYXNzPSdtcy1zcGltbi1pbWcgbXMtc3BpbW4tcHJlc2VuY2UtZGlzY29ubmVjdGVkLTEweDEweDMyJyBzcmM9ICcvX2xheW91dHMvMTUvaW1hZ2VzL3NwaW1uLnBuZz9yZXY9MjMnIGFsdD0nVXNlciBQcmVzZW5jZScgc2lwPUFuZHkuQnJvd25AcGFybGlhbWVudC5nb3Z0Lm56IGlkPSdpbW5fMSx0eXBlPXNpcCcgLz48L3NwYW4+PC9hPjwvc3Bhbj48c3Bhbj5kAgQPFgIfDQUKQW5keSBCcm93bmQCBg8WAh8NBRRQcmVmZXJyZWQgbmFtZTogQW5keWQCCA8WAh8NZWQCCg8WAh8NBVA8YSBocmVmPSJtYWlsdG86QW5keS5Ccm93bkBwYXJsaWFtZW50LmdvdnQubnoiPkFuZHkuQnJvd25AcGFybGlhbWVudC5nb3Z0Lm56PC9hPmQCDA8WAh8NZWQCFg9kFgJmDxQrAAIPFgQfCmcfCwIBZGQWAmYPZBYCAgEPZBYCZg8VB0A8dGQgc3R5bGU9J3ZlcnRpY2FsLWFsaWduOnRvcDsgbGluZS1oZWlnaHQ6MS41Oyc+Q29udHJhY3RvcjwvdGQ+ALwBPHRkIHN0eWxlPSd2ZXJ0aWNhbC1hbGlnbjogdG9wOyc+PGEgaHJlZj0iaHR0cDovL2RldjA0LW91cmhvdXNlLmNhbXB1cy5zZXJ2aWNlcy9TZWFyY2gvUGFnZXMvYWR2cHBsc3JjaHJlc3VsdHMuYXNweD9rPShQU1BlcnNvbkJ1c2luZXNzVW5pdCUzYSUyMkFSQytDb25zdWx0aW5nJTIyKSI+QVJDIENvbnN1bHRpbmc8L2E+PC90ZD4AAMIBPHRkIHN0eWxlPSd2ZXJ0aWNhbC1hbGlnbjogdG9wOyc+PGEgaHJlZj0iaHR0cDovL2RldjA0LW91cmhvdXNlLmNhbXB1cy5zZXJ2aWNlcy9TZWFyY2gvUGFnZXMvYWR2cHBsc3JjaHJlc3VsdHMuYXNweD9rPShQU1BlcnNvbkxvY2F0aW9uJTNhJTIyQm93ZW4rSG91c2UrbGV2ZWwrMSUyMikiPkJvd2VuIEhvdXNlIGxldmVsIDE8L2E+PC90ZD4AZAIeD2QWAmYPFCsAAg8WBB8KZx8LAgRkZBYCZg9kFggCAQ9kFgJmDxUDHmh0dHA6Ly9vdXJob3VzZS5wYXJsaWFtZW50Lm56LwRIb21lBEhvbWVkAgIPZBYCZg8VAzAvUmVzb3VyY2VDZW50cmUvYWJvdXRJbnRyYW5ldC9QYWdlcy9TaXRlbWFwLmFzcHgHU2l0ZW1hcAdTaXRlbWFwZAIDD2QWAmYPFQM2L1Jlc291cmNlQ2VudHJlL2Fib3V0SW50cmFuZXQvUGFnZXMvQWNjZXNzaWJpbGl0eS5hc3B4DUFjY2Vzc2liaWxpdHkNQWNjZXNzaWJpbGl0eWQCBA9kFgJmDxUDOC9SZXNvdXJjZUNlbnRyZS9hYm91dEludHJhbmV0L1BhZ2VzL0Fib3V0LXRoaXMtc2l0ZS5hc3B4D0Fib3V0IHRoaXMgc2l0ZQ9BYm91dCB0aGlzIHNpdGVkGAUFJWN0bDAwJFRvb2xzRHJvcERvd24kVG9vbHNEcm9wRG93bkxpc3QPFCsADmRkZGRkZGQ8KwAQAAIQZGRkZgL/////D2QFO2N0bDAwJG5hdmlnYXRpb25UZXJtU2V0Rm9vdGVyJE5hdmlnYXRpb25UZXJtRm9vdGVyc0xpc3RWaWV3DxQrAA5kZGRkZGRkPCsABAACBGRkZGYC/////w9kBTtjdGwwMCRuYXZpZ2F0aW9uVGVybVNldEhlYWRlciROYXZpZ2F0aW9uVGVybUhlYWRlcnNMaXN0Vmlldw8UKwAOZGRkZGRkZBQrAAJkZAICZGRkZgL/////D2QFLWN0bDAwJFBsYWNlSG9sZGVyTWFpbiR1c2VyRGV0YWlscyRKb2JMaXN0Vmlldw8UKwAOZGRkZGRkZBQrAAFkAgFkZGRmAv////8PZAUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgMFGmN0bDAwJEZpbmRBUGVyc29uJHJkcGVyc29uBRxjdGwwMCRGaW5kQVBlcnNvbiRyZGJ1c2luZXNzBRxjdGwwMCRGaW5kQVBlcnNvbiRyZGJ1c2luZXNzT/Smq5jM3HZNHBlO/fqCgLF0QNwk1VPoRpADwzBoCYE=" />
 </div>
 
 <script type="text/javascript">
@@ -197,7 +195,7 @@ var g_wsaQoSDataPoints = [];
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'BLANKINTERNET#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002f", webAbsoluteUrl: "http:\u002f\u002fdev04-ourhouse.campus.services", siteAbsoluteUrl: "http:\u002f\u002fdev04-ourhouse.campus.services", serverRequestPath: "\u002fPages\u002fdefault.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Our House Intranet", webTemplate: "53", tenantAppVersion: "0", isAppWeb: false, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-NZ", clientServerTimeDelta: new Date("2017-06-12T23:59:09.5126193Z") - new Date(), siteClientTag: "3748$$15.0.4867.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:2147483647,Low:4294967295},pageListId:"{76008611-6114-4bd7-92fc-571c108121ed}",pageItemId:3, pagePersonalizationScope:1,userId:2965, systemUserKey:"i:0\u0029.w|s-1-5-21-23776394-1414820601-3323695937-1555", alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};var L_Menu_BaseUrl="";
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002f", webAbsoluteUrl: "http:\u002f\u002fdev04-ourhouse.campus.services", siteAbsoluteUrl: "http:\u002f\u002fdev04-ourhouse.campus.services", serverRequestPath: "\u002fpages\u002fuserprofile.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Our House Intranet", webTemplate: "53", tenantAppVersion: "0", isAppWeb: false, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-NZ", clientServerTimeDelta: new Date("2017-06-12T23:59:05.8484461Z") - new Date(), siteClientTag: "3748$$15.0.4867.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:2147483647,Low:4294967295},pageListId:"{76008611-6114-4bd7-92fc-571c108121ed}",pageItemId:5, pagePersonalizationScope:1,userId:2965, systemUserKey:"i:0\u0029.w|s-1-5-21-23776394-1414820601-3323695937-1555", alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};var L_Menu_BaseUrl="";
 var L_Menu_LCID="1033";
 var L_Menu_SiteTheme="null";
 document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};//]]>
@@ -316,10 +314,10 @@ return true;
 
 <div class="aspNetHidden">
 
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="44E3CCA6" />
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="089ACFD3" />
 	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
 	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdABWEQvVRBWRRW3cp93sQ6MrioxRXe0hpP1bpGgFXDXM16VfAyz5RGSjP9cg15+JrI9lGfuBLlr3tT58UesZsfHjaQ677VqthQ5xNVk5tLSce5m183VerA45b2pQBG5vePVWnwjDStac6mgUtInBYlurtCyEZ65beflrkVzpBVSd+tJoJC3bpLdm8BhzUwudSQ+fxbxLNhBhgPbyz1aRg+Onh+LBSxgyW5nWnSAnMYMX0xFASBLqmhVIBglZ1W2AwXCToWhiN51zUIeGf53dmMd4zYi/3NreuX+EK+6yNNQSu7WLGVN+uJeo0mxnO1FD4mGGAWO1soZSb1kBuyABYO5GO5ue3a2h946KpAVFn7YsHF1lAMLUWpH89U+fFqVvlKsu8F35tCG1tdmh1q8wPiUWGAHJqJot7CUCOL1XR9UPvkHBWNWTiJkdz1ggreIFgNWCEwAPTG7ly+c/9w276rc+/cgRyNyTwRS6+689Cz75HTg==" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAzM961naoMADz9dqpYukAtfoxRXe0hpP1bpGgFXDXM16VfAyz5RGSjP9cg15+JrI9lGfuBLlr3tT58UesZsfHjaQ677VqthQ5xNVk5tLSce5m183VerA45b2pQBG5vePVWnwjDStac6mgUtInBYlurtCyEZ65beflrkVzpBVSd+tJoJC3bpLdm8BhzUwudSQ+fxbxLNhBhgPbyz1aRg+Onh+LBSxgyW5nWnSAnMYMX0xFASBLqmhVIBglZ1W2AwXCRbwIrh2P/8dANVPbRpQb0zAQC10aqE2leCwCftExiQ5g==" />
 </div>
 			
 			<!-- ===== STARTER: ScriptManager ===================================================== -->
@@ -800,232 +798,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 							<!-- ===== STARTER: Current navigation =========================================================================================== -->
 							<div class="ms-dialogHidden ms-forceWrap ms-noList">
 								<div class="ms-core-navigation">
-																			
-								</div>
-							</div>	
-							<!-- ===== STARTER: Main Placeholder gets replaced with content of the page ======================================= -->																							
-							
-	<!-- START Main Content Area -->
-    <div id="grid1" class="grid">
-        <div class="row">
-            <div class="block carousel">
-                <!-- START News Carousel -->
-                <input type="hidden" name="ctl00$PlaceHolderMain$HomepageNewsCarousel$TimeDelayhidden" id="ctl00_PlaceHolderMain_HomepageNewsCarousel_TimeDelayhidden" value="9000" />
-
-<!-- START News Carousel -->
-<div id="carousel">
-     
-           
-                
-                <div class="slide">
-					
-                    <div class="slide-image " style = "background-image: url(/ResourceCentre/PublishingImages/Precinct%20Facilities/Parking/ROSS.jpg);" >
-                        <h2>Next staff orientation tour</h2>
-                    </div>
-					
-                    
-                    <p>Are you new to Parliament or not sure where to go? Visitor Services invite new and existing staff on a special 75-minute orientation tour of the parliamentary precinct on Monday 22 June at 9am.<a class="more" href="http://dev04-ourhouse.campus.services/NewsAndEvents/News/Pages/Next-staff-orientation-tour.aspx">Read More</a></p>
-                </div>
-            
-                <div class="slide">
-					
-                    <div class="slide-image " style = "background-image: url(/ResourceCentre/PublishingImages/Business%20Services/Parliamentary%20Service/balcony-view-crop.jpg);" >
-                        <h2>Accessibility update</h2>
-                    </div>
-					
-                    
-                    <p>​You may have noticed little buttons have sprung up on some floor areas around the precincts, namely at the bottom of the staircase in the Executive Wing as well as the Northwest corridor and the internal ramp between Parliament House and the...<a class="more" href="http://dev04-ourhouse.campus.services/NewsAndEvents/News/Pages/Accessibility-update.aspx">Read More</a></p>
-                </div>
-            
-                <div class="slide">
-					
-                    <div class="slide-video">
-                        <div style="width:100%;height:100%;">
-	<div class="mediaPlayerContainer" style="width:100%; height:100%"><video id="ctl00_PlaceHolderMain_HomepageNewsCarousel_HomepageNewsCarouselListView_ctrl2_ctl02"   poster="http://dev04-ourhouse.campus.services/ResourceCentre/PublishingImages/Election%202014/Video/Week%20in%20the%20life%20of%20an%20EA/Preview%20Images/Week%20in%20the%20life%20of%20an%20EA_mp4.png" src="/_layouts/15/clientbin/mediaplaceholder.mp4" onloadstart="new mediaPlayer.initHtml5Player(this,'','',false,'',false,false,0,false);"><source src="http://dev04-ourhouse.campus.services/ResourceCentre/PublishingImages/Election 2014/Video/Week in the life of an EA/Week in the life of an EA.mp4" data-label="" type='video/mp4'>
-
-            <object id="ctl00_PlaceHolderMain_HomepageNewsCarousel_HomepageNewsCarouselListView_ctrl2_ctl02" type="application/x-silverlight-2" data="data:application/x-silverlight-2," width="100%" height="100%">
-                <param name="source" value="/_layouts/15/clientbin/mediaplayer.xap?rev=GohwcTo4onwCGghg2kd2yQ%3D%3D"/>
-                <param name="enableHtmlAccess" value="true"/>
-                <param name="windowless" value="true" />
-                <param name="background" value="#80808080" />
-                <param name="initParams" value="mediaSource=http://dev04-ourhouse.campus.services/ResourceCentre/PublishingImages/Election 2014/Video/Week in the life of an EA/Week in the life of an EA.mp4,previewImageSource=http://dev04-ourhouse.campus.services/ResourceCentre/PublishingImages/Election%202014/Video/Week%20in%20the%20life%20of%20an%20EA/Preview%20Images/Week%20in%20the%20life%20of%20an%20EA_mp4.png,videoSetSource=,startPlayBackAt=0" />
-
-                <a href="https://go.microsoft.com/fwlink/?LinkID=124807" style="text-decoration: none;"><img src="https://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight" style="border-style: none"/></a><a href='http://dev04-ourhouse.campus.services/ResourceCentre/PublishingImages/Election 2014/Video/Week in the life of an EA/Week in the life of an EA.mp4' class='media-link' title='Download Media'><span class='media-title'>Download Media</span></a>
-            </object>
-</video></div><input name="ctl00$PlaceHolderMain$HomepageNewsCarousel$HomepageNewsCarouselListView$ctrl2$ctl02$HiddenInput" type="hidden" id="ctl00_PlaceHolderMain_HomepageNewsCarousel_HomepageNewsCarouselListView_ctrl2_ctl02_HiddenInput" />
-</div>
-                        <h2>5000 poppies for Anzac Day 2015</h2>
-                    </div>
-                    <p>As part of the World War I commemorations, the 5000 Poppies Project is aiming to knit, crochet and sew poppies for a display at the Wigram Air Force Museum on Anzac Day in 2015. <a class="more" href="http://dev04-ourhouse.campus.services/NewsAndEvents/News/Pages/5000-Poppies-Project.aspx">Read More</a></p>
-                </div>
-            
-                <div class="slide">
-					
-                    <div class="slide-image " style = "background-image: url(/ResourceCentre/PublishingImages/News%20and%20Events/News/Magna.jpg);" >
-                        <h2>800th anniversary of the Magna Carta</h2>
-                    </div>
-					
-                    
-                    <p>​This week marks 800 years since the Magna Carta was sealed on the banks of the River Thames on 15 June 1215. Magna Carta means the Great Charter, and it forms the foundation of rights we enjoy today. <a class="more" href="http://dev04-ourhouse.campus.services/NewsAndEvents/News/Pages/800th-anniversary-of-the-Magna-Carta.aspx">Read More</a></p>
-                </div>
-            
-                <div class="slide">
-					
-                    <div class="slide-image " style = "background-image: url(/ResourceCentre/PublishingImages/News%20and%20Events/News/matariki.pub1.jpg);" >
-                        <h2>Matariki Celebration in Copperfield’s</h2>
-                    </div>
-					
-                    
-                    <p>​Please come and join us on Thursday, 18th of June for Matariki Celebration in Copperfield’s​.<a class="more" href="http://dev04-ourhouse.campus.services/NewsAndEvents/News/Pages/Matariki-Celebration-in-Copperfield’s.aspx">Read More</a></p>
-                </div>
-            
-            
-  
-   </div>
-<!-- END News Carousel -->
-	
-                <!-- END News Carousel -->
-            </div>
-            <div class="block aside">
-                <aside>
-                    
-<script src="/Style Library/Intranet/js/jquery.easy-autocomplete.js"></script>
-
-<div class="widget find-people noindex">
-    <h2><span class="icon people"></span>Find a Person</h2>
- 
-    <input name="ctl00$PlaceHolderMain$ctl00$searchTextBox" type="text" id="ctl00_PlaceHolderMain_ctl00_searchTextBox" placeholder="Name/Number" />
-    <ul>
-        <li><input id="ctl00_PlaceHolderMain_ctl00_rdperson" type="radio" name="ctl00$PlaceHolderMain$ctl00$FindPerson" value="rdperson" checked="checked" /><label for="ctl00_PlaceHolderMain_ctl00_rdperson">By Name</label></li>
-        <li><input id="ctl00_PlaceHolderMain_ctl00_rdbusiness" type="radio" name="ctl00$PlaceHolderMain$ctl00$FindPerson" value="rdbusiness" /><label for="ctl00_PlaceHolderMain_ctl00_rdbusiness">Business Unit</label></li>
-    </ul>
-    <input type="submit" name="ctl00$PlaceHolderMain$ctl00$searchPeopleButton" value="" id="ctl00_PlaceHolderMain_ctl00_searchPeopleButton" title="Find people" />
-   
-    <span class="advanced"><a id="ctl00_PlaceHolderMain_ctl00_searchAdvancedPeopleSearchButton" href="javascript:__doPostBack(&#39;ctl00$PlaceHolderMain$ctl00$searchAdvancedPeopleSearchButton&#39;,&#39;&#39;)">Use Advanced Search</a></span>
-</div>
-  
-
-<script  type="text/javascript">
-    var ctlStaffname;
-
-    $(document.getElementById('ctl00_PlaceHolderMain_ctl00_rdperson')).change(function () {
-        var ctlname = document.getElementById('ctl00_PlaceHolderMain_ctl00_searchTextBox');
-
-        if ($(document.getElementById('ctl00_PlaceHolderMain_ctl00_rdperson')).attr("Checked")) {
-            ctlname.setAttribute("placeholder", "Name/Number");
-            ctlStaffname = "NameSuggestion";
-            var options = {
-
-                url: "/SiteCollectionDocuments/PeopleSearchSuggestion.xml",
-                dataType: "xml",
-                xmlElementName: ctlStaffname,
-                adjustWidth: false,
-
-                getValue: function (element) {
-                    return $(element).find("Name").text();
-                },
-
-                list: {
-
-                    match: { enabled: true },
-                    sort: { enabled: true }
-                }
-            };
-
-            $(ctlname).easyAutocomplete(options);
-            var serachVal = $(ctlname).val();
-            if (serachVal != "") {
-                $(ctlname).focus();
-                var e = $.Event('keyup');
-                e.keyCode = 65;
-                $(ctlname).trigger(e);
-
-            }
-        }
-    });
-
-    $(document.getElementById('ctl00_PlaceHolderMain_ctl00_rdbusiness')).change(function () {
-
-        var ctlname = document.getElementById('ctl00_PlaceHolderMain_ctl00_searchTextBox');
-
-        if ($(document.getElementById('ctl00_PlaceHolderMain_ctl00_rdbusiness')).attr("Checked")) {
-            ctlname.setAttribute("placeholder", "Business Unit");
-            ctlStaffname = "BusinessUnitSuggestion";
-            var options = {
-
-                url: "/SiteCollectionDocuments/PeopleSearchSuggestion.xml",
-                dataType: "xml",
-                xmlElementName: ctlStaffname,
-                adjustWidth: false,
-
-                getValue: function (element) {
-                    return $(element).find("Name").text();
-                },
-
-                list: {
-
-                    match: { enabled: true },
-                    sort: { enabled: true }
-                }
-            };
-
-            $(ctlname).easyAutocomplete(options);
-            var serachVal = $(ctlname).val();
-            if (serachVal != "") {
-                $(ctlname).focus();
-                var e = $.Event('keyup');
-                e.keyCode = 65;
-                $(ctlname).trigger(e);
-
-
-            }
-        }
-    });
-
-
-
-
-</script>
-<script type="text/javascript">
-
-    $(document).ready(function () {
-
-        var ctlname = document.getElementById('ctl00_PlaceHolderMain_ctl00_searchTextBox');
-        var ctlStaffname;
-
-        if (document.getElementById('ctl00_PlaceHolderMain_ctl00_rdperson').checked == true) {
-
-             ctlStaffname = "NameSuggestion";
-             ctlname.setAttribute("placeholder", "Name/Number");
-         }
-         else if (document.getElementById('ctl00_PlaceHolderMain_ctl00_rdbusiness').checked == true) {
-            ctlStaffname = "BusinessUnitSuggestion";
-        }
-
-
-        var options = {
-
-            url: "/SiteCollectionDocuments/PeopleSearchSuggestion.xml",
-            dataType: "xml",
-            xmlElementName: ctlStaffname,
-            adjustWidth: false,
-
-            getValue: function (element) {
-                return $(element).find("Name").text();
-            },
-
-            list: {
-
-                match: { enabled: true },
-                sort: { enabled: true }
-            }
-        };
-
-        $(ctlname).easyAutocomplete(options);
-    });
-</script>
-
-                    <menu id="MSOMenu_WebPartMenu" class="ms-hide">
+									
+     <menu id="MSOMenu_WebPartMenu" class="ms-hide">
 	<ie:menuitem title="Collapse this web part." id="MSOMenu_Minimize" onmenuclick="javascript:MSOLayout_MinimizeRestore(MenuWebPart)" text="Minimize" type="option">
 
 	</ie:menuitem><ie:menuitem title="Expand this web part." id="MSOMenu_Restore" onmenuclick="javascript:MSOLayout_MinimizeRestore(MenuWebPart)" text="Restore" type="option">
@@ -1038,915 +812,157 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 
 	</ie:menuitem><ie:menuitem title="Show connections options for this Web Part. These changes will apply to all users." id="MSOMenu_Connections" onmenuclick="" text="Connections" type="option">
 
-	</ie:menuitem><ie:menuitem type="separator"></ie:menuitem><ie:menuitem title="Export this Web Part. These changes will apply to all users." id="MSOMenu_Export" onmenuclick="javascript:MSOWebPartPage_ExportCheckWarning(&#39;\u002f_vti_bin\u002fexportwp.aspx?pageurl=http\u00253A\u00252F\u00252Fdev04\u00252Dourhouse\u00252Ecampus\u00252Eservices\u00253A80\u00252FPages\u00252Fdefault\u00252Easpx\u0026guidstring=&#39;+ escape(MenuWebPartID), MenuWebPart.getAttribute(&#39;HasPers&#39;) == &#39;true&#39;)" text="Export..." type="option">
+	</ie:menuitem><ie:menuitem type="separator"></ie:menuitem><ie:menuitem title="Export this Web Part. These changes will apply to all users." id="MSOMenu_Export" onmenuclick="javascript:MSOWebPartPage_ExportCheckWarning(&#39;\u002f_vti_bin\u002fexportwp.aspx?pageurl=http\u00253A\u00252F\u00252Fdev04\u00252Dourhouse\u00252Ecampus\u00252Eservices\u00253A80\u00252Fpages\u00252Fuserprofile\u00252Easpx\u00253Fpersonid\u00253D21807\u0026guidstring=&#39;+ escape(MenuWebPartID), MenuWebPart.getAttribute(&#39;HasPers&#39;) == &#39;true&#39;)" text="Export..." type="option">
 
 	</ie:menuitem><ie:menuitem id="MSOMenu_Help" iconsrc="/_layouts/15/images/HelpIcon.gif" onmenuclick="MSOWebPartPage_SetNewWindowLocation(MenuWebPart.getAttribute('helpLink'), MenuWebPart.getAttribute('helpMode'))" text="Help" type="option" style="display:none">
 
 	</ie:menuitem>
 </menu>
-                    
-
-<div class="widget links" id="quicklinks">
-    <h2>Quick Links</h2>
-	<div id="quickLinksNoDataMsg" style="display: none;"><a href="javascript:openQuickLinksDialog();">Click here to add quick links</a></div>
-	<div class="content">
-		
-	</div>		
-    <span class="icon edit">Edit</span>
-</div>
-<div id="quicklinksDialog" class="userDialog">
-  <h2>Quick Links</h2>
-  <div class="message"></div>
-  <p>Drag each item into your preferred order. A maximum of eight links are allowed.</p>
-  <div class="content"></div>
-  <div class="add"><input class="addLink" type="button" value="Add" /></div>
-  <input id="quickLinksSubmitBtn" class="dialogSubmit" type="button" value="Update" onclick="submitQuickLinks();" />
-  <input class="dialogClose" type="button" value="Close" />
-</div>
-
-<script type="text/javascript">
-    var quickLinksJson = [];
-    var userPreferenceId = 4;
-    var currentUser;
-    var item = null;
-
-    $(document).ready(function() {
-        // Simple Modal dialog  
-        $('#quicklinks .edit').on('click', function() {
-            openQuickLinksDialog();        
-        });
-    });
-	
-    function htmlEncode(value){
-        return $('<textarea/>').text(value).html().replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-    }
-
-    function openQuickLinksDialog() {
-        // get the input fields
-        var currentFields = getCurrentFields();
-
-        // recreate the field list
-        $('#quicklinksDialog .content').html(currentFields);
-
-        // make the list sortable
-        $('#quicklinksDialog ul').sortable();
-        
-        // reset the message
-        $('#quicklinksDialog .message').html('');
-        
-        // open the modal
-        $('#quicklinksDialog').modal();
-    }
-
-    // listen for Add clicks
-    $(document).on('click', '#quicklinksDialog .add input', function(e){
-        e.preventDefault();
-
-        var clone = getUrlFields('', '');
-        $('#quicklinksDialog ul').append(clone);
-        $('#quicklinksDialog ul').sortable();
-
-        if ($('#quicklinksDialog li').length > 7) {
-            $('#quicklinksDialog .add').hide();
-        }
-
-        setDialogMessage('');  // clear dialog message
-        $.modal.setPosition();
-    });
     
-    // remove a quicklink
-    $(document).on('click', '#quicklinksDialog li .fa-close', function(e){
-        e.preventDefault();
-      
-        $(this).parent().remove();
-      
-        if ($('#quicklinksDialog li').length < 8) {
-            $('#quicklinksDialog .add').show();
-        }
-      
-        setDialogMessage('');  // clear dialog message
-        $.modal.setPosition();
-    });
+<div class="UserPicture">
+<img src="/_layouts/15/images/PersonPlaceholder.200x150x32.png" alt="Andy Brown" title="Andy Brown" height="150" width="200" />
+
+<h2 class='profilenameOverlay'>Andy Brown</h2>
     
-    $(document).on('change', '#quicklinksDialog input', function(e){	
-        setDialogMessage('');  // clear dialog message
-    });
-	
-    // close the modal  
-    $(document).on('click', '.dialogClose', function(e){
-        e.preventDefault();
-      
-        $.modal.close();
-    });
-    
-    function updateQuickLinks() {
-        var output = '';
-        for (var i in quickLinksJson) {
-            if (quickLinksJson[i].Url != '' && quickLinksJson[i].Title != '')
-                output += '<li><a href="' + htmlEncode(quickLinksJson[i].Url) + '">' + htmlEncode(quickLinksJson[i].Title) + '</a></li>';
-        }
-        if (output != '') {
-            output = '<ul>' + output + '</ul>';
-        }
-        $('#quicklinks .content').html(output);
-		
-        if (output != '')
-            $('#quickLinksNoDataMsg').hide();
-        else
-            $('#quickLinksNoDataMsg').show();
-    }
-    
-    function getCurrentFields() {
-        var output = '<ul>';
-        for (var i in quickLinksJson) {
-            output += getUrlFields(quickLinksJson[i].Title, quickLinksJson[i].Url);
-        }
-        output += '</ul>';
-        return output;
-    }
-    
-    function getUrlFields(title, url) {
-        return '<li><input type="text" name="title[]" value="' + htmlEncode(title) + '" placeholder="Title" maxlength="75" /><input type="text" name="url[]" value="' + htmlEncode(url) + '" placeholder="URL" /><span class="fa fa-close"></span></li>';
-    }
-    
-    // listen for submissions
-    function submitQuickLinks() {
+    <div class="ms-core-listMenu-verticalBox">
+					        
 
-        // update the json
-        quickLinksJson = [];
-        count = 1;
-        var error = false;
-      
-        $('#quicklinksDialog li').each(function(){
-            var title = $(this).children('input[name="title[]"]').val();
-            var url = $(this).children('input[name="url[]"]').val();
-        
-            // rebuild the json array
-            if (title == '' && url == '') {
-                // skip
-            }
-            else if (title == '' || url == '') {
-                setDialogMessage('Title and URL are required for each link.');
-                error = true;
-            }
-            else {
-                quickLinksJson.push({"Title": htmlDecode(title), "Url": url, "SortOrder": count});
-                count++;
-            }
-          
-        });
-      
-        if (!error) {
-            $("input#quickLinksSubmitBtn").prop("disabled", true);
-            $("input#quickLinksSubmitBtn").prop("value", "Updating...");
-            setDialogMessage('');
-			
-            // update the display
-            updateQuickLinks();
-
-            // submit the results
-            createOrUpdateQuickLinks(false);
-        }
-    }
-
-    function setDialogMessage(msg) {
-        $('#simplemodal-container .message').html(msg);
-    }
-
-    SP.SOD.executeFunc('sp.js', 'SP.ClientContext', sharePointReadyQuickLinks);
-
-    function sharePointReadyQuickLinks() {
-        getCurrentUser();
-    }
-	
-    function getCurrentUser() {
-        var context = SP.ClientContext.get_current();
-        var web = context.get_web();
-		
-        currentUser = web.get_currentUser();
-		
-        context.load(currentUser);
-        context.executeQueryAsync(onGetCurrentUserSuccess, onCurrentUserFailed);
-    }
-
-    function onGetCurrentUserSuccess() {
-        //custom code with current logged in user
-    }
-
-    function onCurrentUserFailed(sender, args) {
-        var msg = args.get_message();
-        setDialogMessage(msg);
-    }
-	
-    function createOrUpdateQuickLinks(isNew)
-    {
-        if (userPreferenceId == 0)
-            isNew = true;
-			
-        var context = SP.ClientContext.get_current();
-
-        var web = context.get_web();
-        var list = web.get_lists().getByTitle('User Preferences');
-			
-        if (isNew)
-        {		
-            var userVal = new SP.FieldUserValue();
-            userVal.set_lookupId(currentUser.get_id());
-
-            var itemCreateInfo = new SP.ListItemCreationInformation();
-            item = list.addItem(itemCreateInfo);
-			
-            item.set_item('PSUser',userVal);
-        }
-        else
-        {
-            item = list.getItemById(userPreferenceId);  
-        }
-
-        item.set_item('PSQuickLinks', JSON.stringify(quickLinksJson));
-        item.update();  
-		
-        // Create callback handlers
-        var success = Function.createDelegate(this, this.onSuccessQuickLinks);
-        var failure = Function.createDelegate(this, this.onFailureQuickLinks);
-
-        // Execute an async query
-        context.executeQueryAsync(success, failure);
-    }
-	
-    function onSuccessQuickLinks(sender, args) {
-        if (userPreferenceId == 0)
-            userPreferenceId = item.get_id();
-
-        enableQuickLinkUpdateBtn();
-        setDialogMessage('Quick Links have been updated!');
-    }
-        
-    function onFailureQuickLinks(sender, args) {
-        var msg = args.get_message();
-		
-        if (args.get_errorTypeName() == "System.ArgumentException" && msg.indexOf('Item does not exist') != -1)
-        {
-            createOrUpdateQuickLinks(true);
-        }
-        else
-        {
-            enableQuickLinkUpdateBtn();
-            setDialogMessage(msg);
-        }
-    }
-	
-    function enableQuickLinkUpdateBtn()
-    {
-        $("input#quickLinksSubmitBtn").prop("disabled", false);
-        $("input#quickLinksSubmitBtn").prop("value", "Update");
-    }
-</script>
-
-                    
-	            </aside>
-            </div>
-        </div>
-    </div>
-
-    <div id="grid2" class="grid">
-        <div class="row">
-            <div class="block widget">
-                
-
-<div id="nextSitting" class="grid">
-    <div class="row">
-        <div class="block parliament"></div>
-        <div class="block">
-            <h3>The House is sitting today</h3>
-            <ul>
-                <li><a target='_blank' href="http://www.parliament.nz/en-NZ/PB/Business/Programme/9/4/d/00CLOOCThisWkProgramme1-House-sitting-programme.htm" class="">View sitting calendar</a></li>
-                <li><a target='_blank' href="http://www.parliament.nz/en-NZ/AboutParl/SeeHear/PTV/" class="">View Parliament TV</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-                
-
-<div id="upcomingEvents">
-    <h2>Upcoming Events</h2>
-    
-    
-			<div>No upcoming events, stay tuned.</div>
-		
-</div>
-
-
-	                            
-            </div>
-
-            <div id="documents" class="block widget">
-               	
 
  <script type="text/javascript">
-   
-     $(document).ready(function () {
+     function OpenDialog(title, pageUrl) {
+         var options = {
+             url: pageUrl,
+             title: title,
+             autoSize: true,
+             showClose: true,
+             dialogReturnValueCallback: callback
+         };
+         SP.UI.ModalDialog.showModalDialog(options);
+     }
 
-         $("#ctl00_PlaceHolderMain_HomePageDocumentSearch1_documentSearchTextBox").bind("keypress", function (e) {
-             var code = e.keyCode || e.which;
-             if (code == 13) {
-                 e.preventDefault();
-                 $("#ctl00_PlaceHolderMain_HomePageDocumentSearch1_documentSearchButton").click();
-                 return false;
-             }
-         });
-
-
-
-     });
-    </script> 
-
-
-<h2>Document Search</h2>
-<div class="search">
-    <input name="ctl00$PlaceHolderMain$HomePageDocumentSearch1$documentSearchTextBox" type="text" id="ctl00_PlaceHolderMain_HomePageDocumentSearch1_documentSearchTextBox" /><input type="submit" name="ctl00$PlaceHolderMain$HomePageDocumentSearch1$documentSearchButton" value="" id="ctl00_PlaceHolderMain_HomePageDocumentSearch1_documentSearchButton" title="Find documents" />
-</div>
-
-
-
-<script type="text/javascript">
-    function GetIconClass (fileType, isObjectiveDocument)
-    {
-        if (isObjectiveDocument)
-        {
-            return "class=\"icon obj mostViewed\"";
-        }
-
-        if (fileType != "")
-        {
-            var fileTypeClass="class=\"icon {0} mostViewed\"";
-            return fileTypeClass.replace("{0}", fileType);
-        }
-
-        return string.Empty;
-    }
-
+     function callback(dialogResult)               // refresh function  
+     {
+         SP.UI.ModalDialog.RefreshPage(dialogResult);
+     }
+</script>
    
 
-    $(document).ready(function () {
-        var rootURL = 'http://dev04-ourhouse.campus.services/';
-        rootURL = rootURL.replace(/\/$/, "");
-        numberOfDocuments = '4';
-        var documentQuery = "/_api/search/query?querytext='path:{0}/ResourceCentre/Documents'&RowLimit={1}&refinementfilters='isDocument:equals(\"1\")'&sortlist='ViewsRecent:descending'";
-        documentQuery = documentQuery.replace("{0}", rootURL);
-        documentQuery = documentQuery.replace("{1}", numberOfDocuments);
-
-        $.ajax({
-            url: documentQuery,
-            method: "GET",
-            headers: {
-                "accept": "application/json;odata=verbose",
-            },
-            success: function (data) {
-                var restResults = data.d.query.PrimaryQueryResult.RelevantResults.Table.Rows.results;
-                 
-                for (var i = 0; i < restResults.length; i++) {
-
-                   
-                    $isDocument = restResults[i].Cells.results[29]["Value"]
-                    if ($isDocument == "true") {
-                                                        
-                        var documentTitle = restResults[i].Cells.results[3]["Value"];
-                        var documentURL = restResults[i].Cells.results[6]["Value"];
-                        var documentIcon = GetIconClass(restResults[i].Cells.results[31]["Value"],false);
-                        var documentItem = "<li><a href=\"{0}\"><span {1}></span>{2}</a></li>";
-                        documentItem = documentItem.replace("{0}", documentURL);
-                        documentItem = documentItem.replace("{1}", documentIcon);
-                        documentItem = documentItem.replace("{2}", documentTitle);
-                        $("#PageDocumentMostViewed ul").append(documentItem);
-                    }
-                   
-                }
-            },
-            error: function (sender, args) {
-            }
-        });
-
-    });
-</script>
 
 
 
-
-<div id="PageDocumentMostViewed" class="">
-    <h3>Often Viewed Items</h3>
-    <ul>
-             
-    </ul>
+					    
+					    </div>
 </div>
 
-
-            </div>
-
-            <div class="block aside">
-                <aside>
-                    <div class="contactBox noindex">
-                        
-
-<link rel="stylesheet" href="/Style Library/Intranet/CSS/jquery-ui.css">
-<script src="/Style Library/Intranet/js/jquery-ui.js"></script>
-
-<div id="usefulContacts">
-	<h2>Useful Contacts</h2>
-	<span class="icon edit">Edit</span>
-
-	<div class="personContacts" id="predefinedContactsContainer">
-		
-				<ul class="personalContactsList">
-					
-				<li class="contactItem">Emergency <a href="tel:04 817 7777-up">04 817 7777-up</a></li>
+										
+								</div>
+							</div>	
+							<!-- ===== STARTER: Main Placeholder gets replaced with content of the page ======================================= -->																							
+							
+	<!-- START Main Content Area -->
+	<div id="top" class="primary">
+		<article>
+			<header>					
+			</header>
 			
-				<li class="contactItem">Serjeant-at-Arms  <a href="tel:04 817 9823">04 817 9823</a></li>
 			
-				<li class="contactItem">Security Administration Office  <a href="tel:04 817 9496">04 817 9496</a></li>
-			
-				</ul>
-			
-		<div id="usefulContactsNoDataMsg" style="display: none;"><a href="javascript:openUsefulContactsDialog();">Click here to add contacts</a></div>
-		<ul class="personalContactsList" id="personalContacts">
-			
-						
-					<li class="contactItem">Vuong  <a href="tel:sldkfjsd">sldkfjsd</a></li>
-				
-					<li class="contactItem">Rendt  <a href="tel:sldkfjsd">sldkfjsd</a></li>
-				
-					<li class="contactItem">Aman  <a href="tel:12345">12345</a></li>
-				
-				
-		</ul>
-	</div>
-</div>
-
-<div id="usefulContactsDialog" class="userDialog">
-	<h2>Useful Contacts</h2>
-	<div class="message"></div>
-    <p>Drag each item into your preferred order. A maximum of five links are allowed.</p>
-    <div class="content"></div>
-    <div class="add"><input class="addContact" type="button" value="Add" /></div>
-    <input id="usefulContactsSubmitBtn" class="dialogSubmit" type="button" value="Update" onclick="submitUsefulContacts();" />
-    <input  class="dialogClose" type="button" value="Close" />
-</div>
-
-<script type="text/javascript">
-    var usefulContactsJson = [{"ContactName":"Vuong","ContactNumber":"sldkfjsd","SortOrder":1},{"ContactName":"Rendt","ContactNumber":"sldkfjsd","SortOrder":2},{"ContactName":"Aman","ContactNumber":"12345","SortOrder":3}];
-    var userPreferenceId = 4;
-    var currentUser;
-    var item = null;
-
-    $(document).ready(function(){
-        // load UsefulContacts from current json object
-        updateUsefulContacts();
-
-        // Simple Modal dialog  
-        $('#usefulContacts .edit').on('click', function() {
-            openUsefulContactsDialog();        
-        });
-    });
-
-    function htmlEncode(value){
-        return $('<textarea/>').text(value).html().replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-    }
-	
-    function openUsefulContactsDialog()
-    {
-        // get the input fields
-        var currentFields = getCurrentUsefulContactFields();
-
-        // recreate the field list
-        $('#usefulContactsDialog .content').html(currentFields);
-
-        // make the list sortable
-        $('#usefulContactsDialog ul').sortable();
-        
-        // reset the message
-        $('#usefulContactsDialog .message').html('');
-        
-        // open the modal
-        $('#usefulContactsDialog').modal();
-    }
-	
-    // listen for Add clicks
-    $(document).on('click', '#usefulContactsDialog .add input', function(e){
-        e.preventDefault();
-		
-        var clone = getContactFields('', '');
-        $('#usefulContactsDialog ul').append(clone);
-        $('#usefulContactsDialog ul').sortable();
-      
-        if ($('#usefulContactsDialog li').length > 4) {
-            $('#usefulContactsDialog .add').hide();
-        }
-		
-        setDialogMessage('');  // clear dialog message
-        $.modal.setPosition();
-    });
-    
-    // remove a quicklink
-    $(document).on('click', '#usefulContactsDialog li .fa-close', function(e){
-        e.preventDefault();		
-      
-        $(this).parent().remove();
-      
-        if ($('#usefulContactsDialog li').length < 5) {
-            $('#usefulContactsDialog .add').show();
-        }
-		
-        setDialogMessage('');  // clear dialog message
-        $.modal.setPosition();
-    });
-	
-    $(document).on('change', '#usefulContactsDialog input', function(e){	
-        setDialogMessage('');  // clear dialog message
-    });
-
-    function updateUsefulContacts() {
-        var output = '';
-        for (var i in usefulContactsJson) {
-            if (usefulContactsJson[i].ContactNumber != '' && usefulContactsJson[i].ContactName != '')
-                output += '<li class="contactItem">' + htmlEncode(usefulContactsJson[i].ContactName) + '<a href="tel:' + htmlEncode(usefulContactsJson[i].ContactNumber) + '">' + htmlEncode(usefulContactsJson[i].ContactNumber) + '</a></li>';
-        }
-        $('#personalContacts').html(output);
-		
-        if (output != '')
-            $('#usefulContactsNoDataMsg').hide();
-        else
-            $('#usefulContactsNoDataMsg').show();
-    }
-    
-    // close the modal  
-    $(document).on('click', '.usefulContactsCloseDialog', function(e){
-        e.preventDefault();
-      
-        $.modal.close();
-      
-        $('#usefulContactsDialog ul').sortable('destroy');
-    });
-	
-    function getCurrentUsefulContactFields() {
-        var output = '<ul>';
-        for (var i in usefulContactsJson) {
-            output += getContactFields(usefulContactsJson[i].ContactName, usefulContactsJson[i].ContactNumber);
-        }
-        output += '</ul>';
-        return output;
-    }
-    
-    function getContactFields(contactName, contactNumber) {
-        return '<li><input type="text" name="contactName[]" value="' + htmlEncode(contactName) + '" placeholder="Contact Name" maxlength="40" /><input type="text" name="contactNumber[]" value="' + htmlEncode(contactNumber) + '" placeholder="Contact Number"  maxlength="15" /><span class="fa fa-close"></span></li>';
-    }
-    
-    // listen for submissions
-    function submitUsefulContacts() {
-
-        // update the json
-        usefulContactsJson = [];
-        count = 1;
-        var error = false;
-	  
-        $('#usefulContactsDialog li').each(function(){
-            var contactName = $(this).children('input[name="contactName[]"]').val();
-            var contactNumber = $(this).children('input[name="contactNumber[]"]').val();
-        
-            // rebuild the json array
-            if (contactName == '' && contactNumber == '') {
-                // skip
-            }
-            else if (contactName == '' || contactNumber == '') {
-                setDialogMessage('Contact name and number are required for each entry.');
-                error = true;
-            }
-            else {
-                usefulContactsJson.push({"ContactName": contactName, "ContactNumber": contactNumber, "SortOrder": count});
-                count++;
-            }
-        });
-      
-        if (!error) {
-            $("input#usefulContactsSubmitBtn").prop("disabled", true);
-            $("input#usefulContactsSubmitBtn").prop("value", "Updating...");
-            setDialogMessage('');
-			
-            // update the display
-            updateUsefulContacts();
-			
-            // submit the results
-            createOrUpdateUsefulContacts(false);
-        }
-    }
-
-    function setDialogMessage(msg) {
-        $('#simplemodal-container .message').html(msg);
-    }
-	
-    SP.SOD.executeFunc('sp.js', 'SP.ClientContext', sharePointReadyUsefulContacts);
-
-    function sharePointReadyUsefulContacts() {
-        getCurrentUser();
-    }
-	
-    function getCurrentUser() {
-        var context = SP.ClientContext.get_current();
-        var web = context.get_web();
-		
-        currentUser = web.get_currentUser();
-		
-        context.load(currentUser);
-        context.executeQueryAsync(onGetCurrentUserSuccess, onCurrentUserFailed);
-    }
-
-    function onGetCurrentUserSuccess() {
-        //custom code with current logged in user
-    }
-
-    function onCurrentUserFailed(sender, args) {
-        var msg = args.get_message();
-        setDialogMessage(msg);
-    }
-	
-    function createOrUpdateUsefulContacts(isNew)
-    {
-        if (userPreferenceId == 0)
-            isNew = true;
-			
-        var context = SP.ClientContext.get_current();
-
-        var web = context.get_web();
-        var list = web.get_lists().getByTitle('User Preferences');
-		
-        if (isNew)
-        {		
-            var userVal = new SP.FieldUserValue();
-            userVal.set_lookupId(currentUser.get_id());
-
-            var itemCreateInfo = new SP.ListItemCreationInformation();
-            item = list.addItem(itemCreateInfo);
-			
-            item.set_item('PSUser',userVal);
-        }
-        else
-        {
-            item = list.getItemById(userPreferenceId);  
-        }
-
-        item.set_item('PSUsefulContacts', JSON.stringify(usefulContactsJson));
-        item.update();  
-		
-        // Create callback handlers
-        var success = Function.createDelegate(this, this.onSuccessUsefulContacts);
-        var failure = Function.createDelegate(this, this.onFailureUsefulContacts);
-
-        // Execute an async query
-        context.executeQueryAsync(success, failure);
-    }
-	
-    function onSuccessUsefulContacts(sender, args) {
-        if (userPreferenceId == 0)
-            userPreferenceId = item.get_id();
-
-        enableUsefulContactsUpdateBtn();
-        setDialogMessage('Useful Contacts have been updated!');
-    }
-        
-    function onFailureUsefulContacts(sender, args) {
-        var msg = args.get_message();
-		
-        if (args.get_errorTypeName() == "System.ArgumentException" && msg.indexOf('Item does not exist') != -1)
-        {
-            createOrUpdateUsefulContacts(true);
-        }
-        else 
-        {
-            enableUsefulContactsUpdateBtn();
-            setDialogMessage(msg);
-        }
-    }
-	
-    function enableUsefulContactsUpdateBtn()
-    {
-        $("input#usefulContactsSubmitBtn").prop("disabled", false);
-        $("input#usefulContactsSubmitBtn").prop("value", "Update");
-    }
-</script>
-
-                    </div>
-                    
-	            </aside>
-            </div>
-        </div>
-    </div>
-
-    <div id="grid3" class="grid">
-        <div class="row">
-            <div id="my-promos" class="block widget">
-                <!-- START Our House and People -->
-		        
-
-
-<h2 class="visuallyhidden">Our House and people</h2>
-
-
-        <ul>
             
-        <li>
-            <a href="http://dev04-ourhouse.campus.services/NewsAndEvents/News/Pages/$10-home-Microsoft-Office-products.aspx">
-                <img src="/ResourceCentre/PublishingImages/News%20and%20Events/News/Office.JPG?RenditionID=6" alt="" />
-                <h3>Big success is recognised of the Desks move for Business Solutions team</h3>
-	            <p>The Microsoft Home Use Program enables you to get a licensed copy of most Microsoft Office products.</p>
-	        </a>
-        </li>
-    
-        <li>
-            <a href="http://dev04-ourhouse.campus.services/PrecinctFacilities/CateringAndFood/Pages/Copperfields-daily-menu.aspx">
-                <img src="/ResourceCentre/PublishingImages/Precinct%20Facilities/Catering%20and%20food/Picture-013.jpg?RenditionID=6" alt="" />
-                <h3>Copperfield's Cafe Daily Menu</h3>
-	            <p>Check out the menu for 15-19</p>
-	        </a>
-        </li>
-    
-        <li>
-            <a href="http://dev04-ourhouse.campus.services/BusinessServices/IST/Pages/default.aspx">
-                <img src="/ResourceCentre/PublishingImages/Business%20Services/Information%20and%20Communication%20Technology/Devices.jpg?RenditionID=6" alt="" />
-                <h3>Careers and Opportunities</h3>
-	            <p></p>
-	        </a>
-        </li>
-    
-        </ul>
-    
+			
+            
 
-		        
-                <!-- End Our House and People -->
-            </div>
-            <div class="block">
+<div class="UserProfile">
+<h3 class="UserDisplayName">About Andy Brown</h3>
+
+    
+    
+<ul class="userprofileproperties">
+    <li class="userprofileproperty"><span><span class='ms-imnSpan'> <a href='#' onclick='IMNImageOnClick(event);return false;' class='ms-imnlink ms-spimn-presenceLink' ><span class='ms-spimn-presenceWrapper ms-imnImg ms-spimn-imgSize-10x10'><img name='imnmark' title='' ShowOfflinePawn='1' class='ms-spimn-img ms-spimn-presence-disconnected-10x10x32' src= '/_layouts/15/images/spimn.png?rev=23' alt='User Presence' sip=Andy.Brown@parliament.govt.nz id='imn_1,type=sip' /></span></a></span><span>Andy Brown</li>
+    <li class="userprofileproperty">Preferred name: Andy</li>
+    <li class="userprofileproperty"></li>
+    <li class="userprofileproperty"><a href="mailto:Andy.Brown@parliament.govt.nz">Andy.Brown@parliament.govt.nz</a></li>
+    <li class="userprofileproperty"></li>
+</ul>
+<br />
+<table>
+        
+    
+    
+    
+</table>    
+<br />
+
+<table id="dataTable1" class="filter sortableTable">
+    <thead>
+                <tr>
+                    
+                       <th class='sorting'>Job Title</th>
+                    
+                       <th class='sorting'>Business unit</th>
+                    
+                       <th class='sorting'>Location</th>
+                    
+                  
+                </tr>
+            </thead>
+    
+            <tbody>
                 
-<div class="widget poll">
-	<h2>This is my question and it will go onto multiple lines</h2>
-    <input type="hidden" name="surveyQuestionFieldName" value="This_x0020_is_x0020_my_x0020_que" />
-
-	
-        <label><input type="radio" name="answer" value="0" onclick="enableVoteButton()" />Enter Choice #1</label>
-    
-        <label><input type="radio" name="answer" value="1" onclick="enableVoteButton()" />Enter Choice #2</label>
-    
-        <label><input type="radio" name="answer" value="2" onclick="enableVoteButton()" />Enter Choice #3</label>
-    
-	<a href="" class="view-results" target="_blank">View results</a>
-	<input type="button" value="Vote" name="btnVote" id="btnVote" onClick="vote(this)" disabled="disabled" />
-	
-    <script type="text/javascript">
-        var answers = [];
-        
-        answers.push("Enter Choice #1");
-        
-        answers.push("Enter Choice #2");
-        
-        answers.push("Enter Choice #3");
-        
-
-        SP.SOD.executeFunc('sp.js', 'SP.ClientContext', sharePointReady);
-
-        function sharePointReady() {
-        }
-
-        function htmlDecode(value) {
-            return $("<textarea/>").html(value).text();
-        }
-
-        function vote(btnVote) {
-            var selected = $('input[name="answer"]:checked');
-
-            if (selected.length > 0) {
-                var answer = answers[selected.val()];
-
-                btnVote.value = "Submitting..";
-                btnVote.disabled = true;
-
-                var context = SP.ClientContext.get_current();
-
-                //alert(context);
-                //alert(answer);
-
-                var web = context.get_web();
-                var list = web.get_lists().getByTitle('Survey');
-
-                var itemCreateInfo = new SP.ListItemCreationInformation();
-                var listItem = list.addItem(itemCreateInfo);
-
-                var questionId = $('input[name="surveyQuestionFieldName"]').val();
-
-                /* Set fields in the item. 
-				In managed code, this would be listItem[fieldname] = value. 
-				In Javascript, call listItem.set_item(fieldName,value). 
-				*/
-                listItem.set_item(questionId, htmlDecode(answer));
-                listItem.update();
-
-
-                // Create callback handlers
-                var success = Function.createDelegate(this, this.onSuccessVote);
-                var failure = Function.createDelegate(this, this.onFailureVote);
-
-                // Execute an async query
-                context.executeQueryAsync(success, failure);
-            }
-        }
-
-        // Async query succeeded.
-        function onSuccessVote(sender, args) {
-            alert('Thanks for your participation.');
-            enableVoteButton();
-        }
-        // Async query failed.
-        function onFailureVote(sender, args) {
-            var msg = args.get_message();
-            if (msg == 'You are not allowed to respond again to this survey.')
-                msg = 'You have already responded to this survey, please keep a watch out for the next one.'
-
-            alert(msg);
-            enableVoteButton();
-        }
-
-        function enableVoteButton() {
-            btnVote = document.getElementById("btnVote");
-            btnVote.value = "Vote";
-            btnVote.disabled = false;
-        }
-    </script>
-</div>
+            <tr>
+                <td style='vertical-align:top; line-height:1.5;'>Contractor</td>
 
                 
-<div class="widget promo">
-    <a href="http://dev04-ourhouse.campus.services/PrecinctFacilities/Pages/default.aspx" >
+                
+                <td style='vertical-align: top;'><a href="http://dev04-ourhouse.campus.services/Search/Pages/advpplsrchresults.aspx?k=(PSPersonBusinessUnit%3a%22ARC+Consulting%22)">ARC Consulting</a></td>
+
+                
+
+                
+
+                <td style='vertical-align: top;'><a href="http://dev04-ourhouse.campus.services/Search/Pages/advpplsrchresults.aspx?k=(PSPersonLocation%3a%22Bowen+House+level+1%22)">Bowen House level 1</a></td>
+
+                 
+                
+              
+            </tr>
+
         
-        <img src="http://dev04-ourhouse.campus.services/ResourceCentre/PublishingImages/Business Services/Library/BookList2013_How-to-be-an-m.jpg" alt="" />
+            </tbody>
         
-        <div class="content clearfix">
-            <h2>First featured link</h2>
-	        <p>description of featured link</p>
-            <span class="more">More Information</span>
-        </div>
-    </a>
-</div>
 
+</table>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.userprofileproperty').css("background-image", "none");
+        $('#dataTable1').dataTable({
+            "sDom": 'rt',
+            "aaSorting": [[1, "desc"]],
+            "aoColumns": [
                 
-            </div>
-            <div id="twitter" class="block">
-                
-<!--<link rel="stylesheet" type="text/css" href="/Style Library/Intranet/css/style.DbvFvg.css" /> DISRUPTS OUR LAYOUTS -->
-<script src="/Style Library/Intranet/js/widgets.js"></script>
+                       null,
+                    
+                       null,
+        
+                       null,
+        
+                  
+            ],
+            "aLengthMenu": [
+        [25, 50, 100, 200, -1],
+        [25, 50, 100, 200, "All"]
+            ],
+            "iDisplayLength": -1
+        });
 
-<div class="twitter-pod">
-    <div class="twitter-pod__header">
-        <h4 class="twitter-pod__heading">NZ Parliament Tweets</h4>
-        <a href="https://twitter.com/nzparliament" class="twitter-pod__link theme__link" target="_blank">@nzparliament</a>
-        <a href="https://twitter.com/intent/follow?screen_name=nzparliament" class="twitter-pod__follow twitter-follow"><span class="twitter-follow__icon iconf-twitter fa fa-twitter" aria-hidden="true"></span><span class="twitter-follow__text">Follow</span></a>
-    </div>
-    <a class="twitter-timeline js-display" href="" data-widget-id="638836314142474241" data-screen-name="nzparliament" data-chrome="noheader"></a>
-    <script>
-        !function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-            if (!d.getElementById(id)) {
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "/Style Library/Intranet/js/widgets.js";
-                fjs.parentNode.insertBefore(js, fjs);
-            }
-        }(document, "script", "twitter-wjs");
-    </script>
-</div>
-
-                
-            </div>
-        </div>
-    </div>
-    
-    
-<div id="did-you-know" class="grid">
-    <div class="row">
-        <div class="block widget content">
-            <h2>Did you know first item</h2>
-            <div class="ExternalClass0E993D90B5BD4FC3807A08781F7EE060"><p>​some multi line of text and a link&#160;<strong>http&#58;//dev04-ourhouse.campus.services/Pages/default.aspx</strong></p><p><strong><br></strong></p><p><strong><br></strong></p></div>
-        </div>
-        <div class="block image" style = "background-image: url('http://dev04-ourhouse.campus.services/ResourceCentre/PublishingImages/Business Services/Library/IMG_0808.jpg');" >
-        </div>
-    </div>
-</div>
-
-	<!-- END Main Content Area -->
-
-	
-	
-		
-	<script type="text/javascript">// <![CDATA[ 
-
-if(typeof(MSOLayout_MakeInvisibleIfEmpty) == "function") {MSOLayout_MakeInvisibleIfEmpty();}// ]]>
+    });
 </script>
+ 
+</div>
+
+            <script language="javascript">if (typeof (MSOLayout_MakeInvisibleIfEmpty) == "function") { MSOLayout_MakeInvisibleIfEmpty(); }</script>
+		</article>
+	</div>
+	<!-- END Main Content Area -->
 <div style='display:none' id='hidZone'></div>
                             <!--<div class="backTop"><a id="backTopLink" href="#top">Back to top &#94;</a></div>-->
 						</div>
@@ -2015,7 +1031,7 @@ if(typeof(MSOLayout_MakeInvisibleIfEmpty) == "function") {MSOLayout_MakeInvisibl
 var _spFormDigestRefreshInterval = 1440000;window.g_updateFormDigestPageLoaded = new Date(); window.g_updateFormDigestPageLoaded.setDate(window.g_updateFormDigestPageLoaded.getDate() -5);var _fV4UI = true;
 function _RegisterWebPartPageCUI()
 {
-    var initInfo = {editable: true,isEditMode: false,allowWebPartAdder: false,listId: "{76008611-6114-4bd7-92fc-571c108121ed}",itemId: 3,recycleBinEnabled: true,enableMinorVersioning: true,enableModeration: false,forceCheckout: true,rootFolderUrl: "\u002fPages",itemPermissions:{High:2147483647,Low:4294967295}};
+    var initInfo = {editable: true,isEditMode: false,allowWebPartAdder: false,listId: "{76008611-6114-4bd7-92fc-571c108121ed}",itemId: 5,recycleBinEnabled: true,enableMinorVersioning: true,enableModeration: false,forceCheckout: true,rootFolderUrl: "\u002fPages",itemPermissions:{High:2147483647,Low:4294967295}};
     SP.Ribbon.WebPartComponent.registerWithPageManager(initInfo);
     var wpcomp = SP.Ribbon.WebPartComponent.get_instance();
     var hid;
@@ -2051,7 +1067,7 @@ var initInfo =
 itemPermMasks: {High:2147483647,Low:4294967295},
 listPermMasks: {High:2147483647,Low:4294967295},
 listId: "76008611-6114-4bd7-92fc-571c108121ed",
-itemId: 3,
+itemId: 5,
 workflowsAssociated: false,
 editable: true,
 doNotShowProperties: false,
@@ -2062,49 +1078,6 @@ SP.Ribbon.DocLibAspxPageComponent.registerWithPageManager(initInfo);
 "sp.ribbon.js");
 var g_disableCheckoutInEditMode = false;
 var _spWebPermMasks = {High:2147483647,Low:4294967295};var _spPageStateActionControlId='ctl00_ctl21_PageStateActionButton';function _cUpdx63829de2201a4365a3904788f682d0a3(){var myd = null; if (typeof(datax63829de2201a4365a3904788f682d0a3) != 'undefined') {myd = datax63829de2201a4365a3904788f682d0a3;} var myc = document.getElementById('ctl00_x63829de2201a4365a3904788f682d0a3');_cUpdcx63829de2201a4365a3904788f682d0a3(myd, myc);}function _cUpdcx63829de2201a4365a3904788f682d0a3(data, ctrl){SiteLogoImagePageUpdate(ctrl, data);}
-function EnsureScripts(scriptInfoList, finalFunction)
-{
-if (scriptInfoList.length == 0)
-{
-finalFunction();
-}
-else
-{
-var scriptInfo = scriptInfoList.shift();
-var rest = function () { EnsureScripts(scriptInfoList, finalFunction); };
-var defd;
-try
-{
-eval('defd = typeof(' + scriptInfo[1] + ');');
-}
-catch (e)
-{
-defd = 'undefined';
-}
-var ensureKey = scriptInfo[0];
-if (ensureKey == 'SP.Ribbon.js')
-{
-ensureKey = 'ribbon';
-}
-if (scriptInfo[2])
-{
-EnsureScript(ensureKey, defd, null);
-ExecuteOrDelayUntilScriptLoaded(rest, scriptInfo[0]);
-}
-else
-{
-EnsureScript(ensureKey, defd, rest);
-}
-}
-}
-function PublishingRibbonUpdateRibbon()
-{
-var pageManager = SP.Ribbon.PageManager.get_instance();
-if (pageManager)
-{
-pageManager.get_commandDispatcher().executeCommand('appstatechanged', null);
-}
-}
 theForm.oldSubmit = theForm.submit;
 theForm.submit = WebForm_SaveScrollPositionSubmit;
 
@@ -2113,7 +1086,6 @@ theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
 
 var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 g_QuickLaunchControlIds.push("zz12_TopNavigationMenu");_spBodyOnLoadFunctionNames.push('QuickLaunchInitDroppable'); var g_zz12_TopNavigationMenu = null; function init_zz12_TopNavigationMenu() { if (g_zz12_TopNavigationMenu == null) g_zz12_TopNavigationMenu = $create(SP.UI.AspMenu, null, null, null, $get('zz12_TopNavigationMenu')); } if(g_spPreFetchKeys) {{ g_spPreFetchKeys.push('SP.Core.js');}}EnsureScriptFunc('SP.Core.js', 'SP.UI.AspMenu', init_zz12_TopNavigationMenu);
-function load_ctl00_PlaceHolderMain_HomepageNewsCarousel_HomepageNewsCarouselListView_ctrl2_ctl02(player) { var element = null; try { element = player.getHost(); } catch(err) {element = player; } var elementId = element.id; if (!window.mediaPlayer) window.mediaPlayer = {}; if (!mediaPlayer.players) mediaPlayer.players = {}; mediaPlayer.players[elementId] = element; ExecuteOrDelayUntilScriptLoaded(function() { Pub.Ribbon.PubRibbonComponent.mediaPlayerLoaded(mediaPlayer.players[elementId], 0) }, 'sp.ui.pub.ribbon.js'); }
 //]]>
 </script>
 </form>

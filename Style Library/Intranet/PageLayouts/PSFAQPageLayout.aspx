@@ -26,13 +26,13 @@
 	    });
 	</script>
 	<SharePointWebControls:CssRegistration ID="CssRegistration1" name="<% $SPUrl:~sitecollection/Style Library/~language/Themable/Core Styles/pagelayouts15.css %>" runat="server"/>
-	<SharePointWebControls:CssRegistration ID="PSFaqs" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/css/faqs.css%>" after="main.css" runat="server"/>
-	<SharePointWebControls:CssRegistration ID="PSScroller" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/css/jquery-ui.css%>" after="main.css" runat="server"/>
+	<SharePointWebControls:CssRegistration ID="PSFaqs" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/CSS/faqs.css%>" after="main.css" runat="server"/>
+	<SharePointWebControls:CssRegistration ID="PSScroller" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/CSS/jquery-ui.css%>" after="main.css" runat="server"/>
 	<PublishingWebControls:EditModePanel ID="EditModePanel1" runat="server">
 		<!-- Styles for edit mode only-->
 		<SharePointWebControls:CssRegistration ID="CssRegistration3" name="<% $SPUrl:~sitecollection/Style Library/~language/Themable/Core Styles/editmode15.css %>"
 			After="<% $SPUrl:~sitecollection/Style Library/~language/Themable/Core Styles/pagelayouts15.css %>" runat="server"/>
-        <SharePointWebControls:CssRegistration ID="PSEditMode" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/css/psedit.css%>" after="editmode15.css" runat="server"/>
+        <SharePointWebControls:CssRegistration ID="PSEditMode" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/CSS/psedit.css%>" after="editmode15.css" runat="server"/>
 	</PublishingWebControls:EditModePanel>
 </asp:Content>
 

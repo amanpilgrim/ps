@@ -69,13 +69,13 @@
 		<SharePoint:CssRegistration ID="CssRegistration1" Name="Themable/corev15.css" runat="server" />
 		
 		<!-- ===== STARTER: Custom CSS  =================================================================================================== -->
-        <SharePoint:CssRegistration ID="CssRegistration2" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/css/normalize.css?Rev=2017.05.11 %&gt;" runat="server" after="SharepointCssFile"/>
-		<SharePoint:CssRegistration ID="CssRegistration5" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/css/font-awesome/css/font-awesome.min.css?Rev=2017.05.11 %&gt;" runat="server" after="SharepointCssFile"/>
-		<SharePoint:CssRegistration ID="CssRegistration7" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/css/slick.css %&gt;" runat="server" after="SharepointCssFile"/>
-        <SharePoint:CssRegistration ID="CssRegistration3" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/css/main.css?Rev=2017.05.11 %&gt;" runat="server" after="SharepointCssFile"/>
-        <SharePoint:CssRegistration ID="CssRegistration4" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/css/pscore.css %&gt;" runat="server" after="SharepointCssFile"/>
-        <SharePoint:CssRegistration ID="CssRegistration6" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/css/responsive.css?Rev=2017.05.19 %&gt;" runat="server" after="SharepointCssFile"/>	
-        <link href="/Style Library/Intranet/css/print.css" rel="stylesheet" type="text/css" media="print" />
+        <SharePoint:CssRegistration ID="CssRegistration2" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/CSS/normalize.css?Rev=2017.05.11 %&gt;" runat="server" after="SharepointCssFile"/>
+		<SharePoint:CssRegistration ID="CssRegistration5" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/CSS/font-awesome/css/font-awesome.min.css?Rev=2017.05.11 %&gt;" runat="server" after="SharepointCssFile"/>
+		<SharePoint:CssRegistration ID="CssRegistration7" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/CSS/slick.css %&gt;" runat="server" after="SharepointCssFile"/>
+        <SharePoint:CssRegistration ID="CssRegistration3" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/CSS/main.css?Rev=2017.05.11 %&gt;" runat="server" after="SharepointCssFile"/>
+        <SharePoint:CssRegistration ID="CssRegistration4" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/CSS/pscore.css %&gt;" runat="server" after="SharepointCssFile"/>
+        <SharePoint:CssRegistration ID="CssRegistration6" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/CSS/responsive.css?Rev=2017.05.19 %&gt;" runat="server" after="SharepointCssFile"/>	
+        <link href="/Style Library/Intranet/CSS/print.css" rel="stylesheet" type="text/css" media="print" />
 
 		<!-- ===== STARTER: Additional header placeholder - overridden by asp:Content on pages or page layouts  =========================== -->
 		<asp:ContentPlaceHolder ID="PlaceHolderAdditionalPageHead" runat="server" />
@@ -457,9 +457,9 @@
 						    <footer id="footer" class="noindex">
 							    <nav>
 								    <ul>
-                      <li class="noindex"><a class="noindex" href="http://ourhouse.parliament.nz/" title="Home"><img src="/Style%20Library/Intranet/Images/nz-parliament.png" alt="New Zealand Govt Website link. " /></a></li>
+                      <li class="noindex"><a class="noindex" href="http://ourhouse.parliament.nz/" title="Home"><img src="/Style%20Library/Intranet/images/nz-parliament.png" alt="New Zealand Govt Website link. " /></a></li>
 									    <PS:NavigationTermSetFooter id="navigationTermSetFooter" runat="server" />
-									    <!--<li class="last"><a href="http://newzealand.govt.nz" title="Open the New Zealand Government website in a new window. " target="_blank"><img src="/Style Library/Intranet/images/nzgovt-logo.png" alt="New Zealand Govt Website link. " /></a></li>-->
+									    <%-- <li class="last"><a href="http://newzealand.govt.nz" title="Open the New Zealand Government website in a new window. " target="_blank"><img src="/Style Library/Intranet/images/nzgovt-logo.png" alt="New Zealand Govt Website link. " /></a></li>--%>
                       <li><a id="govt" href="https://www.govt.nz" title="govt.nz - Connecting you to New Zealand central &amp; local government services" rel="external">www.govt.nz</a></li>
 								    </ul>
 							    </nav>

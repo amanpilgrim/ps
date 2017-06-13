@@ -13,16 +13,16 @@
 <asp:Content ContentPlaceholderID="PlaceHolderAdditionalPageHead" runat="server">
 	
 	<SharePointWebControls:CssRegistration ID="CssRegistration1" name="<% $SPUrl:~sitecollection/Style Library/~language/Themable/Core Styles/pagelayouts15.css %>" runat="server"/>
-	<SharePointWebControls:CssRegistration ID="PSScroller" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/css/jquery-ui.css%>" after="main.css" runat="server"/>
-    <SharePointWebControls:CssRegistration ID="PSFilter" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/css/filter.css%>" after="main.css" runat="server"/>
+	<SharePointWebControls:CssRegistration ID="PSScroller" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/CSS/jquery-ui.css%>" after="main.css" runat="server"/>
+    <SharePointWebControls:CssRegistration ID="PSFilter" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/CSS/filter.css%>" after="main.css" runat="server"/>
     
-    <SharePoint:CssRegistration ID="CssRegistration2" name="<% $SPUrl:~sitecollection/Style Library/Intranet/css/textext.core.css %>" runat="server"/>
-    <SharePoint:CssRegistration ID="CssRegistration4" name="<% $SPUrl:~sitecollection/Style Library/Intranet/css/textext.plugin.arrow.css %>" runat="server"/>
-    <SharePoint:CssRegistration ID="CssRegistration5" name="<% $SPUrl:~sitecollection/Style Library/Intranet/css/textext.plugin.autocomplete.css %>" runat="server"/>
-    <SharePoint:CssRegistration ID="CssRegistration6" name="<% $SPUrl:~sitecollection/Style Library/Intranet/css/textext.plugin.clear.css %>" runat="server"/>
-    <SharePoint:CssRegistration ID="CssRegistration7" name="<% $SPUrl:~sitecollection/Style Library/Intranet/css/textext.plugin.focus.css %>" runat="server"/>
-    <SharePoint:CssRegistration ID="CssRegistration8" name="<% $SPUrl:~sitecollection/Style Library/Intranet/css/textext.plugin.prompt.css %>" runat="server"/>
-    <SharePoint:CssRegistration ID="CssRegistration9" name="<% $SPUrl:~sitecollection/Style Library/Intranet/css/textext.plugin.tags.css %>" runat="server"/>
+    <SharePoint:CssRegistration ID="CssRegistration2" name="<% $SPUrl:~sitecollection/Style Library/Intranet/CSS/textext.core.css %>" runat="server"/>
+    <SharePoint:CssRegistration ID="CssRegistration4" name="<% $SPUrl:~sitecollection/Style Library/Intranet/CSS/textext.plugin.arrow.css %>" runat="server"/>
+    <SharePoint:CssRegistration ID="CssRegistration5" name="<% $SPUrl:~sitecollection/Style Library/Intranet/CSS/textext.plugin.autocomplete.css %>" runat="server"/>
+    <SharePoint:CssRegistration ID="CssRegistration6" name="<% $SPUrl:~sitecollection/Style Library/Intranet/CSS/textext.plugin.clear.css %>" runat="server"/>
+    <SharePoint:CssRegistration ID="CssRegistration7" name="<% $SPUrl:~sitecollection/Style Library/Intranet/CSS/textext.plugin.focus.css %>" runat="server"/>
+    <SharePoint:CssRegistration ID="CssRegistration8" name="<% $SPUrl:~sitecollection/Style Library/Intranet/CSS/textext.plugin.prompt.css %>" runat="server"/>
+    <SharePoint:CssRegistration ID="CssRegistration9" name="<% $SPUrl:~sitecollection/Style Library/Intranet/CSS/textext.plugin.tags.css %>" runat="server"/>
         
     <SharePoint:Scriptlink ID="Scriptlink11" runat="server" Name="~sitecollection/Style Library/Intranet/js/jquery-1.8.2.min.js" Language="javascript" />
     <SharePoint:Scriptlink ID="Scriptlink1" runat="server" Name="~sitecollection/Style Library/Intranet/js/textext.core.js" Language="javascript" />
@@ -42,7 +42,7 @@
 		<!-- Styles for edit mode only-->
 		<SharePointWebControls:CssRegistration ID="CssRegistration3" name="<% $SPUrl:~sitecollection/Style Library/~language/Themable/Core Styles/editmode15.css %>"
 			After="<% $SPUrl:~sitecollection/Style Library/~language/Themable/Core Styles/pagelayouts15.css %>" runat="server"/>
-        <SharePointWebControls:CssRegistration ID="PSEditMode" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/css/psedit.css%>" after="editmode15.css" runat="server"/>
+        <SharePointWebControls:CssRegistration ID="PSEditMode" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/CSS/psedit.css%>" after="editmode15.css" runat="server"/>
 	</PublishingWebControls:EditModePanel>
 </asp:Content>
 

@@ -10,8 +10,8 @@
 
 <%@Register TagPrefix="PS" TagName="DocumentFilter" Src="~/_controltemplates/15/Document/DocumentFilter.ascx" %>
 <%@Register TagPrefix="PS" TagName="DocumentList" Src="~/_controltemplates/15/Document/DocumentList.ascx" %>
-<%@Register TagPrefix="PS" TagName="DocumentMostViewed" Src="~/_controltemplates/15/Document/DocumentMostViewed.ascx" %>
 <%@Register TagPrefix="PS" Namespace="PS.Intranet.SiteElements.CustomFieldControls" Assembly="PS.Intranet.SiteElements, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4acf9d96094f0c6f" %>
+<%@Register TagPrefix="PS" TagName="DocumentsMostViewed" Src="~/_controltemplates/15/HomePageDocument/DocumentsMostViewed.ascx" %>
 
 <asp:Content ContentPlaceholderID="PlaceHolderAdditionalPageHead" runat="server">
 	<script src="/Style Library/Intranet/js/jquery.dataTables.min.js"></script>	
@@ -19,13 +19,13 @@
     <script src="/Style Library/Intranet/js/dataTables.dataSourcePlugins.js"></script>
 
 	<SharePointWebControls:CssRegistration ID="CssRegistration1" name="<% $SPUrl:~sitecollection/Style Library/~language/Themable/Core Styles/pagelayouts15.css %>" runat="server"/>
-	<SharePointWebControls:CssRegistration ID="PSFilter" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/css/filter.css?Rev=2016.03.01 %>" after="main.css" runat="server"/>
-    <SharePointWebControls:CssRegistration ID="PSNews" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/css/news.css%>" after="main.css" runat="server"/>
+	<SharePointWebControls:CssRegistration ID="PSFilter" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/CSS/filter.css?Rev=2016.03.01 %>" after="main.css" runat="server"/>
+    <SharePointWebControls:CssRegistration ID="PSNews" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/CSS/news.css%>" after="main.css" runat="server"/>
 	<PublishingWebControls:EditModePanel ID="EditModePanel1" runat="server">
 		<!-- Styles for edit mode only-->
 		<SharePointWebControls:CssRegistration ID="CssRegistration2" name="<% $SPUrl:~sitecollection/Style Library/~language/Themable/Core Styles/editmode15.css %>"
 			After="<% $SPUrl:~sitecollection/Style Library/~language/Themable/Core Styles/pagelayouts15.css %>" runat="server"/>
-        <SharePointWebControls:CssRegistration ID="PSEditMode" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/css/psedit.css%>" after="editmode15.css" runat="server"/>
+        <SharePointWebControls:CssRegistration ID="PSEditMode" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/CSS/psedit.css%>" after="editmode15.css" runat="server"/>
 	</PublishingWebControls:EditModePanel>
 </asp:Content>
 
@@ -84,7 +84,7 @@
                     </ZoneTemplate>
                 </WebPartPages:WebPartZone>
                 
-              <%--  <PS:DocumentMostViewed runat="server" ID="DocumentMostViewed" />--%>
+                <PS:DocumentsMostViewed ID="DocumentsMostViewed" runat="server" NumberOfDocuments="10" IsHomePage="false"  />
 	        </PublishingWebControls:EditModePanel>
         </aside>
 		

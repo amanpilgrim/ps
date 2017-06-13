@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 
 @font-face {
   font-family: 'Open Sans';
@@ -727,7 +727,6 @@ a:hover .meta .category {
   padding-right: 6px;
   border-right: solid 1px #000; 
 }
-
 div.meta {
   margin: 1em 0;
 }

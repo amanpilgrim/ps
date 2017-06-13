@@ -137,6 +137,8 @@
                 prevArrow: '<span class="fa fa-chevron-left"></span>',
                 dots: false
             });
+
+            fixSlickVideoPosterDisplayIssue();
         });
 
         $('#upcomingEvents .carousel').each(function () {
@@ -151,13 +153,24 @@
             });
         });
 
-        $("#carousel").on("beforeChange", function () {
+        $("#carousel").on("beforeChange", function (event, slick, currentSlide, nextSlide) {
+            $("#carousel div[data-slick-index='" + nextSlide + "'] video").show();
+
             $("#carousel video").each(function () {
                 this.pause();
             });
 
             console.debug('carousel has changed!');
         });
+
+        $("#carousel").on("afterChange", function () {
+            fixSlickVideoPosterDisplayIssue();
+        });
+
+        function fixSlickVideoPosterDisplayIssue() {
+            $("#carousel div[aria-hidden='true'] video").hide();
+            $("#carousel div[aria-hidden='false'] video").show();
+        }
 
         $("#carousel video").on('play', function () {
             $('#carousel').slick('slickPause');
@@ -173,9 +186,9 @@
             $('#carousel').slick('slickPlay');
             console.debug("Video paused. Current time of videoplay: " + e.target.currentTime);
         });
-        
+
         /* People Search */
-        $('.ms-srch-result #Actions').before('<label>Sort by</label>')
+        $('.ms-srch-result #Actions').before('<label>Sort by</label>');
 
         
 

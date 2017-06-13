@@ -18,14 +18,14 @@
 	<script src="/Style Library/Intranet/js/jquery.colorbox.js"></script>	
 
 	<SharePointWebControls:CssRegistration ID="CssRegistration1" name="<% $SPUrl:~sitecollection/Style Library/~language/Themable/Core Styles/pagelayouts15.css %>" runat="server"/>
-	<SharePointWebControls:CssRegistration ID="PSSection" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/css/section.css%>" after="main.css" runat="server"/>
-	<SharePointWebControls:CssRegistration ID="PSNews" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/css/news.css%>" after="section.css" runat="server"/>
-	<SharePointWebControls:CssRegistration ID="PSGallery" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/css/gallery.css%>" after="section.css" runat="server"/>
+	<SharePointWebControls:CssRegistration ID="PSSection" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/CSS/section.css%>" after="main.css" runat="server"/>
+	<SharePointWebControls:CssRegistration ID="PSNews" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/CSS/news.css%>" after="section.css" runat="server"/>
+	<SharePointWebControls:CssRegistration ID="PSGallery" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/CSS/gallery.css%>" after="section.css" runat="server"/>
 	<PublishingWebControls:EditModePanel ID="EditModePanel1" runat="server">
 		<!-- Styles for edit mode only-->
 		<SharePointWebControls:CssRegistration ID="CssRegistration3" name="<% $SPUrl:~sitecollection/Style Library/~language/Themable/Core Styles/editmode15.css %>"
 			After="<% $SPUrl:~sitecollection/Style Library/~language/Themable/Core Styles/pagelayouts15.css %>" runat="server"/>
-        <SharePointWebControls:CssRegistration ID="PSEditMode" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/css/psedit.css%>" after="editmode15.css" runat="server"/>
+        <SharePointWebControls:CssRegistration ID="PSEditMode" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/CSS/psedit.css%>" after="editmode15.css" runat="server"/>
 	</PublishingWebControls:EditModePanel>
 </asp:Content>
 
