@@ -728,8 +728,10 @@ a:hover .meta .category {
   border-right: solid 1px #000; 
 }
 
-article div.meta {
+div.meta {
   margin: 1em 0;
+}
+article div.meta {
   padding-left: 10px;
   border-left: solid 5px #2ebcc5;
 }
