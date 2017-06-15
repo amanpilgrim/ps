@@ -1,4 +1,4 @@
-﻿@charset "utf-8";
+@charset "utf-8";
 
 @font-face {
   font-family: 'Open Sans';
@@ -95,6 +95,9 @@ body {
   min-width: 320px;
   box-sizing: border-box;
   overflow-y: scroll;
+}
+body.nav-open {
+  overflow: hidden;
 }
 
 h1 {
@@ -1035,70 +1038,94 @@ article div.meta {
 .logo img {
   height: 120px;
   width: auto;
+  transition: .3s;
 }
-/*.logo a {
-  display: inline-block;
-  border-left: solid 2px #555;
-  padding-left: 20px;
-  line-height: 1;
-  color: #157a6b;
-  text-decoration: none;
-}
-.logo a span {
-  display: block;
-  font-size: 55px;
-  color: #fff;
-}
-.logo a i {
-  font-family: OpenSansLight, 'Open Sans', sans-serif;;
-  font-size: 1.71428571428571em;  24 
-  font-style: italic;
-}*/
 
 /* Navigation */
 #menu {
   position: fixed;
   top: 0;
   left: 0;
-  width: 0;
-  padding-left: 120px;
+  width: 120px;
+  padding-left: 0px;
   height: 100%;
   overflow: visible;
   background: #292929;
   z-index: 104;
   transition: .3s ease-in-out;
 }
+.toggles ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.toggles li {
+  padding: 18px 0;
+  margin: 0;
+  text-align: center;
+}
+.toggles .fa {
+  font-size: 24px;
+  line-height: 44px;
+  width: 44px;
+  border-radius: 22px;
+  cursor: pointer;
+}
+.toggles .fa-address-book {
+  color: #f6bd14;
+  font-size: 44px;
+}
+.toggles .fa-wrench {
+  background: #d25a49;
+  color: #292929;
+  font-size: 30px;
+}
+.toggles .fa-search {
+  background: #464646;
+  color: #fff;
+}
 #toggle {
 	display: block;
 	width: 120px;
 	height: 120px;
-	position: absolute;
+/*	position: absolute;
 	top: 0;
-	right: 0;
+	right: 0;*/
 	background: #1bcba5;
 	color: #000;
 	font-size: 50px;
 	line-height: 120px;
 	text-align: center;
 	cursor: pointer;
+  transition: .3s;
 }
 #slideout {
-    width: 600px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: -9999px;
+  bottom: 0;
+  background: rgba(0,0,0,.5);
+  padding-top: 120px;
+/*    width: 600px;
     background: #292929;
     position: absolute;
     left: -600px;
-    top: 120px;
+    top: 120px;*/
     transition: .3s ease-in-out;
 }
 .nav-open #slideout {
-  left: 120px;
+  left: 120px !important;
 }
 
 /* Search */
 .search {
-  padding: 20px 75px 20px 30px;
+  padding: 19px 75px 20px 30px;
+  box-sizing: border-box;
   position: relative;
-  
+}
+#menu .search {
+  background: #292929;
 }
 .search input[type="text"] {
   background: transparent;
@@ -1140,6 +1167,7 @@ article div.meta {
   background: #f6bd14;
   color: #000;
   padding: 30px 30px 82px;
+  box-sizing: border-box;
   position: relative;
 }
 .find-people h2 {
@@ -1162,13 +1190,16 @@ article div.meta {
   bottom: 0;
 }
 .find-people ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .find-people li {
-    display: inline-block;
-    margin: 0;
+  display: inline-block;
+  margin: 0;
+}
+.find-people label {
+  white-space: nowrap;
 }
 .find-people input[type="text"] {
   background: #fff;
@@ -1210,7 +1241,8 @@ article div.meta {
 }
 
 #menu .find-people {
-  padding: 20px 75px 20px 30px;
+  padding: 12px 75px 12px 30px;
+  height: 80px;
 }
 #menu .find-people h2 {
   margin: 0;
@@ -1236,6 +1268,7 @@ article div.meta {
 
 #menu .find-people input[type="submit"] {
   color: #000;
+  bottom: initial;
 }
 #menu .find-people ::-webkit-input-placeholder {
   color: #000;
@@ -1249,8 +1282,11 @@ article div.meta {
 #menu .find-people input[type="text"]:-ms-input-placeholder {
   color: #000;
 }
-.find-people label {
-  white-space: nowrap;
+#menu .find-people ul {
+  display: inline-block;
+}
+#menu .find-people .advanced {
+  display: none;
 }
 
 .easy-autocomplete-container {
@@ -1285,6 +1321,7 @@ article div.meta {
   padding: 20px 30px;
   position: relative;
   z-index: 20;
+  box-sizing: border-box;
 }
 .menu-title, #menu .find-people h2 {
   display: inline-block;
@@ -1363,12 +1400,19 @@ article div.meta {
   color: #fff;
 }
 
+.menuSearch .find-people, .menuSearch #tools, .menuSearch .mainNav,
+.menuPeople #tools, .menuPeople .search, .menuPeople .mainNav,
+.menuTools .find-people, .menuTools .search, .menuTools .mainNav {
+/*  display: none;*/
+  visibility: hidden;
+}
+
 /* Main Navigation */
 .ms-core-navigation {
   font-family: 'Open Sans', sans-serif;
 }
 .mainNav .ms-displayInline, .mainNav .ms-core-listMenu-horizontalBox {
-  display: block
+  display: block;
 }
 
 .mainNav {
@@ -1381,10 +1425,29 @@ article div.meta {
   margin: 0;
   padding: 0;
 }
-.mainNav li {
+.mainNav ul.root > li > a {
   position: relative;
+  cursor: pointer;
 }
-.mainNav .fa {
+.mainNav ul.root > li > a .menu-item-text:after {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  font-size: 20px;
+  content: "\f055";
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  right: 15px;
+}
+.mainNav ul.root > li.open > a .menu-item-text:after {
+  content: "\f056";
+}
+.mainNav a > .fa {
   font-size: 20px;
   color: #999;
   width: 20px;
@@ -1400,7 +1463,7 @@ article div.meta {
   
 }
 
-.mainNav a .menu-item-text {
+.mainNav a {
   color: #fff;
   text-decoration: none;
 }
@@ -1409,17 +1472,35 @@ article div.meta {
 .mainNav li.selected .menu-item-text {
   
 }
+.mainNav a .menu-item-text {
+  font-size: 16px;
+}
+
+.mainNav span.translation {
+  font-size: 11px;
+  margin-left: 10px;
+  border-left: solid 2px #1bcba5;
+  padding-left: 10px;
+}
+
+.mainNav ul.root > li > a:link, 
+.mainNav ul.root > li > a:visited {
+  display: block;
+  font-weight: 600;
+  padding: 12px 20px;
+  background: #292929;
+  color: #fff;
+}
+.mainNav ul.root > li > a.ms-core-listMenu-item:hover {
+  background: #ccc;
+  color: #000;
+}
 
 .ms-core-listMenu-horizontalBox .dynamic-children.additional-background {
   padding-right: 0;
   background: none;
 }
 .ms-core-listMenu-horizontalBox li.static > .ms-core-listMenu-item {
-  display: block;
-  font-weight: 600;
-  padding: 12px 20px;
-  background: #292929;
-  color: #fff;
   border: 0;
   margin-right: 0;
 }
@@ -1436,6 +1517,7 @@ ul.dynamic {
   border: 0;
   box-shadow: none;
   padding: 0 20px;
+  box-sizing: border-box;
   z-index: 999;
 }
 .open ul.dynamic {
@@ -1469,7 +1551,12 @@ ul.dynamic {
   font-weight: normal;
 }
 .mainNav .dynamic a:hover {
-  background-color: #dbe6de;
+  background-color: transparent;
+}
+
+.ms-core-listMenu-horizontalBox a.ms-core-listMenu-item:hover,
+.ms-core-listMenu-horizontalBox a.ms-core-listMenu-item.ms-core-listMenu-selected:hover {
+  color: #f00;
 }
 
 /* Breadcrumbs */
@@ -1538,7 +1625,9 @@ ul.dynamic {
   min-height: 300px;
   padding: 0 15px;
   box-sizing: border-box;
-  margin-top: 70px;
+  position: relative;
+  margin-top: 0;
+  transition: 0s;
 }
 .subNav .title {
   font-size: 1.71428571428571em;
@@ -1661,8 +1750,8 @@ li > a.ms-core-listMenu-item:active {
 }
 #main > div.primary {
   padding: 0 30px;
-  margin-top: 70px;
-  margin-bottom: 20px;
+/*  margin-top: 70px;
+  margin-bottom: 20px;*/
 }
 #main .primary.narrow {
   padding-right: 30px;
@@ -1784,6 +1873,7 @@ ul.carouselNav li {
 .hero {
   margin: 0 0 50px;
 }
+.PSEventPageLayout .hero,
 .PSNewsContentPageLayout .hero,
 .PSNewsListingPageLayout .hero,
 .PSSectionLandingPageLayout .hero {
@@ -1913,6 +2003,9 @@ aside {
 }
 aside .widget {
   margin-bottom: 50px;
+}
+aside .widget:last-child {
+  margin-bottom: 0;
 }
 /*article aside {
   clear: both;

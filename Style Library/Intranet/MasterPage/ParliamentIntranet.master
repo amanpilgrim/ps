@@ -23,6 +23,7 @@
         <meta charset="utf-8" />
         <meta name="GENERATOR" content="Microsoft SharePoint" />
         <meta http-equiv="Expires" content="0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 		
         <!-- ===== STARTER: Robots  ======================================================================================================= -->
         <SharePoint:RobotsMetaTag ID="RobotsMetaTag1" runat="server" />
@@ -170,7 +171,15 @@
 						<!-- END PS Header -->
 						
 						<div id="menu" class="logoSearch">
-                                    <span id="toggle" class="fa fa-bars"></span>
+                <span id="toggle" class="fa fa-bars"></span>
+                <div class="toggles">
+                  <ul>
+                    <li><span id="menuSearch" class="fa fa-search"></span></li>
+                    <li><span id="menuPeople" class="fa fa-address-book"></span></li>
+                    <li><span id="menuTools" class="fa fa-wrench"></span></li>
+                  </ul>
+                </div>
+
 
                                     <div id="slideout">
                                             <!-- ===== STARTER: Search Control ==================================================================================== -->
@@ -457,9 +466,9 @@
 						    <footer id="footer" class="noindex">
 							    <nav>
 								    <ul>
-                      <li class="noindex"><a class="noindex" href="http://ourhouse.parliament.nz/" title="Home"><img src="/Style%20Library/Intranet/images/nz-parliament.png" alt="New Zealand Govt Website link. " /></a></li>
+                      <li class="noindex"><a class="noindex" href="https://www.parliament.nz" title="Visit the NZ Parliament website"><img src="/Style%20Library/Intranet/images/nz-parliament.png" alt="New Zealand Parliament logo" /></a></li>
 									    <PS:NavigationTermSetFooter id="navigationTermSetFooter" runat="server" />
-									    <%-- <li class="last"><a href="http://newzealand.govt.nz" title="Open the New Zealand Government website in a new window. " target="_blank"><img src="/Style Library/Intranet/images/nzgovt-logo.png" alt="New Zealand Govt Website link. " /></a></li>--%>
+									    <%--<li class="last"><a href="http://newzealand.govt.nz" title="Open the New Zealand Government website in a new window. " target="_blank"><img src="/Style Library/Intranet/images/nzgovt-logo.png" alt="New Zealand Govt Website link. " /></a></li>--%>
                       <li><a id="govt" href="https://www.govt.nz" title="govt.nz - Connecting you to New Zealand central &amp; local government services" rel="external">www.govt.nz</a></li>
 								    </ul>
 							    </nav>

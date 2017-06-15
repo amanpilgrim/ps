@@ -66,6 +66,10 @@ div a[id$="item_hoverParentLink"] {
   color: #acacac;
   padding-right: 0;
 }
+/* Hide the help icon */
+#ms-help {
+  display: none;
+}
 
 #suiteBarRight .ms-core-menu-root:hover,
 #suiteBarRight .ms-menu-althov,
