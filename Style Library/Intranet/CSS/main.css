@@ -788,6 +788,12 @@ article div.meta {
 #carousel .slide {
   z-index: 10;
 }
+.slide {
+  display: none;
+}
+.slide:first-child {
+  display: block;
+}
 #carousel .slide-image, #carousel .slide-video {
   height: 0;
   width: 100%;
@@ -887,7 +893,7 @@ article div.meta {
 }
 
 
-/* NEWS AND TILE GRIDS */
+/* TILE GRIDS */
 .tiles .block {
   background: #ebebeb;
 }
@@ -920,6 +926,27 @@ article div.meta {
   border: 0;
   margin: 0;
   cursor: pointer;
+}
+
+#event-grid .block {
+  position: relative;
+}
+#event-grid div.date {
+  background: rgba(0,0,0,.75);
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#event-grid .date span {
+  display: inline-block;
+  padding: 10px 15px;
+}
+#event-grid .day {
+  background: #1bcba5;
+  color: #000;
+  text-transform: uppercase;
 }
 
 
@@ -1416,7 +1443,8 @@ article div.meta {
 }
 
 .mainNav {
-
+  font-size: 13px;
+  line-height: 1.25;
 }
 
 .mainNav ul, .mainNav li {
@@ -1426,6 +1454,7 @@ article div.meta {
   padding: 0;
 }
 .mainNav ul.root > li > a {
+  font-size: 16px;
   position: relative;
   cursor: pointer;
 }
@@ -1442,7 +1471,7 @@ article div.meta {
   position: absolute;
   top: 50%;
   margin-top: -10px;
-  right: 15px;
+  right: 17px;
 }
 .mainNav ul.root > li.open > a .menu-item-text:after {
   content: "\f056";
@@ -1472,9 +1501,6 @@ article div.meta {
 .mainNav li.selected .menu-item-text {
   
 }
-.mainNav a .menu-item-text {
-  font-size: 16px;
-}
 
 .mainNav span.translation {
   font-size: 11px;
@@ -1487,7 +1513,7 @@ article div.meta {
 .mainNav ul.root > li > a:visited {
   display: block;
   font-weight: 600;
-  padding: 12px 20px;
+  padding: 12px 47px 12px 20px;
   background: #292929;
   color: #fff;
 }

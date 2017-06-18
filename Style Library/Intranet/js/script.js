@@ -94,6 +94,7 @@
         
         function onResize() {
           slideoutDimensions();
+          peopleResults();
         }
         
         var $sidebar   = $(".subNav"), 
@@ -169,6 +170,8 @@
             if ($toggle.hasClass('fa-bars')) {
                 $('body').removeClass('nav-closed').addClass('nav-open');
                 $toggle.removeClass('fa-bars').addClass('fa-close');
+                // recalculate the slideout
+                slideoutDimensions();
             } else {
                 //var navWidth = $('#navbar').width();
                 $toggle.removeClass('fa-close').addClass('fa-bars');
@@ -209,11 +212,36 @@
           var bodyWidth = window.innerWidth - $('#menu').width();
           $('#slideout').width(bodyWidth);
           $('#slideout').css({left: -bodyWidth});
+          
+          // reset any height styles
+          $('.mainNav').removeAttr('style');
 
           var windowHeight = $(window).height();
-          var slideoutOffset = $('.mainNav').offsetTop;
-          var slideoutHeight = (windowHeight - slideoutOffset);
-          $('.mainNav').height(slideoutHeight).css({'overflow-y': 'auto'});
+          var scrollTop = $(window).scrollTop();
+          var slideoutOffset = $('.mainNav').offset().top;
+          var slideoutHeight = (windowHeight - (slideoutOffset - scrollTop));
+//          log('windowHeight ' + windowHeight);
+//          log('scrollTop ' + scrollTop);
+//          log('slideoutOffset ' + slideoutOffset);
+//          log('slideoutHeight ' + slideoutHeight);
+          
+          if ($('.mainNav').height() > slideoutHeight) {
+            $('.mainNav').height(slideoutHeight).css({'overflow-y': 'scroll'});
+          }
+          // child items
+          var dynamicOffset = $('#toggle').height();
+          var dynamicHeight = windowHeight - dynamicOffset;
+//          log('dynamicOffset ' + dynamicOffset);
+//          log('dynamicHeight ' + dynamicHeight);
+          
+          $('.mainNav ul.dynamic').each(function(){
+            $(this).removeAttr('style');
+//            log('height ' + $(this).height());
+            if ($(this).height() > dynamicHeight) {
+              $(this).css({'overflow-y': 'scroll'});
+            }
+            $(this).height(dynamicHeight);
+          });
         }
 //        slideoutDimensions();
         
@@ -222,12 +250,14 @@
           e.stopPropagation();
           
           var outerWidth = $(window).outerWidth();
+          // full horizontal menu
           if (outerWidth > 1279) {
             // hide all open ones
             $('.mainNav ul.root > li.open').removeClass('open');
             // add open to this one
             $(this).parent().addClass('open');
           }
+          // default responsive menu
           else {
             var $parent = $(this).parent();
             if ($parent.hasClass('open')) {
@@ -324,8 +354,17 @@
 
         /* People Search */
         $('.ms-srch-result #Actions').before('<label>Sort by</label>');
-
         
+        // list item heights
+        peopleResults();
+        
+        function peopleResults() {
+          $('#people-results li').each(function(){
+            $(this).css('min-height', $(this).find('img').width());
+          });
+        }
+
+
 
         /* Text Editor Overrides */
         $(".ms-rtestate-write").attr({
