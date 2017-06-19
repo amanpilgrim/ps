@@ -37,16 +37,14 @@
 
         <link id="CssRegistration1" rel="stylesheet" type="text/css" href="/_layouts/15/1033/styles/Themable/corev15.css?rev=DHzjGJKbtAsTIA4uW3YOqA%3D%3D"/>
 <link id="CssRegistration1" rel="stylesheet" type="text/css" href="/Style%20Library/en-US/Themable/Core%20Styles/pagelayouts15.css"/>
-<link rel="stylesheet" type="text/css" href="/_layouts/15/1033/styles/controls15.css?rev=GF%2Fpek4jNA7LfT%2Ffzc2JQA%3D%3D"/>
 <link id="CssRegistration2" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/CSS/normalize.css?Rev=2017.05.11"/>
 <link id="CssRegistration5" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/CSS/font-awesome/css/font-awesome.min.css?Rev=2017.05.11"/>
 <link id="CssRegistration7" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/CSS/slick.css"/>
 <link id="CssRegistration3" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/CSS/main.css?Rev=2017.05.11"/>
 <link id="CssRegistration4" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/CSS/pscore.css"/>
 <link id="CssRegistration6" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/CSS/responsive.css?Rev=2017.05.19"/>
+<link id="PSNews" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/CSS/news.css"/>
 <script type="text/javascript" src="/_layouts/15/init.js?rev=RIl4brNTuKjQszVd%2Bc1CnQ%3D%3D"></script>
-<script type="text/javascript" src="/_layouts/15/ScriptResx.ashx?culture=en%2Dus&amp;name=SP%2EPublishing%2EResources&amp;rev=Wzy1bSeygPIkuVShJwoI7g%3D%3D"></script>
-<script type="text/javascript" src="/_layouts/15/mediaplayer.js?rev=YyqTLoWJZuIG93N00x4YTw%3D%3D"></script>
 <script type="text/javascript" src="/ScriptResource.axd?d=YWikJi2__BU1_2pMnk8OcdBn-5lUhBvVGrdV95zQ8CDoEEByD4Fi2Mb5EaNZ0fTKq9Pd3rbuqfqlPV6wgP170uY7zTntx23jk5qaG4CmFW7OnziEUHs1L-4zUoaycfD8nyKOEJeNGN7MqmNp0VzG3OzLEW2KqhRcY0qAYUlRCXOIsN_npEHA9nPcTGlBnU1g0&amp;t=4794f07b"></script>
 <script type="text/javascript" src="/_layouts/15/blank.js?rev=ZaOXZEobVwykPO9g8hq%2F8A%3D%3D"></script>
 <script type="text/javascript" src="/ScriptResource.axd?d=IpVLDukecVy_xgecUbvXqBG3anUd7elfvm-80an-0uVhW_2K1UnnDoJTWh1TI1TUaBQfkfPH831BBAhxcD_uDTVcnV69i7xODolSZzzSiVv4fZbBqR5apk405c2NCvBcOBCP7BxwyrUR1Zrlqc3yycC7tOKmjrkCOHUoYRVDmYsefVPBpDkENvHbznPz8Wdf0&amp;t=4794f07b"></script>
@@ -76,6 +74,7 @@
 <script type="text/javascript">RegisterSod("dragdrop.js", "\u002f_layouts\u002f15\u002fdragdrop.js?rev=xyQu9SPqkjO4R2\u00252BS3IwO8Q\u00253D\u00253D");</script>
 <script type="text/javascript">RegisterSod("quicklaunch.js", "\u002f_layouts\u002f15\u002fquicklaunch.js?rev=\u00252BHeX6ARcp\u00252F9LpMq6FqQYyA\u00253D\u00253D");RegisterSodDep("quicklaunch.js", "dragdrop.js");</script>
 <script type="text/javascript">RegisterSod("sp.ui.pub.ribbon.js", "\u002f_layouts\u002f15\u002fsp.ui.pub.ribbon.js?rev=75kKdJAREet7iiUJWDStBg\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("sp.publishing.resources.resx", "\u002f_layouts\u002f15\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=SP\u00252EPublishing\u00252EResources\u0026rev=Wzy1bSeygPIkuVShJwoI7g\u00253D\u00253D");</script>
 <link type="text/xml" rel="alternate" href="/NewsAndEvents/News/_vti_bin/spsdisco.aspx" />	
 		
 		<!-- ===== STARTER: Core SharePoint CSS =========================================================================================== -->
@@ -88,7 +87,25 @@
 		
 	
 	
-<link rel="canonical" href="http://dev04-ourhouse.campus.services:80/NewsAndEvents/News/Pages/default.aspx" />
+	
+
+   <script type="text/javascript">
+       function validate() {
+           // check that page is in edit mode                   
+           if (SP.Ribbon.PageState.Handlers.isInEditMode()) {
+               if (jQuery('input[id*="_PSVideoSelectorControl_"]').val() != "" && jQuery('input[id*="_PSGalleryLocationSelectorControl_"]').val() != "") {
+                   alert('You can only select either a video or a folder of the page image carousel!');
+                   // prevent page postback                               
+                   return false;
+               }
+           }
+
+           return true;
+       }
+	</script>	
+
+
+<link rel="canonical" href="http://dev04-ourhouse.campus.services:80/NewsAndEvents/News/Pages/Next-staff-orientation-tour.aspx" />
 		
 
 		<!-- ===== STARTER: Web Part Manager  ============================================================================================= -->
@@ -120,7 +137,7 @@
 	
 	<body>
         
-<div class='PSNewsListingPageLayout'>
+<div class='PSNewsContentPageLayout'>
 
 		<!-- ===== STARTER: SP IDs / Prefetch SP images / SP Form  =========================================================================== -->
 		
@@ -130,7 +147,7 @@
 <img src="/Style Library/Intranet/images/Intranet-Logo.png?rev=23" />
 </div>
 
-		<form method="post" action="./default.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+		<form method="post" action="./Next-staff-orientation-tour.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
 <div class="aspNetHidden">
 <input type="hidden" name="_wpcmWpid" id="_wpcmWpid" value="" />
 <input type="hidden" name="wpcmVal" id="wpcmVal" value="" />
@@ -143,7 +160,7 @@
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x1A2AED5067A65290AEA9D738545B56ECD02345FB75435306B9A96512E25D43379985A08448E8E47A9AF86CCECDE9289FF03FF543EB26E27484A7BACB2734EF4B,12 Jun 2017 23:59:08 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xC3EA45CF41928E6392000E7A0205B0E233803F6992029D5CB5ABA9B4701CB7BD3B22648DC58401EC44A5D3F129E5C0C29A4A58EEA9E212C6A0580CA675520234,13 Jun 2017 00:18:17 -0000" />
 <input type="hidden" name="MSOAuthoringConsole_FormContext" id="MSOAuthoringConsole_FormContext" value="" />
 <input type="hidden" name="MSOAC_EditDuringWorkflow" id="MSOAC_EditDuringWorkflow" value="" />
 <input type="hidden" name="InputComments" id="InputComments" value="" />
@@ -158,10 +175,10 @@
 <input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
 <input type="hidden" name="MSOSPWebPartManager_EndWebPartEditing" id="MSOSPWebPartManager_EndWebPartEditing" value="false" />
 <input type="hidden" name="_maintainWorkspaceScrollPosition" id="_maintainWorkspaceScrollPosition" value="0" />
-<input type="hidden" name="SPPageStateContext_PreviousAuthoringVersion" id="SPPageStateContext_PreviousAuthoringVersion" value="46" />
-<input type="hidden" name="SPPageStateContext_PreviousAuthoringItemUser" id="SPPageStateContext_PreviousAuthoringItemUser" value="2" />
+<input type="hidden" name="SPPageStateContext_PreviousAuthoringVersion" id="SPPageStateContext_PreviousAuthoringVersion" value="29" />
+<input type="hidden" name="SPPageStateContext_PreviousAuthoringItemUser" id="SPPageStateContext_PreviousAuthoringItemUser" value="430" />
 <input type="hidden" name="MSOShowUnapproved_Xml" id="MSOShowUnapproved_Xml" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE2MDEyNDc2MjgPZBYCZg9kFgICAQ9kFgQCAQ9kFgICJA9kFgJmD2QWAmYPPCsABgBkAgkPZBYOAgQPZBYCAgIPZBYGAgMPZBYCAgEPZBYCZg8PFgIeB1Zpc2libGVoZGQCBQ9kFgICAw9kFgJmD2QWBAICD2QWCgIBDxYGHhNDbGllbnRPbkNsaWNrU2NyaXB0BYoBRW5zdXJlU2NyaXB0RnVuYygnc2hhcmluZy5qcycsICdEaXNwbGF5U2hhcmVkV2l0aERpYWxvZycsIGZ1bmN0aW9uICgpIHsgRGlzcGxheVNoYXJlZFdpdGhEaWFsb2coJ1x1MDAyZk5ld3NBbmRFdmVudHNcdTAwMmZOZXdzXHUwMDJmJyk7IH0pHihDbGllbnRPbkNsaWNrU2NyaXB0Q29udGFpbmluZ1ByZWZpeGVkVXJsBYoBRW5zdXJlU2NyaXB0RnVuYygnc2hhcmluZy5qcycsICdEaXNwbGF5U2hhcmVkV2l0aERpYWxvZycsIGZ1bmN0aW9uICgpIHsgRGlzcGxheVNoYXJlZFdpdGhEaWFsb2coJ1x1MDAyZk5ld3NBbmRFdmVudHNcdTAwMmZOZXdzXHUwMDJmJyk7IH0pHhhDbGllbnRPbkNsaWNrTmF2aWdhdGVVcmxkZAIDDxYIHwBoHwEFendpbmRvdy5sb2NhdGlvbiA9ICdqYXZhc2NyaXB0OkVuc3VyZUNoZWNrb3V0QW5kQ2hhbmdlTGF5b3V0TW9kZVRvRWRpdChcJzY2MGRiYmZiLWMwYjEtNDhjYS1hY2ZjLWJhNzkyMDVlMTIxZVwnLDIsZmFsc2UpOyc7HwJkHwMFZWphdmFzY3JpcHQ6RW5zdXJlQ2hlY2tvdXRBbmRDaGFuZ2VMYXlvdXRNb2RlVG9FZGl0KFwnNjYwZGJiZmItYzBiMS00OGNhLWFjZmMtYmE3OTIwNWUxMjFlXCcsMixmYWxzZSk7ZAIFDxYCHwBoZAILDxYCHwBoZAIRD2QWAmYPDxYGHhxQcmV2aW91c0F1dGhvcmluZ0l0ZW1WZXJzaW9uBQI0Nh4aUHJldmlvdXNBdXRob3JpbmdJdGVtT3duZXIFATIeHFByZXZpb3VzQXV0aG9yaW5nQ29udHJvbE1vZGULKYgBTWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViQ29udHJvbHMuU1BDb250cm9sTW9kZSwgTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTUuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwFkZAIDDw8WAh4JQWNjZXNzS2V5BQEvZGQCBw9kFgICAQ9kFgICAQ9kFgYCAQ8PFgQeBF8hU0ICAh4IQ3NzQ2xhc3MFF21zLXByb21vdGVkQWN0aW9uQnV0dG9uZGQCBQ8PFgYfAGgfCAICHwkFF21zLXByb21vdGVkQWN0aW9uQnV0dG9uZGQCBw8WBB4GQWN0aW9uCymKAU1pY3Jvc29mdC5TaGFyZVBvaW50LldlYkNvbnRyb2xzLlBhZ2VTdGF0ZUFjdGlvbiwgTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTUuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwAfAGdkAgYPZBYCZg8UKwACDxYEHgtfIURhdGFCb3VuZGceC18hSXRlbUNvdW50AgJkZBYCZg9kFgQCAQ9kFgJmDxUCGWh0dHA6Ly93d3cucGFybGlhbWVudC5uei8Rd3d3LnBhcmxpYW1lbnQubnpkAgIPZBYCZg8VAjgvUmVzb3VyY2VDZW50cmUvYWJvdXRJbnRyYW5ldC9QYWdlcy9BYm91dC10aGlzLXNpdGUuYXNweApDb250YWN0IFVzZAISD2QWAmYPD2QWAh4LcGxhY2Vob2xkZXIFC05hbWUvTnVtYmVyZAIUD2QWAmYPFCsAAg8WBB8LZx8MAhBkZBYCZg9kFiACAQ9kFgJmDxUCK2h0dHBzOi8vd3d3LmZsZXhpcHVyY2hhc2UuY29tL2FjY291bnQvbG9naW4NRmxleGlQdXJjaGFzZWQCAg9kFgJmDxUCHWh0dHA6Ly9vY3Z3ZWIwMy9lc3VibWlzc2lvbnMyDGVTdWJtaXNzaW9uc2QCAw9kFgJmDxUCGWh0dHA6Ly9vY3Z3ZWIwMy9leWVsbG93cy8IZVllbGxvd3NkAgQPZBYCZg8VAjFodHRwOi8vcXdhLmNhbXB1cy5zZXJ2aWNlcy9tZXRhc3Rvcm0vZGVmYXVsdC5hc3B4HFF1ZXN0aW9ucyBmb3IgV3JpdHRlbiBBbnN3ZXJkAgUPZBYCZg8VAkRodHRwOi8vc3lzdGVzdC1jcGQuY2FtcHVzLnNlcnZpY2VzL2NvcmVwYXJsaWFtZW50YXJ5ZGF0YS9odG1sY2xpZW50Lx1Db3JlIFBhcmxpYW1lbnRhcnkgRGF0YSAoQ1BEKWQCBg9kFgJmDxUCE2h0dHA6Ly9vY3Z3ZWIwMy9hbHATQXVkaXQgbG9nIFByb2Nlc3NvcmQCBw9kFgJmDxUCGGh0dHA6Ly9vY3Z3ZWIwMy9tZW1iaWxscyFQcm9wb3NlZCBtZW1iZXJzIGJpbGxzIHB1Ymxpc2hpbmdkAggPZBYCZg8VAhhodHRwOi8vb2N2d2ViMDMvaHBzdG93ZWIISFBTdG9XZWJkAgkPZBYCZg8VAiZodHRwOi8vZHB3cHJkLnBzaW50ZXJuZXQucGFybGlhbWVudC5ueh5OWlAgRG9jdW1lbnQgUHVibGlzaGluZyBXaXphcmRkAgoPZBYCZg8VAkBodHRwOi8vcG9ydGFsLmNhbXB1cy5zZXJ2aWNlcy9TaXRlUGFnZXMvT3V0YWdlTm90aWZpY2F0aW9ucy5hc3B4FE91dGFnZSBub3RpZmljYXRpb25zZAILD2QWAmYPFQI1aHR0cDovL2xpYnJhcnkuY2FtcHVzLnNlcnZpY2VzL0lubWFnaWNHZW5pZS9vcGFjLmFzcHgfUGFybGlhbWVudGFyeSBMaWJyYXJ5IENhdGFsb2d1ZWQCDA9kFgJmDxUCIGh0dHBzOi8vdGhlY2xlcmsuY29tcGx5d2l0aC5uZXQvCkNvbXBseVdpdGhkAg0PZBYCZg8VAkZodHRwOi8vY29tcGx5d2l0aC5jYW1wdXMuc2VydmljZXMvbG9naW4uYXNweD9SZXR1cm5Vcmw9JTJmRGVmYXVsdC5hc3B4JENvbXBseVdpdGggZm9yIFBhcmxpYW1lbnRhcnkgU2VydmljZWQCDg9kFgJmDxUCRGh0dHA6Ly9zeXN0ZXN0LXNlbGVjdGNvbW1pdHRlZXMuY2FtcHVzLnNlcnZpY2VzL3NpdGVwYWdlcy9pbmRleC5hc3B4EVNlbGVjdCBDb21taXR0ZWVzZAIPD2QWAmYPFQIxaHR0cDovL3N5c3Rlc3Qtb3VyaG91c2UuY2FtcHVzLnNlcnZpY2VzL3NpdGVzL3ZlYiRWRUIgKFZlbnVlIGFuZCBFdmVudCBCb29raW5nKSBzeXN0ZW1kAhAPZBYCZg8VAnhodHRwOi8vc3lzdGVzdC1vdXJob3VzZS5jYW1wdXMuc2VydmljZXMvUGVvcGxlL0luZm9ybWF0aW9uRm9yTWVtYmVycy9Vc2VmdWxJbmZvcm1hdGlvbi9QYWdlcy9Qcm9wb3NlZC1NZW1iZXJzLWJpbGxzLmFzcHgXUHJvcG9zZWQgTWVtYmVycycgQmlsbHNkAhoPZBYCAgcPZBYCAgEPDxYCHwBoZBYCAgMPZBYCZg9kFgICAw9kFgICBQ9kFgICAQ88KwAJAQAPFgQeDVBhdGhTZXBhcmF0b3IECB4NTmV2ZXJFeHBhbmRlZGdkZAIcD2QWCgIBD2QWAgIBD2QWBAICDw8WAh8AaGRkAgQPFCsAAg8WBB8LZx8MAgVkZBYCZg9kFgoCAQ9kFgYCAQ9kFgJmDxUCaXN0eWxlID0gImJhY2tncm91bmQtaW1hZ2U6IHVybCgvUmVzb3VyY2VDZW50cmUvUHVibGlzaGluZ0ltYWdlcy9QcmVjaW5jdCUyMEZhY2lsaXRpZXMvUGFya2luZy9ST1NTLmpwZyk7IhtOZXh0IHN0YWZmIG9yaWVudGF0aW9uIHRvdXJkAgMPFgIfAGgWAgICDxUBG05leHQgc3RhZmYgb3JpZW50YXRpb24gdG91cmQCBA8VAsEBQXJlIHlvdSBuZXcgdG8gUGFybGlhbWVudCBvciBub3Qgc3VyZSB3aGVyZSB0byBnbz8gVmlzaXRvciBTZXJ2aWNlcyBpbnZpdGUgbmV3IGFuZCBleGlzdGluZyBzdGFmZiBvbiBhIHNwZWNpYWwgNzUtbWludXRlIG9yaWVudGF0aW9uIHRvdXIgb2YgdGhlIHBhcmxpYW1lbnRhcnkgcHJlY2luY3Qgb24gTW9uZGF5IDIyIEp1bmUgYXQgOWFtLl9odHRwOi8vZGV2MDQtb3VyaG91c2UuY2FtcHVzLnNlcnZpY2VzL05ld3NBbmRFdmVudHMvTmV3cy9QYWdlcy9OZXh0LXN0YWZmLW9yaWVudGF0aW9uLXRvdXIuYXNweGQCAg9kFgYCAQ9kFgJmDxUChAFzdHlsZSA9ICJiYWNrZ3JvdW5kLWltYWdlOiB1cmwoL1Jlc291cmNlQ2VudHJlL1B1Ymxpc2hpbmdJbWFnZXMvQnVzaW5lc3MlMjBTZXJ2aWNlcy9QYXJsaWFtZW50YXJ5JTIwU2VydmljZS9iYWxjb255LXZpZXctY3JvcC5qcGcpOyIUQWNjZXNzaWJpbGl0eSB1cGRhdGVkAgMPFgIfAGgWAgICDxUBFEFjY2Vzc2liaWxpdHkgdXBkYXRlZAIEDxUC9wHigItZb3UgbWF5IGhhdmUgbm90aWNlZCBsaXR0bGUgYnV0dG9ucyBoYXZlIHNwcnVuZyB1cCBvbiBzb21lIGZsb29yIGFyZWFzIGFyb3VuZCB0aGUgcHJlY2luY3RzLCBuYW1lbHkgYXQgdGhlIGJvdHRvbSBvZiB0aGUgc3RhaXJjYXNlIGluIHRoZSBFeGVjdXRpdmUgV2luZyBhcyB3ZWxsIGFzIHRoZSBOb3J0aHdlc3QgY29ycmlkb3IgYW5kIHRoZSBpbnRlcm5hbCByYW1wIGJldHdlZW4gUGFybGlhbWVudCBIb3VzZSBhbmQgdGhlLi4uWGh0dHA6Ly9kZXYwNC1vdXJob3VzZS5jYW1wdXMuc2VydmljZXMvTmV3c0FuZEV2ZW50cy9OZXdzL1BhZ2VzL0FjY2Vzc2liaWxpdHktdXBkYXRlLmFzcHhkAgMPZBYGAgEPFgIfAGgWAmYPFQJ0c3R5bGUgPSAiYmFja2dyb3VuZC1pbWFnZTogdXJsKC9SZXNvdXJjZUNlbnRyZS9QdWJsaXNoaW5nSW1hZ2VzL05ld3MlMjBhbmQlMjBFdmVudHMvTmV3cy81MDAwLVBvcHBpZXMtUHJvamVjdC5qcGcpOyIfNTAwMCBwb3BwaWVzIGZvciBBbnphYyBEYXkgMjAxNWQCAw9kFgICAg8VAR81MDAwIHBvcHBpZXMgZm9yIEFuemFjIERheSAyMDE1ZAIEDxUCsgFBcyBwYXJ0IG9mIHRoZSBXb3JsZCBXYXIgSSBjb21tZW1vcmF0aW9ucywgdGhlIDUwMDAgUG9wcGllcyBQcm9qZWN0IGlzIGFpbWluZyB0byBrbml0LCBjcm9jaGV0IGFuZCBzZXcgcG9wcGllcyBmb3IgYSBkaXNwbGF5IGF0IHRoZSBXaWdyYW0gQWlyIEZvcmNlIE11c2V1bSBvbiBBbnphYyBEYXkgaW4gMjAxNS4gWGh0dHA6Ly9kZXYwNC1vdXJob3VzZS5jYW1wdXMuc2VydmljZXMvTmV3c0FuZEV2ZW50cy9OZXdzL1BhZ2VzLzUwMDAtUG9wcGllcy1Qcm9qZWN0LmFzcHhkAgQPZBYGAgEPZBYCZg8VAmVzdHlsZSA9ICJiYWNrZ3JvdW5kLWltYWdlOiB1cmwoL1Jlc291cmNlQ2VudHJlL1B1Ymxpc2hpbmdJbWFnZXMvTmV3cyUyMGFuZCUyMEV2ZW50cy9OZXdzL01hZ25hLmpwZyk7IiQ4MDB0aCBhbm5pdmVyc2FyeSBvZiB0aGUgTWFnbmEgQ2FydGFkAgMPFgIfAGgWAgICDxUBJDgwMHRoIGFubml2ZXJzYXJ5IG9mIHRoZSBNYWduYSBDYXJ0YWQCBA8VAssB4oCLVGhpcyB3ZWVrIG1hcmtzIDgwMCB5ZWFycyBzaW5jZSB0aGUgTWFnbmEgQ2FydGEgd2FzIHNlYWxlZCBvbiB0aGUgYmFua3Mgb2YgdGhlIFJpdmVyIFRoYW1lcyBvbiAxNSBKdW5lIDEyMTUuIE1hZ25hIENhcnRhIG1lYW5zIHRoZSBHcmVhdCBDaGFydGVyLCBhbmQgaXQgZm9ybXMgdGhlIGZvdW5kYXRpb24gb2YgcmlnaHRzIHdlIGVuam95IHRvZGF5LiBoaHR0cDovL2RldjA0LW91cmhvdXNlLmNhbXB1cy5zZXJ2aWNlcy9OZXdzQW5kRXZlbnRzL05ld3MvUGFnZXMvODAwdGgtYW5uaXZlcnNhcnktb2YtdGhlLU1hZ25hLUNhcnRhLmFzcHhkAgUPZBYGAgEPZBYCZg8VAm1zdHlsZSA9ICJiYWNrZ3JvdW5kLWltYWdlOiB1cmwoL1Jlc291cmNlQ2VudHJlL1B1Ymxpc2hpbmdJbWFnZXMvTmV3cyUyMGFuZCUyMEV2ZW50cy9OZXdzL21hdGFyaWtpLnB1YjEuanBnKTsiJ01hdGFyaWtpIENlbGVicmF0aW9uIGluIENvcHBlcmZpZWxk4oCZc2QCAw8WAh8AaBYCAgIPFQEnTWF0YXJpa2kgQ2VsZWJyYXRpb24gaW4gQ29wcGVyZmllbGTigJlzZAIEDxUCZOKAi1BsZWFzZSBjb21lIGFuZCBqb2luIHVzIG9uIFRodXJzZGF5LCAxOHRoIG9mIEp1bmUgZm9yIE1hdGFyaWtpIENlbGVicmF0aW9uIGluIENvcHBlcmZpZWxk4oCZc+KAiy5raHR0cDovL2RldjA0LW91cmhvdXNlLmNhbXB1cy5zZXJ2aWNlcy9OZXdzQW5kRXZlbnRzL05ld3MvUGFnZXMvTWF0YXJpa2ktQ2VsZWJyYXRpb24taW4tQ29wcGVyZmllbGTigJlzLmFzcHhkAgMPZBYCAgEPZBYCZg8WAh8AaGQCBw9kFgICAQ8WAh4TUHJldmlvdXNDb250cm9sTW9kZQsrBAFkAgkPFgIfEAsrBAFkAg8PZBYCZg8WAh8AaBYCZg9kFgQCAQ9kFgJmDxQrAAJkZGQCBQ9kFgICAQ8UKwACZGRkAh4PZBYCZg8UKwACDxYEHwtnHwwCBGRkFgJmD2QWCAIBD2QWAmYPFQMeaHR0cDovL291cmhvdXNlLnBhcmxpYW1lbnQubnovBEhvbWUESG9tZWQCAg9kFgJmDxUDMC9SZXNvdXJjZUNlbnRyZS9hYm91dEludHJhbmV0L1BhZ2VzL1NpdGVtYXAuYXNweAdTaXRlbWFwB1NpdGVtYXBkAgMPZBYCZg8VAzYvUmVzb3VyY2VDZW50cmUvYWJvdXRJbnRyYW5ldC9QYWdlcy9BY2Nlc3NpYmlsaXR5LmFzcHgNQWNjZXNzaWJpbGl0eQ1BY2Nlc3NpYmlsaXR5ZAIED2QWAmYPFQM4L1Jlc291cmNlQ2VudHJlL2Fib3V0SW50cmFuZXQvUGFnZXMvQWJvdXQtdGhpcy1zaXRlLmFzcHgPQWJvdXQgdGhpcyBzaXRlD0Fib3V0IHRoaXMgc2l0ZWQYCQVZY3RsMDAkUGxhY2VIb2xkZXJNYWluJFNob3dSZWxhdGVkSW5mb3JtYXRpb24kRWRpdE1vZGVQYW5lbDYkUmVsYXRlZExpbmtzJFJlbGF0ZWRMaW5rc1ZpZXcPZ2QFV2N0bDAwJFBsYWNlSG9sZGVyTWFpbiRTaG93UmVsYXRlZEluZm9ybWF0aW9uJEVkaXRNb2RlUGFuZWw2JEtleUNvbnRhY3RzJGtleUNvbnRhY3RzTGlzdA9nZAUXY3RsMDAkVG9wTmF2aWdhdGlvbk1lbnUPD2QFD05ld3MgYW5kIEV2ZW50c2QFV2N0bDAwJFBsYWNlSG9sZGVyTWFpbiRFZGl0TW9kZVBhbmVsMTkkSG9tZXBhZ2VOZXdzQ2Fyb3VzZWwkSG9tZXBhZ2VOZXdzQ2Fyb3VzZWxMaXN0Vmlldw8UKwAOZGRkZGRkZDwrAAUAAgVkZGRmAv////8PZAU7Y3RsMDAkbmF2aWdhdGlvblRlcm1TZXRGb290ZXIkTmF2aWdhdGlvblRlcm1Gb290ZXJzTGlzdFZpZXcPFCsADmRkZGRkZGQ8KwAEAAIEZGRkZgL/////D2QFO2N0bDAwJG5hdmlnYXRpb25UZXJtU2V0SGVhZGVyJE5hdmlnYXRpb25UZXJtSGVhZGVyc0xpc3RWaWV3DxQrAA5kZGRkZGRkFCsAAmRkAgJkZGRmAv////8PZAUlY3RsMDAkVG9vbHNEcm9wRG93biRUb29sc0Ryb3BEb3duTGlzdA8UKwAOZGRkZGRkZDwrABAAAhBkZGRmAv////8PZAUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgMFGmN0bDAwJEZpbmRBUGVyc29uJHJkcGVyc29uBRxjdGwwMCRGaW5kQVBlcnNvbiRyZGJ1c2luZXNzBRxjdGwwMCRGaW5kQVBlcnNvbiRyZGJ1c2luZXNzBUFjdGwwMCRQbGFjZUhvbGRlckxlZnROYXZCYXIkVUlWZXJzaW9uZWRDb250ZW50MyRWNFF1aWNrTGF1bmNoTWVudQ8PZAUETmV3c2R2szyEpl/zxpy7Vdnyhu+8muEP0mfuXA0iq6nYEQI+lg==" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE4OTk3NzE5NDUPZBYCZg9kFgICAQ9kFgQCAQ9kFgICJA9kFgJmD2QWAmYPPCsABgBkAgkPZBYOAgQPZBYCAgIPZBYGAgMPZBYCAgEPZBYCZg8PFgIeB1Zpc2libGVoZGQCBQ9kFgICAw9kFgJmD2QWBAICD2QWCgIBDxYGHhNDbGllbnRPbkNsaWNrU2NyaXB0BYoBRW5zdXJlU2NyaXB0RnVuYygnc2hhcmluZy5qcycsICdEaXNwbGF5U2hhcmVkV2l0aERpYWxvZycsIGZ1bmN0aW9uICgpIHsgRGlzcGxheVNoYXJlZFdpdGhEaWFsb2coJ1x1MDAyZk5ld3NBbmRFdmVudHNcdTAwMmZOZXdzXHUwMDJmJyk7IH0pHihDbGllbnRPbkNsaWNrU2NyaXB0Q29udGFpbmluZ1ByZWZpeGVkVXJsBYoBRW5zdXJlU2NyaXB0RnVuYygnc2hhcmluZy5qcycsICdEaXNwbGF5U2hhcmVkV2l0aERpYWxvZycsIGZ1bmN0aW9uICgpIHsgRGlzcGxheVNoYXJlZFdpdGhEaWFsb2coJ1x1MDAyZk5ld3NBbmRFdmVudHNcdTAwMmZOZXdzXHUwMDJmJyk7IH0pHhhDbGllbnRPbkNsaWNrTmF2aWdhdGVVcmxkZAIDDxYIHwBoHwEFfHdpbmRvdy5sb2NhdGlvbiA9ICdqYXZhc2NyaXB0OkVuc3VyZUNoZWNrb3V0QW5kQ2hhbmdlTGF5b3V0TW9kZVRvRWRpdChcJzY2MGRiYmZiLWMwYjEtNDhjYS1hY2ZjLWJhNzkyMDVlMTIxZVwnLDQzMCxmYWxzZSk7JzsfAmQfAwVnamF2YXNjcmlwdDpFbnN1cmVDaGVja291dEFuZENoYW5nZUxheW91dE1vZGVUb0VkaXQoXCc2NjBkYmJmYi1jMGIxLTQ4Y2EtYWNmYy1iYTc5MjA1ZTEyMWVcJyw0MzAsZmFsc2UpO2QCBQ8WAh8AaGQCCw8WAh8AaGQCEQ9kFgJmDw8WBh4cUHJldmlvdXNBdXRob3JpbmdJdGVtVmVyc2lvbgUCMjkeGlByZXZpb3VzQXV0aG9yaW5nSXRlbU93bmVyBQM0MzAeHFByZXZpb3VzQXV0aG9yaW5nQ29udHJvbE1vZGULKYgBTWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViQ29udHJvbHMuU1BDb250cm9sTW9kZSwgTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTUuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwFkZAIDDw8WAh4JQWNjZXNzS2V5BQEvZGQCBw9kFgICAQ9kFgICAQ9kFgYCAQ8PFgQeBF8hU0ICAh4IQ3NzQ2xhc3MFF21zLXByb21vdGVkQWN0aW9uQnV0dG9uZGQCBQ8PFgYfAGgfCAICHwkFF21zLXByb21vdGVkQWN0aW9uQnV0dG9uZGQCBw8WBB4GQWN0aW9uCymKAU1pY3Jvc29mdC5TaGFyZVBvaW50LldlYkNvbnRyb2xzLlBhZ2VTdGF0ZUFjdGlvbiwgTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTUuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwAfAGdkAgYPZBYCZg8UKwACDxYEHgtfIURhdGFCb3VuZGceC18hSXRlbUNvdW50AgJkZBYCZg9kFgQCAQ9kFgJmDxUCGWh0dHA6Ly93d3cucGFybGlhbWVudC5uei8Rd3d3LnBhcmxpYW1lbnQubnpkAgIPZBYCZg8VAjgvUmVzb3VyY2VDZW50cmUvYWJvdXRJbnRyYW5ldC9QYWdlcy9BYm91dC10aGlzLXNpdGUuYXNweApDb250YWN0IFVzZAISD2QWAmYPD2QWAh4LcGxhY2Vob2xkZXIFC05hbWUvTnVtYmVyZAIUD2QWAmYPFCsAAg8WBB8LZx8MAhBkZBYCZg9kFiACAQ9kFgJmDxUCK2h0dHBzOi8vd3d3LmZsZXhpcHVyY2hhc2UuY29tL2FjY291bnQvbG9naW4NRmxleGlQdXJjaGFzZWQCAg9kFgJmDxUCHWh0dHA6Ly9vY3Z3ZWIwMy9lc3VibWlzc2lvbnMyDGVTdWJtaXNzaW9uc2QCAw9kFgJmDxUCGWh0dHA6Ly9vY3Z3ZWIwMy9leWVsbG93cy8IZVllbGxvd3NkAgQPZBYCZg8VAjFodHRwOi8vcXdhLmNhbXB1cy5zZXJ2aWNlcy9tZXRhc3Rvcm0vZGVmYXVsdC5hc3B4HFF1ZXN0aW9ucyBmb3IgV3JpdHRlbiBBbnN3ZXJkAgUPZBYCZg8VAkRodHRwOi8vc3lzdGVzdC1jcGQuY2FtcHVzLnNlcnZpY2VzL2NvcmVwYXJsaWFtZW50YXJ5ZGF0YS9odG1sY2xpZW50Lx1Db3JlIFBhcmxpYW1lbnRhcnkgRGF0YSAoQ1BEKWQCBg9kFgJmDxUCE2h0dHA6Ly9vY3Z3ZWIwMy9hbHATQXVkaXQgbG9nIFByb2Nlc3NvcmQCBw9kFgJmDxUCGGh0dHA6Ly9vY3Z3ZWIwMy9tZW1iaWxscyFQcm9wb3NlZCBtZW1iZXJzIGJpbGxzIHB1Ymxpc2hpbmdkAggPZBYCZg8VAhhodHRwOi8vb2N2d2ViMDMvaHBzdG93ZWIISFBTdG9XZWJkAgkPZBYCZg8VAiZodHRwOi8vZHB3cHJkLnBzaW50ZXJuZXQucGFybGlhbWVudC5ueh5OWlAgRG9jdW1lbnQgUHVibGlzaGluZyBXaXphcmRkAgoPZBYCZg8VAkBodHRwOi8vcG9ydGFsLmNhbXB1cy5zZXJ2aWNlcy9TaXRlUGFnZXMvT3V0YWdlTm90aWZpY2F0aW9ucy5hc3B4FE91dGFnZSBub3RpZmljYXRpb25zZAILD2QWAmYPFQI1aHR0cDovL2xpYnJhcnkuY2FtcHVzLnNlcnZpY2VzL0lubWFnaWNHZW5pZS9vcGFjLmFzcHgfUGFybGlhbWVudGFyeSBMaWJyYXJ5IENhdGFsb2d1ZWQCDA9kFgJmDxUCIGh0dHBzOi8vdGhlY2xlcmsuY29tcGx5d2l0aC5uZXQvCkNvbXBseVdpdGhkAg0PZBYCZg8VAkZodHRwOi8vY29tcGx5d2l0aC5jYW1wdXMuc2VydmljZXMvbG9naW4uYXNweD9SZXR1cm5Vcmw9JTJmRGVmYXVsdC5hc3B4JENvbXBseVdpdGggZm9yIFBhcmxpYW1lbnRhcnkgU2VydmljZWQCDg9kFgJmDxUCRGh0dHA6Ly9zeXN0ZXN0LXNlbGVjdGNvbW1pdHRlZXMuY2FtcHVzLnNlcnZpY2VzL3NpdGVwYWdlcy9pbmRleC5hc3B4EVNlbGVjdCBDb21taXR0ZWVzZAIPD2QWAmYPFQIxaHR0cDovL3N5c3Rlc3Qtb3VyaG91c2UuY2FtcHVzLnNlcnZpY2VzL3NpdGVzL3ZlYiRWRUIgKFZlbnVlIGFuZCBFdmVudCBCb29raW5nKSBzeXN0ZW1kAhAPZBYCZg8VAnhodHRwOi8vc3lzdGVzdC1vdXJob3VzZS5jYW1wdXMuc2VydmljZXMvUGVvcGxlL0luZm9ybWF0aW9uRm9yTWVtYmVycy9Vc2VmdWxJbmZvcm1hdGlvbi9QYWdlcy9Qcm9wb3NlZC1NZW1iZXJzLWJpbGxzLmFzcHgXUHJvcG9zZWQgTWVtYmVycycgQmlsbHNkAhoPZBYCAgcPZBYCAgEPDxYCHwBoZBYCAgMPZBYCZg9kFgICAw9kFgICBQ9kFgICAQ88KwAJAQAPFgQeDVBhdGhTZXBhcmF0b3IECB4NTmV2ZXJFeHBhbmRlZGdkZAIcD2QWDAIBD2QWBAIBD2QWAmYPFgIfAGhkAgMPZBYCZg9kFgJmDxQrAAIPFgQfC2cfDAIKZGQWAmYPZBYUAgEPZBYEZg8VAhduZXdzZmVhdHVyZSBuZXdzY3VycmVudFcvUmVzb3VyY2VDZW50cmUvUHVibGlzaGluZ0ltYWdlcy9OZXdzIGFuZCBFdmVudHMvTmV3cy9DaHJpc3RtYXMgUGFydHkgMjAxNC9JTUdfMTc5My5KUEdkAgEPFQMUQ2hyaXN0bWFzIFBhcnR5IDIwMTQUQ2hyaXN0bWFzIFBhcnR5IDIwMTQUQ2hyaXN0bWFzIFBhcnR5IDIwMTRkAgIPZBYEZg8VAgtuZXdzZmVhdHVyZVcvUmVzb3VyY2VDZW50cmUvUHVibGlzaGluZ0ltYWdlcy9OZXdzIGFuZCBFdmVudHMvTmV3cy9DaHJpc3RtYXMgUGFydHkgMjAxNC9JTUdfMTc5NC5KUEdkAgEPFQMUQ2hyaXN0bWFzIFBhcnR5IDIwMTQUQ2hyaXN0bWFzIFBhcnR5IDIwMTQUQ2hyaXN0bWFzIFBhcnR5IDIwMTRkAgMPZBYEZg8VAgtuZXdzZmVhdHVyZVcvUmVzb3VyY2VDZW50cmUvUHVibGlzaGluZ0ltYWdlcy9OZXdzIGFuZCBFdmVudHMvTmV3cy9DaHJpc3RtYXMgUGFydHkgMjAxNC9JTUdfMTc5NS5KUEdkAgEPFQMUQ2hyaXN0bWFzIFBhcnR5IDIwMTQUQ2hyaXN0bWFzIFBhcnR5IDIwMTQUQ2hyaXN0bWFzIFBhcnR5IDIwMTRkAgQPZBYEZg8VAgtuZXdzZmVhdHVyZVcvUmVzb3VyY2VDZW50cmUvUHVibGlzaGluZ0ltYWdlcy9OZXdzIGFuZCBFdmVudHMvTmV3cy9DaHJpc3RtYXMgUGFydHkgMjAxNC9JTUdfMTc5OC5KUEdkAgEPFQMUQ2hyaXN0bWFzIFBhcnR5IDIwMTQUQ2hyaXN0bWFzIFBhcnR5IDIwMTQUQ2hyaXN0bWFzIFBhcnR5IDIwMTRkAgUPZBYEZg8VAgtuZXdzZmVhdHVyZVcvUmVzb3VyY2VDZW50cmUvUHVibGlzaGluZ0ltYWdlcy9OZXdzIGFuZCBFdmVudHMvTmV3cy9DaHJpc3RtYXMgUGFydHkgMjAxNC9JTUdfMTc5OS5KUEdkAgEPFQMUQ2hyaXN0bWFzIFBhcnR5IDIwMTQUQ2hyaXN0bWFzIFBhcnR5IDIwMTQUQ2hyaXN0bWFzIFBhcnR5IDIwMTRkAgYPZBYEZg8VAgtuZXdzZmVhdHVyZVcvUmVzb3VyY2VDZW50cmUvUHVibGlzaGluZ0ltYWdlcy9OZXdzIGFuZCBFdmVudHMvTmV3cy9DaHJpc3RtYXMgUGFydHkgMjAxNC9JTUdfMTgwNS5KUEdkAgEPFQMUQ2hyaXN0bWFzIFBhcnR5IDIwMTQUQ2hyaXN0bWFzIFBhcnR5IDIwMTQUQ2hyaXN0bWFzIFBhcnR5IDIwMTRkAgcPZBYEZg8VAgtuZXdzZmVhdHVyZVcvUmVzb3VyY2VDZW50cmUvUHVibGlzaGluZ0ltYWdlcy9OZXdzIGFuZCBFdmVudHMvTmV3cy9DaHJpc3RtYXMgUGFydHkgMjAxNC9JTUdfMTgwNy5KUEdkAgEPFQMUQ2hyaXN0bWFzIFBhcnR5IDIwMTQUQ2hyaXN0bWFzIFBhcnR5IDIwMTQUQ2hyaXN0bWFzIFBhcnR5IDIwMTRkAggPZBYEZg8VAgtuZXdzZmVhdHVyZVcvUmVzb3VyY2VDZW50cmUvUHVibGlzaGluZ0ltYWdlcy9OZXdzIGFuZCBFdmVudHMvTmV3cy9DaHJpc3RtYXMgUGFydHkgMjAxNC9JTUdfMTgwOC5KUEdkAgEPFQMUQ2hyaXN0bWFzIFBhcnR5IDIwMTQUQ2hyaXN0bWFzIFBhcnR5IDIwMTQUQ2hyaXN0bWFzIFBhcnR5IDIwMTRkAgkPZBYEZg8VAgtuZXdzZmVhdHVyZVcvUmVzb3VyY2VDZW50cmUvUHVibGlzaGluZ0ltYWdlcy9OZXdzIGFuZCBFdmVudHMvTmV3cy9DaHJpc3RtYXMgUGFydHkgMjAxNC9JTUdfMTgxMC5KUEdkAgEPFQMUQ2hyaXN0bWFzIFBhcnR5IDIwMTQUQ2hyaXN0bWFzIFBhcnR5IDIwMTQUQ2hyaXN0bWFzIFBhcnR5IDIwMTRkAgoPZBYEZg8VAgtuZXdzZmVhdHVyZVcvUmVzb3VyY2VDZW50cmUvUHVibGlzaGluZ0ltYWdlcy9OZXdzIGFuZCBFdmVudHMvTmV3cy9DaHJpc3RtYXMgUGFydHkgMjAxNC9JTUdfMTgxMy5KUEdkAgEPFQMUQ2hyaXN0bWFzIFBhcnR5IDIwMTQUQ2hyaXN0bWFzIFBhcnR5IDIwMTQUQ2hyaXN0bWFzIFBhcnR5IDIwMTRkAgMPZBYGAgEPFgIeE1ByZXZpb3VzQ29udHJvbE1vZGULKwQBZAIHD2QWAgIBDxYCHgRUZXh0BSFpbnRyYW5ldC1hZG1pbkBwYXJsaWFtZW50LmdvdnQubnpkAgkPZBYCAgEPFgIeB29uY2xpY2sFnAJyZXR1cm4gT3BlbkFsZXJ0c0RpYWxvZygnaHR0cDovL2RldjA0LW91cmhvdXNlLmNhbXB1cy5zZXJ2aWNlcy9OZXdzQW5kRXZlbnRzL05ld3MvX2xheW91dHMvMTUvU3ViTmV3LmFzcHg/TGlzdD17NjYwZGJiZmItYzBiMS00OGNhLWFjZmMtYmE3OTIwNWUxMjFlfSZJRD00MzAmU291cmNlPWh0dHAlM2ElMmYlMmZkZXYwNC1vdXJob3VzZS5jYW1wdXMuc2VydmljZXMlMmZOZXdzQW5kRXZlbnRzJTJmTmV3cyUyZlBhZ2VzJTJmTmV4dC1zdGFmZi1vcmllbnRhdGlvbi10b3VyLmFzcHgmSXNEbGc9MScpO2QCBw8WAh8QCysEAWQCCw9kFgICAQ9kFgRmD2QWAgIBDxYCHxEFCjE4LzA2LzIwMTVkAgEPFgIfEQUQVmlzaXRvciBTZXJ2aWNlc2QCDQ9kFgJmDxYCHwBoFgJmD2QWBAIBD2QWAmYPFCsAAmRkZAIFD2QWAgIBDxQrAAJkZGQCDw9kFgICAQ9kFgJmDxQrAAIPFgQfC2cfDAIDZGQWAmYPZBYGAgEPZBYCZg8VB09odHRwOi8vZGV2MDQtb3VyaG91c2UuY2FtcHVzLnNlcnZpY2VzL05ld3NBbmRFdmVudHMvTmV3cy9QYWdlcy9Kb24tVGVzdGluZy5hc3B4AAtKb24gVGVzdGluZxlzdHlsZT0ndmlzaWJpbGl0eTpoaWRkZW4nAAoxNS8xMi8yMDE2B3Rlc3RpbmdkAgIPZBYCZg8VB1FodHRwOi8vZGV2MDQtb3VyaG91c2UuY2FtcHVzLnNlcnZpY2VzL05ld3NBbmRFdmVudHMvTmV3cy9QYWdlcy9Tb2xvLUFsYnVtLTEtLmFzcHiXATxpbWcgc3JjPSIvUmVzb3VyY2VDZW50cmUvUHVibGlzaGluZ0ltYWdlcy9OZXdzJTIwYW5kJTIwRXZlbnRzL0V2ZW50JTIwZ2FsbGVyaWVzL1JOWkFGJTIwNzV0aCUyMGJpcnRoZGF5L0lNR18zMzQ3LkpQRz9SZW5kaXRpb25JRD01IiBhbHQ9IiIgc3R5bGU9IiIgLz4W4oCLTUFaREEzIFNQMjUgTElNSVRFRAAORXhoaWJpdGlvbnMuLi4KMTUvMTIvMjAxNgVNQVpEQWQCAw9kFgJmDxUHV2h0dHA6Ly9kZXYwNC1vdXJob3VzZS5jYW1wdXMuc2VydmljZXMvTmV3c0FuZEV2ZW50cy9OZXdzL1BhZ2VzL3Rlc3RpbmctaW1hZ2VzLXBhZ2UuYXNweGE8aW1nIHNyYz0iL05ld3NBbmRFdmVudHMvTmV3cy9QdWJsaXNoaW5nSW1hZ2VzL1NhcmlrYSUyMHNtbC5qcGc/UmVuZGl0aW9uSUQ9NSIgYWx0PSIiIHN0eWxlPSIiIC8+E3Rlc3RpbmcgaW1hZ2VzIHBhZ2UACEludHJhbmV0CjA4LzA4LzIwMTYUU2hhcmVwb2ludCBEZXZlbG9wZXJkAh4PZBYCZg8UKwACDxYEHwtnHwwCBGRkFgJmD2QWCAIBD2QWAmYPFQMeaHR0cDovL291cmhvdXNlLnBhcmxpYW1lbnQubnovBEhvbWUESG9tZWQCAg9kFgJmDxUDMC9SZXNvdXJjZUNlbnRyZS9hYm91dEludHJhbmV0L1BhZ2VzL1NpdGVtYXAuYXNweAdTaXRlbWFwB1NpdGVtYXBkAgMPZBYCZg8VAzYvUmVzb3VyY2VDZW50cmUvYWJvdXRJbnRyYW5ldC9QYWdlcy9BY2Nlc3NpYmlsaXR5LmFzcHgNQWNjZXNzaWJpbGl0eQ1BY2Nlc3NpYmlsaXR5ZAIED2QWAmYPFQM4L1Jlc291cmNlQ2VudHJlL2Fib3V0SW50cmFuZXQvUGFnZXMvQWJvdXQtdGhpcy1zaXRlLmFzcHgPQWJvdXQgdGhpcyBzaXRlD0Fib3V0IHRoaXMgc2l0ZWQYCgVZY3RsMDAkUGxhY2VIb2xkZXJNYWluJFNob3dSZWxhdGVkSW5mb3JtYXRpb24kRWRpdE1vZGVQYW5lbDYkUmVsYXRlZExpbmtzJFJlbGF0ZWRMaW5rc1ZpZXcPZ2QFV2N0bDAwJFBsYWNlSG9sZGVyTWFpbiRTaG93UmVsYXRlZEluZm9ybWF0aW9uJEVkaXRNb2RlUGFuZWw2JEtleUNvbnRhY3RzJGtleUNvbnRhY3RzTGlzdA9nZAVLY3RsMDAkUGxhY2VIb2xkZXJNYWluJEVkaXRNb2RlUGFuZWwyJE5ld3NJbWFnZUNhcm91c2VsJE5ld3NDYXJvdXNlbExpc3RWaWV3DxQrAA5kZGRkZGRkPCsACgACCmRkZGYC/////w9kBRdjdGwwMCRUb3BOYXZpZ2F0aW9uTWVudQ8PZAUPTmV3cyBhbmQgRXZlbnRzZAU7Y3RsMDAkbmF2aWdhdGlvblRlcm1TZXRGb290ZXIkTmF2aWdhdGlvblRlcm1Gb290ZXJzTGlzdFZpZXcPFCsADmRkZGRkZGQ8KwAEAAIEZGRkZgL/////D2QFO2N0bDAwJG5hdmlnYXRpb25UZXJtU2V0SGVhZGVyJE5hdmlnYXRpb25UZXJtSGVhZGVyc0xpc3RWaWV3DxQrAA5kZGRkZGRkFCsAAmRkAgJkZGRmAv////8PZAVHY3RsMDAkUGxhY2VIb2xkZXJNYWluJEVkaXRNb2RlUGFuZWwxMCRSZWNlbnROZXdzU3RvcmllcyROZXdzU3Rvcmllc1ZpZXcPFCsADmRkZGRkZGQUKwADZGRkAgNkZGRmAv////8PZAUlY3RsMDAkVG9vbHNEcm9wRG93biRUb29sc0Ryb3BEb3duTGlzdA8UKwAOZGRkZGRkZDwrABAAAhBkZGRmAv////8PZAUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgMFGmN0bDAwJEZpbmRBUGVyc29uJHJkcGVyc29uBRxjdGwwMCRGaW5kQVBlcnNvbiRyZGJ1c2luZXNzBRxjdGwwMCRGaW5kQVBlcnNvbiRyZGJ1c2luZXNzBUFjdGwwMCRQbGFjZUhvbGRlckxlZnROYXZCYXIkVUlWZXJzaW9uZWRDb250ZW50MyRWNFF1aWNrTGF1bmNoTWVudQ8PZAUETmV3c2TkkXWwF1jxcOdE86zxzZ/yu4xc297AekbUXXRrhgBpcg==" />
 </div>
 
 <script type="text/javascript">
@@ -194,13 +211,13 @@ var g_wsaQoSDataPoints = [];
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'BLANKINTERNET#2';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fNewsAndEvents\u002fNews", webAbsoluteUrl: "http:\u002f\u002fdev04-ourhouse.campus.services\u002fNewsAndEvents\u002fNews", siteAbsoluteUrl: "http:\u002f\u002fdev04-ourhouse.campus.services", serverRequestPath: "\u002fNewsAndEvents\u002fNews\u002fPages\u002fdefault.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "News", webTemplate: "53", tenantAppVersion: "0", isAppWeb: false, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-NZ", clientServerTimeDelta: new Date("2017-06-12T23:59:07.6535231Z") - new Date(), siteClientTag: "3748$$15.0.4867.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:2147483647,Low:4294967295},pageListId:"{660dbbfb-c0b1-48ca-acfc-ba79205e121e}",pageItemId:2, pagePersonalizationScope:1,userId:2965, systemUserKey:"i:0\u0029.w|s-1-5-21-23776394-1414820601-3323695937-1555", alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};var L_Menu_BaseUrl="/NewsAndEvents/News";
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fNewsAndEvents\u002fNews", webAbsoluteUrl: "http:\u002f\u002fdev04-ourhouse.campus.services\u002fNewsAndEvents\u002fNews", siteAbsoluteUrl: "http:\u002f\u002fdev04-ourhouse.campus.services", serverRequestPath: "\u002fNewsAndEvents\u002fNews\u002fPages\u002fNext-staff-orientation-tour.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "News", webTemplate: "53", tenantAppVersion: "0", isAppWeb: false, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-NZ", clientServerTimeDelta: new Date("2017-06-13T00:18:16.9253151Z") - new Date(), siteClientTag: "3748$$15.0.4867.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:2147483647,Low:4294967295},pageListId:"{660dbbfb-c0b1-48ca-acfc-ba79205e121e}",pageItemId:430, pagePersonalizationScope:1,userId:2965, systemUserKey:"i:0\u0029.w|s-1-5-21-23776394-1414820601-3323695937-1555", alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};var L_Menu_BaseUrl="/NewsAndEvents/News";
 var L_Menu_LCID="1033";
 var L_Menu_SiteTheme="null";
 var dlc_fvsi = {"DefaultViews":[],"ViewUrls":[],"WebUrl":"\/NewsAndEvents\/News"};
 function _spNavigateHierarchy(nodeDiv, dataSourceId, dataPath, url, listInContext, type) {
 
-    CoreInvoke('ProcessDefaultNavigateHierarchy', nodeDiv, dataSourceId, dataPath, url, listInContext, type, document.forms.aspnetForm, "", "\u002fNewsAndEvents\u002fNews\u002fPages\u002fdefault.aspx");
+    CoreInvoke('ProcessDefaultNavigateHierarchy', nodeDiv, dataSourceId, dataPath, url, listInContext, type, document.forms.aspnetForm, "", "\u002fNewsAndEvents\u002fNews\u002fPages\u002fNext-staff-orientation-tour.aspx");
 
 }
 //]]>
@@ -209,7 +226,7 @@ function _spNavigateHierarchy(nodeDiv, dataSourceId, dataPath, url, listInContex
 <script src="/_layouts/15/blank.js?rev=ZaOXZEobVwykPO9g8hq%2F8A%3D%3D" type="text/javascript"></script>
 <script type="text/javascript">
 //<![CDATA[
-var scheduling = {"url":"\/NewsAndEvents\/News\/_layouts\/15\/PageSettings.aspx?Region=Scheduling&Page=2"};function ShowUnapprovedResourcesWithTimeout() { if (!browseris.ie6up && g_bResourcesAlreadyChecked) { alert('Before checking again, you will need to refresh this page.'); return false; } showConsoleMessage(l_ur_plsWait, false);window.setTimeout("ShowUnapprovedResourcesPage()",10); }l_chkResStatus = 'Checking page for unpublished items...';
+var scheduling = {"url":"\/NewsAndEvents\/News\/_layouts\/15\/PageSettings.aspx?Region=Scheduling&Page=430"};function ShowUnapprovedResourcesWithTimeout() { if (!browseris.ie6up && g_bResourcesAlreadyChecked) { alert('Before checking again, you will need to refresh this page.'); return false; } showConsoleMessage(l_ur_plsWait, false);window.setTimeout("ShowUnapprovedResourcesPage()",10); }l_chkResStatus = 'Checking page for unpublished items...';
 l_ur_plsWait = 'Please wait while checking for unpublished items...';
 l_ur_rfct = '__publishingReusableFragment';
 l_ur_wsurl = 'http:\u002f\u002fdev04-ourhouse.campus.services\u002fNewsAndEvents\u002fNews\u002f_vti_bin\u002fPublishingService.asmx';
@@ -218,8 +235,8 @@ l_ur_fullreport = "Unpublished items are detected on the page.  View the <a href
 l_ur_fullreportnors = "Unpublished items are detected on the page.  View the <a href=\"#\" onclick=\"javascript:window.top.open('\u002fNewsAndEvents\u002fNews\u002f_layouts\u002f15\u002fUnapprovedResources.aspx', '_unapprovedResourcesReport', 'height=580,width=540,resizable=yes,status=no,location=no,toolbar=no,menubar=no,directories=no,scrollbars=no');\" title=\"Open a new window to view the full report\">full report</a> in a new window.  Before checking again, you will need to <a href=\"#\" onclick=\"g_bWarnBeforeLeave = false;theForm.submit();\">refresh this page</a>.";
 l_ur_recsready = 'No unpublished items detected on this page.';
 var g_ProcessedXml;
-var g_PageNameForDisplay = 'default.aspx';
-var g_PageFileVersionForDisplay = '8.2';
+var g_PageNameForDisplay = 'Next-staff-orientation-tour.aspx';
+var g_PageFileVersionForDisplay = '5.2';
 var checkForDraft = {"checkForDraftFn":"ShowUnapprovedResourcesWithTimeout();HideServerGeneratedMessage()"};var startWorkflow = {"startWorkflowFn":"__doPostBack('ctl00$ctl20$ctl10$ctl10','startWorkflow')"};var workflowStatus = {"workflowStatusFn":"__doPostBack('ctl00$ctl20$ctl10$ctl11','workflowStatus')"};var g_previewRequested = false;var preview = {"inputPagePreviewClientId":null,"mobileChannels":null,"previewFn":"if(!g_previewRequested){g_previewRequested=true;__doPostBack('ctl00$ctl20$ctl10$ctl13','previewPage');}"};var editSeoProperties = {"editSeoPropertiesFn":"__doPostBack('ctl00$ctl20$ctl10$ctl17','editSeoProperties')","forceCheckOut":true,"isCheckedOut":true,"isCheckedOutToCurrentUser":true,"isTermPage":false,"url":"javascript:__doPostBack('ctl00$ctl20$ctl10$ctl17','editSeoProperties')"};if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();function WebForm_OnSubmit() {
 UpdateFormDigest('\u002fNewsAndEvents\u002fNews', 1440000);
                     var workspaceElem = GetCachedElement("s4-workspace");
@@ -239,10 +256,10 @@ return true;
 
 <div class="aspNetHidden">
 
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="5F34AD17" />
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3D872C59" />
 	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
 	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAA12UHCGOYHXlVtyESSVqEEg02cUqIZtuyzZQNAhgv3dzUZ+4EuWve1PnxR6xmx8eNpDrvtWq2FDnE1WTm0tJx7mbXzdV6sDjlvalAEbm949VafCMNK1pzqaBS0icFiW6u0LIRnrlt5+WuRXOkFVJ360mgkLdukt2bwGHNTC51JD5/FvEs2EGGA9vLPVpGD46eH4sFLGDJbmdadICcxgxfTEUBIEuqaFUgGCVnVbYDBcJLnKxkVjRKh8JxfOSerZ5Xnbqn0HkdJdD4fSKb608m7VJgJm0gb9vnZXpsFJhai5l8L1vRU5BAvYpoSDuaxa/08=" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAsqgs2dYPRLk3OYSMitQuS802cUqIZtuyzZQNAhgv3dzUZ+4EuWve1PnxR6xmx8eNpDrvtWq2FDnE1WTm0tJx7mbXzdV6sDjlvalAEbm949VafCMNK1pzqaBS0icFiW6u0LIRnrlt5+WuRXOkFVJ360mgkLdukt2bwGHNTC51JD5/FvEs2EGGA9vLPVpGD46eH4sFLGDJbmdadICcxgxfTEUBIEuqaFUgGCVnVbYDBcJLQa+QKUw1kvt67VCSYiRrSe4YOgm+asgObCe+oORkey" />
 </div>
 			
 			<!-- ===== STARTER: ScriptManager ===================================================== -->
@@ -411,7 +428,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 
 				                <div class="breadcrumb noindex">
 				                    
-									<b>You are here:</b><span id="ctl00_PlaceHolderBreadcrumb_Sitemappath1" sitemapproviders="SPSiteMapProvider,SPXmlContentMapProvider" endercurrentnodeaslink="false" hideinteriorrootnodes="true"><a href="#ctl00_PlaceHolderBreadcrumb_Sitemappath1_SkipLink"><img alt="Skip Navigation Links" src="/WebResource.axd?d=ruuHC9DELf5lzfkUjQArx3H_1BTxv3iVgNh8K3Vc3W5wLzLrlmzQD4R1KvYYEbXIE0U5cizDpDyzeCr4y4Y3GMR8_Q_02lYNv7XqiZ5Iio41&amp;t=636065610560204723" width="0" height="0" style="border-width:0px;" /></a><span><a title="Our House Intranet" href="/Pages/default.aspx">Our House Intranet</a></span><span>&#160;/&#160;</span><span><a href="/NewsAndEvents/Pages/default.aspx">News and Events</a></span><span>&#160;/&#160;</span><span>News</span><a id="ctl00_PlaceHolderBreadcrumb_Sitemappath1_SkipLink"></a></span>	
+									<b>You are here:</b><span id="ctl00_PlaceHolderBreadcrumb_Sitemappath1" sitemapproviders="SPSiteMapProvider,SPXmlContentMapProvider" endercurrentnodeaslink="false" hideinteriorrootnodes="true"><a href="#ctl00_PlaceHolderBreadcrumb_Sitemappath1_SkipLink"><img alt="Skip Navigation Links" src="/WebResource.axd?d=ruuHC9DELf5lzfkUjQArx3H_1BTxv3iVgNh8K3Vc3W5wLzLrlmzQD4R1KvYYEbXIE0U5cizDpDyzeCr4y4Y3GMR8_Q_02lYNv7XqiZ5Iio41&amp;t=636065610560204723" width="0" height="0" style="border-width:0px;" /></a><span><a title="Our House Intranet" href="/Pages/default.aspx">Our House Intranet</a></span><span>&#160;/&#160;</span><span><a href="/NewsAndEvents/Pages/default.aspx">News and Events</a></span><span>&#160;/&#160;</span><span><a href="/NewsAndEvents/News/Pages/default.aspx">News</a></span><span>&#160;/&#160;</span><span>Next staff orientation tour</span><a id="ctl00_PlaceHolderBreadcrumb_Sitemappath1_SkipLink"></a></span>	
 				                </div>
 				
 				                
@@ -781,189 +798,362 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 							</div>	
 							<!-- ===== STARTER: Main Placeholder gets replaced with content of the page ======================================= -->																							
 							
-	<!-- START Main Content Area -->
-	<div id="top" class="primary noindex">
-        <div id="ctl00_PlaceHolderMain_EditModePanel19" class="edit-mode-panel">
-	
-	        <div class="hero">
-	            <input type="hidden" name="ctl00$PlaceHolderMain$EditModePanel19$HomepageNewsCarousel$TimeDelayhidden" id="ctl00_PlaceHolderMain_EditModePanel19_HomepageNewsCarousel_TimeDelayhidden" value="9000" />
 
-<!-- START News Carousel -->
-<div id="carousel">
-     
-           
-                
-                <div class="slide">
-					
-                    <div class="slide-image " style = "background-image: url(/assets/parliament.jpg);" >
-                        <h2>Next staff orientation tour</h2>
-                    </div>
-					
-                    
-                    <p>Are you new to Parliament or not sure where to go? Visitor Services invite new and existing staff on a special 75-minute orientation tour of the parliamentary precinct on Monday 22 June at 9am.<a class="more" href="http://dev04-ourhouse.campus.services/NewsAndEvents/News/Pages/Next-staff-orientation-tour.aspx">Read More</a></p>
-                </div>
-            
-                <div class="slide">
-					
-                    <div class="slide-image " style = "background-image: url(/assets/carousel.jpg);" >
-                        <h2>Accessibility update</h2>
-                    </div>
-					
-                    
-                    <p>​You may have noticed little buttons have sprung up on some floor areas around the precincts, namely at the bottom of the staircase in the Executive Wing as well as the Northwest corridor and the internal ramp between Parliament House and the...<a class="more" href="http://dev04-ourhouse.campus.services/NewsAndEvents/News/Pages/Accessibility-update.aspx">Read More</a></p>
-                </div>
-            
-                <div class="slide">
-					
-                    <div class="slide-video">
-                        <div style="width:100%;height:100%;">
-		<div class="mediaPlayerContainer" style="width:100%; height:100%"><video id="ctl00_PlaceHolderMain_EditModePanel19_HomepageNewsCarousel_HomepageNewsCarouselListView_ctrl2_ctl02"   poster="http://dev04-ourhouse.campus.services/ResourceCentre/PublishingImages/Election%202014/Video/Week%20in%20the%20life%20of%20an%20EA/Preview%20Images/Week%20in%20the%20life%20of%20an%20EA_mp4.png" src="/_layouts/15/clientbin/mediaplaceholder.mp4" onloadstart="new mediaPlayer.initHtml5Player(this,'','',false,'',false,false,0,false);"><source src="http://dev04-ourhouse.campus.services/ResourceCentre/PublishingImages/Election 2014/Video/Week in the life of an EA/Week in the life of an EA.mp4" data-label="" type='video/mp4'>
-
-            <object id="ctl00_PlaceHolderMain_EditModePanel19_HomepageNewsCarousel_HomepageNewsCarouselListView_ctrl2_ctl02" type="application/x-silverlight-2" data="data:application/x-silverlight-2," width="100%" height="100%">
-                <param name="source" value="/_layouts/15/clientbin/mediaplayer.xap?rev=GohwcTo4onwCGghg2kd2yQ%3D%3D"/>
-                <param name="enableHtmlAccess" value="true"/>
-                <param name="windowless" value="true" />
-                <param name="background" value="#80808080" />
-                <param name="initParams" value="mediaSource=http://dev04-ourhouse.campus.services/ResourceCentre/PublishingImages/Election 2014/Video/Week in the life of an EA/Week in the life of an EA.mp4,previewImageSource=http://dev04-ourhouse.campus.services/ResourceCentre/PublishingImages/Election%202014/Video/Week%20in%20the%20life%20of%20an%20EA/Preview%20Images/Week%20in%20the%20life%20of%20an%20EA_mp4.png,videoSetSource=,startPlayBackAt=0" />
-
-                <a href="https://go.microsoft.com/fwlink/?LinkID=124807" style="text-decoration: none;"><img src="https://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight" style="border-style: none"/></a><a href='http://dev04-ourhouse.campus.services/ResourceCentre/PublishingImages/Election 2014/Video/Week in the life of an EA/Week in the life of an EA.mp4' class='media-link' title='Download Media'><span class='media-title'>Download Media</span></a>
-            </object>
-</video></div><input name="ctl00$PlaceHolderMain$EditModePanel19$HomepageNewsCarousel$HomepageNewsCarouselListView$ctrl2$ctl02$HiddenInput" type="hidden" id="ctl00_PlaceHolderMain_EditModePanel19_HomepageNewsCarousel_HomepageNewsCarouselListView_ctrl2_ctl02_HiddenInput" />
-	</div>
-                        <h2>5000 poppies for Anzac Day 2015</h2>
-                    </div>
-                    <p>As part of the World War I commemorations, the 5000 Poppies Project is aiming to knit, crochet and sew poppies for a display at the Wigram Air Force Museum on Anzac Day in 2015. <a class="more" href="http://dev04-ourhouse.campus.services/NewsAndEvents/News/Pages/5000-Poppies-Project.aspx">Read More</a></p>
-                </div>
-            
-                <div class="slide">
-					
-                    <div class="slide-image " style = "background-image: url(/assets/parliament.jpg);" >
-                        <h2>800th anniversary of the Magna Carta</h2>
-                    </div>
-					
-                    
-                    <p>​This week marks 800 years since the Magna Carta was sealed on the banks of the River Thames on 15 June 1215. Magna Carta means the Great Charter, and it forms the foundation of rights we enjoy today. <a class="more" href="http://dev04-ourhouse.campus.services/NewsAndEvents/News/Pages/800th-anniversary-of-the-Magna-Carta.aspx">Read More</a></p>
-                </div>
-            
-                <div class="slide">
-					
-                    <div class="slide-image " style = "background-image: url(/assets/carousel.jpg);" >
-                        <h2>Matariki Celebration in Copperfield’s</h2>
-                    </div>
-					
-                    
-                    <p>​Please come and join us on Thursday, 18th of June for Matariki Celebration in Copperfield’s​.<a class="more" href="http://dev04-ourhouse.campus.services/NewsAndEvents/News/Pages/Matariki-Celebration-in-Copperfield’s.aspx">Read More</a></p>
-                </div>
-            
-            
-  
-   </div>
-<!-- END News Carousel -->
-
-	        </div>
-		
-</div>
-
-        <div id="ctl00_PlaceHolderMain_EditModePanel9" class="edit-mode-panel">
-	
-            
-
-        
-</div>
-            
-        
-
-		<article>
-            <div id="ctl00_PlaceHolderMain_EditModePanel4" class="edit-mode-panel">
-	
-			    <header>
-			        <h1 class="noBorder"><span class="requiredfield">
-		            News</span></h1>
-                    <p class="translation">Pitopito kōrero</p>
-			    </header>
-            
-</div>
-            
-            <div class="clear">
-				<div id="ctl00_PlaceHolderMain_PSContent_label" style='display:none'>Content</div><div id="ctl00_PlaceHolderMain_PSContent__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_PSContent_label"></div>
-			</div>
-		</article>
-
+    <div id="top" class="primary">
         <div id="ctl00_PlaceHolderMain_EditModePanel2" class="edit-mode-panel">
 	
-		    
-
-<div class="grid tiles" id="news-grid">
-
+	        <!--News Content Carousel begins-->
+            
+ 
+	        <div id="ctl00_PlaceHolderMain_EditModePanel2_NewsImageCarousel_newsCarousel" class="newsCarousel hero">
+    <span>Thursday, 18 June 2015</span>
+            
+                
+            <figure class="newsfeature newscurrent" >
+                    <img src="/assets/hero.jpg" title="Christmas Party 2014" alt="Christmas Party 2014" />
+                    <figcaption class="newsdescription">                            
+                    Christmas Party 2014
+                    </figcaption>
+            </figure>      
+        
+            <figure class="newsfeature" >
+                    <img src="/assets/carousel.jpg" title="Christmas Party 2014" alt="Christmas Party 2014" />
+                    <figcaption class="newsdescription">                            
+                    Christmas Party 2014
+                    </figcaption>
+            </figure>      
+        
+            <figure class="newsfeature" >
+                    <img src="/ResourceCentre/PublishingImages/News and Events/News/Christmas Party 2014/IMG_1795.JPG?RenditionID=7" title="Christmas Party 2014" alt="Christmas Party 2014" />
+                    <figcaption class="newsdescription">                            
+                    Christmas Party 2014
+                    </figcaption>
+            </figure>      
+        
+            <figure class="newsfeature" >
+                    <img src="/ResourceCentre/PublishingImages/News and Events/News/Christmas Party 2014/IMG_1798.JPG?RenditionID=7" title="Christmas Party 2014" alt="Christmas Party 2014" />
+                    <figcaption class="newsdescription">                            
+                    Christmas Party 2014
+                    </figcaption>
+            </figure>      
+        
+            <figure class="newsfeature" >
+                    <img src="/ResourceCentre/PublishingImages/News and Events/News/Christmas Party 2014/IMG_1799.JPG?RenditionID=7" title="Christmas Party 2014" alt="Christmas Party 2014" />
+                    <figcaption class="newsdescription">                            
+                    Christmas Party 2014
+                    </figcaption>
+            </figure>      
+        
+            <figure class="newsfeature" >
+                    <img src="/ResourceCentre/PublishingImages/News and Events/News/Christmas Party 2014/IMG_1805.JPG?RenditionID=7" title="Christmas Party 2014" alt="Christmas Party 2014" />
+                    <figcaption class="newsdescription">                            
+                    Christmas Party 2014
+                    </figcaption>
+            </figure>      
+        
+            <figure class="newsfeature" >
+                    <img src="/ResourceCentre/PublishingImages/News and Events/News/Christmas Party 2014/IMG_1807.JPG?RenditionID=7" title="Christmas Party 2014" alt="Christmas Party 2014" />
+                    <figcaption class="newsdescription">                            
+                    Christmas Party 2014
+                    </figcaption>
+            </figure>      
+        
+            <figure class="newsfeature" >
+                    <img src="/ResourceCentre/PublishingImages/News and Events/News/Christmas Party 2014/IMG_1808.JPG?RenditionID=7" title="Christmas Party 2014" alt="Christmas Party 2014" />
+                    <figcaption class="newsdescription">                            
+                    Christmas Party 2014
+                    </figcaption>
+            </figure>      
+        
+            <figure class="newsfeature" >
+                    <img src="/ResourceCentre/PublishingImages/News and Events/News/Christmas Party 2014/IMG_1810.JPG?RenditionID=7" title="Christmas Party 2014" alt="Christmas Party 2014" />
+                    <figcaption class="newsdescription">                            
+                    Christmas Party 2014
+                    </figcaption>
+            </figure>      
+        
+            <figure class="newsfeature" >
+                    <img src="/ResourceCentre/PublishingImages/News and Events/News/Christmas Party 2014/IMG_1813.JPG?RenditionID=7" title="Christmas Party 2014" alt="Christmas Party 2014" />
+                    <figcaption class="newsdescription">                            
+                    Christmas Party 2014
+                    </figcaption>
+            </figure>      
+                    				
+        
+    <div class="carouselFooter">
+        <ul class="newscarouselNav ">
+            <li class="prevcontrol preventDefault"><span>&laquo; </span><a href="#" class="previousNews">Previous</a><span>&nbsp;</span></li>
+            <li> <strong><span class="currentIndex">0</span></strong> of <span class="totalNewsFeatures">0</span></li>
+            <li class="nextcontrol preventDefault"><span>&nbsp;</span><a href="#" class="nextNews">Next</a><span> &raquo;</span></li>
+        </ul>
+    </div>
 </div>
-<div class="load-more">
-	<input id="loadMoreNewsBtn" type="button" value="Load More" onclick="loadNews()" />
-</div>
 
-<script src="/Style%20Library/Intranet/js/data.news.js" type="text/javascript"></script>
-<script type="text/javascript">
-    var renditionId = 9;
-    var currentNewsIndex = 0;
-    var newsCount = allNews.length;
-    var newsCountPerClick = 9;
-    var newsPerRow = 3;
-	
-    loadNews();
-	
-    function loadNews()
-    {
-        var innerIndex = 0;
-        var newsContent = '<div class="row">';
-
-        for (var i = currentNewsIndex; i < currentNewsIndex + newsCountPerClick && i < newsCount; i++) {
-            var currentNews = allNews[i];
-            var img = '';
-			
-            if (currentNews.PageImage.Url != "")
-                //img = '<img src="' +currentNews.PageImage.Url+'?RenditionID=' +renditionId+ '" alt="' +(currentNews.PageImage.Title != null ? currentNews.PageImage.Title : '')+ '" style="' + currentNews.ImageStyle + '" />';
-                  img = '<img src="/assets/grid.jpg?RenditionID=' +renditionId+ '" alt="' +(currentNews.PageImage.Title != null ? currentNews.PageImage.Title : '')+ '" style="' + currentNews.ImageStyle + '" />';
-			
-            // start a new row every three items
-            if (i % 3 == 0 && innerIndex !== 0) {
-                newsContent += '</div><div class="row">';
-            }
-			
-            newsContent += '<div class="block"><a href="' + currentNews.Url + '">';
-            newsContent += img + '<div class="inner"><h2>' + currentNews.Title  + '</h2>';
-
-            newsContent += '<div class="meta">';
-            if (currentNews.NewsTopics != '') {
-                newsContent += '<span class="category">' + currentNews.NewsTopics + '</span> ';
-            }
-            newsContent += '<span class="date">' + currentNews.NewsDate + '</span></div>';
-            newsContent += '<p>' + currentNews.Description + '</p></div>';
-            newsContent += '</a></div>';
-
-            innerIndex++;
-        }
-        // close the opening row
-        newsContent += '</div>';
-
-        $('#news-grid').append(newsContent);
+	        <!--End News Content Carousel-->
 		
-        currentNewsIndex = currentNewsIndex + newsCountPerClick;
-        if (currentNewsIndex >= newsCount)
-            $('#loadMoreNewsBtn').hide();
+</div>
+
+	
+	    <div class="primary narrow">
+            <!-- START Top Content Area -->
+		    <div id="ctl00_PlaceHolderMain_EditModePanel8" class="edit-mode-panel">
+	
+			    <header>
+			    	<h1><span class="requiredfield">Next staff orientation tour</span></h1>
+				    				    
+	                
+<div class="meta"><span class="category">Annual report</span><span class="date">18 June 2015</span></div>
+
+					<ul class="functions">
+				        
+<li><a href="javascript:window.print();" class="icon print" title="Print page. "></a></li>
+
+						
+<script type="text/javascript"> 
+    function mailThisPage() {
+        var link = window.location;
+        var emailSubject = document.title;
+        var emailAdderess = 'intranet-admin@parliament.govt.nz';
+
+        window.location = "mailto:" + emailAdderess + "?Subject=" + emailSubject + "&body=" + link;
     }
+
 </script>
 
+<li>
+    <a href="javascript:mailThisPage()" class="icon email" title="Email feedback. "></a>
+</li>
+
+
+		                
+
+<script type="text/javascript">
+    function OpenAlertsDialog(pageUrl) {
+        var options = {
+            url: pageUrl,
+            title: 'Alerts',
+            autoSize: true,
+            showClose: true,
+            dialogReturnValueCallback: callback
+        };
+        SP.UI.ModalDialog.showModalDialog(options);
+    }
+
+    function callback(dialogResult) {
+        SP.UI.ModalDialog.RefreshPage(dialogResult); //will not refresh, form not submitted.
+    }
+
+</script>
+
+<li>
+    <a id="ctl00_PlaceHolderMain_EditModePanel8_pageAlert_alertLink" class="icon alert" title="Alert me. " onclick="return OpenAlertsDialog(&#39;http://dev04-ourhouse.campus.services/NewsAndEvents/News/_layouts/15/SubNew.aspx?List={660dbbfb-c0b1-48ca-acfc-ba79205e121e}&amp;ID=430&amp;Source=http%3a%2f%2fdev04-ourhouse.campus.services%2fNewsAndEvents%2fNews%2fPages%2fNext-staff-orientation-tour.aspx&amp;IsDlg=1&#39;);"></a>
+</li>
+
+		          	</ul>	
+			    </header>
+	        
+</div>	
+		    <!-- END Top Content Area -->
+		
+		    <!-- START Main Content Area -->
+		    <article>
+		        	
+                <span class="requiredfield">
+			        <div id="ctl00_PlaceHolderMain_PSContent_label" style='display:none'>Content</div><div id="ctl00_PlaceHolderMain_PSContent__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_PSContent_label"><p>Are you new to Parliament or not sure where to go?</p><p>Visitor Services invite new and existing staff on a special 75-minute orientation tour of the parliamentary precinct on Monday&#160;22&#160;June at 9am.</p><p>The tour will include key locations in Bowen House, Executive Wing, Parliament House and the Parliamentary Library.<br><br>If you'd like to join us or have any questions please phone the Tour Desk on Ext. 9503 or email us at <a href="mailto&#58;tour.desk@parliament.govt.nz"><span style="text-decoration&#58;underline;"><font color="#0000ff">tour.desk@parliament.govt.nz</font></span><font color="#0000ff"></font></a> for a booking.<br><br>The tour starts at <strong>9.00am, Ground floor of Bowen</strong> <strong>House (meet in the room opposite Oliver's)</strong> and the tour will finish in the Visitor Centre, Executive Wing.</p></div>
+                </span>
+	
+	            
+		    </article>
+
+            <div id="ctl00_PlaceHolderMain_EditModePanel4" class="edit-mode-panel">
+	
+                
+
+<link rel="stylesheet" href="/Style Library/Intranet/CSS/jquery-ui.css">
+<script src="/Style Library/Intranet/js/jquery-ui.js"></script>
+  
+<script type="text/javascript">
+    //function OpenDialog(pageUrl, title) {
+    //    var options = {
+    //        url: pageUrl,
+    //        title: "Metadata for " + title,
+    //        autoSize: true,
+    //        showClose: true,
+    //        dialogReturnValueCallback: callback
+    //    };
+    //    SP.UI.ModalDialog.showModalDialog(options);
+    //}
+    
+    function callback(dialogResult)               // refresh function  
+    {
+        SP.UI.ModalDialog.RefreshPage(dialogResult);
+    }
+
+</script>
+
+<footer>
+    <div class="noindex">
+	    <ul class="meta noindex">
+            <li id="ctl00_PlaceHolderMain_EditModePanel4_pageLastUpdated_PublishedDateListItem"><b>Published date: </b>18/06/2015</li>
+	        <li><b>Content owner:</b> <a href="/People/OurStaff-ParliamentaryService/PrecinctServices/Pages/Visitor-Services.aspx">Visitor Services</a> »</li>  <!-- Custom SharePoint Field controls here -->
+            <li class="last" ><a href="#" onclick="return OpenDialog('http://dev04-ourhouse.campus.services/NewsAndEvents/News/_layouts/15/AppPage/metadata.aspx?targetPage=http://dev04-ourhouse.campus.services/NewsAndEvents/News/Pages/Next-staff-orientation-tour.aspx', 'Next staff orientation tour');" >Show metadata</a> »</li> <!-- Custom SharePoint Field controls here -->
+        </ul>
+    </div>	
+</footer>	
+
+            
+</div>
+	    </div>
+        <!--
+        <aside class="sidebar">
+            <div class="related">
+                <h2>Related Stories</h2>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="/url" alt="" />
+                            <div class="inner">
+                                <h3>Title</h3>
+                                <div class="meta">
+                                    <span class="category">NewsTopic</span>
+                                    <span class="date">31 May 2017</span>
+                                </div>
+			                    <p>Description</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        -->
+        <aside>
+              <div class="widget related">
+                <h2>Related Stories</h2>
+                <ul>
+                  <li>
+                    <a href="http://dev04-ourhouse.campus.services/NewsAndEvents/News/Pages/Jon-Testing.aspx">
+                      <img src="/assets/grid.jpg" alt="">
+                      <div class="inner">
+                        <h3>News Story Title</h3>
+                        <div class="meta">
+                          <span class="category">Category name, second category</span>
+                          <span class="date">18 April 2017</span>
+                        </div>
+                        <p>The thunder storm had passed. The towers of the Oriental College and the pine trees ...</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://dev04-ourhouse.campus.services/NewsAndEvents/News/Pages/Jon-Testing.aspx">
+                      <img src="/assets/grid.jpg" alt="">
+                      <div class="inner">
+                        <h3>News Story Title</h3>
+                        <div class="meta">
+                          <span class="category">Category name, second category</span>
+                          <span class="date">18 April 2017</span>
+                        </div>
+                        <p>The thunder storm had passed. The towers of the Oriental College and the pine trees ...</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </aside>
         
+
+
+        <!-- START Lastest News Links-->
+	    <div id="ctl00_PlaceHolderMain_EditModePanel10" class="edit-mode-panel">
+	
+            <div id="recent" class="grid">
+                <div class="row">
+                    <div class="block widget recent">
+	                    
+        <h2>Recent News Stories</h2>
+        <ul>
+            
+         <li class="clearfix">
+            <a href="http://dev04-ourhouse.campus.services/NewsAndEvents/News/Pages/Jon-Testing.aspx">
+                <img src="/assets/copperfields.jpg" alt="" style="" />
+                <div class="inner">
+                    <h3>Jon Testing</h3>
+                    <div class="meta">
+                        <span class="category"style='visibility:hidden'></span>
+                        <span class="date">15/12/2016</span>
+                    </div>
+			        <p>testing</p>
+                </div>
+            </a>
+         </li>
+    
+         <li class="clearfix">
+            <a href="http://dev04-ourhouse.campus.services/NewsAndEvents/News/Pages/Solo-Album-1-.aspx">
+                <img src="/assets/grid.jpg" alt="" style="" />
+                <div class="inner">
+                    <h3>​MAZDA3 SP25 LIMITED</h3>
+                    <div class="meta">
+                        <span class="category">Exhibitions...</span>
+                        <span class="date">15/12/2016</span>
+                    </div>
+			        <p>MAZDA</p>
+                </div>
+            </a>
+         </li>
+    
+         <li class="clearfix">
+            <a href="http://dev04-ourhouse.campus.services/NewsAndEvents/News/Pages/testing-images-page.aspx">
+                <img src="/assets/copperfields.jpg" alt="" style="" />
+                <div class="inner">
+                    <h3>testing images page</h3>
+                    <div class="meta">
+                        <span class="category">Intranet</span>
+                        <span class="date">08/08/2016</span>
+                    </div>
+			        <p>Sharepoint Developer</p>
+                </div>
+            </a>
+         </li>
+    
+        </ul>
+    
+
+
+                    </div>
+                    <div id="twitter" class="block">
+                        
+<!--<link rel="stylesheet" type="text/css" href="/Style Library/Intranet/css/style.DbvFvg.css" /> DISRUPTS OUR LAYOUTS -->
+<script src="/Style Library/Intranet/js/widgets.js"></script>
+
+<div class="twitter-pod">
+    <div class="twitter-pod__header">
+        <h4 class="twitter-pod__heading">NZ Parliament Tweets</h4>
+        <a href="https://twitter.com/nzparliament" class="twitter-pod__link theme__link" target="_blank">@nzparliament</a>
+        <a href="https://twitter.com/intent/follow?screen_name=nzparliament" class="twitter-pod__follow twitter-follow"><span class="twitter-follow__icon iconf-twitter fa fa-twitter" aria-hidden="true"></span><span class="twitter-follow__text">Follow</span></a>
+    </div>
+    <a class="twitter-timeline js-display" href="" data-widget-id="638836314142474241" data-screen-name="nzparliament" data-chrome="noheader"></a>
+    <script>
+        !function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+            if (!d.getElementById(id)) {
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "/Style Library/Intranet/js/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }
+        }(document, "script", "twitter-wjs");
+    </script>
 </div>
 
-        
+                    </div>
+                </div>
+            </div>
+	    
+</div>  
+	    <!-- END Lastest News Links -->
 
-        
-
-            																		
-		<script language="javascript">if (typeof (MSOLayout_MakeInvisibleIfEmpty) == "function") { MSOLayout_MakeInvisibleIfEmpty(); }</script>
-
-	</div>
-	<!-- END Main Content Area -->	
+    </div>
+	<!-- END Main Content Area -->
+    
 <div style='display:none' id='hidZone'><menu id="MSOMenu_WebPartMenu" class="ms-hide">
 	<ie:menuitem title="Collapse this web part." id="MSOMenu_Minimize" onmenuclick="javascript:MSOLayout_MinimizeRestore(MenuWebPart)" text="Minimize" type="option">
 
@@ -977,7 +1167,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 
 	</ie:menuitem><ie:menuitem title="Show connections options for this Web Part. These changes will apply to all users." id="MSOMenu_Connections" onmenuclick="" text="Connections" type="option">
 
-	</ie:menuitem><ie:menuitem type="separator"></ie:menuitem><ie:menuitem title="Export this Web Part. These changes will apply to all users." id="MSOMenu_Export" onmenuclick="javascript:MSOWebPartPage_ExportCheckWarning(&#39;\u002fNewsAndEvents\u002fNews\u002f_vti_bin\u002fexportwp.aspx?pageurl=http\u00253A\u00252F\u00252Fdev04\u00252Dourhouse\u00252Ecampus\u00252Eservices\u00253A80\u00252FNewsAndEvents\u00252FNews\u00252FPages\u00252Fdefault\u00252Easpx\u0026guidstring=&#39;+ escape(MenuWebPartID), MenuWebPart.getAttribute(&#39;HasPers&#39;) == &#39;true&#39;)" text="Export..." type="option">
+	</ie:menuitem><ie:menuitem type="separator"></ie:menuitem><ie:menuitem title="Export this Web Part. These changes will apply to all users." id="MSOMenu_Export" onmenuclick="javascript:MSOWebPartPage_ExportCheckWarning(&#39;\u002fNewsAndEvents\u002fNews\u002f_vti_bin\u002fexportwp.aspx?pageurl=http\u00253A\u00252F\u00252Fdev04\u00252Dourhouse\u00252Ecampus\u00252Eservices\u00253A80\u00252FNewsAndEvents\u00252FNews\u00252FPages\u00252FNext\u00252Dstaff\u00252Dorientation\u00252Dtour\u00252Easpx\u0026guidstring=&#39;+ escape(MenuWebPartID), MenuWebPart.getAttribute(&#39;HasPers&#39;) == &#39;true&#39;)" text="Export..." type="option">
 
 	</ie:menuitem><ie:menuitem id="MSOMenu_Help" iconsrc="/_layouts/15/images/HelpIcon.gif" onmenuclick="MSOWebPartPage_SetNewWindowLocation(MenuWebPart.getAttribute('helpLink'), MenuWebPart.getAttribute('helpMode'))" text="Help" type="option" style="display:none">
 
@@ -1051,7 +1241,7 @@ _spNavigateHierarchy = _spNavigateHierarchyEx;
 var _fV4UI = true;
 function _RegisterWebPartPageCUI()
 {
-    var initInfo = {editable: true,isEditMode: false,allowWebPartAdder: false,listId: "{660dbbfb-c0b1-48ca-acfc-ba79205e121e}",itemId: 2,recycleBinEnabled: true,enableMinorVersioning: true,enableModeration: true,forceCheckout: true,rootFolderUrl: "\u002fNewsAndEvents\u002fNews\u002fPages",itemPermissions:{High:2147483647,Low:4294967295}};
+    var initInfo = {editable: true,isEditMode: false,allowWebPartAdder: false,listId: "{660dbbfb-c0b1-48ca-acfc-ba79205e121e}",itemId: 430,recycleBinEnabled: true,enableMinorVersioning: true,enableModeration: true,forceCheckout: true,rootFolderUrl: "\u002fNewsAndEvents\u002fNews\u002fPages",itemPermissions:{High:2147483647,Low:4294967295}};
     SP.Ribbon.WebPartComponent.registerWithPageManager(initInfo);
     var wpcomp = SP.Ribbon.WebPartComponent.get_instance();
     var hid;
@@ -1087,7 +1277,7 @@ var initInfo =
 itemPermMasks: {High:2147483647,Low:4294967295},
 listPermMasks: {High:2147483647,Low:4294967295},
 listId: "660dbbfb-c0b1-48ca-acfc-ba79205e121e",
-itemId: 2,
+itemId: 430,
 workflowsAssociated: true,
 editable: true,
 doNotShowProperties: false,
@@ -1098,6 +1288,35 @@ SP.Ribbon.DocLibAspxPageComponent.registerWithPageManager(initInfo);
 "sp.ribbon.js");
 var g_disableCheckoutInEditMode = false;
 var _spWebPermMasks = {High:2147483647,Low:4294967295};var _spPageStateActionControlId='ctl00_ctl20_PageStateActionButton';function _cUpdx63829de2201a4365a3904788f682d0a3(){var myd = null; if (typeof(datax63829de2201a4365a3904788f682d0a3) != 'undefined') {myd = datax63829de2201a4365a3904788f682d0a3;} var myc = document.getElementById('ctl00_x63829de2201a4365a3904788f682d0a3');_cUpdcx63829de2201a4365a3904788f682d0a3(myd, myc);}function _cUpdcx63829de2201a4365a3904788f682d0a3(data, ctrl){SiteLogoImagePageUpdate(ctrl, data);}
+WebForm_InitCallback();var PageState = {};var PageStateEnabledHandler = {};var PageStateCommandHandler = {};PageState ={'ItemIsInLibrary':'1','ItemIsCheckedOutToCurrentUser':'1','UserHasManageWebRights':'1','ItemHasCustomizableZones':'1','UserHasEnumeratePermissionsRights':'1','ItemHasFieldControls':'1','DocLibWorkflowEnabled':'1','UserHasOverrideCheckoutRights':'1','UserHasViewVersionsRights':'1','DocLibMinorVersionsEnabled':'1','ItemHasCheckedInVersion':'1','UserHasApproverRights':'1','ItemIsPublishingPage':'1','WebIsPublishingSite':'1','UserHasDeleteRights':'1','DocLibApprovalEnabled':'1','DocLibVersioningEnabled':'1','ItemIsInSharedView':'1','DocLibCheckoutRequired':'1','ItemHasPersonalizableZones':'1','UserHasContributorRights':'1'};PageStateEnabledHandler = {'PageStateGroupSave':'SP.Ribbon.PageState.Handlers.isSaveEnabled\u0028\u0029;','PageStateSaveBeforeNavigate':'','PageStateGroupSaveAndStop':'SP.Ribbon.PageState.Handlers.isSaveAndStopEditEnabled\u0028\u0029;','PageStateGroupEdit':'SP.Ribbon.PageState.Handlers.isEditEnabled\u0028\u0029;','PageStateGroupDontSaveAndStop':'SP.Ribbon.PageState.Handlers.isDontSaveAndStopEnabled\u0028\u0029;','PageStateGroupCheckin':'SP.Ribbon.PageState.Handlers.isCheckinEnabled\u0028\u0029;','PageStateGroupCheckout':'SP.Ribbon.PageState.Handlers.isCheckoutEnabled\u0028\u0029;','PageStateGroupOverrideCheckout':'SP.Ribbon.PageState.Handlers.isOverrideCheckoutEnabled\u0028\u0029;','PageStateGroupDiscardCheckout':'SP.Ribbon.PageState.Handlers.isDiscardCheckoutEnabled\u0028\u0029;','PageStateGroupSubmitForApproval':'SP.Ribbon.PageState.Handlers.isSubmitForApprovalEnabled\u0028\u0029;','PageStateGroupCancelApproval':'SP.Ribbon.PageState.Handlers.isCancelApprovalEnabled\u0028\u0029;','PageStateGroupPublish':'SP.Ribbon.PageState.Handlers.isPublishEnabled\u0028\u0029;','PageStateGroupUnpublish':'Pub.Ribbon.PubCommands.unpublishEnabled\u0028\u0029;','PageStateGroupApprove':'SP.Ribbon.PageState.Handlers.isApproveEnabled\u0028\u0029;','PageStateGroupReject':'SP.Ribbon.PageState.Handlers.isRejectEnabled\u0028\u0029;','DeletePage':'SP.Ribbon.PageState.Handlers.isDeleteEnabled\u0028\u0029;','PageStateUpdatePageState':'true;','PageStateGroupSaveAndPublish':'SP.Ribbon.PageState.Handlers.isSaveAndPublishEnabled\u0028\u0029;'};PageStateCommandHandler = {'PageStateGroupSave':'SP.SOD.executeFunc\u0028\u0027sp.ui.pub.ribbon.js\u0027, \u0027Pub.Ribbon.PubCommands\u0027, function\u0028\u0029 {Pub.Ribbon.PubCommands.notifyProgress\u0028SP.Publishing.Resources.notificationMessageSaving\u0029;__doPostBack\u0028\u0027ctl02\u0027,\u0027PageStateGroupSave\u0027\u0029}\u0029;','PageStateSaveBeforeNavigate':'__theFormPostData = \u0022\u0022;__theFormPostCollection=new Array\u0028\u0029; WebForm_OnSubmit\u0028\u0029;WebForm_InitCallback\u0028\u0029;_spResetFormOnSubmitCalledFlag\u0028\u0029;WebForm_DoCallback\u0028\u0027ctl03\u0027,\u0027PageStateSaveBeforeNavigate\u0027,SP.Ribbon.PageState.PageStateHandler.SaveBeforeNavigateCallback,SP.Ribbon.PageState.SaveBeforeNavigateCallback,null,true\u0029','PageStateGroupSaveAndStop':'SP.SOD.executeFunc\u0028\u0027sp.ui.pub.ribbon.js\u0027, \u0027Pub.Ribbon.PubCommands\u0027, function\u0028\u0029 {Pub.Ribbon.PubCommands.notifyProgress\u0028SP.Publishing.Resources.notificationMessageSaving\u0029;SP.Ribbon.PageState.PageStateHandler.EnableSaveBeforeNavigate\u0028false\u0029;__doPostBack\u0028\u0027ctl04\u0027,\u0027PageStateGroupSaveAndStop\u0027\u0029}\u0029;','PageStateGroupEdit':'SP.SOD.executeFunc\u0028\u0027sp.ui.pub.ribbon.js\u0027, \u0027Pub.Ribbon.PubCommands\u0027, function\u0028\u0029 {Pub.Ribbon.PubCommands.notifyProgress\u0028SP.Publishing.Resources.notificationMessageLoading\u0029;if \u0028document.forms[\u0027aspnetForm\u0027][\u0027MSOLayout_InDesignMode\u0027] != null\u0029 document.forms[\u0027aspnetForm\u0027][\u0027MSOLayout_InDesignMode\u0027].value = 1;if \u0028document.forms[\u0027aspnetForm\u0027][\u0027MSOAuthoringConsole_FormContext\u0027] != null\u0029 document.forms[\u0027aspnetForm\u0027][\u0027MSOAuthoringConsole_FormContext\u0027].value = 1;if \u0028document.forms[\u0027aspnetForm\u0027][\u0027MSOSPWebPartManager_DisplayModeName\u0027] != null\u0029 document.forms[\u0027aspnetForm\u0027][\u0027MSOSPWebPartManager_DisplayModeName\u0027].value = \u0027Design\u0027;__doPostBack\u0028\u0027ctl05\u0027,\u0027edit\u0027\u0029}\u0029;','PageStateGroupDontSaveAndStop':'SP.SOD.executeFunc\u0028\u0027sp.ui.pub.ribbon.js\u0027, \u0027Pub.Ribbon.PubCommands\u0027, function\u0028\u0029 {Pub.Ribbon.PubCommands.notifyProgress\u0028SP.Publishing.Resources.notificationMessageReverting\u0029;__doPostBack\u0028\u0027ctl06\u0027,\u0027PageStateGroupDontSaveAndStop\u0027\u0029}\u0029;','PageStateGroupCheckin':'__doPostBack\u0028\u0027ctl07\u0027,\u0027PageStateGroupCheckin\u0027\u0029','PageStateGroupCheckout':'__doPostBack\u0028\u0027ctl08\u0027,\u0027PageStateGroupCheckout\u0027\u0029','PageStateGroupOverrideCheckout':'__doPostBack\u0028\u0027ctl09\u0027,\u0027PageStateGroupOverrideCheckout\u0027\u0029','PageStateGroupDiscardCheckout':'if \u0028confirm\u0028\u0027Are you sure you want to exit without saving? Any unsaved data will be lost.\u0027\u0029\u0029 {__doPostBack\u0028\u0027ctl10\u0027,\u0027PageStateGroupDiscardCheckout\u0027\u0029}','PageStateGroupSubmitForApproval':'__doPostBack\u0028\u0027ctl11\u0027,\u0027PageStateGroupSubmitForApproval\u0027\u0029','PageStateGroupCancelApproval':'WebForm_DoCallback\u0028\u0027ctl12\u0027,\u0027PageStateGroupCancelApproval\u0027,SP.Ribbon.PageState.Handlers.GenericCompleteHandler,SP.Ribbon.PageState.Handlers.GenericError,null,true\u0029','PageStateGroupPublish':'__doPostBack\u0028\u0027ctl13\u0027,\u0027PageStateGroupPublish\u0027\u0029','PageStateGroupUnpublish':'__doPostBack\u0028\u0027ctl14\u0027,\u0027PageStateGroupUnpublish\u0027\u0029','PageStateGroupApprove':'__doPostBack\u0028\u0027ctl15\u0027,\u0027PageStateGroupApprove\u0027\u0029','PageStateGroupReject':'SP.Ribbon.PageState.PageStateHandler.popupWaitScreen\u0028\u0027Page State\u0027,\u0027Rejecting page\u0027\u0029;__theFormPostData = \u0022\u0022;__theFormPostCollection=new Array\u0028\u0029; WebForm_OnSubmit\u0028\u0029;WebForm_InitCallback\u0028\u0029;_spResetFormOnSubmitCalledFlag\u0028\u0029;WebForm_DoCallback\u0028\u0027ctl16\u0027,\u0027PageStateGroupReject\u0027,SP.Ribbon.PageState.Handlers.GenericCompleteHandler,SP.Ribbon.PageState.Handlers.GenericError,null,true\u0029','DeletePage':'if \u0028confirm\u0028\u0027Are you sure you want to send this page to the site Recycle Bin?\u0027\u0029\u0029 {__doPostBack\u0028\u0027ctl17\u0027,\u0027DeletePage\u0027\u0029}','PageStateUpdatePageState':'SP.Ribbon.PageState.PageStateHandler.popupWaitScreen\u0028\u0027Schedule\u0027,\u0027Scheduling the page.\u0027\u0029;__theFormPostData = \u0022\u0022;__theFormPostCollection=new Array\u0028\u0029; WebForm_OnSubmit\u0028\u0029;WebForm_InitCallback\u0028\u0029;_spResetFormOnSubmitCalledFlag\u0028\u0029;WebForm_DoCallback\u0028\u0027ctl18\u0027,\u0027PageStateUpdatePageState\u0027,SP.Ribbon.PageState.Handlers.GenericCompleteHandler,SP.Ribbon.PageState.Handlers.GenericError,null,true\u0029','PageStateGroupSaveAndPublish':'if \u0028PageState[\u0027ViewModeIsEdit\u0027] != null\u0029 {SP.Ribbon.PageState.PageStateHandler.ignoreNextUnload = true;__doPostBack\u0028\u0027ctl19\u0027,\u0027PageStateGroupSaveAndPublish\u0027\u0029}else{SP.Ribbon.PageState.PageStateHandler.popupWaitScreen\u0028\u0027Page State\u0027,\u0027Publishing page\u0027\u0029;__theFormPostData = \u0022\u0022;__theFormPostCollection=new Array\u0028\u0029; WebForm_OnSubmit\u0028\u0029;WebForm_InitCallback\u0028\u0029;_spResetFormOnSubmitCalledFlag\u0028\u0029;WebForm_DoCallback\u0028\u0027ctl19\u0027,\u0027PageStateGroupSaveAndPublish\u0027,SP.Ribbon.PageState.Handlers.GenericCompleteHandler,SP.Ribbon.PageState.Handlers.GenericErrorHandler,null,true\u0029}'};var Notification = {};var PageErrorState = {};PageErrorState = { 'Message': '', 'Title' : '', 'ButtonCount' :0};
+function InitPageStateHandler()
+{
+    SP.Ribbon.PageState.ImportedNativeData = function SP_Ribbon_PageStateHandler_ImportedNativeData()
+    {
+    }
+    SP.Ribbon.PageState.NativeErrorState = function SP_Ribbon_PageStateHandler_NativeErrorState()
+    {
+    }
+    SP.Ribbon.PageState.ImportedNativeData.PageState = PageState;
+    SP.Ribbon.PageState.ImportedNativeData.CommandHandlers = PageStateCommandHandler;
+    SP.Ribbon.PageState.ImportedNativeData.EnabledHandlers = PageStateEnabledHandler;
+    SP.Ribbon.PageState.NativeErrorState = PageErrorState;SP.Ribbon.PageState.ImportedNativeData.StatusTitle = ['Checked out to you','Publication Start Date:'];SP.Ribbon.PageState.ImportedNativeData.StatusBody = ['Only you can see your recent changes. \u003ca href=\u0022javascript:{}\u0022 onclick=\u0022var mgr = SP.Ribbon.PageManager.get_instance\u0028\u0029; if\u0028mgr \u0026\u0026 \u0028mgr.get_commandDispatcher\u0028\u0029\u0029.isCommandEnabled\u0028\u0027PageStateGroupCheckin\u0027\u0029\u0029 \u0028mgr.get_commandDispatcher\u0028\u0029\u0029.executeCommand\u0028\u0027PageStateGroupCheckin\u0027, null\u0029; return CancelEvent\u0028event\u0029;\u0022 style=\u0022text-decoration: underline\u0022\u003eCheck it in\u003c\u002fa\u003e.','Immediately'];SP.Ribbon.PageState.ImportedNativeData.StatusPriority = 'yellow';
+    SP.Ribbon.PageState.CallNativeFunction = function SP_Ribbon_PageState_PageStateHandler_CallNativeFunction(fnName)
+    {
+        return eval(fnName);
+    }
+    pm = SP.Ribbon.PageManager.get_instance();
+    var psh = new SP.Ribbon.PageState.PageStateHandler();
+    pm.addPageComponent(psh);
+    SP.Ribbon.PageState.Handlers.registerCommentsHandler();
+    pm.get_commandDispatcher().executeCommand(Commands.CommandIds.ApplicationStateChanged, null)
+}
+function DelayUntilRibbonLoaded()
+{
+    ExecuteOrDelayUntilScriptLoaded(InitPageStateHandler, "sp.ribbon.js");
+}
+_spBodyOnLoadFunctionNames.push("DelayUntilRibbonLoaded")
+
 function EnsureScripts(scriptInfoList, finalFunction)
 {
 if (scriptInfoList.length == 0)
@@ -1141,35 +1360,6 @@ if (pageManager)
 pageManager.get_commandDispatcher().executeCommand('appstatechanged', null);
 }
 }
-WebForm_InitCallback();var PageState = {};var PageStateEnabledHandler = {};var PageStateCommandHandler = {};PageState ={'ItemIsInLibrary':'1','ItemIsCheckedOutToCurrentUser':'1','UserHasManageWebRights':'1','ItemHasCustomizableZones':'1','UserHasEnumeratePermissionsRights':'1','ItemHasFieldControls':'1','DocLibWorkflowEnabled':'1','UserHasOverrideCheckoutRights':'1','UserHasViewVersionsRights':'1','DocLibMinorVersionsEnabled':'1','ItemHasCheckedInVersion':'1','UserHasApproverRights':'1','ItemIsPublishingPage':'1','WebIsPublishingSite':'1','UserHasDeleteRights':'1','DocLibApprovalEnabled':'1','DocLibVersioningEnabled':'1','ItemIsInSharedView':'1','DocLibCheckoutRequired':'1','ItemHasPersonalizableZones':'1','UserHasContributorRights':'1'};PageStateEnabledHandler = {'PageStateGroupSave':'SP.Ribbon.PageState.Handlers.isSaveEnabled\u0028\u0029;','PageStateSaveBeforeNavigate':'','PageStateGroupSaveAndStop':'SP.Ribbon.PageState.Handlers.isSaveAndStopEditEnabled\u0028\u0029;','PageStateGroupEdit':'SP.Ribbon.PageState.Handlers.isEditEnabled\u0028\u0029;','PageStateGroupDontSaveAndStop':'SP.Ribbon.PageState.Handlers.isDontSaveAndStopEnabled\u0028\u0029;','PageStateGroupCheckin':'SP.Ribbon.PageState.Handlers.isCheckinEnabled\u0028\u0029;','PageStateGroupCheckout':'SP.Ribbon.PageState.Handlers.isCheckoutEnabled\u0028\u0029;','PageStateGroupOverrideCheckout':'SP.Ribbon.PageState.Handlers.isOverrideCheckoutEnabled\u0028\u0029;','PageStateGroupDiscardCheckout':'SP.Ribbon.PageState.Handlers.isDiscardCheckoutEnabled\u0028\u0029;','PageStateGroupSubmitForApproval':'SP.Ribbon.PageState.Handlers.isSubmitForApprovalEnabled\u0028\u0029;','PageStateGroupCancelApproval':'SP.Ribbon.PageState.Handlers.isCancelApprovalEnabled\u0028\u0029;','PageStateGroupPublish':'SP.Ribbon.PageState.Handlers.isPublishEnabled\u0028\u0029;','PageStateGroupUnpublish':'Pub.Ribbon.PubCommands.unpublishEnabled\u0028\u0029;','PageStateGroupApprove':'SP.Ribbon.PageState.Handlers.isApproveEnabled\u0028\u0029;','PageStateGroupReject':'SP.Ribbon.PageState.Handlers.isRejectEnabled\u0028\u0029;','DeletePage':'SP.Ribbon.PageState.Handlers.isDeleteEnabled\u0028\u0029;','PageStateUpdatePageState':'true;','PageStateGroupSaveAndPublish':'SP.Ribbon.PageState.Handlers.isSaveAndPublishEnabled\u0028\u0029;'};PageStateCommandHandler = {'PageStateGroupSave':'SP.SOD.executeFunc\u0028\u0027sp.ui.pub.ribbon.js\u0027, \u0027Pub.Ribbon.PubCommands\u0027, function\u0028\u0029 {Pub.Ribbon.PubCommands.notifyProgress\u0028SP.Publishing.Resources.notificationMessageSaving\u0029;__doPostBack\u0028\u0027ctl02\u0027,\u0027PageStateGroupSave\u0027\u0029}\u0029;','PageStateSaveBeforeNavigate':'__theFormPostData = \u0022\u0022;__theFormPostCollection=new Array\u0028\u0029; WebForm_OnSubmit\u0028\u0029;WebForm_InitCallback\u0028\u0029;_spResetFormOnSubmitCalledFlag\u0028\u0029;WebForm_DoCallback\u0028\u0027ctl03\u0027,\u0027PageStateSaveBeforeNavigate\u0027,SP.Ribbon.PageState.PageStateHandler.SaveBeforeNavigateCallback,SP.Ribbon.PageState.SaveBeforeNavigateCallback,null,true\u0029','PageStateGroupSaveAndStop':'SP.SOD.executeFunc\u0028\u0027sp.ui.pub.ribbon.js\u0027, \u0027Pub.Ribbon.PubCommands\u0027, function\u0028\u0029 {Pub.Ribbon.PubCommands.notifyProgress\u0028SP.Publishing.Resources.notificationMessageSaving\u0029;SP.Ribbon.PageState.PageStateHandler.EnableSaveBeforeNavigate\u0028false\u0029;__doPostBack\u0028\u0027ctl04\u0027,\u0027PageStateGroupSaveAndStop\u0027\u0029}\u0029;','PageStateGroupEdit':'SP.SOD.executeFunc\u0028\u0027sp.ui.pub.ribbon.js\u0027, \u0027Pub.Ribbon.PubCommands\u0027, function\u0028\u0029 {Pub.Ribbon.PubCommands.notifyProgress\u0028SP.Publishing.Resources.notificationMessageLoading\u0029;if \u0028document.forms[\u0027aspnetForm\u0027][\u0027MSOLayout_InDesignMode\u0027] != null\u0029 document.forms[\u0027aspnetForm\u0027][\u0027MSOLayout_InDesignMode\u0027].value = 1;if \u0028document.forms[\u0027aspnetForm\u0027][\u0027MSOAuthoringConsole_FormContext\u0027] != null\u0029 document.forms[\u0027aspnetForm\u0027][\u0027MSOAuthoringConsole_FormContext\u0027].value = 1;if \u0028document.forms[\u0027aspnetForm\u0027][\u0027MSOSPWebPartManager_DisplayModeName\u0027] != null\u0029 document.forms[\u0027aspnetForm\u0027][\u0027MSOSPWebPartManager_DisplayModeName\u0027].value = \u0027Design\u0027;__doPostBack\u0028\u0027ctl05\u0027,\u0027edit\u0027\u0029}\u0029;','PageStateGroupDontSaveAndStop':'SP.SOD.executeFunc\u0028\u0027sp.ui.pub.ribbon.js\u0027, \u0027Pub.Ribbon.PubCommands\u0027, function\u0028\u0029 {Pub.Ribbon.PubCommands.notifyProgress\u0028SP.Publishing.Resources.notificationMessageReverting\u0029;__doPostBack\u0028\u0027ctl06\u0027,\u0027PageStateGroupDontSaveAndStop\u0027\u0029}\u0029;','PageStateGroupCheckin':'__doPostBack\u0028\u0027ctl07\u0027,\u0027PageStateGroupCheckin\u0027\u0029','PageStateGroupCheckout':'__doPostBack\u0028\u0027ctl08\u0027,\u0027PageStateGroupCheckout\u0027\u0029','PageStateGroupOverrideCheckout':'__doPostBack\u0028\u0027ctl09\u0027,\u0027PageStateGroupOverrideCheckout\u0027\u0029','PageStateGroupDiscardCheckout':'if \u0028confirm\u0028\u0027Are you sure you want to exit without saving? Any unsaved data will be lost.\u0027\u0029\u0029 {__doPostBack\u0028\u0027ctl10\u0027,\u0027PageStateGroupDiscardCheckout\u0027\u0029}','PageStateGroupSubmitForApproval':'__doPostBack\u0028\u0027ctl11\u0027,\u0027PageStateGroupSubmitForApproval\u0027\u0029','PageStateGroupCancelApproval':'WebForm_DoCallback\u0028\u0027ctl12\u0027,\u0027PageStateGroupCancelApproval\u0027,SP.Ribbon.PageState.Handlers.GenericCompleteHandler,SP.Ribbon.PageState.Handlers.GenericError,null,true\u0029','PageStateGroupPublish':'__doPostBack\u0028\u0027ctl13\u0027,\u0027PageStateGroupPublish\u0027\u0029','PageStateGroupUnpublish':'__doPostBack\u0028\u0027ctl14\u0027,\u0027PageStateGroupUnpublish\u0027\u0029','PageStateGroupApprove':'__doPostBack\u0028\u0027ctl15\u0027,\u0027PageStateGroupApprove\u0027\u0029','PageStateGroupReject':'SP.Ribbon.PageState.PageStateHandler.popupWaitScreen\u0028\u0027Page State\u0027,\u0027Rejecting page\u0027\u0029;__theFormPostData = \u0022\u0022;__theFormPostCollection=new Array\u0028\u0029; WebForm_OnSubmit\u0028\u0029;WebForm_InitCallback\u0028\u0029;_spResetFormOnSubmitCalledFlag\u0028\u0029;WebForm_DoCallback\u0028\u0027ctl16\u0027,\u0027PageStateGroupReject\u0027,SP.Ribbon.PageState.Handlers.GenericCompleteHandler,SP.Ribbon.PageState.Handlers.GenericError,null,true\u0029','DeletePage':'if \u0028confirm\u0028\u0027Are you sure you want to send this page to the site Recycle Bin?\u0027\u0029\u0029 {__doPostBack\u0028\u0027ctl17\u0027,\u0027DeletePage\u0027\u0029}','PageStateUpdatePageState':'SP.Ribbon.PageState.PageStateHandler.popupWaitScreen\u0028\u0027Schedule\u0027,\u0027Scheduling the page.\u0027\u0029;__theFormPostData = \u0022\u0022;__theFormPostCollection=new Array\u0028\u0029; WebForm_OnSubmit\u0028\u0029;WebForm_InitCallback\u0028\u0029;_spResetFormOnSubmitCalledFlag\u0028\u0029;WebForm_DoCallback\u0028\u0027ctl18\u0027,\u0027PageStateUpdatePageState\u0027,SP.Ribbon.PageState.Handlers.GenericCompleteHandler,SP.Ribbon.PageState.Handlers.GenericError,null,true\u0029','PageStateGroupSaveAndPublish':'if \u0028PageState[\u0027ViewModeIsEdit\u0027] != null\u0029 {SP.Ribbon.PageState.PageStateHandler.ignoreNextUnload = true;__doPostBack\u0028\u0027ctl19\u0027,\u0027PageStateGroupSaveAndPublish\u0027\u0029}else{SP.Ribbon.PageState.PageStateHandler.popupWaitScreen\u0028\u0027Page State\u0027,\u0027Publishing page\u0027\u0029;__theFormPostData = \u0022\u0022;__theFormPostCollection=new Array\u0028\u0029; WebForm_OnSubmit\u0028\u0029;WebForm_InitCallback\u0028\u0029;_spResetFormOnSubmitCalledFlag\u0028\u0029;WebForm_DoCallback\u0028\u0027ctl19\u0027,\u0027PageStateGroupSaveAndPublish\u0027,SP.Ribbon.PageState.Handlers.GenericCompleteHandler,SP.Ribbon.PageState.Handlers.GenericErrorHandler,null,true\u0029}'};var Notification = {};var PageErrorState = {};PageErrorState = { 'Message': '', 'Title' : '', 'ButtonCount' :0};
-function InitPageStateHandler()
-{
-    SP.Ribbon.PageState.ImportedNativeData = function SP_Ribbon_PageStateHandler_ImportedNativeData()
-    {
-    }
-    SP.Ribbon.PageState.NativeErrorState = function SP_Ribbon_PageStateHandler_NativeErrorState()
-    {
-    }
-    SP.Ribbon.PageState.ImportedNativeData.PageState = PageState;
-    SP.Ribbon.PageState.ImportedNativeData.CommandHandlers = PageStateCommandHandler;
-    SP.Ribbon.PageState.ImportedNativeData.EnabledHandlers = PageStateEnabledHandler;
-    SP.Ribbon.PageState.NativeErrorState = PageErrorState;SP.Ribbon.PageState.ImportedNativeData.StatusTitle = ['Checked out to you','Publication Start Date:'];SP.Ribbon.PageState.ImportedNativeData.StatusBody = ['Only you can see your recent changes. \u003ca href=\u0022javascript:{}\u0022 onclick=\u0022var mgr = SP.Ribbon.PageManager.get_instance\u0028\u0029; if\u0028mgr \u0026\u0026 \u0028mgr.get_commandDispatcher\u0028\u0029\u0029.isCommandEnabled\u0028\u0027PageStateGroupCheckin\u0027\u0029\u0029 \u0028mgr.get_commandDispatcher\u0028\u0029\u0029.executeCommand\u0028\u0027PageStateGroupCheckin\u0027, null\u0029; return CancelEvent\u0028event\u0029;\u0022 style=\u0022text-decoration: underline\u0022\u003eCheck it in\u003c\u002fa\u003e.','Immediately'];SP.Ribbon.PageState.ImportedNativeData.StatusPriority = 'yellow';
-    SP.Ribbon.PageState.CallNativeFunction = function SP_Ribbon_PageState_PageStateHandler_CallNativeFunction(fnName)
-    {
-        return eval(fnName);
-    }
-    pm = SP.Ribbon.PageManager.get_instance();
-    var psh = new SP.Ribbon.PageState.PageStateHandler();
-    pm.addPageComponent(psh);
-    SP.Ribbon.PageState.Handlers.registerCommentsHandler();
-    pm.get_commandDispatcher().executeCommand(Commands.CommandIds.ApplicationStateChanged, null)
-}
-function DelayUntilRibbonLoaded()
-{
-    ExecuteOrDelayUntilScriptLoaded(InitPageStateHandler, "sp.ribbon.js");
-}
-_spBodyOnLoadFunctionNames.push("DelayUntilRibbonLoaded")
-
 function EnsurePublishingConsoleActionScripts()
 {
 EnsureScripts(
@@ -1194,7 +1384,7 @@ theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
                 function _ribbonInitFunc1()
 
                 {
-                    EnsureScriptParams('core.js', '_ribbonInitFunc1Wrapped', '', '', '\u002fNewsAndEvents\u002fNews\u002f_layouts\u002f15\u002fcommandui.ashx', '93830869', '1033', 'RibbonContainer', {'Ribbon.Read':true,'Ribbon.WikiPageTab':true,'Ribbon.ContextualTabs.Media.Options':true,'Ribbon.PublishTab':true}, null, {'Ribbon.PublishTab.Variations':true,'Ribbon.EditingTools.CPEditTab.Layout.PageLayout':true,'Ribbon.WebPartInsert.InsertRelatedDataToListForm':true,'Ribbon.WikiPageTab.Manage.RenamePage':true,'Ribbon.PublishTab.Workflow.ManageWorkflow':true,'Ribbon.WebPartPage':true,'Ribbon.WikiPageTab.PubPageActions.PreviewMenu':true,'Ribbon.EditingTools.CPEditTab.EditAndCheckout.SaveAndPublish':true,'Ribbon.WikiPageTab.EditAndCheckout.CopySharedPage':true,'Ribbon.WikiPageTab.Manage.DeleteFriendlyUrlPage':true,'Ribbon.WikiPageTab.Manage.PageUrls':true,'Ribbon.WikiPageTab.Manage.PageProperties.Menu.PageProperties.EditTermProperties':true,'Ribbon.WikiPageTab.PageActions':true,'Ribbon.PublishTab.Translation':true,'Ribbon.WikiPageTab.EditAndCheckout.SaveAndPublish':true,'Ribbon.PublishTab.Publishing.QuickDeploy':true,'Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation':true,'Ribbon.VariationsListTabGroup.VariationsListTab.Translation':true,'Ribbon.VariationsTab.Translation':true},
+                    EnsureScriptParams('core.js', '_ribbonInitFunc1Wrapped', '', '', '\u002fNewsAndEvents\u002fNews\u002f_layouts\u002f15\u002fcommandui.ashx', '93830869', '1033', 'RibbonContainer', {'Ribbon.PublishTab':true,'Ribbon.Read':true,'Ribbon.WikiPageTab':true}, null, {'Ribbon.PublishTab.Variations':true,'Ribbon.EditingTools.CPEditTab.Layout.PageLayout':true,'Ribbon.WebPartInsert.InsertRelatedDataToListForm':true,'Ribbon.WikiPageTab.Manage.RenamePage':true,'Ribbon.PublishTab.Workflow.ManageWorkflow':true,'Ribbon.WebPartPage':true,'Ribbon.WikiPageTab.PubPageActions.PreviewMenu':true,'Ribbon.EditingTools.CPEditTab.EditAndCheckout.SaveAndPublish':true,'Ribbon.WikiPageTab.EditAndCheckout.CopySharedPage':true,'Ribbon.WikiPageTab.Manage.DeleteFriendlyUrlPage':true,'Ribbon.WikiPageTab.Manage.PageUrls':true,'Ribbon.WikiPageTab.Manage.PageProperties.Menu.PageProperties.EditTermProperties':true,'Ribbon.WikiPageTab.PageActions':true,'Ribbon.PublishTab.Translation':true,'Ribbon.WikiPageTab.EditAndCheckout.SaveAndPublish':true,'Ribbon.PublishTab.Publishing.QuickDeploy':true,'Ribbon.VariationsTabGroup.VariationsDoclibTab.Translation':true,'Ribbon.VariationsListTabGroup.VariationsListTab.Translation':true,'Ribbon.VariationsTab.Translation':true},
                                             {'PublishTabTrimmingVisibilityContext':true,'WSSPageStateVisibilityContext':true}, false, 0, false, 'SP.Ribbon.PageManager.get_instance()', false, null, null, null, '-692253904', 0, '.');
                 }
                 function _ribbonStartInit(initialTabId, buildMinimized, e)
@@ -1240,7 +1430,6 @@ theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
 var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
 g_QuickLaunchControlIds.push("zz11_TopNavigationMenu");_spBodyOnLoadFunctionNames.push('QuickLaunchInitDroppable'); var g_zz11_TopNavigationMenu = null; function init_zz11_TopNavigationMenu() { if (g_zz11_TopNavigationMenu == null) g_zz11_TopNavigationMenu = $create(SP.UI.AspMenu, null, null, null, $get('zz11_TopNavigationMenu')); } if(g_spPreFetchKeys) {{ g_spPreFetchKeys.push('SP.Core.js');}}EnsureScriptFunc('SP.Core.js', 'SP.UI.AspMenu', init_zz11_TopNavigationMenu);
 g_QuickLaunchControlIds.push("zz13_V4QuickLaunchMenu");_spBodyOnLoadFunctionNames.push('QuickLaunchInitDroppable'); var g_zz13_V4QuickLaunchMenu = null; function init_zz13_V4QuickLaunchMenu() { if (g_zz13_V4QuickLaunchMenu == null) g_zz13_V4QuickLaunchMenu = $create(SP.UI.AspMenu, null, null, null, $get('zz13_V4QuickLaunchMenu')); } ExecuteOrDelayUntilScriptLoaded(init_zz13_V4QuickLaunchMenu, 'SP.Core.js');
-function load_ctl00_PlaceHolderMain_EditModePanel19_HomepageNewsCarousel_HomepageNewsCarouselListView_ctrl2_ctl02(player) { var element = null; try { element = player.getHost(); } catch(err) {element = player; } var elementId = element.id; if (!window.mediaPlayer) window.mediaPlayer = {}; if (!mediaPlayer.players) mediaPlayer.players = {}; mediaPlayer.players[elementId] = element; ExecuteOrDelayUntilScriptLoaded(function() { Pub.Ribbon.PubRibbonComponent.mediaPlayerLoaded(mediaPlayer.players[elementId], 0) }, 'sp.ui.pub.ribbon.js'); }
 //]]>
 </script>
 </form>

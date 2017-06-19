@@ -102,7 +102,7 @@ body.nav-open {
 
 h1 {
   font-size: 4.28571428571429em; /* 60 */
-  line-height: 1.2;
+  line-height: 1;
   font-weight: normal;
   color: #000;
   margin: 0;
@@ -685,6 +685,7 @@ aside .promo .content {
 }
 .related li {
   margin: 0 0 30px;
+  position: relative;
 }
 .related a {
   display: block;
@@ -701,7 +702,7 @@ aside .promo .content {
 .related h3 {
   font-size: 1.71428571428571em; /* 24 */
   color: #157a6b;
-  margin: 0 0 20px;
+  margin: 0 0 14px;
 }
 .related p {
   margin: 1em 0 0;
@@ -818,7 +819,7 @@ article div.meta {
 #carousel .slide-video h2 {
   pointer-events: none;
 }
-#carousel .slide-video:hover h2 {
+#carousel .slide-video:hover h2, #carousel .slide-video:hover .summary {
   display: none;
 }
 #carousel p {
@@ -928,25 +929,129 @@ article div.meta {
   cursor: pointer;
 }
 
+/* EVENTS */
+#txtDateFrom, #txtDateTo {
+  display: inline-block;
+  width: 49%;
+  padding: 9px 10px;
+}
+#txtDateFrom {
+  margin-right: 2%;
+}
+
 #event-grid .block {
   position: relative;
 }
-#event-grid div.date {
+.event-date {
   background: rgba(0,0,0,.75);
   color: #fff;
+  line-height: 1.2;
+}
+.block .event-date, aside .event-date {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
 }
-#event-grid .date span {
+.event-date > span  {
   display: inline-block;
   padding: 10px 15px;
+  font-weight: 600;
 }
-#event-grid .day {
+.event-date .month-day {
   background: #1bcba5;
   color: #000;
+  font-size: 2.57142857142857em; /* 36 */
   text-transform: uppercase;
+}
+.event-date .month {
+  font-family: OpenSansLight, sans-serif;
+  font-weight: normal;
+}
+.event-date .time {
+  font-size: 1.42857142857143em;
+}
+aside .event-date .month-day {
+  font-size: 2em;
+}
+aside .event-date .time {
+  font-size: 1em;
+}
+
+/* Event Carousel */
+.PSEventListingPageLayout #carousel {
+  padding-bottom: 35px;
+}
+#carousel .summary, .hero .summary {
+  background: rgba(0,0,0,.5);
+  color: #fff;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: auto;
+  height: auto;
+}
+#carousel .detail, .hero .detail {
+  margin-left: 20%;
+  padding: 5px 15px 5px 20px;
+  padding-left: 15px;
+}
+#carousel .event-date, .hero .event-date {
+  width: 20%;
+  float: left;
+}
+#carousel .event-date > span, .hero .event-date > span {
+  display: block;
+  text-align: center;
+}
+#carousel .summary h2, #carousel .slide-video h2 {
+  padding: 0;
+  position: relative;
+}
+#carousel .summary p {
+    margin: 1em 0 0 0;
+}
+#carousel .summary .more {
+  font-style: italic;
+  color: #fff;
+}
+.summary h2 {
+  color: #fff;
+  margin: 0;
+}
+
+/* Event */
+.event-detail {
+  background: #464646;
+  color: #fff;
+  font-size: 1.14285714285714em; /* 16 */
+  width: 100%;
+  display: table;
+  border-spacing: 30px;
+}
+.event-detail > div {
+  display: table-cell;
+  width: 50%;
+}
+.event-detail h3 {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+}
+.event-detail ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.event-detail li {
+  margin: 1em 0;
+}
+.event-detail label {
+  display: block;
+  font-weight: 600;
 }
 
 
@@ -1898,8 +2003,10 @@ ul.carouselNav li {
 /* Hero */
 .hero {
   margin: 0 0 50px;
+  position: relative;
 }
 .PSEventPageLayout .hero,
+.PSEventListingPageLayout .hero,
 .PSNewsContentPageLayout .hero,
 .PSNewsListingPageLayout .hero,
 .PSSectionLandingPageLayout .hero {
@@ -2439,6 +2546,9 @@ article a.button { padding: 4px 10px 6px; }
 .backTop {
   clear: both;
   text-align: right;
+}
+.backTop .fa {
+  margin-left: 6px;
 }
 
 /* Corneres and Gradients *
