@@ -363,7 +363,17 @@
             $(this).css('min-height', $(this).find('img').width());
           });
         }
-
+        
+        // Accordion
+        $('.accordion').on('click', 'h3', function(){
+          var $target = $(this).parent();
+          if ($target.hasClass('open')) {
+            $target.removeClass('open').children('.content').slideUp();
+          } else {
+            $target.siblings('.open').removeClass('open').children('.content').slideUp();
+            $target.addClass('open').children('.content').slideDown();
+          }
+        });
 
 
         /* Text Editor Overrides */

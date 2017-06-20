@@ -40,9 +40,9 @@
 <link id="CssRegistration2" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/CSS/normalize.css?Rev=2017.05.11"/>
 <link id="CssRegistration5" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/CSS/font-awesome/css/font-awesome.min.css?Rev=2017.05.11"/>
 <link id="CssRegistration7" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/CSS/slick.css"/>
-<link id="CssRegistration3" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/CSS/main.css?Rev=2017.05.11"/>
+<link id="CssRegistration3" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/CSS/main.css"/>
 <link id="CssRegistration4" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/CSS/pscore.css"/>
-<link id="CssRegistration6" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/CSS/responsive.css?Rev=2017.05.19"/>
+<link id="CssRegistration6" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/CSS/responsive.css"/>
 <link id="PSFilter" rel="stylesheet" type="text/css" href="/Style%20Library/Intranet/CSS/filter.css"/>
 <script type="text/javascript" src="/_layouts/15/init.js?rev=RIl4brNTuKjQszVd%2Bc1CnQ%3D%3D"></script>
 <script type="text/javascript" src="/ScriptResource.axd?d=YWikJi2__BU1_2pMnk8OcdBn-5lUhBvVGrdV95zQ8CDoEEByD4Fi2Mb5EaNZ0fTKq9Pd3rbuqfqlPV6wgP170uY7zTntx23jk5qaG4CmFW7OnziEUHs1L-4zUoaycfD8nyKOEJeNGN7MqmNp0VzG3OzLEW2KqhRcY0qAYUlRCXOIsN_npEHA9nPcTGlBnU1g0&amp;t=ffffffff85e60464"></script>
@@ -405,7 +405,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 									<b>You are here:</b><span id="ctl00_PlaceHolderBreadcrumb_Sitemappath1" sitemapproviders="SPSiteMapProvider,SPXmlContentMapProvider" endercurrentnodeaslink="false" hideinteriorrootnodes="true"><a href="#ctl00_PlaceHolderBreadcrumb_Sitemappath1_SkipLink"><img alt="Skip Navigation Links" src="/WebResource.axd?d=ruuHC9DELf5lzfkUjQArx3H_1BTxv3iVgNh8K3Vc3W5wLzLrlmzQD4R1KvYYEbXIE0U5cizDpDyzeCr4y4Y3GMR8_Q_02lYNv7XqiZ5Iio41&amp;t=636289386966629520" width="0" height="0" style="border-width:0px;" /></a><span><a title="Our House Intranet" href="/Pages/default.aspx">Our House Intranet</a></span><span>&#160;/&#160;</span><span><a title="Rongo Takahanga" href="/NewsAndEvents/Pages/default.aspx">News and Events</a></span><span>&#160;/&#160;</span><span>Noticeboard</span><a id="ctl00_PlaceHolderBreadcrumb_Sitemappath1_SkipLink"></a></span>	
 				                </div>
 				
-				                
+                <h1>Noticeboard</h1>
 				                
 							</div>
 						</header>
@@ -774,20 +774,27 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 							
 	<!-- START Main Content Area -->
 	<div id="top" class="primary">
+    <div class="primary narrow">
 		<header>
-			<h1><span class="requiredfield">
-		Noticeboard</span></h1>
+      
+      <div id="ctl00_PlaceHolderMain_PSContent_label" style='display:none'>Content</div>
+      <div id="ctl00_PlaceHolderMain_PSContent__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_PSContent_label">
+        <p class="psstyle-rteElement-Normal">Click on 'Request listing' to add your 
+own notices about upcoming events, items for sale, 
+accommodation, lost and found items, and health and fitness 
+classes.</p>
+        <p class="psstyle-rteElement-Normal"><strong>Note&#58; Noticeboard can be accessed from the 'Quick Links' panel on the homepage.</strong></p>
+      </div>
+			
             <div id="ctl00_PlaceHolderMain_EditModePanel8" class="edit-mode-panel">
 	
 			    <ul class="functions">
-			        <li><a href="#" id="requestListingButton" class="button" style="float: left;" onclick="OpenNoticeBoardAddFormDialog('http://dev04-ourhouse.campus.services/NewsAndEvents/Noticeboard/Lists/Noticeboard/NewForm.aspx?Source=http%3A%2F%2Fourhouse%2Ecampus%2Eservices%2FNewsAndEvents%2FNoticeboard%2FLists%2FNoticeboard%2FAllItems%2Easpx&isdlg=1', 'Add Noticeboard Item')">Request Listing</a></li>
+			        <li><a href="#" id="requestListingButton" class="button" onclick="OpenNoticeBoardAddFormDialog('http://dev04-ourhouse.campus.services/NewsAndEvents/Noticeboard/Lists/Noticeboard/NewForm.aspx?Source=http%3A%2F%2Fourhouse%2Ecampus%2Eservices%2FNewsAndEvents%2FNoticeboard%2FLists%2FNoticeboard%2FAllItems%2Easpx&isdlg=1', 'Add Noticeboard Item')">Request Listing</a></li>
 
                     
 
 <li>
     <a href="#" onclick="launchAddAlertDialog();" class="icon alert" title="Add Alert for this article category."></a>
-</li>
-
 <script type="text/javascript">
     function OpenAlertDialog(pageUrl, title) {
         var options = {
@@ -812,7 +819,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
         OpenAlertDialog(url, 'Add alert');
     }
 </script>
-
+</li>
 			        
 <li><a href="javascript:window.print();" class="icon print" title="Print page. "></a></li>
 
@@ -821,12 +828,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm',
 </div>									
 		</header>
             
-        <div>
-			<div id="ctl00_PlaceHolderMain_PSContent_label" style='display:none'>Content</div><div id="ctl00_PlaceHolderMain_PSContent__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_PSContent_label"><p class="psstyle-rteElement-Normal">Click on 'Request listing' to <span style="line-height&#58;17.98px;">add your 
-own&#160;</span><span style="line-height&#58;17.98px;">n</span><span style="line-height&#58;17.98px;">otices about upcoming events, items for sale, 
-accomm</span><span style="line-height&#58;17.98px;">odation,&#160;</span><span style="line-height&#58;17.98px;">lost and found&#160;items, and health and fitness 
-classes.</span>​</p><p class="psstyle-rteElement-Normal"><strong>Note&#58; Noticeboard can be accessed from the 'Quick Links' panel on the homepage.</strong></p></div>
-        </div>
+			
 			
         <div id="ctl00_PlaceHolderMain_EditModePanel3" class="edit-mode-panel">
 	
@@ -953,12 +955,13 @@ classes.</span>​</p><p class="psstyle-rteElement-Normal"><strong>Note&#58; Not
 </script>
 
 
-<h3>My Noticeboard items</h3>
+<h2>My Noticeboard items</h2>
 <table id="pendingItemsDataTable" class="filter sortableTable">
     
             <thead>
                 <tr>
                     <th class="sorting">Item</th>
+                    <th><span class="fa fa-paperclip"></span></th>
 
                     <th class="sorting">Date</th>
 
@@ -972,17 +975,24 @@ classes.</span>​</p><p class="psstyle-rteElement-Normal"><strong>Note&#58; Not
                 
             <tr>
                 <td>
-                    <h4>
-                       <h4><a href="#" onclick="return OpenNoticeBoardDialog('http://dev04-ourhouse.campus.services/NewsAndEvents/Noticeboard/_layouts/15/AppPage/NoticeboardItem.aspx?itemId=340', 'This is a test booking ');" >This is a test booking </a></h4>
-                    </h4> 
-                    
-                    <div class="ExternalClass79548BDE226541F8B6952F2136C69947"><p>some descr​iption about notice</p></div>
+                  <img src="/assets/noticeboard.jpg" alt="" />
+                  <div class="content">
+                    <h3><a href="#" onclick="return OpenNoticeBoardDialog('http://dev04-ourhouse.campus.services/NewsAndEvents/Noticeboard/_layouts/15/AppPage/NoticeboardItem.aspx?itemId=340', 'This is a test booking ');" >This is a test booking </a></h3>
+                    <div class="ExternalClass79548BDE226541F8B6952F2136C69947">
+                      <p>some descr​iption about notice</p>
+                      <ul>
+                        <li>A list item</li>
+                      </ul>
+                    </div>
                     
                     <p>
                          Contact: Andy Wong (DEV Admin)
                          <span></span>
                     </p> 
+                  </div>
                 </td>
+                
+                <td></td>
 
                 <td>
                     13/06/2017
@@ -994,27 +1004,27 @@ classes.</span>​</p><p class="psstyle-rteElement-Normal"><strong>Note&#58; Not
                 
                 <td>
                     Approved
-                    <br />
-                    <a href="#" class="button" id="noticeboardItem-340" onclick="ConfirmDelete(340)">Delete</a>
-                    <br />
-                    <a href="#" class="button" id="noticeboardItem-edit-340" onclick="EditNoticeboardItem(340)">Edit</a>
+                    <div class="actions">
+                      <span class="fa fa-edit" title="Edit" id="noticeboardItem-edit-340" onclick="EditNoticeboardItem(340)"></span>
+                      <span class="fa fa-close" title="Delete" id="noticeboardItem-340" onclick="ConfirmDelete(340)"></span>
+                    </div>
                 </td>
             </tr>
 
         
             <tr>
                 <td>
-                    <h4>
-                       <h4><a href="#" onclick="return OpenNoticeBoardDialog('http://dev04-ourhouse.campus.services/NewsAndEvents/Noticeboard/_layouts/15/AppPage/NoticeboardItem.aspx?itemId=342', 'Eid ul-Fitr celebrations in Parliament');" >Eid ul-Fitr celebrations in Parliament</a></h4>
-                    </h4> 
+                    <h3><a href="#" onclick="return OpenNoticeBoardDialog('http://dev04-ourhouse.campus.services/NewsAndEvents/Noticeboard/_layouts/15/AppPage/NoticeboardItem.aspx?itemId=342', 'Eid ul-Fitr celebrations in Parliament');" >Eid ul-Fitr celebrations in Parliament</a></h3>
                     
-                    <div class="ExternalClass3E6EA031F2414656827B9298F0D203CF"><p>​</p><p>Hon Judith Collins would like to invite all Muslim parliamentary staff to the Eid celebrations in Parliament. These will be held...
+                    <p>Hon Judith Collins would like to invite all Muslim parliamentary staff to the Eid celebrations in Parliament. These will be held...</p>
                     
                     <p>
                          Contact: sandra.mackenzie@parliament.govt.nz
                          <span>Phone: 817 8499</span>
                     </p> 
                 </td>
+                
+                <td></td>
 
                 <td>
                     17/05/2017
@@ -1026,27 +1036,27 @@ classes.</span>​</p><p class="psstyle-rteElement-Normal"><strong>Note&#58; Not
                 
                 <td>
                     Approved
-                    <br />
-                    <a href="#" class="button" id="noticeboardItem-342" onclick="ConfirmDelete(342)">Delete</a>
-                    <br />
-                    <a href="#" class="button" id="noticeboardItem-edit-342" onclick="EditNoticeboardItem(342)">Edit</a>
+                    <div class="actions">
+                      <span class="fa fa-edit" title="Edit" id="noticeboardItem-edit-342" onclick="EditNoticeboardItem(342)"></span>
+                      <span class="fa fa-close" title="Delete" id="noticeboardItem-342" onclick="ConfirmDelete(342)"></span>
+                    </div>
                 </td>
             </tr>
 
         
             <tr>
                 <td>
-                    <h4>
-                       <h4><a href="#" onclick="return OpenNoticeBoardDialog('http://dev04-ourhouse.campus.services/NewsAndEvents/Noticeboard/_layouts/15/AppPage/NoticeboardItem.aspx?itemId=343', 'Pump Class with Trish - June/July 2017');" class="icon info">Pump Class with Trish - June/July 2017</a></h4>
-                    </h4> 
+                    <h3><a href="#" onclick="return OpenNoticeBoardDialog('http://dev04-ourhouse.campus.services/NewsAndEvents/Noticeboard/_layouts/15/AppPage/NoticeboardItem.aspx?itemId=343', 'Pump Class with Trish - June/July 2017');">Pump Class with Trish - June/July 2017</a></h3>
                     
-                    <div class="ExternalClassF150C64A04F84AF5888E7E868F2F8371"><p>​</p><p>Start Winter with a Healthy Challenge (Six session block)</p><p>When&#58; Wednesdays 12pm - 12.50pm (Wed 7 June to Wed 12 July...
-                    
+                    <p>Start Winter with a Healthy Challenge (Six session block)</p>
+                    <p>When&#58; Wednesdays 12pm - 12.50pm (Wed 7 June to Wed 12 July...</p>
                     <p>
                          Contact: Trish - trish.g@paradise.net.nz
                          <span>Phone: Trish - 021 2178 407</span>
                     </p> 
                 </td>
+                
+                <td><span class="icon txt"></span></td>
 
                 <td>
                     04/06/2017
@@ -1058,27 +1068,31 @@ classes.</span>​</p><p class="psstyle-rteElement-Normal"><strong>Note&#58; Not
                 
                 <td>
                     Approved
+                    <div class="actions">
+                      <span class="fa fa-edit" title="Edit" id="noticeboardItem-edit-343" onclick="EditNoticeboardItem(343)"></span>
+                      <span class="fa fa-close" title="Delete" id="noticeboardItem-343" onclick="ConfirmDelete(343)"></span>
+                    </div>
+                      
+<!--                    <a href="#" class="button" id="noticeboardItem-343" onclick="ConfirmDelete(343)">Delete</a>
                     <br />
-                    <a href="#" class="button" id="noticeboardItem-343" onclick="ConfirmDelete(343)">Delete</a>
-                    <br />
-                    <a href="#" class="button" id="noticeboardItem-edit-343" onclick="EditNoticeboardItem(343)">Edit</a>
+                    <a href="#" class="button" id="noticeboardItem-edit-343" onclick="EditNoticeboardItem(343)">Edit</a>-->
                 </td>
             </tr>
 
         
             <tr>
                 <td>
-                    <h4>
-                       <h4><a href="#" onclick="return OpenNoticeBoardDialog('http://dev04-ourhouse.campus.services/NewsAndEvents/Noticeboard/_layouts/15/AppPage/NoticeboardItem.aspx?itemId=348', 'Aqua classes with Trish - May/June/July');" class="icon info">Aqua classes with Trish - May/June/July</a></h4>
-                    </h4> 
+                    <h3><a href="#" onclick="return OpenNoticeBoardDialog('http://dev04-ourhouse.campus.services/NewsAndEvents/Noticeboard/_layouts/15/AppPage/NoticeboardItem.aspx?itemId=348', 'Aqua classes with Trish - May/June/July');">Aqua classes with Trish - May/June/July</a></h3>
                     
-                    <div class="ExternalClass695CC3C61714482C9D4D6D8F84092221"><ul><li><div class="ExternalClassE68DEBA233F74265B7D9541BE12A6B3E">Aqua...
+                    <p>Aqua...</p>
                     
                     <p>
                          Contact: Trish - trish.g@paradise.net.nz
                          <span>Phone: Trish - 021 2178 407</span>
                     </p> 
                 </td>
+                
+                <td><span class="icon obr"></span></td>
 
                 <td>
                     07/06/2017
@@ -1090,23 +1104,19 @@ classes.</span>​</p><p class="psstyle-rteElement-Normal"><strong>Note&#58; Not
                 
                 <td>
                     Approved
-                    <br />
-                    <a href="#" class="button" id="noticeboardItem-348" onclick="ConfirmDelete(348)">Delete</a>
-                    <br />
-                    <a href="#" class="button" id="noticeboardItem-edit-348" onclick="EditNoticeboardItem(348)">Edit</a>
+                    <div class="actions">
+                      <span class="fa fa-edit" title="Edit" id="noticeboardItem-edit-348" onclick="EditNoticeboardItem(348)"></span>
+                      <span class="fa fa-close" title="Delete" id="noticeboardItem-348" onclick="ConfirmDelete(348)"></span>
+                    </div>
                 </td>
             </tr>
 
         
             </tbody>
 
-        
-
 </table>
-<br/>
-<h3>All Noticeboard items</h3>
 
-
+<h2>All Noticeboard items</h2>
 <div class="top">
     <p><b>6</b> Results</p>
 </div>
@@ -1126,9 +1136,7 @@ classes.</span>​</p><p class="psstyle-rteElement-Normal"><strong>Note&#58; Not
                 
             <tr>
                 <td>
-                    <h4>
-                       <h4><a href="#" onclick="return OpenNoticeBoardDialog('http://dev04-ourhouse.campus.services/NewsAndEvents/Noticeboard/_layouts/15/AppPage/NoticeboardItem.aspx?itemId=348', 'Aqua classes with Trish - May/June/July');" class="icon info">Aqua classes with Trish - May/June/July</a></h4>
-                    </h4> 
+                    <h3><a href="#" onclick="return OpenNoticeBoardDialog('http://dev04-ourhouse.campus.services/NewsAndEvents/Noticeboard/_layouts/15/AppPage/NoticeboardItem.aspx?itemId=348', 'Aqua classes with Trish - May/June/July');">Aqua classes with Trish - May/June/July</a></h3> 
                     
                     <div class="ExternalClass695CC3C61714482C9D4D6D8F84092221"><ul><li><div class="ExternalClassE68DEBA233F74265B7D9541BE12A6B3E">Aqua...
                     
@@ -1150,11 +1158,9 @@ classes.</span>​</p><p class="psstyle-rteElement-Normal"><strong>Note&#58; Not
         
             <tr>
                 <td>
-                    <h4>
-                       <h4><a href="#" onclick="return OpenNoticeBoardDialog('http://dev04-ourhouse.campus.services/NewsAndEvents/Noticeboard/_layouts/15/AppPage/NoticeboardItem.aspx?itemId=346', 'Apartment for rent');" class="icon info">Apartment for rent</a></h4>
-                    </h4> 
+                    <h3><a href="#" onclick="return OpenNoticeBoardDialog('http://dev04-ourhouse.campus.services/NewsAndEvents/Noticeboard/_layouts/15/AppPage/NoticeboardItem.aspx?itemId=346', 'Apartment for rent');">Apartment for rent</a></h3> 
                     
-                    <div class="ExternalClass079B6D93570645E5B242C8E0A3BF6613"><p>​</p><p>Two bedroom apartment for rent in Kelburn (Talavera Terrace).</p><p>Easy walk into city. Street parking. Includes clothes washer,...
+                    <div class="ExternalClass079B6D93570645E5B242C8E0A3BF6613"><p>Two bedroom apartment for rent in Kelburn (Talavera Terrace).</p><p>Easy walk into city. Street parking. Includes clothes washer,...</p>
                     
                     <p>
                          Contact: Onwell Matadi (DEV Admin)
@@ -1174,11 +1180,9 @@ classes.</span>​</p><p class="psstyle-rteElement-Normal"><strong>Note&#58; Not
         
             <tr>
                 <td>
-                    <h4>
-                       <h4><a href="#" onclick="return OpenNoticeBoardDialog('http://dev04-ourhouse.campus.services/NewsAndEvents/Noticeboard/_layouts/15/AppPage/NoticeboardItem.aspx?itemId=343', 'Pump Class with Trish - June/July 2017');" class="icon info">Pump Class with Trish - June/July 2017</a></h4>
-                    </h4> 
+                    <h3><a href="#" onclick="return OpenNoticeBoardDialog('http://dev04-ourhouse.campus.services/NewsAndEvents/Noticeboard/_layouts/15/AppPage/NoticeboardItem.aspx?itemId=343', 'Pump Class with Trish - June/July 2017');">Pump Class with Trish - June/July 2017</a></h3> 
                     
-                    <div class="ExternalClassF150C64A04F84AF5888E7E868F2F8371"><p>​</p><p>Start Winter with a Healthy Challenge (Six session block)</p><p>When&#58; Wednesdays 12pm - 12.50pm (Wed 7 June to Wed 12 July...
+                    <div class="ExternalClassF150C64A04F84AF5888E7E868F2F8371"><p>Start Winter with a Healthy Challenge (Six session block)</p><p>When&#58; Wednesdays 12pm - 12.50pm (Wed 7 June to Wed 12 July...</p>
                     
                     <p>
                          Contact: Trish - trish.g@paradise.net.nz
@@ -1198,11 +1202,9 @@ classes.</span>​</p><p class="psstyle-rteElement-Normal"><strong>Note&#58; Not
         
             <tr>
                 <td>
-                    <h4>
-                       <h4><a href="#" onclick="return OpenNoticeBoardDialog('http://dev04-ourhouse.campus.services/NewsAndEvents/Noticeboard/_layouts/15/AppPage/NoticeboardItem.aspx?itemId=342', 'Eid ul-Fitr celebrations in Parliament');" >Eid ul-Fitr celebrations in Parliament</a></h4>
-                    </h4> 
+                    <h3><a href="#" onclick="return OpenNoticeBoardDialog('http://dev04-ourhouse.campus.services/NewsAndEvents/Noticeboard/_layouts/15/AppPage/NoticeboardItem.aspx?itemId=342', 'Eid ul-Fitr celebrations in Parliament');" >Eid ul-Fitr celebrations in Parliament</a></h3> 
                     
-                    <div class="ExternalClass3E6EA031F2414656827B9298F0D203CF"><p>​</p><p>Hon Judith Collins would like to invite all Muslim parliamentary staff to the Eid celebrations in Parliament. These will be held...
+                    <div class="ExternalClass3E6EA031F2414656827B9298F0D203CF"><p>Hon Judith Collins would like to invite all Muslim parliamentary staff to the Eid celebrations in Parliament. These will be held...</p>
                     
                     <p>
                          Contact: sandra.mackenzie@parliament.govt.nz
@@ -1222,9 +1224,7 @@ classes.</span>​</p><p class="psstyle-rteElement-Normal"><strong>Note&#58; Not
         
             <tr>
                 <td>
-                    <h4>
-                       <h4><a href="#" onclick="return OpenNoticeBoardDialog('http://dev04-ourhouse.campus.services/NewsAndEvents/Noticeboard/_layouts/15/AppPage/NoticeboardItem.aspx?itemId=341', 'Bedsit Accomodation in Mt Victoria ');" >Bedsit Accomodation in Mt Victoria </a></h4>
-                    </h4> 
+                    <h3><a href="#" onclick="return OpenNoticeBoardDialog('http://dev04-ourhouse.campus.services/NewsAndEvents/Noticeboard/_layouts/15/AppPage/NoticeboardItem.aspx?itemId=341', 'Bedsit Accomodation in Mt Victoria ');" >Bedsit Accomodation in Mt Victoria </a></h3> 
                     
                     <div class="ExternalClass0F7B2B4043374E70A53471396CF19E4F"><p>​Sunny comfortable bed-sit for rentinin Mt Victoria. Available immediately.</p></div>
                     
@@ -1246,9 +1246,7 @@ classes.</span>​</p><p class="psstyle-rteElement-Normal"><strong>Note&#58; Not
         
             <tr>
                 <td>
-                    <h4>
-                       <h4><a href="#" onclick="return OpenNoticeBoardDialog('http://dev04-ourhouse.campus.services/NewsAndEvents/Noticeboard/_layouts/15/AppPage/NoticeboardItem.aspx?itemId=340', 'This is a test booking ');" >This is a test booking </a></h4>
-                    </h4> 
+                    <h3><a href="#" onclick="return OpenNoticeBoardDialog('http://dev04-ourhouse.campus.services/NewsAndEvents/Noticeboard/_layouts/15/AppPage/NoticeboardItem.aspx?itemId=340', 'This is a test booking ');" >This is a test booking </a></h3> 
                     
                     <div class="ExternalClass79548BDE226541F8B6952F2136C69947"><p>some descr​iption about notice</p></div>
                     
@@ -1281,6 +1279,35 @@ classes.</span>​</p><p class="psstyle-rteElement-Normal"><strong>Note&#58; Not
 			
         <script language="javascript">if (typeof (MSOLayout_MakeInvisibleIfEmpty) == "function") { MSOLayout_MakeInvisibleIfEmpty(); }</script>
 	</div>
+                  
+                  <aside>
+                    <div class="widget faqs">
+                      <h2>Noticeboard FAQs</h2>
+                      <ul class="accordion">
+                        <li>
+                          <h3>Parliamentary Information Service</h3>
+                          <div class="content">
+                            <p>You must have the Speaker’s permission before you take photographs or film inside the Parliamentary Buildings. Personal filming or photography within the parliamentary grounds does not generally require permission. Filming or photography within the parliamentary grounds for business/commercial purposes does require prior approval by, or under the authority, of the Speaker.</p>
+                          </div>
+                        </li>
+                        <li>
+                          <h3>How can I find out the name of my member of Parliament?</h3>
+                          <div class="content">
+                            <p>You must have the Speaker’s permission before you take photographs or film inside the Parliamentary Buildings. Personal filming or photography within the parliamentary grounds does not generally require permission. Filming or photography within the parliamentary grounds for business/commercial purposes does require prior approval by, or under the authority, of the Speaker.</p>
+                          </div>
+                        </li>
+                        <li>
+                          <h3>How can I contact a member of Parliament?</h3>
+                          <div class="content">
+                            <p>You must have the Speaker’s permission before you take photographs or film inside the Parliamentary Buildings. Personal filming or photography within the parliamentary grounds does not generally require permission. Filming or photography within the parliamentary grounds for business/commercial purposes does require prior approval by, or under the authority, of the Speaker.</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </aside>
+                    
+                </div>
+                  
 	<!-- END Main Content Area -->
 <div style='display:none' id='hidZone'><menu id="MSOMenu_WebPartMenu" class="ms-hide">
 	<ie:menuitem title="Collapse this web part." id="MSOMenu_Minimize" onmenuclick="javascript:MSOLayout_MinimizeRestore(MenuWebPart)" text="Minimize" type="option">
@@ -1301,7 +1328,7 @@ classes.</span>​</p><p class="psstyle-rteElement-Normal"><strong>Note&#58; Not
 
 	</ie:menuitem>
 </menu></div>
-                            <!--<div class="backTop"><a id="backTopLink" href="#top">Back to top &#94;</a></div>-->
+                            <div class="backTop"><a id="backTopLink" href="#top">Back to top</a></div>
 						</div>
 						
                         <div class="noindex">
