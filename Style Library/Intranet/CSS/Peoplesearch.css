@@ -69,8 +69,27 @@ body {
 }
 /* hide the filters */
 #MSOZoneCell_WebPartWPQ3 {
-  display: none;
+  /*display: none;*/
 }
+.ms-srchnav ul {
+  list-style: none;
+  padding: 0;
+  border-bottom: solid 1px #ccc;
+}
+.ms-srchnav li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  border: solid 1px #ccc;
+  border-width: 1px 1px 0 1px;
+  border-radius: 4px 4px 0 0;
+}
+.ms-srchnav a {
+  display: block;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+/*.ms-searchCenter-result-main .ms-WPBody {*/
 #WebPartWPQ4 {
   background: #f6bd14;
   color: #000;

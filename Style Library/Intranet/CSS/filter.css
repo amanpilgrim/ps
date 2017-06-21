@@ -156,14 +156,14 @@ Comment:        Used for dynamic table filters;
 .filter td p { margin: 0; }
 
 .filter td.break-word {
-	word-break: break-all;
-	word-break: break-word;   
+	/*word-break: break-all;*/
+	word-wrap: break-word;   
 	white-space: normal;
 /*	width:	200px;*/
 }
 .filter td.break-word-Documents {
   word-wrap: break-word;
-  word-break: break-all;
+  /*word-break: break-all;*/
 	white-space: normal;
 /*	width: 100px;
   padding-left: 30px;*/
