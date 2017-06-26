@@ -90,19 +90,19 @@ body {
   font-weight: 600;
 }
 /*.ms-searchCenter-result-main .ms-WPBody {*/
-#WebPartWPQ4 {
+.search-filters {
   background: #f6bd14;
   color: #000;
   padding: 30px 229px 30px 30px; /* 156 + 10 + 48 + 15 */
   position: relative;
 }
-#WebPartWPQ4 #SearchBox {
+.search-filters #SearchBox {
   float: none;
 }
-#WebPartWPQ4 .ms-srch-sb-border {
+.search-filters .ms-srch-sb-border {
   border: 0;
 }
-#WebPartWPQ4 #SearchBox input {
+.search-filters #SearchBox input {
   font-size: 16px;
   line-height: 1.25;
   padding: 14px 10px;
@@ -111,7 +111,7 @@ body {
   border: 0;
   border-radius: 5px;
 }
-#WebPartWPQ4 .ms-srch-sb-searchLink {
+.search-filters .ms-srch-sb-searchLink {
   display: inline-block;
   font: normal normal normal 2em/1 FontAwesome;
   text-rendering: auto;
@@ -130,14 +130,14 @@ body {
   cursor: pointer;
   text-decoration: none;
 }
-#WebPartWPQ4 .ms-srch-sb-searchLink:before {
+.search-filters .ms-srch-sb-searchLink:before {
   content: '\f002';
 }
 #searchImg {
   display: none;
 }
 
-#WebPartWPQ4 #AdvancedLink {
+.search-filters #AdvancedLink {
   float: none;
   margin: 0;
   
