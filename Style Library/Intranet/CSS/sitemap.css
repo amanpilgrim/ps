@@ -20,6 +20,7 @@ div.primary ul.col,
 div.primary ul.col li {
 	background-image: none;
 	padding: 0;
+    list-style: none;
 }
 div.primary ul.col li {
 	font-family: "OpenSansCondensedLight", verdana, arial, sans-serif;

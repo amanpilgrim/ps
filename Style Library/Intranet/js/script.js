@@ -353,16 +353,14 @@
         });
 
         /* People Search */
-        $('.ms-srch-result #Actions').before('<label>Sort by</label>');
+        //$('.ms-srch-result #Actions').before('<label>Sort by</label>'); // now handled as callback inside PS_Item_Person.html
         
-        // list item heights
-        peopleResults();
-        
+        // result heights
         function peopleResults() {
-          $('#people-results li').each(function(){
-            $(this).css('min-height', $(this).find('img').width());
-          });
+            var minHeight = $('.people-result:first-child').css('padding-left');
+            $('.people-result').css('min-height', minHeight);
         }
+        peopleResults();
         
         // Accordion
         $('.accordion').on('click', 'h3', function(){

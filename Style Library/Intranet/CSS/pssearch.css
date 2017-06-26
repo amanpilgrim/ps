@@ -1,33 +1,20 @@
-@charset "utf-8";
-/*@font-face {
-    font-family: 'OpenSansCondensedLight';
-    src: url('../webfonts/OpenSans-CondLight-webfont.eot');
-    src: url('../webfonts/OpenSans-CondLight-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../webfonts/OpenSans-CondLight-webfont.woff') format('woff'),
-         url('../webfonts/OpenSans-CondLight-webfont.ttf') format('truetype'),
-         url('../webfonts/OpenSans-CondLight-webfont.svg#OpenSansCondensedLight') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-body { 
-	color: #333;
-	font: normal 12px/1.5 verdana, arial, sans-serif !important  Override SP ; 
-}
-
+﻿@charset "utf-8";
 .ms-srch-item-highlightedText {
+  color: #000;
+  background-color: yellow !important;
+}
 
-   background-color:yellow !important;
-}*/
-
-/* People search */
+/* Search Structure */
 .ms-searchCenter-refinement {
   display: block;
   float: left;
   width: 25%;
   padding: 0 15px;
+  margin: 0;
   box-sizing: border-box;
+}
+.ms-searchCenter-refinement .ms-ref-refiner {
+  padding: 0;
 }
 .ms-searchCenter-refinement a.ms-ref-refinername {
   display: block;
@@ -35,6 +22,8 @@ body {
   font-weight: bold;
   color: #000;
   text-transform: uppercase;
+  width: auto;
+  padding: 0;
   margin-bottom: 15px;
 }
 .ms-searchCenter-refinement .ms-ref-selSec,
@@ -42,7 +31,14 @@ body {
   border-left: solid 5px #1bcba5;
   padding-left: 15px;
 }
+.ms-searchCenter-refinement .ms-ref-refiner[refinername="LastModifiedTime"] .ms-ref-unselSec {
+  border-left: 0;
+  padding-left: 0;
+}
+
 .ms-searchCenter-refinement #Value {
+  width: auto;
+  padding: 0;
   border-bottom: solid 2px #d7d7d7;
 }
 .ms-searchCenter-refinement #Value:first-child {
@@ -54,10 +50,21 @@ body {
   font-weight: 600;
   font-family: 'Open Sans', sans-serif;
   padding: 10px 0;
-  display: block;
   color: #666;
+  vertical-align: middle;
 }
-/* main body area */
+.ms-searchCenter-refinement label.ms-ref-ellipsis {
+  display: inline-block;
+  width: 90%;
+}
+.ms-ref-refiner #Value, .ms-ref-unsel-toggle, #OtherValue, #SubmitValue {
+  width: auto;
+}
+.slider_extent_label_section, .histogram_container {
+  
+}
+
+/* Main body area */
 .ms-searchCenter-result-main {
   float: left;
   width: 75%;
@@ -67,11 +74,10 @@ body {
   z-index: 11;
   padding: 0 30px;
 }
-/* hide the filters */
-#MSOZoneCell_WebPartWPQ3 {
-  /*display: none;*/
-}
+
+/* Search Tabs */
 .ms-srchnav ul {
+  display: block;
   list-style: none;
   padding: 0;
   border-bottom: solid 1px #ccc;
@@ -80,44 +86,75 @@ body {
   display: inline-block;
   padding: 0;
   margin: 0;
-  border: solid 1px #ccc;
-  border-width: 1px 1px 0 1px;
-  border-radius: 4px 4px 0 0;
+  
+}
+.ms-srchnav h2.ms-displayInline {
+  display: block;
+  margin: 0;
 }
 .ms-srchnav a {
   display: block;
   padding: 10px 20px;
   font-weight: 600;
+  border: solid 1px #ccc;
+  border-width: 1px 1px 0 1px;
+  border-radius: 4px 4px 0 0;
 }
-/*.ms-searchCenter-result-main .ms-WPBody {*/
-.search-filters {
+.ms-srchnav-link:hover, .ms-srchnav-link-selected:hover {
+  color: #157a6b;
+}
+
+.ms-srchnav a.ms-srchnav-link-selected  {
+  background: #1bcba5;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.ms-srchnav a.ms-srchnav-link-selected:hover {
+  background: #157a6b;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Search Filters */
+.ms-searchCenter-result-main .ms-webpartzone-cell {
+	position: relative;
+}
+.ms-searchCenter-result-main #SearchBox {
+  float: none;
   background: #f6bd14;
   color: #000;
   padding: 30px 229px 30px 30px; /* 156 + 10 + 48 + 15 */
-  position: relative;
 }
-.search-filters #SearchBox {
-  float: none;
+.ms-srch-sbLarge {
+  display: block;
+  background: transparent;
 }
-.search-filters .ms-srch-sb-border {
+.ms-searchCenter-result-main .ms-srch-sb-border {
   border: 0;
 }
-.search-filters #SearchBox input {
+.ms-searchCenter-result-main #SearchBox input {
+  float: none;
+  height: auto;
   font-size: 16px;
   line-height: 1.25;
   padding: 14px 10px;
+  margin: 0;
   background: #f8d466;
   color: #000;
   border: 0;
   border-radius: 5px;
 }
-.search-filters .ms-srch-sb-searchLink {
+.ms-searchCenter-result-main .ms-srch-sb-searchLink {
   display: inline-block;
   font: normal normal normal 2em/1 FontAwesome;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-width: 28px;
+  width: 28px;
+  height: 28px;
   text-align: center;
   margin: 0;
   background: #000;
@@ -130,14 +167,14 @@ body {
   cursor: pointer;
   text-decoration: none;
 }
-.search-filters .ms-srch-sb-searchLink:before {
+.ms-searchCenter-result-main .ms-srch-sb-searchLink:before {
   content: '\f002';
 }
 #searchImg {
   display: none;
 }
 
-.search-filters #AdvancedLink {
+.ms-searchCenter-result-main #AdvancedLink {
   float: none;
   margin: 0;
   
@@ -158,8 +195,12 @@ body {
 }
 
 /* Sort by */
-#ResultHeader {
+.ms-srch-result {
+  margin: 0;
+}
+.ms-srch-result #ResultHeader {
   float: right;
+  margin: 0 0 1em;
 }
 #ResultHeader label {
   display: inline-block;
@@ -175,9 +216,11 @@ body {
   vertical-align: middle;
 }
 #ResultHeader #Actions li {
-  border: solid 1px #ccc;
-  overflow: hidden;
+  display: block;
   background: #fff;
+  border: solid 1px #ccc;
+  margin: 0;
+  overflow: hidden;
   position: relative;
 }
 #ResultHeader #Actions li:before {
@@ -210,72 +253,97 @@ body {
   display: none;
 }
 
-
-#people-results {
+/* People Results */
+.people-result {
   font-size: 1em; /* 16 */
   line-height: 1.333;
-}
-#people-results ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-#people-results > ul > li {
   position: relative;
   padding-left: 20%;
   /*min-height: 250px;*/
   background: #ebebeb;
   margin: 30px 0;
 }
-#people-results img {
+.people-result ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.people-result .profile-image {
   position: absolute;
   top: 0;
   left: 0;
   width: 20%;
 }
-#people-results h2 {
+.people-result h2 {
   font-size: 2em;
   color: inherit;
   margin: 0;
 }
-#people-results .title {
+.people-result .title {
   font-size: 1.28571428571429em; /* 18 */
   font-style: italic;
 }
-#people-results .detail {
+.people-result .detail {
   padding: 10px 15px;
 }
-#people-results a.detail {
+.people-result a.detail {
   display: block;
   background: #666;
   color: #fff;
   position: relative;
 }
-#people-results a.detail:hover {
+.people-result a.detail:hover {
   background: #1bcba5;
   color: #000;
 }
-#people-results .dataset {
+.people-result .dataset {
   float: left;
   width: 50%;
   padding: 0 15px;
   box-sizing: border-box;
 }
-#people-results a.detail ul.dataset {
+.people-result a.detail ul.dataset {
   padding-right: 40px;
 }
-#people-results .fa {
+.people-result .fa {
   font-size: 50px;
   position: absolute;
   top: 50%;
   margin-top: -25px;
   right: 15px;
 }
-
-#people-results label {
+.people-result label {
   display: inline;
   font-weight: bold;
   margin-right: 6px;
   vertical-align: baseline;
 }
 
+/* Generic Search Results */
+.ms-srch-item-path {
+  color: #157a6b;
+  width: auto;
+}
+
+/* Advanced Search */
+.ms-searchCenter-advanced {
+  max-width: 800px;
+}
+.ms-advsrchText-v2box {
+  height: auto;
+}
+input[type="text"].ms-advsrchPropValue,
+select.ms-advsrchPropertyDDL,
+select.ms-advsrchOperatorDDL,
+select.ms-advsrchAndOrDDL {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  line-height: 21px;
+  color: #000;
+  width: auto;
+  height: auto;
+}
+td.ms-advsrchText-v2 select {
+  color: #000;
+  width: auto;
+}
