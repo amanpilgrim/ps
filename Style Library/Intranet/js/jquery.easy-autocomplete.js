@@ -10,6 +10,7 @@
 /*
  * EasyAutocomplete - Configuration 
  */
+
 var EasyAutocomplete = (function (scope) {
 
     scope.Configuration = function Configuration(options) {
@@ -342,29 +343,6 @@ var EasyAutocomplete = (function (scope) {
                         //	return 1;
                         //}
                         return 0;
-                    };
-
-                    if (!options.list.match1) {
-
-                        options.list.match1 = {};
-                    }
-
-
-                    options.list.match1.method = function (element, phrase) {
-
-                        lastname = element.substr(element.indexOf(' ') + 1);
-                        firstname = element.substr(0, element.indexOf(' '));
-                        // debugger;
-
-                        //if (element.search(phrase) > -1) {
-                        if (lastname.search(phrase) == 0) {
-
-                            return true;
-                        }
-
-                        else {
-                            return false;
-                        }
                     };
 
                 }
@@ -1381,6 +1359,7 @@ var EasyAutocomplete = (function (scope) {
                 $field.next("." + consts.getValue("CONTAINER_CLASS")).remove();
             }
 
+            
             function highlight(string, phrase) {
 
                 if (config.get("highlightPhrase") && phrase !== "") {
@@ -1394,6 +1373,7 @@ var EasyAutocomplete = (function (scope) {
             function escapeRegExp(str) {
                 return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
             }
+
 
             function highlightPhrase(string, phrase) {
                 var escapedPhrase = escapeRegExp(phrase);
@@ -1534,7 +1514,8 @@ var EasyAutocomplete = (function (scope) {
 
 				    function loadData(inputPhrase) {
 
-				        // debugger;
+				        inputPhrase = inputPhrase.replace(/[^\w-,&'\s]/gi, '');
+				        
 				        if (inputPhrase.length < config.get("minCharNumber")) {
 				            return;
 				        }

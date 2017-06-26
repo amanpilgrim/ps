@@ -295,7 +295,19 @@ td.psstyle-rteTableLastCol-NoBorder { text-align: right; }
 }*/
 
 .srch-advancedtable {
-    display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+td.ms-advsrchHeadingText {
+  font-size: 1em;
+}
+h3.ms-advsearch-header {
+  font-size: 1.71428571428571em;
+  color: #000;
+}
+div.ms-advsearch-header {
+  margin: 0;
 }
 
 

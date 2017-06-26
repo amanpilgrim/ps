@@ -23,7 +23,11 @@
         <SharePointWebControls:CssRegistration ID="PSEditMode" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/css/psedit.css%>" after="editmode15.css" runat="server"/>
 	</PublishingWebControls:EditModePanel>
 </asp:Content>
-
+<asp:Content ContentPlaceHolderId="PlaceHolderPageHeaderTitle" runat="server">
+    <PublishingWebControls:EditModePanel ID="EditModePanel6" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
+        <h1><SharePoint:TextField ID="TextField3" runat="server" FieldName="Title"></SharePoint:TextField></h1>
+    </PublishingWebControls:EditModePanel>
+</asp:Content>
 <asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server">
 	<!-- START Secondary Area -->
     <PublishingWebControls:EditModePanel ID="EditModePanel4" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
@@ -33,11 +37,14 @@
 	<!-- END Secondary Area -->	
 	
 	<!-- START Main Content Area -->
-	<div id="top" class="primary narrow">
+    <div id="top" class="primary">
+        <div class="primary narrow">
 		<header>
-			<h1><span class="requiredfield">
-		<SharePoint:TextField ID="TextField2" runat="server" FieldName="Title"></SharePoint:TextField></span></h1>
-            <PublishingWebControls:EditModePanel ID="EditModePanel8" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
+            <PublishingWebControls:EditModePanel ID="EditModePanel5" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
+                 <span class="requiredfield"><SharePoint:TextField ID="TextField2" runat="server" FieldName="Title"></SharePoint:TextField></span>
+            </PublishingWebControls:EditModePanel>
+                
+			<PublishingWebControls:EditModePanel ID="EditModePanel8" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
 			    <ul class="functions">                
 			    </ul>	
             </PublishingWebControls:EditModePanel>								
@@ -47,7 +54,7 @@
                 <PS:MyAlerts runat="server" id="MyAlertsControl" />
             </div>
             
-			<PublishingWebControls:EditModePanel ID="EditModePanel2" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
+			<PublishingWebControls:EditModePanel ID="EditModePanel2" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">                 
 			    <PublishingWebControls:RichHtmlField ID="PSContent" FieldName="PSContent" HasInitialFocus="True" runat="server"/>
 			    <span class="requiredfield"><SharePointWebControls:TextField ID="PSSummaryDescription" FieldName="PSSummaryDescription" runat="server"></SharePointWebControls:TextField></span>
                 <span class="ms-metadata">Enter a max 100 character summary for display on the Resource Centre page.</span>
@@ -66,7 +73,7 @@
 	        </PublishingWebControls:EditModePanel>			
 		</article>
 	</div>	
-		
+		</div>
 	<!-- END Main Content Area -->					
 
 	<script language="javascript">if (typeof (MSOLayout_MakeInvisibleIfEmpty) == "function") { MSOLayout_MakeInvisibleIfEmpty(); }</script>

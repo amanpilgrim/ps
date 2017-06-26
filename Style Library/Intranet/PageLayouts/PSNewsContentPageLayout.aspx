@@ -18,6 +18,8 @@
 <%@Register TagPrefix="PS" TagName="Video" Src="~/_controltemplates/15/News/Video.ascx" %>
 <%@Register TagPrefix="PS" TagName="Twitter" Src="~/_controltemplates/15/Twitter/Twitter.ascx" %>
 <%@Register TagPrefix="PS" TagName="NewsCategorySection" Src="~/_controltemplates/15/News/NewsCategorySection.ascx" %>
+<%@Register TagPrefix="PS" TagName="RelatedNewsStories" Src="~/_controltemplates/15/News/RelatedNewsStories.ascx" %>
+
 
 <asp:Content ContentPlaceholderID="PlaceHolderAdditionalPageHead" runat="server">
 	<SharePointWebControls:CssRegistration ID="CssRegistration1" name="<% $SPUrl:~sitecollection/Style Library/~language/Themable/Core Styles/pagelayouts15.css %>" runat="server"/>
@@ -109,10 +111,10 @@
 				    <Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl2" FieldName="PSKeywords" runat="server" />
 				    <Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl3" FieldName="PSBusinessGroups" runat="server" />
 				    <Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl4" FieldName="PSOrganisation" runat="server" />
-				    <SharePoint:DateTimeField ID="DateTimeField1" FieldName="PSPublishedDate" runat="server" />
+				    <span class="requiredfield"><SharePoint:DateTimeField ID="DateTimeField1" FieldName="PSPublishedDate" runat="server" /></span>
 	                
 	                
-	                <SharePoint:DateTimeField ID="DateTimeField2" FieldName="PSNewsDate" runat="server" />
+	                <span class="requiredfield"><SharePoint:DateTimeField ID="DateTimeField2" FieldName="PSNewsDate" runat="server" /></span>
 				    <Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl5" FieldName="PSNewsTopic" runat="server" />
 				    <Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl6"  FieldName="PSBusinessFunctions" runat="server" />
 	                <PS:EnhancedUrlSelectorControl ID="PSVideoSelectorControl" FieldName="PSVideo" runat="server" />
@@ -124,45 +126,26 @@
             <PublishingWebControls:EditModePanel ID="EditModePanel4" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
                 <PS:PageFooter id="pageLastUpdated" runat="server"/>
             </PublishingWebControls:EditModePanel>
+	       
 	    </div>
-        <!--
-        <aside class="sidebar">
-            <div class="related">
-                <h2>Related Stories</h2>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img src="/url" alt="" />
-                            <div class="inner">
-                                <h3>Title</h3>
-                                <div class="meta">
-                                    <span class="category">NewsTopic</span>
-                                    <span class="date">31 May 2017</span>
-                                </div>
-			                    <p>Description</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </aside>
-        -->
+       
         <PS:ShowRelatedInformation ID="ShowRelatedInformation" runat="server" />
+        <PS:RelatedNewsStories id="RelatedNewsStories" runat="server" />
 
         <!-- START Lastest News Links-->
-	    <PublishingWebControls:EditModePanel ID="EditModePanel10" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
+        <PublishingWebControls:EditModePanel ID="EditModePanel10" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
             <div id="recent" class="grid">
                 <div class="row">
                     <div class="block widget recent">
-	                    <PS:RecentNewsStories id="RecentNewsStories" runat="server"/>
+                        <PS:RecentNewsStories id="RecentNewsStories" runat="server"/>
                     </div>
                     <div id="twitter" class="block">
                         <PS:Twitter id="Twitter1" runat="server"></PS:Twitter>
                     </div>
                 </div>
             </div>
-	    </PublishingWebControls:EditModePanel>  
-	    <!-- END Lastest News Links -->
+        </PublishingWebControls:EditModePanel>  
+        <!-- END Lastest News Links -->
 
     </div>
 	<!-- END Main Content Area -->

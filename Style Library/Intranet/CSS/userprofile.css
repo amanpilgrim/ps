@@ -115,9 +115,10 @@ Comment:        Used for dynamic table filters;
 
 .filter td.break-word {
 /*	word-break: break-all;*/
+  -ms-word-wrap: break-word;
   word-wrap: break-word;
-	white-space: normal;
-	width:	200px;
+  white-space: normal;
+  width: 200px;
 }
 
 .filter tr:nth-of-type(even),

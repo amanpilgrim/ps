@@ -22,7 +22,7 @@ h1 { color: #000; }
   background-position: 50% 0;
 }
 .PSHomePageLayout #header .container {
-  min-height: auto;
+  min-height: 0;
 }
 
 .PSHomePageLayout #main {
@@ -45,6 +45,9 @@ h1 { color: #000; }
 #grid1 .carousel {
   width: 80%;
   position: relative;
+}
+#grid1 .carousel .hero {
+  margin: 0;
 }
 #grid1 .aside {
   width: 20%;

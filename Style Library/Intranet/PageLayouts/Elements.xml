@@ -157,5 +157,17 @@
       <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSUserProfilePageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSUserProfilePageLayout.png" />
       <Property Name="PublishingAssociatedContentType" Value=";#PSArticleCategoryListingPage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39001751E9882E0D45C5828F371CFFC1649600885BA25342834F2FA2B9D6A84D51598500DDD337FD6134458390962D935D0E7700;#"/>
     </File>
+    <File Path="PageLayouts\PSEventPageLayout.aspx" Url="PSEventPageLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Our House Event Page" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSListingPageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSListingPageLayout.png" />
+      <Property Name="PublishingAssociatedContentType" Value=";#PSArticleCategoryListingPage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF3900AF4206E1CF9041829B2813CEBAD5928F;#"/>
+    </File>
+    <File Path="PageLayouts\PSEventsLandingPageLayout.aspx" Url="PSEventsLandingPageLayout.aspx" Type="GhostableInLibrary">
+      <Property Name="Title" Value="Our House Events Landing Page" />
+      <Property Name="ContentType" Value="$Resources:cmscore,contenttype_pagelayout_name;" />
+      <Property Name="PublishingPreviewImage" Value="~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSListingPageLayout.png, ~SiteCollection/_catalogs/masterpage/$Resources:core,Culture;/Preview Images/PSListingPageLayout.png" />
+      <Property Name="PublishingAssociatedContentType" Value=";#PSEventsLandingPage;#0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF39001751E9882E0D45C5828F371CFFC1649600FECB47A4F123450A883345C2210E90A7;#"/>
+    </File>
   </Module>
 </Elements>

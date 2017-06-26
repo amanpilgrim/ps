@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 
 @font-face {
   font-family: 'Open Sans';
@@ -266,7 +266,7 @@ thead th {
 }
 td, tbody th {
   background: #fff;
-  padding: 15px 10px;
+  padding: 5px 10px;
   text-align: left;
   vertical-align: top;
 }
@@ -275,7 +275,7 @@ tbody th {
 }
 tbody tr:nth-child(even) td,
 tbody tr:nth-child(even) th {
-  background: #f2f2f2;
+  /*background: #f2f2f2;*/
 }
 td ul {
   margin: 0;
@@ -350,26 +350,32 @@ input {
   font-family: 'Open Sans', sans-serif;
 }
 input[type="text"], input[type="email"], input[type="password"], input[type="number"], select, textarea {
+  font-family: 'Open Sans', sans-serif;
   width: 100%;
   padding: 9px 14px;
   background: #fff;
+  color: #000;
   border: solid 1px #ccc;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-input[type="submit"] {
-  background: #6eb33c;
-  color: #fff;
+input[type=button], input[type=reset], input[type=submit], button {
+  background: #1bcba5;
+  color: #000;
   border: 0;
   padding: 5px 20px;
   line-height: inherit;
   font-weight: bold;
-}
-input[type=button], input[type=reset], input[type=submit], button {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   box-sizing: border-box;
+  cursor: pointer;
+}
+input[type=button]:hover, input[type=reset]:hover, input[type=submit]:hover, button:hover {
+  border-color: transparent;
+  background: #157a6b;
+  color: #fff;
 }
 /* https://coderwall.com/p/w7npmq/fully-custom-select-box-simple-css-only */
 .dropdown .select {
@@ -490,8 +496,9 @@ figcaption {
 }
 
 .grid .block {
-	display: table-cell;
-	width: 33.33%;
+  display: table-cell;
+  width: 33.33%;
+  -ms-word-wrap: break-word;
   word-wrap: break-word;
   box-sizing: border-box;
   vertical-align: top;
@@ -788,6 +795,9 @@ article div.meta {
   margin: 0;
   padding: 0;
 }
+.contacts li {
+    margin: 1.5em 0 !important;
+}
 
 /* News Carousel */
 #carousel {
@@ -812,12 +822,13 @@ article div.meta {
   background-size: cover;
 }
 #carousel .slide-video {
-  padding-top: 56.65%; /* 56.25 16:9 */
+  padding-top: 52%; /* 56.25 16:9 */
 }
 
 #carousel .slide-image h2, #carousel .slide-video h2 {
   color: #fff;
   text-shadow: 1px 2px 1px rgba(0,0,0,.8);
+  background: rgba(0,0,0,.1);
   padding: 30px;
   margin: 0;
   position: absolute;
@@ -1013,7 +1024,7 @@ aside .event-date .time {
   display: block;
   text-align: center;
 }
-#carousel .summary h2, #carousel .slide-video h2 {
+#carousel .summary h2 {
   padding: 0;
   position: relative;
 }
@@ -1984,6 +1995,8 @@ li > a.ms-core-listMenu-item:active {
   position: relative;
   overflow: visible; /*hidden;  To show 2013 Callout popups, under related infromation*/
   z-index: 11;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
 }
 #main > div.primary {
   padding: 0 30px;
@@ -2247,6 +2260,8 @@ aside {
   overflow: visible; /* hidden; To show 2013 Callout popups, under related infromation */
   position: relative;
   width: 25%;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
 }
 aside .widget {
   margin-bottom: 50px;
@@ -2544,9 +2559,9 @@ a.disable:focus { text-decoration: none; }
 .txt:before {
   content: "\f0f6";
 }
-.externalLink:before {
+/*.externalLink:before {
   content: "\f08e";
-}
+}*/
 .pdf:before {
   content: "\f1c1";
   color: #bc1902;
@@ -2622,9 +2637,9 @@ ul.listing,
 
 
 /* Buttons */
-.container button, .button, .button:link, .button:visited,
-/*.container input[type="submit"],*/
-h2.ms-displayInline a.ms-srchnav-link-selected  {
+.container button, .button, .button:link, .button:visited
+/*.container input[type="submit"],
+h2.ms-displayInline a.ms-srchnav-link-selected*/  {
   background: #1bcba5;
   color: #000;
   border: 0;
@@ -2634,9 +2649,9 @@ h2.ms-displayInline a.ms-srchnav-link-selected  {
   white-space: nowrap;
 }
 
-.container button:hover, .button:hover,
-/*.container input[type="submit"]:hover,*/
-h2.ms-displayInline a.ms-srchnav-link-selected:hover {
+.container button:hover, .button:hover
+/*.container input[type="submit"]:hover,
+h2.ms-displayInline a.ms-srchnav-link-selected:hover*/ {
   background: #157a6b;
   color: #fff;
   text-decoration: none;
@@ -2666,10 +2681,19 @@ article a.button { padding: 4px 10px 6px; }
 .backTop {
   clear: both;
   text-align: right;
+  padding-right: 30px;
 }
 .backTop .fa {
-  margin-left: 6px;
+  font-size: 30px;
+  color: #ccc;
 }
+.backTop .fa:hover {
+  color: inherit;
+}
+.PSHomePageLayout .backTop {
+  display: none;
+}
+
 
 /* Corneres and Gradients *
 .roundedCorner {
@@ -2884,7 +2908,4 @@ h1.ms-dlgTitleText.ms-accentText.ms-dlg-heading {
 .edit-mode-panel .cbs-List li div{
   padding-bottom: 7px;
   width: 180px;
-}
-.ms-srch-item-highlightedText {
-  background-color:yellow !important;
 }

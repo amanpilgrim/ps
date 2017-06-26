@@ -27,6 +27,7 @@
 <asp:Content contentplaceholderid="PlaceHolderMain" runat="server">
 	<!-- START Main Content Area -->
 	<div id="top" class="primary">
+	<div class="primary narrow">
 		<article>
 			<header>
 			<h1><span class="requiredfield">
@@ -59,12 +60,11 @@
 			</PublishingWebControls:EditModePanel>
 
             <PS:ApplicationLinkListing ID="ApplicationLinkListing" runat="server"/>	
-
-            <PS:ShowRelatedInformation ID="ShowRelatedInformation" runat="server"/>							
-            																		
-			<script language="javascript">if (typeof (MSOLayout_MakeInvisibleIfEmpty) == "function") { MSOLayout_MakeInvisibleIfEmpty(); }</script>
 		</article>
-
-	</div>
+    </div>
+    <PS:ShowRelatedInformation ID="ShowRelatedInformation" runat="server"/>							
+            																		
+	<script language="javascript">if (typeof (MSOLayout_MakeInvisibleIfEmpty) == "function") { MSOLayout_MakeInvisibleIfEmpty(); }</script>
+    </div>
 	<!-- END Main Content Area -->	
 </asp:Content>

@@ -105,7 +105,7 @@ Comment:        Used for dynamic table filters;
 .dataTables_filter {
 /*   float: right;
    text-align: right;
-   */display: none;
+   */
 }
 .dataTables_info { 
 /*    float: left; 
@@ -156,20 +156,27 @@ Comment:        Used for dynamic table filters;
 .filter td p { margin: 0; }
 
 .filter td.break-word {
-	/*word-break: break-all;*/
-	word-wrap: break-word;   
-	white-space: normal;
+  /*word-break: break-all;*/
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;   
+  white-space: normal;
 /*	width:	200px;*/
 }
 .filter td.break-word-Documents {
+  -ms-word-wrap: break-word;
   word-wrap: break-word;
   /*word-break: break-all;*/
-	white-space: normal;
+  white-space: normal;
 /*	width: 100px;
   padding-left: 30px;*/
   color: #157a6b;
   font-weight: bold; 
 /*  display: block;*/
+}
+.filter td.break-word > div,
+.filter td.break-word-Documents > div {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .filter td.break-word-Documents:hover {

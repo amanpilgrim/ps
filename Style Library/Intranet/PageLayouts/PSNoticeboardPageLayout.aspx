@@ -28,32 +28,33 @@
         <SharePointWebControls:CssRegistration ID="PSEditMode" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/CSS/psedit.css%>" after="editmode15.css" runat="server"/>        
 	</PublishingWebControls:EditModePanel>
 </asp:Content>
-
+<asp:Content ContentPlaceHolderId="PlaceHolderPageHeaderTitle" runat="server">
+    <PublishingWebControls:EditModePanel ID="EditModePanel6" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
+        <h1><SharePoint:TextField ID="TextField3" runat="server" FieldName="Title"></SharePoint:TextField></h1>
+    </PublishingWebControls:EditModePanel>
+</asp:Content>
 <asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server">
 	<!-- START Main Content Area -->
 	<div id="top" class="primary">
+         <div class="primary narrow">
 		<header>
-			<h1><span class="requiredfield">
-		<SharePoint:TextField ID="TextField2" runat="server" FieldName="Title"></SharePoint:TextField></span></h1>
-            <PublishingWebControls:EditModePanel ID="EditModePanel8" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
+              <PublishingWebControls:EditModePanel ID="EditModePanel4" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
+            <span class="requiredfield"><SharePoint:TextField ID="TextField1" runat="server" FieldName="Title"></SharePoint:TextField></span>
+        </PublishingWebControls:EditModePanel>
+            <div>
+			<PublishingWebControls:RichHtmlField ID="PSContent" FieldName="PSContent" HasInitialFocus="True" runat="server"/>
+        </div> 								
+		</header>
+             <PublishingWebControls:EditModePanel ID="EditModePanel8" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
 			    <ul class="functions">
 			        <PS:RequestLink id="requestLink" runat="server"/>
                     <PS:AddAlert id="addAlert" runat="server" />
 			        <PS:PrintCurrentPage id="printPage" runat="server"/>
                 </ul>
-            </PublishingWebControls:EditModePanel>									
-		</header>
-            
-        <div>
-			<PublishingWebControls:RichHtmlField ID="PSContent" FieldName="PSContent" HasInitialFocus="True" runat="server"/>
-        </div>
-			
-        <PublishingWebControls:EditModePanel ID="EditModePanel3" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
-            <PS:Noticeboard id="Noticeboard" runat="server"/>
-        </PublishingWebControls:EditModePanel>
+            </PublishingWebControls:EditModePanel>	
 
-		<PublishingWebControls:EditModePanel ID="EditModePanel2" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
-			<span class="requiredfield"><SharePoint:FileField ID="FileField1" FieldName="FileLeafRef" runat="server" /></span>
+            <PublishingWebControls:EditModePanel ID="EditModePanel2" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
+            <span class="requiredfield"><SharePoint:FileField ID="FileField1" FieldName="FileLeafRef" runat="server" /></span>
 			<span class="requiredfield"><Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl1" FieldName="PSContentOwner" runat="server" /></span>
 			<span class="requiredfield"><Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControlAudience" FieldName="PSTargetAudiences" runat="server" /></span>
 			<Taxonomy:TaxonomyFieldControl ID="TaxonomyFieldControl2" FieldName="PSKeywords" runat="server" />
@@ -63,7 +64,17 @@
             <span class="requiredfield"><PS:EnhancedUrlSelectorControl ID="UrlField1" FieldName="PSRequestNoticeboardListingUrl" runat="server" /></span>
             
 		</PublishingWebControls:EditModePanel>
+        
 			
+        <PublishingWebControls:EditModePanel ID="EditModePanel3" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
+            <PS:Noticeboard id="Noticeboard" runat="server"/>
+        </PublishingWebControls:EditModePanel>
+
+	
+			
+        
+             </div>
+
         <script language="javascript">if (typeof (MSOLayout_MakeInvisibleIfEmpty) == "function") { MSOLayout_MakeInvisibleIfEmpty(); }</script>
 	</div>
 	<!-- END Main Content Area -->

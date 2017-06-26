@@ -11,6 +11,7 @@
 <%@Register TagPrefix="PS" TagName="ToolsDropDown" Src="~/_controltemplates/15/ToolsDropDown/ToolsDropDown.ascx" %>
 <%@Register TagPrefix="PS" TagName="FindAPerson" Src="~/_controltemplates/15/SitePeopleSearchBox/FindPeople.ascx" %>
 <%@Register TagPrefix="PS" TagName="CurrentPageLayout" Src="~/_controltemplates/15/CurrentPageLayout/CurrentPageLayout.ascx" %>
+<%@Register TagPrefix="PS" TagName="SectionName" Src="~/_controltemplates/15/Section/SectionName.ascx" %>
 <!DOCTYPE HTML>
 <!--[if lt IE 7]> <html class="ie6 oldie" lang="en"> <![endif]-->
 <!--[if IE 7]> <html class="ie7 oldie" lang="en"> <![endif]-->
@@ -71,11 +72,12 @@
 		
 		<!-- ===== STARTER: Custom CSS  =================================================================================================== -->
         <SharePoint:CssRegistration ID="CssRegistration2" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/CSS/normalize.css?Rev=2017.05.11 %&gt;" runat="server" after="SharepointCssFile"/>
-		<SharePoint:CssRegistration ID="CssRegistration5" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/CSS/font-awesome/css/font-awesome.min.css?Rev=2017.05.11 %&gt;" runat="server" after="SharepointCssFile"/>
-		<SharePoint:CssRegistration ID="CssRegistration7" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/CSS/slick.css %&gt;" runat="server" after="SharepointCssFile"/>
-        <SharePoint:CssRegistration ID="CssRegistration3" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/CSS/main.css?Rev=2017.05.11 %&gt;" runat="server" after="SharepointCssFile"/>
-        <SharePoint:CssRegistration ID="CssRegistration4" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/CSS/pscore.css %&gt;" runat="server" after="SharepointCssFile"/>
-        <SharePoint:CssRegistration ID="CssRegistration6" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/CSS/responsive.css?Rev=2017.05.19 %&gt;" runat="server" after="SharepointCssFile"/>	
+		<SharePoint:CssRegistration ID="CssRegistration3" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/CSS/font-awesome/css/font-awesome.min.css?Rev=2017.05.11 %&gt;" runat="server" after="SharepointCssFile"/>
+		<SharePoint:CssRegistration ID="CssRegistration4" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/CSS/slick.css %&gt;" runat="server" after="SharepointCssFile"/>
+        <SharePoint:CssRegistration ID="CssRegistration5" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/CSS/pscore.css %&gt;" runat="server" after="SharepointCssFile"/>
+        <SharePoint:CssRegistration ID="CssRegistration6" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/CSS/pssearch.css %&gt;" runat="server" after="SharepointCssFile"/>
+        <SharePoint:CssRegistration ID="CssRegistration7" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/CSS/main.css?Rev=2017.05.11 %&gt;" runat="server" after="SharepointCssFile"/>
+        <SharePoint:CssRegistration ID="CssRegistration8" name="&lt;% $SPUrl:~sitecollection/Style Library/Intranet/CSS/responsive.css?Rev=2017.05.19 %&gt;" runat="server" after="SharepointCssFile"/>	
         <link href="/Style Library/Intranet/CSS/print.css" rel="stylesheet" type="text/css" media="print" />
 
 		<!-- ===== STARTER: Additional header placeholder - overridden by asp:Content on pages or page layouts  =========================== -->
@@ -106,8 +108,12 @@
                 SP.UI.ModalDialog.RefreshPage(dialogResult);
             }
 
+            // fix IE11 Sharepoint issue
+            if (typeof browseris !== 'undefined') {
+                browseris.ie = false;
+            }
+
         </script>
-        
 
 	</head>
 	
@@ -215,7 +221,7 @@
 								<div class="ms-core-navigation">
 									<asp:ContentPlaceHolder id="PlaceHolderLeftNavBar" runat="server">
 										<div class="ms-quicklaunchouter subNav">
-                                            <div class="title">[Section name]</div>
+										    <PS:SectionName id="SectionName" runat="server"/>
 											<div class="ms-quickLaunch noindex">
 												<asp:ContentPlaceHolder id="PlaceHolderQuickLaunchTop" runat="server">
 													<SharePoint:UIVersionedContent ID="UIVersionedContent1" UIVersion="3" runat="server">
@@ -237,77 +243,34 @@
 													CssClass="ms-quicklaunch-navmgr">
 													<div class="noindex">
 														<SharePoint:DelegateControl ID="DelegateControl5" runat="server" ControlId="QuickLaunchDataSource">
-														
-														
-														
-														
-														
-																<Template_Controls>
+															<Template_Controls>
 																<asp:SiteMapDataSource SiteMapProvider="SPNavigationProvider" ShowStartingNode="False" id="QuickLaunchSiteMap" StartingNodeUrl="sid:1025" runat="server" />
 															</Template_Controls>
 														</SharePoint:DelegateControl>
 														<SharePoint:UIVersionedContent ID="UIVersionedContent2" UIVersion="3" runat="server">
-														
-														
-														
-														
-														
 															<ContentTemplate>
 																<SharePoint:AspMenu id="QuickLaunchMenu" runat="server" DataSourceId="QuickLaunchSiteMap" Orientation="Vertical" StaticDisplayLevels="2" ItemWrap="true" MaximumDynamicDisplayLevels="0" StaticSubMenuIndent="0" SkipLinkText="" CssClass="s4-die">
-																
-																
-																
-																
-																
 																	<LevelMenuItemStyles>
 																		<asp:menuitemstyle CssClass="ms-navheader" />
 																		<asp:menuitemstyle CssClass="ms-navitem" />
 																	</LevelMenuItemStyles>
-																
-																
-																
-																
-																
+
 																	<LevelSubMenuStyles>
 																		<asp:submenustyle CssClass="ms-navSubMenu1" />
 																		<asp:submenustyle CssClass="ms-navSubMenu2" />
 																	</LevelSubMenuStyles>
 																
-																
-																
-																
-																
 																	<LevelSelectedStyles>
 																		<asp:menuitemstyle CssClass="ms-selectednavheader" />
 																		<asp:menuitemstyle CssClass="ms-selectednav" />
 																	</LevelSelectedStyles>
-																
-																
-																
-																
-																
 																</SharePoint:AspMenu>
 															</ContentTemplate>
-														
-														
-														
-														
-														
-													</SharePoint:UIVersionedContent>
+		    											</SharePoint:UIVersionedContent>
 														<SharePoint:UIVersionedContent ID="UIVersionedContent3" UIVersion="4" runat="server">
-														
-														
-														
-														
-														
 															<ContentTemplate>
 																<SharePoint:AspMenu id="V4QuickLaunchMenu" runat="server" EnableViewState="false" DataSourceId="QuickLaunchSiteMap" UseSimpleRendering="true" UseSeparateCss="false" Orientation="Vertical" StaticDisplayLevels="2" MaximumDynamicDisplayLevels="0" SkipLinkText="" CssClass="s4-ql" />
 															</ContentTemplate>
-														
-														
-														
-														
-														
 														</SharePoint:UIVersionedContent>
 													</div>
 												</Sharepoint:SPNavigationManager>
@@ -459,17 +422,18 @@
 							</div>	
 							<!-- ===== STARTER: Main Placeholder gets replaced with content of the page ======================================= -->																							
 							<asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server" />
-                            <!--<div class="backTop"><a id="backTopLink" href="#top">Back to top &#94;</a></div>-->
+
+                            <div class="backTop"><a id="backTopLink" href="#top" class="fa fa-chevron-circle-up" title="Back to top"></a></div>
 						</div>
 						
                         <div class="noindex">
 						    <footer id="footer" class="noindex">
 							    <nav>
 								    <ul>
-                      <li class="noindex"><a class="noindex" href="https://www.parliament.nz" title="Visit the NZ Parliament website"><img src="/Style%20Library/Intranet/images/nz-parliament.png" alt="New Zealand Parliament logo" /></a></li>
+                      <li class="noindex"><a class="noindex" href="https://www.parliament.nz" title="Visit the NZ Parliament website" target="_blank"><img src="/Style%20Library/Intranet/images/nz-parliament.png" alt="New Zealand Parliament logo" /></a></li>
 									    <PS:NavigationTermSetFooter id="navigationTermSetFooter" runat="server" />
 									    <%--<li class="last"><a href="http://newzealand.govt.nz" title="Open the New Zealand Government website in a new window. " target="_blank"><img src="/Style Library/Intranet/images/nzgovt-logo.png" alt="New Zealand Govt Website link. " /></a></li>--%>
-                      <li><a id="govt" href="https://www.govt.nz" title="govt.nz - Connecting you to New Zealand central &amp; local government services" rel="external">www.govt.nz</a></li>
+                      <li><a id="govt" href="https://www.govt.nz" title="govt.nz - Connecting you to New Zealand central &amp; local government services" rel="external" target="_blank">www.govt.nz</a></li>
 								    </ul>
 							    </nav>
 						    </footer>

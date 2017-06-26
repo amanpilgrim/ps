@@ -26,6 +26,8 @@
     <ProjectItemFile Source="PSMyAlertsManagementPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
     <ProjectItemFile Source="PSAdvancedPeopleSearchPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
     <ProjectItemFile Source="PSArticleCategoryListingPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
+    <ProjectItemFile Source="PSEventPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
+    <ProjectItemFile Source="PSEventsLandingPageLayout.aspx" Target="PageLayouts\" Type="ElementFile" />
   </Files>
   <ExtensionData>
     <ExtensionDataItem Key="DeploymentConflictResolutionBehavior" Value="None" />

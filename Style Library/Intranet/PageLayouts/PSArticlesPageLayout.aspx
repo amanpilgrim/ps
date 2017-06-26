@@ -43,12 +43,16 @@
         <SharePointWebControls:CssRegistration ID="PSEditMode" name="<%$SPUrl:~SiteCollection/Style Library/Intranet/CSS/psedit.css%>" after="editmode15.css" runat="server"/>
 	</PublishingWebControls:EditModePanel>
 </asp:Content>
-
+<asp:Content ContentPlaceHolderId="PlaceHolderPageHeaderTitle" runat="server">
+    <PublishingWebControls:EditModePanel ID="EditModePanel6" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
+        <h1><SharePoint:TextField ID="TextField3" runat="server" FieldName="Title"></SharePoint:TextField></h1>
+    </PublishingWebControls:EditModePanel>
+</asp:Content>
 <asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server">
 	<div id="top" class="primary">
+         <div class="primary narrow">
 		<header>
-			<h1><span class="requiredfield">
-		<SharePoint:TextField ID="TextField2" runat="server" FieldName="Title"></SharePoint:TextField></span></h1>
+			
             <PublishingWebControls:EditModePanel ID="EditModePanel8" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
 			    <ul class="functions">
 			        <PS:ArticleSearch id="articleSearch" runat="server"/>
@@ -59,6 +63,10 @@
             </PublishingWebControls:EditModePanel>
 		</header>
 		<article>
+            <PublishingWebControls:EditModePanel ID="EditModePanel3" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
+                 <span class="requiredfield"><SharePoint:TextField ID="TextField2" runat="server" FieldName="Title"></SharePoint:TextField></span>
+            </PublishingWebControls:EditModePanel>
+
 		    <div class="clear">
 			<PublishingWebControls:RichHtmlField ID="PSContent" FieldName="PSContent" HasInitialFocus="True" runat="server"/>
 			</div>			
@@ -69,7 +77,7 @@
                 <PS:Articles id="articles" runat="server" />
             </PublishingWebControls:EditModePanel>
 
-			<PublishingWebControls:EditModePanel ID="EditModePanel2" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
+			<PublishingWebControls:EditModePanel ID="EditModePanel2" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">                 
 			    <span class="requiredfield"><SharePointWebControls:TextField ID="PSSummaryDescription" FieldName="PSSummaryDescription" runat="server"></SharePointWebControls:TextField></span>
                 <SharePointWebControls:FieldDescription ID="FieldDescription1" FieldName="PSSummaryDescription" runat="server"/>
 			    <span class="requiredfield"><SharePoint:FileField ID="FileField1" FieldName="FileLeafRef" runat="server" /></span>
@@ -86,7 +94,8 @@
             <footer>
 			</footer>			
 
-		</article>						
+		</article>	
+      </div>					
 		<script language="javascript">if (typeof (MSOLayout_MakeInvisibleIfEmpty) == "function") { MSOLayout_MakeInvisibleIfEmpty(); }</script>
 	</div>
     

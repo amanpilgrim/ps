@@ -35,7 +35,7 @@
         <div class="primary narrow">
             <article>
                 <PublishingWebControls:EditModePanel ID="EditModePanel9" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
-                    <PS:PageImage ID="PageImage" FieldName="PSPageImage" ImageRenditionName="Section Image" runat="server" />                
+                    <PS:PageImage ID="PageImage" FieldName="PSPageImage" ImageRenditionName="Content Image" runat="server" />                
                 </PublishingWebControls:EditModePanel>
             
                 <PublishingWebControls:EditModePanel ID="EditModePanel10" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
