@@ -54,9 +54,11 @@
 			</div>
 		</article>
 
+        <div class="primary narrow">
         <PublishingWebControls:EditModePanel ID="EditModePanel2" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
 		    <PS:NewsListing id="NewsListing" runat="server"/>
         </PublishingWebControls:EditModePanel>
+        </div>
 
         <PublishingWebControls:EditModePanel ID="EditModePanel3" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
 			<span class="requiredfield"><SharePoint:FileField ID="FileField1" FieldName="FileLeafRef" runat="server" /></span>
@@ -68,7 +70,7 @@
 			<SharePoint:DateTimeField ID="DateTimeField1" FieldName="PSPublishedDate" runat="server" />
 		</PublishingWebControls:EditModePanel>
 
-        <%--<PS:ShowRelatedInformation ID="ShowRelatedInformation" runat="server" />--%>
+        <PS:ShowRelatedInformation ID="ShowRelatedInformation" runat="server" />
             																		
 		<script language="javascript">if (typeof (MSOLayout_MakeInvisibleIfEmpty) == "function") { MSOLayout_MakeInvisibleIfEmpty(); }</script>
 

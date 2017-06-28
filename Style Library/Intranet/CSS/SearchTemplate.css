@@ -1,0 +1,30 @@
+﻿
+.searchTemplateTable
+{
+  width:720px;
+}
+
+.searchTemplateTable table, th
+{
+        text-align: left;
+	background-color: #f6f6f2;
+}
+.searchTemplateTable table, th, td {
+   border: 1px solid #CECECE;
+   padding-left:5px;
+}
+
+.searchTemplateTable{
+    counter-reset: rowNumber;
+    counter-increment: rowNumber;
+}
+
+.searchTemplateTable tr:not(:first-child)  {
+    counter-increment: rowNumber;
+}
+
+.searchTemplateTable tr td:first-child::before {
+    content: counter(rowNumber);
+    min-width: 1em;
+    margin-right: 0.5em;
+}

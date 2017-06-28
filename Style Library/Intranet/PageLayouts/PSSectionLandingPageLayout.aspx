@@ -37,17 +37,17 @@
 <asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server">
 	<!-- START Main Content Area -->
 	<div id="top" class="primary">
+        <PublishingWebControls:EditModePanel ID="EditModePanel9" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
+            <PS:PageImage ID="PageImage" FieldName="PSPageImage" ImageRenditionName="Section Image" runat="server" />
+		</PublishingWebControls:EditModePanel>
+            
+        <PublishingWebControls:EditModePanel ID="EditModePanel10" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
+            <PublishingWebControls:RichImageField ID="RichImageField2" FieldName="PSPageImage" runat="server" />
+            <SharePointWebControls:FieldDescription FieldName="PSPageImage" runat="server"/>
+        </PublishingWebControls:EditModePanel>
+
 	    <div class="primary narrow">
 		    <article>
-                <PublishingWebControls:EditModePanel ID="EditModePanel9" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
-                    <PS:PageImage ID="PageImage" FieldName="PSPageImage" ImageRenditionName="Section Image" runat="server" />
-			    </PublishingWebControls:EditModePanel>
-            
-                <PublishingWebControls:EditModePanel ID="EditModePanel10" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
-                    <PublishingWebControls:RichImageField ID="RichImageField2" FieldName="PSPageImage" runat="server" />
-                    <SharePointWebControls:FieldDescription FieldName="PSPageImage" runat="server"/>
-                </PublishingWebControls:EditModePanel>
-
 			    <PublishingWebControls:EditModePanel ID="EditModePanel8" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
 				    <header>		    
 			            <h1><SharePoint:TextField ID="TextField5" runat="server" FieldName="Title"></SharePoint:TextField></h1>

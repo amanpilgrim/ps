@@ -21,21 +21,7 @@
 <body>
     <div id="Item_Person">
       
-<!--#_
-    // reset OnPostRender so it only runs once (we can't access Control Template)
-    ctx.OnPostRender = [];
-    ctx.OnPostRender.push(function(){
-        // set each result min-height 
-        var minHeight = $('.people-result:first-child').css('padding-left');
-        $('.people-result').css('min-height', minHeight);
-
-        // prepend label to filter
-        $('.ms-srch-result #Actions').before('<label>Sort by</label>');
-    });
-_#-->
-        
-
-        
+       
         <!--#_
               if(!$isNull(ctx.CurrentItem) && !$isNull(ctx.ClientControl)){
               var id = ctx.ClientControl.get_nextUniqueId();
@@ -247,6 +233,14 @@ _#-->
     if(typeof(ctx.EnqueueImnRequest) == "undefined") { ctx.EnqueueImnRequest = false; }
     if (ctx.EnqueueImnRequest == false) {
     ctx.ClientControl.add_oneTimeResultRendered(function(){ if (typeof(ProcessImn) != "undefined") { ProcessImn(); } });
+
+    // set each result min-height 
+    var minHeight = $('.people-result:first-child').css('padding-left');
+    $('.people-result').css('min-height', minHeight);
+
+    // prepend label to filter
+    $('.ms-srch-result #Actions').before('<label>Sort by</label>');
+
     ctx.EnqueueImnRequest = true;
     }
     };

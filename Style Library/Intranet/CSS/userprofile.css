@@ -1,28 +1,80 @@
-﻿.UserProfile {
-    position: relative;
-    right: -20px;
-}
-.UserDisplayName {
-    color:#004d38
+﻿.UserPicture {
+  float: left;
+  width: 200px;
+  margin: 0 15px;
+  position: relative;
 }
 
-.UserPicture img { 	max-width: 200px; }
+.UserPicture img {
+  max-width: 200px;
+}
 
 .profilenameOverlay {
-    width: 180px;
-    top: 336px;
-    color: #fff;
-    padding-top: 7px;
-    padding-right: 0px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    position: absolute;
-    z-index: 1;
-    text-decoration: none;
-    background-color: #000000;
-    background-color: rgba(0, 0, 0, 0.6);
-    text-align: center;
+  padding: 10px;
+  margin: 0;
+  background-color: #000000;
+  background-color: rgba(0,0,0,0.6);
+  color: #fff;
+  font: 2em/1.2 OpenSansLight, sans-serif;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
 }
+
+.UserProfile {
+  position: relative;
+}
+
+.UserDisplayName {
+  margin: 0;
+}
+
+.userprofileproperties {
+  list-style: none;
+  padding: 0;
+}
+
+.userprofileproperty span {
+  line-height: 1;
+}
+
+.profileTable td {
+  padding-left: 0;
+}
+/*
+.ms-spimn-presenceLink {
+  display: inline-block;
+  line-height: 1;
+  padding: 0;
+  margin-right: 6px;
+}
+.ms-spimn-presenceWrapper {
+  width: 0;
+  height: 20px;
+  padding-left: 20px;
+  margin: 0;
+  overflow: hidden;
+}
+.ms-spimn-img {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+}
+.ms-spimn-presenceWrapper:before {
+  font: normal 20px/1 FontAwesome;
+  content: "\f17e";
+  color: #ccc;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+*/
+
+
 
 /*#s4-leftpanel {
   display:none;
@@ -39,7 +91,7 @@ Project:        Intranet Redevelopment;
 Author:         Datacom Wellington;
 Comment:        Used for dynamic table filters;
 ************************************************** */
-
+/*
 .searchFilter {
 	background-color: #fff;
 	font-family: verdana, arial, sans-serif;
@@ -114,7 +166,6 @@ Comment:        Used for dynamic table filters;
 }
 
 .filter td.break-word {
-/*	word-break: break-all;*/
   -ms-word-wrap: break-word;
   word-wrap: break-word;
   white-space: normal;
@@ -135,9 +186,9 @@ tr.even td { background-color: #f6f6f2; }
 .filter .button { 
 	display: block;
 	margin-top: 5px;
-}
+}*/
 
-/* Edit Left Nav */
+/* Edit Left Nav *
 .ms-core-listMenu-verticalBox {
 	background-color: #fff;
  	padding-left: 0;
@@ -160,3 +211,4 @@ tr.even td { background-color: #f6f6f2; }
 		font-size: 17px;
 		line-height: 1.2;
 	}
+*/

@@ -190,9 +190,10 @@
                                     <div id="slideout">
                                             <!-- ===== STARTER: Search Control ==================================================================================== -->
 									    <div class="search ms-dialogHidden">
-										    <asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server">
+										    <asp:ContentPlaceHolder id="PlaceHolderNewSearchArea" runat="server">
 												<SharePoint:DelegateControl ID="DelegateControl4" runat="server" ControlId="SmallSearchInputBox" Version="4"/>
 										    </asp:ContentPlaceHolder>
+										    <asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server" Visible="false" />
 									    </div>
 
                                         <!-- ===== Find a Person Control ==================================================================================== -->

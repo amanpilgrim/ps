@@ -280,6 +280,10 @@ td.psstyle-rteTableLastCol-NoBorder { text-align: right; }
 	font-size: 1em;
 }
 
+aside .ms-webpartzone-cell {
+  margin: 0;
+}
+
 /* WebPart Zones */
 .ms-SPZoneLabel {
 	clear: both;

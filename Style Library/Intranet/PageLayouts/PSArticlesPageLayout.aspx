@@ -50,7 +50,6 @@
 </asp:Content>
 <asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server">
 	<div id="top" class="primary">
-         <div class="primary narrow">
 		<header>
 			
             <PublishingWebControls:EditModePanel ID="EditModePanel8" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
@@ -95,13 +94,12 @@
 			</footer>			
 
 		</article>	
-      </div>					
+			
 		<script language="javascript">if (typeof (MSOLayout_MakeInvisibleIfEmpty) == "function") { MSOLayout_MakeInvisibleIfEmpty(); }</script>
 	</div>
     
     <PublishingWebControls:EditModePanel ID="EditModePanel4" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
-	<!-- START Secondary Area -->
-        
+	<!-- START Secondary Area -->     
 
 
     </PublishingWebControls:EditModePanel>

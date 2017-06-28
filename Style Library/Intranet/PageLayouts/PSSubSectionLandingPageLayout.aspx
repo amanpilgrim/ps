@@ -34,18 +34,19 @@
 <asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server">
 	<!-- START Main Content Area -->
 	<div id="top" class="primary">
-	    <PublishingWebControls:EditModePanel ID="EditModePanel9" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
-            <PS:PageImage ID="PageImage" FieldName="PSPageImage" ImageRenditionName="Content Image" runat="server" />
-		</PublishingWebControls:EditModePanel>
-            
-        <PublishingWebControls:EditModePanel ID="EditModePanel10" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
-            <span class="requiredfield"><SharePoint:TextField ID="TextField2" runat="server" FieldName="Title"></SharePoint:TextField></span>
-            <PublishingWebControls:RichImageField ID="RichImageField2" FieldName="PSPageImage" runat="server" />
-            <SharePointWebControls:FieldDescription ID="FieldDescription1" FieldName="PSPageImage" runat="server"/>
-        </PublishingWebControls:EditModePanel>
 
 	    <div class="primary narrow">
             <article>
+                <PublishingWebControls:EditModePanel ID="EditModePanel9" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
+                    <PS:PageImage ID="PageImage" FieldName="PSPageImage" ImageRenditionName="Content Image" runat="server" />
+		        </PublishingWebControls:EditModePanel>
+            
+                <PublishingWebControls:EditModePanel ID="EditModePanel10" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Edit">
+                    <span class="requiredfield"><SharePoint:TextField ID="TextField2" runat="server" FieldName="Title"></SharePoint:TextField></span>
+                    <PublishingWebControls:RichImageField ID="RichImageField2" FieldName="PSPageImage" runat="server" />
+                    <SharePointWebControls:FieldDescription ID="FieldDescription1" FieldName="PSPageImage" runat="server"/>
+                </PublishingWebControls:EditModePanel>
+
 			    <header>
 				    <%--<h1><span class="requiredfield"><SharePoint:TextField ID="TextField2" runat="server" FieldName="Title"></SharePoint:TextField></span></h1> --%>
                     <p class="translation"><SharePoint:TextField ID="TextField1" runat="server" FieldName="PSSubheading"></SharePoint:TextField></p>
@@ -56,7 +57,6 @@
 			            <span class="requiredfield"><SharePointWebControls:TextField ID="TextField3" runat="server" FieldName="PSSummaryDescription"></SharePointWebControls:TextField></span>
 			            <PublishingWebControls:RichHtmlField ID="RichHtmlField1" FieldName="PSContent" HasInitialFocus="True" runat="server"/>
                     </PublishingWebControls:EditModePanel>
-
 			        
 			        <PublishingWebControls:EditModePanel ID="EditModePanel4" runat="server" CssClass="edit-mode-panel" PageDisplayMode="Display">
 				        <PublishingWebControls:RichHtmlField ID="PSContent" FieldName="PSContent" HasInitialFocus="True" runat="server"/>

@@ -485,14 +485,14 @@ figcaption {
 }
 
 .grid {
-	display: table;
-	table-layout: fixed;
-	border-spacing: 30px;
-	margin: 0 -30px;
+  display: table;
+  table-layout: fixed;
+  border-spacing: 30px;
+  margin: 0 -30px;
 }
 
 .grid .row {
-	display: table-row;
+  display: table-row;
 }
 
 .grid .block {
@@ -828,7 +828,7 @@ article div.meta {
 #carousel .slide-image h2, #carousel .slide-video h2 {
   color: #fff;
   text-shadow: 1px 2px 1px rgba(0,0,0,.8);
-  background: rgba(0,0,0,.1);
+  background: rgba(0,0,0,.2);
   padding: 30px;
   margin: 0;
   position: absolute;
@@ -846,6 +846,8 @@ article div.meta {
 }
 #carousel .fa {
   font-size: 30px;
+}
+#carousel .slick-arrow {
   color: #ccc;
   position: absolute;
   bottom: 0;
@@ -856,7 +858,7 @@ article div.meta {
 #carousel .fa-chevron-left {
   right: 100px;
 }
-#carousel .fa:hover {
+#carousel .slick-arrow:hover {
   color: #000;
 }
 
@@ -884,6 +886,12 @@ article div.meta {
 }
 .widget.documents h2 {
   margin-bottom: 15px;
+}
+.widget.documents h3 {
+  font-family: OpenSansLight, sans-serif;
+  font-size: 2em;
+  line-height: 1.25;
+  margin: 0 0 15px;
 }
 .widget.documents ul {
   list-style: none;
@@ -998,7 +1006,7 @@ aside .event-date .time {
 }
 
 /* Event Carousel */
-.PSEventListingPageLayout #carousel {
+.PSEventsLandingPageLayout #carousel {
   padding-bottom: 35px;
 }
 #carousel .summary, .hero .summary {
@@ -1008,6 +1016,7 @@ aside .event-date .time {
   position: absolute;
   left: 0;
   bottom: 0;
+  right: 0;
   top: auto;
   height: auto;
 }
@@ -1025,6 +1034,7 @@ aside .event-date .time {
   text-align: center;
 }
 #carousel .summary h2 {
+  background: transparent;
   padding: 0;
   position: relative;
 }
@@ -1351,7 +1361,7 @@ ul.accordion {
 #slideout {
   position: absolute;
   top: 0;
-  right: 0;
+  /*right: 0;*/
   left: -9999px;
   bottom: 0;
   background: rgba(0,0,0,.5);
@@ -1365,6 +1375,7 @@ ul.accordion {
 }
 .nav-open #slideout {
   left: 120px !important;
+  right: 0;
 }
 
 /* Search */
@@ -1589,10 +1600,8 @@ ul.accordion {
 }
 .toolMenu {
   display: inline-block;
-  min-width: 200px;
   background: #e1948a;
-  padding: 5px 45px 5px 15px;
-  border-radius: 2px 2px 4px 4px;
+  border-radius: 5px;
   box-shadow: 0 0 2px rgba(0,0,0,.2);
   position: relative;
   vertical-align: middle;
@@ -1600,8 +1609,11 @@ ul.accordion {
 }
 .toolMenu > a {
   display: block;
+  min-width: 200px;
   font-size: 1.28571428571429em; /* 18 */
   line-height: 30px;
+  padding: 5px 45px 5px 15px;
+  position: relative;
 }
 .toolMenu .fa {
   position: absolute;
@@ -1614,8 +1626,11 @@ ul.accordion {
   border-left: solid 1px #9b6a5c;
   transition: .3s ease-in-out;
 }
-.toolMenu:hover {
-  border-radius: 2px 2px 0 0;
+.toolMenu.open {
+  border-radius: 5px 5px 0 0;
+}
+.toolMenu.open .fa:before {
+  content: '\f0d8';
 }
 
 .toolOptions {
@@ -1625,12 +1640,16 @@ ul.accordion {
   margin: 0;
   padding: 0;
   background: #e1948a;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 5px 5px;
   position: absolute;
   top: 40px;
   left: 0;
+  transition: .3s ease-in-out;
 }
 .toolMenu:hover .toolOptions {
+  /*display: block;*/
+}
+.toolMenu.open .toolOptions {
   display: block;
 }
 
@@ -1799,8 +1818,15 @@ ul.dynamic {
   font-weight: normal;
 }
 .mainNav .dynamic a:hover {
-  background-color: transparent;
+  background-color: #292929;
+  color: #fff;
+  margin: -1px -20px;
+  padding: 13px 20px;
 }
+.mainNav .dynamic a:hover .menu-item-text {
+  color: #fff !important;
+}
+
 
 .ms-core-listMenu-horizontalBox a.ms-core-listMenu-item:hover,
 .ms-core-listMenu-horizontalBox a.ms-core-listMenu-item.ms-core-listMenu-selected:hover {
@@ -1809,7 +1835,7 @@ ul.dynamic {
 
 /* Breadcrumbs */
 .breadcrumb {
-  color: #999;
+  color: #acacac;
   
   width: 25%;
   padding: 15px;
@@ -1817,14 +1843,6 @@ ul.dynamic {
   position: absolute;
   left: 0;
   bottom: 0;
-
-/*  clear: left;
-  float: left;
-  display: inline;
-  width: 285px;
-  margin-right: 50px;
-  position: relative;
-  z-index: 0;*/
 }
 .breadcrumb b {
   display: inline-block;
@@ -1838,12 +1856,16 @@ ul.dynamic {
 .breadcrumb span span a {
   white-space: nowrap;
 }
-.breadcrumb > span > span:first-of-type a, .fa-home {
+.breadcrumb > span > span:first-of-type a {
   color: #acacac;
   display: inline-block;
   width: 13px;
   overflow: hidden;
   vertical-align: middle;
+}
+.breadcrumb > span > span:first-of-type a:hover {
+  color: #fff;
+  text-decoration: none;
 }
 .breadcrumb > span > span:first-of-type a:before {
   display: inline-block;
@@ -1853,16 +1875,17 @@ ul.dynamic {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: '\f015';
-  color: #acacac;
   margin-right: 5px;
   position: relative;
   top: -1px;
   z-index: -1;
 }
-/*.breadcrumb .home + span > span { display: none; }
-.breadcrumb .home + span > span + span { display: inline-block; }*/
 .breadcrumb img {
   display: none;
+}
+.breadcrumb > span > span:nth-child(4) > a {
+  text-decoration: none !important;
+  cursor: default;
 }
 
 /* Sub Nav */
@@ -1981,6 +2004,10 @@ li > a.ms-core-listMenu-item:active {
   font-weight: normal;
   padding: 5px 0;
 }
+#s4-bodyContainer .subNav li.hasChildren li.selected a {
+  font-weight: 600;
+}
+
 
 /* **** Main Content Area *** */
 #main {
@@ -2133,14 +2160,14 @@ ul.carouselNav li {
   position: relative;
 }
 .PSEventPageLayout .hero,
-.PSEventListingPageLayout .hero,
+.PSEventsLandingPageLayout .hero,
 .PSNewsContentPageLayout .hero,
 .PSNewsListingPageLayout .hero,
 .PSSectionLandingPageLayout .hero {
   margin: -270px 0 50px;
 }
 
-.hero img, .hero video {
+.hero img {
   width: 100%;
   height: auto;
 }
@@ -2267,7 +2294,7 @@ aside .widget {
   margin-bottom: 50px;
 }
 aside .widget:last-child {
-  margin-bottom: 0;
+  /*margin-bottom: 0;*/
 }
 /*article aside {
   clear: both;
@@ -2853,6 +2880,7 @@ h1.ms-dlgTitleText.ms-accentText.ms-dlg-heading {
   font-weight: bold;
   line-height: 1.25;
   text-transform: uppercase;
+  background: #fff;
   color: #000;
   width: 100px;
   padding: 10px 20px;

@@ -8,15 +8,15 @@ Comment:        Used for dynamic table filters;
 ************************************************** */
 
 .searchFilter {
-	background-color: #1bcba5;
+  background-color: #1bcba5;
   color: #fff;
   padding: 20px 80px 20px 30px;
   position: relative;
 }
 
 .searchFilter legend { 
-    position: absolute;
-    margin: -9999px;
+  position: absolute;
+  margin: -9999px;
 }
 
 .searchFilter .field {
@@ -150,8 +150,7 @@ Comment:        Used for dynamic table filters;
 .filter th:last-child { border-right-color: #000; }*/
 
 .filter td { 
-	border: 1px solid red; 
-	padding: 5px 10px;
+  padding: 5px 10px;
 }
 .filter td p { margin: 0; }
 
@@ -163,6 +162,7 @@ Comment:        Used for dynamic table filters;
 /*	width:	200px;*/
 }
 .filter td.break-word-Documents {
+  width: 40%;
   -ms-word-wrap: break-word;
   word-wrap: break-word;
   /*word-break: break-all;*/
@@ -177,6 +177,7 @@ Comment:        Used for dynamic table filters;
 .filter td.break-word-Documents > div {
     -ms-word-wrap: break-word;
     word-wrap: break-word;
+    word-break: break-all;
 }
 
 .filter td.break-word-Documents:hover {

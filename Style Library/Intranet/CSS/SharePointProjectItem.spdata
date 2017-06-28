@@ -37,5 +37,6 @@
     <ProjectItemFile Source="normalize.css" Target="CSS\" Type="ElementFile" />
     <ProjectItemFile Source="responsive.css" Target="CSS\" Type="ElementFile" />
     <ProjectItemFile Source="slick.css" Target="CSS\" Type="ElementFile" />
+    <ProjectItemFile Source="SearchTemplate.css" Target="CSS\" Type="ElementFile" />
   </Files>
 </ProjectItem>
