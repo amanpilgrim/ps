@@ -75,91 +75,91 @@ aside .widget {
 /* News Carousel */
 
 /*div.carousel { 
-	float: left; 
-	height: 300px;
-	padding: 0;
-	position: relative;
-	width: 665px;
+  float: left; 
+  height: 300px;
+  padding: 0;
+  position: relative;
+  width: 665px;
   width: 80%;
 }
 .carousel .button { 
-	float: left; 
-	margin-left: 20px;
+  float: left; 
+  margin-left: 20px;
 }
 
 .feature {
-	cursor: url(/_layouts/15/pause.cur), pointer !important;
+  cursor: url(/_layouts/15/pause.cur), pointer !important;
     height: 200px;
-	overflow: hidden;
+  overflow: hidden;
 }
 .feature img {
-	float: left;
-	margin-right: 20px;
-	max-width: 665px;
+  float: left;
+  margin-right: 20px;
+  max-width: 665px;
 }
 .feature h2,
 .feature p { margin: 0; }
 
 .feature a {
-	float: left;
-	width: 100%;
+  float: left;
+  width: 100%;
 }
 .feature a:hover {
-	color: #0167ce;
-	text-decoration: none;
+  color: #0167ce;
+  text-decoration: none;
 }
 .feature a:hover * { color: #0167ce; }
 
 div.carousel a.more {
-	bottom: 5px;
-	position: absolute;
-	right: 0;
-	width: auto;
+  bottom: 5px;
+  position: absolute;
+  right: 0;
+  width: auto;
 }
 div.carousel a.more:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 .carouselFooter { 
-	clear: both;
-	margin-top: 5px;
-	padding: 5px 0;
+  clear: both;
+  margin-top: 5px;
+  padding: 5px 0;
 }
 
 ul.carouselNav {
-	cursor: default !important;
-	float: left;
+  cursor: default !important;
+  float: left;
 }
 .carouselNav a {
-	background: url(../images/icons.png) no-repeat right -298px;
-	float: left;
-	height: 11px;
-	margin-right: 5px; 
-	text-indent: -9999px;
-	width: 11px;
+  background: url(../images/icons.png) no-repeat right -298px;
+  float: left;
+  height: 11px;
+  margin-right: 5px; 
+  text-indent: -9999px;
+  width: 11px;
 }
 .carouselNav a.current { 
-	background-position: right -199px; 
-	font-weight: bold;
+  background-position: right -199px; 
+  font-weight: bold;
 }
 
  Columns 
 .column a.button {
-	display: inline-block;
-	margin-top: 10px;
+  display: inline-block;
+  margin-top: 10px;
 }
 
 .column h3 { clear: both; }
 .column p { margin: 0; }
 
 .onParliament h3 {
-	background: url(../images/icons.png) no-repeat 5px -807px;
-	border-bottom: 1px solid #004d38;
-	color: #004d38;
-	font-size: 18px;
-	margin: 10px 0;
-	padding: 0;
-	text-indent: 30px;
+  background: url(../images/icons.png) no-repeat 5px -807px;
+  border-bottom: 1px solid #004d38;
+  color: #004d38;
+  font-size: 18px;
+  margin: 10px 0;
+  padding: 0;
+  text-indent: 30px;
 }
 .onParliament h3 a,
 .onParliament h3 a:link,
@@ -175,76 +175,76 @@ ul.carouselNav {
 }
 
 .sitting p {
-	background-color: #d1e9da;
-	margin-top: 10px;
-	padding: 3px 0;
-	text-align: center;
+  background-color: #d1e9da;
+  margin-top: 10px;
+  padding: 3px 0;
+  text-align: center;
 }
 .sitting p.calendarUnavailable {
     background-color: #ff5050;
 }
 
 .sitting ul li {
-	background-image: none;
-	margin: 0;
-	padding: 0;
+  background-image: none;
+  margin: 0;
+  padding: 0;
 }
 .sitting li a:after {
-	color: #333;
-	content:"\00a0\00bb"; 
+  color: #333;
+  content:"\00a0\00bb"; 
 }
 
 
 .calBox {
-	float: left;
-	margin: 0 6px 10px 0;
-	width: 60px;
+  float: left;
+  margin: 0 6px 10px 0;
+  width: 60px;
 }
 
 .calBox span {
-	background: #ccc;
-	border: 1px solid #a7a7a7;
-	display: block;
-	height: 45px;
-	padding: 3px 5px;
-	text-align: center;
+  background: #ccc;
+  border: 1px solid #a7a7a7;
+  display: block;
+  height: 45px;
+  padding: 3px 5px;
+  text-align: center;
 }
 
 .calBox .day {
-	background: linear-gradient(#fff, #ccc); 
-		background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ffffff), to(#cccccc));
-		background: -webkit-linear-gradient(#fff, #ccc);
-		background: -moz-linear-gradient(#fff, #ccc);
-		background: -ms-linear-gradient(#fff, #ccc);
-		background: -o-linear-gradient(#fff, #ccc);	
-		-pie-background: linear-gradient(#fff, #ccc);
-	border-radius: 8px 8px 0 0;
-		-webkit-border-radius: 8px 8px 0 0;
-		-moz-border-radius: 8px 8px 0 0;	
-	font-family: 'OpenSansCondensedBold';	
-  	font-size: 40px;
+  background: linear-gradient(#fff, #ccc); 
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ffffff), to(#cccccc));
+    background: -webkit-linear-gradient(#fff, #ccc);
+    background: -moz-linear-gradient(#fff, #ccc);
+    background: -ms-linear-gradient(#fff, #ccc);
+    background: -o-linear-gradient(#fff, #ccc);	
+    -pie-background: linear-gradient(#fff, #ccc);
+  border-radius: 8px 8px 0 0;
+    -webkit-border-radius: 8px 8px 0 0;
+    -moz-border-radius: 8px 8px 0 0;	
+  font-family: 'OpenSansCondensedBold';	
+    font-size: 40px;
 }
 .calBox .month {
-	background: linear-gradient(#ccc, #fff);
-		background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ccc), to(#fff));
-		background: -webkit-linear-gradient(#ccc, #fff);
-		background: -moz-linear-gradient(#ccc, #fff);
-		background: -ms-linear-gradient(#ccc, #fff);
-		background: -o-linear-gradient(#ccc, #fff);
-		-pie-background: linear-gradient(#ccc, #fff);
-	border-radius: 0 0 8px 8px;
-		-webkit-border-radius: 0px 0px 8px 8px;
-		-moz-border-radius: 0px 0px 8px 8px;	
-	border-top-width: 0;
-	font-family: 'OpenSansCondensedLight';
+  background: linear-gradient(#ccc, #fff);
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ccc), to(#fff));
+    background: -webkit-linear-gradient(#ccc, #fff);
+    background: -moz-linear-gradient(#ccc, #fff);
+    background: -ms-linear-gradient(#ccc, #fff);
+    background: -o-linear-gradient(#ccc, #fff);
+    -pie-background: linear-gradient(#ccc, #fff);
+  border-radius: 0 0 8px 8px;
+    -webkit-border-radius: 0px 0px 8px 8px;
+    -moz-border-radius: 0px 0px 8px 8px;	
+  border-top-width: 0;
+  font-family: 'OpenSansCondensedLight';
  	font-size: 16px;
 }*/
 
 /* *** Secondary Area Styles (Aside) *** */
 aside {
-/*	clear: none;
-	float: right;
-	width: 258px; */
+  /*	clear: none;
+    float: right;
+    width: 258px; */
   float: right;
   width: 20%;
 }
@@ -257,14 +257,18 @@ aside h2 {
 }
 
 aside .inner { 
-	padding: 30px;
+  padding: 30px;
 }
 
 aside .scrollable {
-	height: 100px;
-	overflow: hidden;
-	overflow-y: scroll;
-	padding-right: 5px;
+  height: 100px;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding-right: 5px;
+}
+
+#quicklinks {
+  margin: 0;
 }
 
 /* Events */
@@ -389,7 +393,7 @@ aside .scrollable {
 /* Useful Contacts */
 .contactBox {
   padding: 0 30px 0 15px;
-/*  border-left: solid 5px #d15a49;*/
+  /*  border-left: solid 5px #d15a49;*/
   position: relative;
 }
 .contactBox ul {
@@ -467,21 +471,21 @@ aside .scrollable {
   border-bottom: 0;
 }
 #documents input[type="submit"] {
-    display: inline-block;
-    font: normal normal normal 2em/1 FontAwesome;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    min-width: 28px;
-    margin: 0;
-    background: transparent;
-    color: #000;
-    padding: 5px 11px;
-/*    border: solid 4px #000;*/
-    position: absolute;
-    top: 0;
-    right: 0;
-    cursor: pointer;
+  display: inline-block;
+  font: normal normal normal 2em/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 28px;
+  margin: 0;
+  background: transparent;
+  color: #000;
+  padding: 5px 11px;
+  /*    border: solid 4px #000;*/
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
 }
 
 /* Editable Promos */
@@ -531,32 +535,32 @@ aside .scrollable {
 
 /* Tabs *
 .tabBox { 
-	border: 1px solid #a7a7a7;
-	border-radius: 8px; 
-		-webkit-border-radius: 8px; 
-		-moz-border-radius: 8px;
-	float: left;
-	margin: 15px 0 0; 
-	padding: 10px 0 0;
-	position: relative; 
+  border: 1px solid #a7a7a7;
+  border-radius: 8px; 
+    -webkit-border-radius: 8px; 
+    -moz-border-radius: 8px;
+  float: left;
+  margin: 15px 0 0; 
+  padding: 10px 0 0;
+  position: relative; 
 }
 
 ul.tabs {
-	float: left;
-	margin: 0;
-	padding: 0;
+  float: left;
+  margin: 0;
+  padding: 0;
 }
 .tabs li { 
-	float: left;
-	font-family: 'OpenSansCondensedLight';	
-	font-size: 18px;
-	height: 25px;
-	margin: 0;
-	padding: 5px 5px 0;
-	position: relative;
-	text-align: center;
-	top: 1px;
-	width: 116px;
+  float: left;
+  font-family: 'OpenSansCondensedLight';	
+  font-size: 18px;
+  height: 25px;
+  margin: 0;
+  padding: 5px 5px 0;
+  position: relative;
+  text-align: center;
+  top: 1px;
+  width: 116px;
 }
 
 .tabs h3 { text-indent: 10px; }
@@ -564,9 +568,9 @@ ul.tabs {
 .tabs a,
 .tabs a:link,
 .tabs a:visited { 
-	color: #000; 
-	display: block;
-	outline: 0; 
+  color: #000; 
+  display: block;
+  outline: 0; 
 }
 
 #OurHouseli a,
@@ -574,49 +578,49 @@ ul.tabs {
 #OurHouseli a:visited { color: #fff; }
 
 .tabs #TheHouseli { 
-	background-color: #d1e9da;
-	border: 1px solid #cacaca;
-	border-bottom: 0;
-	border-radius: 8px 8px 0 0; 
-		-webkit-border-radius: 8px 8px 0 0; 
-		-moz-border-radius: 8px 8px 0 0;
-	box-shadow: #999 0 -1px 1px;	
-		-webkit-box-shadow: #999 0 -1px 1px;
-		-moz-box-shadow: #999 0 -1px 1px;
+  background-color: #d1e9da;
+  border: 1px solid #cacaca;
+  border-bottom: 0;
+  border-radius: 8px 8px 0 0; 
+    -webkit-border-radius: 8px 8px 0 0; 
+    -moz-border-radius: 8px 8px 0 0;
+  box-shadow: #999 0 -1px 1px;	
+    -webkit-box-shadow: #999 0 -1px 1px;
+    -moz-box-shadow: #999 0 -1px 1px;
 }
 .tabs #TheHouseli a { background: transparent url(../images/icons.png) no-repeat 3px -806px; }
 
 .tabs #OurHouseli { 
-	background: #78aea1 none;
-		background: -webkit-gradient(linear, 0 0, 0 bottom, from(#78aea1), to(#082f21));
-		background: -webkit-linear-gradient(#78aea1, #082f21);
-		background: -moz-linear-gradient(#78aea1, #082f21);
-		background: -ms-linear-gradient(#78aea1, #082f21);
-		background: -o-linear-gradient(#78aea1, #082f21);
-		background: linear-gradient(#78aea1, #082f21);
-		-pie-background: linear-gradient(#78aea1, #082f21);
-	color: #fff; 	
+  background: #78aea1 none;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#78aea1), to(#082f21));
+    background: -webkit-linear-gradient(#78aea1, #082f21);
+    background: -moz-linear-gradient(#78aea1, #082f21);
+    background: -ms-linear-gradient(#78aea1, #082f21);
+    background: -o-linear-gradient(#78aea1, #082f21);
+    background: linear-gradient(#78aea1, #082f21);
+    -pie-background: linear-gradient(#78aea1, #082f21);
+  color: #fff; 	
 }
 .tabBox .inner {
-	border: 1px solid #cacaca;
-	border-top: 0;
-	border-bottom-color: #030;
-	border-radius: 0 0 8px 8px; 
-		-webkit-border-radius: 0 0 8px 8px; 
-		-moz-border-radius: 0 0 8px 8px;
-	box-shadow: #999 0 2px 1px;	
-		-webkit-box-shadow: #999 0 2px 1px;
-		-moz-box-shadow: #999 0 2px 1px;	
-	clear: both;
-	margin: 0;
-	min-height: 40px;
-	width: 234px;
+  border: 1px solid #cacaca;
+  border-top: 0;
+  border-bottom-color: #030;
+  border-radius: 0 0 8px 8px; 
+    -webkit-border-radius: 0 0 8px 8px; 
+    -moz-border-radius: 0 0 8px 8px;
+  box-shadow: #999 0 2px 1px;	
+    -webkit-box-shadow: #999 0 2px 1px;
+    -moz-box-shadow: #999 0 2px 1px;	
+  clear: both;
+  margin: 0;
+  min-height: 40px;
+  width: 234px;
 }
 .tabBox #TheHouseTab { background-color: #d1e9da; }
 .tabBox #OurHouseTab { 
-	background-color: #fff;
-	border: 1px solid #103829;
-	border-top: 3px solid #103829;	
+  background-color: #fff;
+  border: 1px solid #103829;
+  border-top: 3px solid #103829;	
 }
 
 .contactBox { margin-top: 15px; }
@@ -631,7 +635,7 @@ ul.tabs {
     width: 100%;
 }
 .personalContactsList {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .predefinedContacts {
@@ -642,8 +646,8 @@ ul.tabs {
     width: 100%;
 }
 .contactItem{
-	width: 215px;
-	word-wrap: break-word;
+  width: 215px;
+  word-wrap: break-word;
 }
 .personContacts .contactItem{
  	color: #000;
@@ -652,14 +656,61 @@ ul.tabs {
 
 }
 .mannualName { 
-	color: #000;
-	font-weight: bold;
+  color: #000;
+  font-weight: bold;
 }*/
 
 
 /* Button Override */
 .contactBox a.button[title="Add new contact"],
 .contactBox a.button[title="Manage Contacts"] {
-	color: #fff;
-	position: relative;    
+  color: #fff;
+  position: relative;    
+}
+
+/* Media queries - responsive.css comes before */
+@media screen and (max-width: 1279px) {
+
+  #documents {
+    padding: 15px;
+  }
+  #my-promos li {
+    padding-left: 0;
+    min-height: 0;
+    margin: 0 0 15px;
+  }
+  #my-promos ul li:last-child {
+    margin-bottom: 0;
+  }
+  #my-promos img {
+    position: static;
+    float: left;
+    width: 25%;
+  }
+  #my-promos h3, #my-promos p {
+    margin-left: 30%;
+  }
+  #grid2 .aside {
+    margin: 15px;
+  }
+  #grid3 .block .widget:first-child {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  #grid1 .carousel, #grid1 .aside, 
+  #grid2 #documents, #grid2 .aside {
+    width: auto;
+  }
+
+  #nextSitting .row {
+    display: table-row;
+  }
+  #nextSitting .block {
+    display: table-cell;
+  }
+  #my-promos {
+    padding: 15px;
+  }
 }

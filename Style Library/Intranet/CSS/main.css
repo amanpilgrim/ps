@@ -1168,7 +1168,6 @@ ul.accordion {
   font-size: 1.14285714285714em; /* 16 */
   font-weight: bold;
   color: #00717a;
-  padding-right: 30px;
   margin: 0;
   position: relative;
   cursor: pointer;
@@ -1210,13 +1209,8 @@ ul.accordion {
   background-size: cover;
   color: #fff;
   padding: 0 15px;
-/*  margin-top: -35px;*/
   position: relative;
   z-index: 10;
-/*  position: fixed;
-  top: 0;
-  left: 120px;
-  right: 0;*/
 }
 #header h1 {
   font-size: 3.42857142857143em; /* 48 */
@@ -2136,6 +2130,7 @@ ul.bullets li,
 }
 .translation {
   font-size: 2.57142857142857em; /* 36 */
+  line-height: 1.25;
   margin: 0;
 }
 

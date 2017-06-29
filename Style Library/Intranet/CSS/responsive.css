@@ -101,20 +101,15 @@
 }
 @media screen and (min-width: 1024px) {
 
-  #toggle {
-    /*display: none;*/
-  }
-  
+  /* Structure */
   #main {
     padding: 70px 15px 50px;
     position: relative;
   }
   #main > div.primary {
     padding: 0 30px;
-  /*  margin-top: 70px;
-    margin-bottom: 20px;*/
   }
-  
+
   /* sticky header */
   .scroll .altNav {
     background: #000;
@@ -131,7 +126,7 @@
     height: 70px;
     line-height: 70px;
   }
-  
+
   .fixed #slideout {
     padding-top: 70px;
   }
@@ -139,14 +134,14 @@
 }
 
 @media screen and (min-width: 1280px) {
-  
+
   /* menu widgets */
   #menu .search,
   #menu .find-people,
   #menu #tools {
     width: 50%;
   }
-  
+
   /* dropdown */
   .mainNav {
     width: 50%;
@@ -189,14 +184,14 @@
   .mainNav ul.root > li > a:hover .fa {
     content: "";
   }
-  
+
   .mainNav ul.root > li.open > a .menu-item-text:after {
     content: "";
   }
   .mainNav ul.root > li > a .menu-item-text:after {
     content: "\f0a9";
   }
-  
+
   .mainNav ul.dynamic {
     width: 50% !important;
     top: 120px !important;
@@ -210,7 +205,7 @@
   .mainNav li.open ul.dynamic {
     display: block !important;
   }
-  
+
   .mainNav ul.dynamic li {
     font-size: 1em; /* 24 */
   }
@@ -232,8 +227,142 @@
 
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1279px) {
 
+  body {
+    padding-left: 80px;
+  }
+  #menu {
+    width: 80px;
+  }
+  #toggle {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 40px;
+  }
+  #slideout {
+    padding-top: 80px;
+  }
+  .nav-open #slideout {
+    left: 80px !important;
+  }
+  .logo {
+    left: 80px;
+  }
+  .logo img {
+    height: 80px;
+  }
+  .altNav {
+    left: 297px;
+  }
+  .fixed .altNav {
+    left: 270px;
+  }
+
+  /* Header */
+  #header h1 {
+    font-size: 2.5em;
+    padding: 15px;
+  }
+
+  /* Structure */
+  #main > div.primary {
+    padding: 0 15px;
+  }
+  aside .widget {
+    margin-bottom: 30px;
+  }
+
+  /* Grids */
+  .grid {
+    border-spacing: 15px;
+    margin: 0 -15px;
+  }
+  .block .inner {
+    padding: 15px;
+  }
+  .block h2 {
+    font-size: 16px;
+  }
+  .block .edit, .block .fa-edit {
+    top: 15px;
+    right: 15px;
+  }
+
+  /* Widgets */
+  .widget h2 {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+  }
+  .links {
+    padding: 15px;
+  }
+  .links ul {
+    font-size: 1em;
+  }
+  aside .promo .content {
+    padding: 15px;
+  }
+  aside .faqs {
+    padding: 15px;
+  }
+  .grid .widget.promo > a {
+    padding: 15px;
+  }
+  .widget.poll {
+    padding: 15px 15px 60px;
+  }
+  .poll input[type="submit"], .poll input[type="button"] {
+    bottom: 15px;
+    right: 15px;
+  }
+  .widget.documents {
+    padding: 15px;
+  }
+  #did-you-know .content {
+    width: 100%;
+    padding: 15px 30px;
+    margin: 0;
+  }
+  #did-you-know .image {
+    width: 100%;
+    margin: 0;
+  }
+  /* Find a Person */
+  .find-people {
+    padding: 15px 15px 67px;
+  }
+  .find-people input[type="submit"] {
+    bottom: 15px;
+    right: 15px;
+  }
+  /* Content */
+  blockquote {
+    font-size: 1.5em;
+    min-height: 60px;
+    padding-left: 75px;
+  }
+  blockquote:before {
+    font-size: 60px;
+  }
+  /* News */
+  #recent .recent li {
+    margin-top: 15px;
+  }
+  #recent .recent img {
+    width: 25%;
+  }
+  #recent .recent .inner {
+    margin-left: 30%;
+  }
+  #event-grid .block {
+    margin: 15px 0;
+  }
+  /* Back to Top Link */
+  .backTop {
+    padding-right: 0;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -242,79 +371,144 @@
 
 @media screen and (max-width: 1023px) {
 
-/*  .slideout {
-    width: 300px;
-    height: 100%;
-    padding: 0 15px;
-    background: #262262;
-    position: fixed;
-    top: 0;
-    left: -310px;
-    overflow-y: auto;
-    z-index: 29;
-    transition: .1s;
-
-    -webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.2);
-    box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.5);
+  .subNav, .breadcrumb, .altNav nav {
+    display: none;
   }
-  .nav-open .slideout {
+
+  .fixed .altNav {
     left: 0;
   }
-  .slideout {
-    padding-top: 54px;
+
+  body {
+    padding: 0;
   }
-  .slideout .search input[type="search"] {
-    width: 234px;
+  #s4-workspace {
+    position: static;
+  }
+  #menu {
+    position: absolute;
+    width: 80px;
+    height: auto;
+    top: 30px;
+    background: transparent;
+  }
+  /*  #toggle {
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      font-size: 40px;
+    }*/
+  .toggles {
+    background: #292929;
+    position: relative;
+    left: -100%;
+  }
+  .nav-open .toggles {
+    left: 0;
+  }
+  /*  #slideout {
+      padding-top: 80px;
+    }
+    .nav-open #slideout {
+      left: 80px !important;
+    }*/
+  #menu .find-people {
+    height: auto;
   }
 
-  #nav {
+  /* Header */
+  #s4-ribbonrow, #notificationArea, #DeltaPageStatusBar {
+    display: none !important;
+  }
+  .altNav {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #292929;
+  }
+  .logo {
+    position: absolute;
+    top: 30px;
+    /*left: 80px;*/
+  }
+  .logo img {
+    /*height: 80px;*/
+  }
+
+  #header {
+    padding: 80px 15px 0;
+    background-position: 50% 50%;
+  }
+  .PSHomePageLayout #header {
+    height: 0 !important;
+  }
+  #header .container {
+    min-height: 0;
+  }
+  #header h1 {
+    position: relative;
+    left: 0;
+    padding: 15px 0;
+  }
+
+  /* Structure */
+  #main div.primary {
+    float: none;
     width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,.9);
-    position: fixed;
-    top: 0;
-    left: -110%;
-    overflow-y: auto;
-    z-index: 29;
-    transition: .1s;
-
-    -webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.2);
-    box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.5);
   }
-  .nav-open #nav {
-    left: 0;
-    right: 50px;
-    width: auto;
+  #main > div.primary {
+    padding: 0;
+    margin: 0 0 15px;
+  }
+  #main .primary.narrow {
+    padding-right: 0;
+    margin-bottom: 0;
+  }
+  aside {
+    float: none;
+    width: 100%;
+  }
+  aside .widget {
+    margin: 15px 0;
   }
 
-  #nav > ul > li > a {
+  .hero,
+  .PSEventPageLayout .hero,
+  .PSEventsLandingPageLayout .hero,
+  .PSNewsContentPageLayout .hero,
+  .PSNewsListingPageLayout .hero,
+  .PSSectionLandingPageLayout .hero {
+    margin: 0 -15px 20px;
+  }
+
+  /* Grids */
+  .grid, .grid .row, .grid .block {
+    display: block;
+  }
+  .grid {
+    margin: 0;
+  }
+  .grid .block {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  /* Widgets */
+  #carousel {
+    padding-bottom: 30px;
+  }
+  #carousel .slide-image h2, #carousel .slide-video h2 {
     padding: 15px;
   }
-  #nav > ul > li > a.parent {
-    padding-right: 40px;
+  #carousel p {
+    margin: 15px 15px 0;
   }
-  #nav > ul > li > a > span {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    display: inline-block;
-    width: 20px;
-    background: rgba(255,255,255,.5);
-    color: #262262;
-    text-align: center;
-    border-radius: 10px;
+  /* News */
+  #recent {
+    padding: 15px;
   }
-  #nav > ul > li > a > span.fa-caret-down {
-    padding: 2px 0;
-  }
-  #nav > ul > li > a > span.fa-caret-up {
-    padding: 0 0 4px;
-  }
-  #nav ul ul {
-    display: none;
-  }*/
+
 }
 
 @media screen and (max-width: 768px) {
@@ -326,5 +520,5 @@
 }
 
 @media screen and (max-width: 767px) {
-  
+
 }
