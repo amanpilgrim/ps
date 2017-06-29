@@ -290,13 +290,78 @@ aside .ms-webpartzone-cell {
 	margin-top: 10px;
 }
 
+/* Blog */
+#MSO_ContentTable {
+  margin: 0;
+}
+#MSO_ContentTable td {
+  padding: 0;
+}
+.ms-blog-MainArea {
+  min-width: 0;
+  max-width: 100%;
+  margin: 0;
+}
+.ms-blog-MainArea td {
+  width: 75%;
+}
+.ms-blog-MainArea td.ms-blog-LeftColumn {
+  width: 25%;
+}
+
+.ms-blog-postList {
+  /*margin-right: 0;*/
+  min-width: 0;
+  max-width: 100%;
+}
+.ms-blog-postList h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+.ms-blog-postList .ms-accentText, .ms-blog-postList .ms-accentText:visited {
+  color: #157a6b;
+}
+.ms-webpart-titleText.ms-webpart-titleText, .ms-webpart-titleText > a {
+  font-family: 'Open Sans', sans-serif;
+  color: #000;
+  margin: 0 0 20px;
+}
+
+
+
 /***** Overwrite Sharepoint Search Site ****/
+.ms-core-listMenu-verticalBox > .ms-core-listMenu-root > li > .ms-core-listMenu-item, .ms-core-listMenu-verticalBox > .ms-core-listMenu-root > li > .ms-core-listMenuEdit, .ms-core-listMenu-heading, .ms-tv-header,
+.ms-calloutLink:link, a.ms-calloutLink:visited, .ms-calloutLinkDisabled, .ms-commandLink, .ms-commandLink:visited, .ms-secondaryCommandLink, .ms-secondaryCommandLink:visited {
+  font-family: 'Open Sans', sans-serif;
+}
+.ms-blog-quickLinksTitle {
+  text-transform: uppercase;
+  font-weight: 600;
+}
 /*div.ms-dialogHidden.ms-forceWrap.ms-noList { 
-	clear: both;
-	float: left;
-	margin-right: 30px;
-	width: 165px;
+  clear: both;
+  float: left;
+  width: 25%;
+  padding: 0 15px;
+  margin: 0;
+  box-sizing: border-box;
+}
+.ms-searchCenter-refinement a.ms-ref-refinername {
+  display: block;
+  font-size: 1.71428571428571em;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+  width: auto;
+  padding: 0;
+  margin-bottom: 15px;
+}
+.ms-searchCenter-refinement .ms-ref-selSec,
+.ms-searchCenter-refinement .ms-ref-unselSec {
+  border-left: solid 5px #1bcba5;
+  padding-left: 15px;
 }*/
+
 
 .srch-advancedtable {
   margin: 0;

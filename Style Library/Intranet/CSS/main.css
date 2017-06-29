@@ -101,6 +101,7 @@ body.nav-open {
 }
 
 h1 {
+  font-family: OpenSansLight, sans-serif;
   font-size: 4.28571428571429em; /* 60 */
   line-height: 1;
   font-weight: normal;
@@ -148,20 +149,20 @@ a:hover, a:active {
 }
 a.button {
   display: inline-block;
-  background: #fff;
+  /*background: #fff;
   color: #157a6b;
+  border: 0 solid #157a6b;*/
   padding: 15px 30px;
   line-height: 1;
   text-transform: uppercase;
   font-weight: bold;
   text-decoration: none;
-  border: 0 solid #157a6b;
   transition: .3s;
 }
 a.button:hover, a.button:active, a.button:focus {
-  background: #157a6b;
+  /*background: #157a6b;
   border: 0 solid #157a6b;
-  color: #fff;
+  color: #fff;*/
 }
 a.more {
   white-space: nowrap;
@@ -1889,13 +1890,35 @@ ul.dynamic {
 }
 
 /* Sub Nav */
-.subNav {
+div.ms-dialogHidden.ms-forceWrap.ms-noList { 
   display: block;
+  float: left;
+  width: 25%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  position: relative;
+}
+.ms-core-listMenu-root > li > ul {
+  border-left: solid 5px #1bcba5;
+  padding-left: 0;
+}
+.ms-core-listMenu-root li li {
+  margin: 0;
+}
+.mainNav ul.dynamic {
+  border: 0;
+  padding-left: 20px;
+}
+
+
+
+.subNav {
+  /*display: block;
   float: left;
   width: 25%;
   min-height: 300px;
   padding: 0 15px;
-  box-sizing: border-box;
+  box-sizing: border-box;*/
   position: relative;
   margin-top: 0;
   transition: 0s;
@@ -1986,6 +2009,10 @@ li > a.ms-core-listMenu-item:active {
   color: #ccc;
   cursor: pointer;
 }
+.subNav li ul {
+  padding-left: 0;
+  border-left: 0;
+}
 .subNav li.hasChildren ul {
   display: none;
   margin-left: 30px;
@@ -2007,7 +2034,6 @@ li > a.ms-core-listMenu-item:active {
 #s4-bodyContainer .subNav li.hasChildren li.selected a {
   font-weight: 600;
 }
-
 
 /* **** Main Content Area *** */
 #main {

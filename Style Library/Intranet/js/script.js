@@ -133,19 +133,22 @@
             output += '<br>check: ' + check;
             output += '<br>marginTop: ' + marginTop;
 
-            // we've hit the bottom  
-            if (scrollTop >= check && marginTop >= check + logoOffset) {
-                $sidebar.stop().css({ marginTop: check });
-                output += '<br><b>Bottom</b>';
-            }
-                // we've passed the threshold
-            else if (scrollTop >= threshold + logoOffset) {
-                $sidebar.stop().css({ marginTop: marginTop - logoOffset });
-                output += '<br><b>Margin</b>';
-            }
-            else {
-                $sidebar.stop().css({ marginTop: 0 });
-                output += '<br><b>Inline</b>';
+            // make sure the content extends beyond subNav
+            if (check > logoOffset) {
+                // we've hit the bottom  
+                if (scrollTop >= check && marginTop >= check + logoOffset) {
+                    $sidebar.stop().css({ marginTop: check });
+                    output += '<br><b>Bottom</b>';
+                }
+                    // we've passed the threshold
+                else if (scrollTop >= threshold + logoOffset) {
+                    $sidebar.stop().css({ marginTop: marginTop - logoOffset });
+                    output += '<br><b>Margin</b>';
+                }
+                else {
+                    $sidebar.stop().css({ marginTop: 0 });
+                    output += '<br><b>Inline</b>';
+                }
             }
             output += '</span>';
             //$("#test").html(output);

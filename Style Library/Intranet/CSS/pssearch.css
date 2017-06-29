@@ -6,12 +6,12 @@
 
 /* Search Structure */
 .ms-searchCenter-refinement {
-  display: block;
+  /*display: block;
   float: left;
   width: 25%;
   padding: 0 15px;
   margin: 0;
-  box-sizing: border-box;
+  box-sizing: border-box;*/
 }
 .ms-searchCenter-refinement .ms-ref-refiner {
   padding: 0;
@@ -45,13 +45,14 @@
   border-top: solid 2px #d7d7d7;
 }
 .ms-searchCenter-refinement .ms-ref-name {
-  font-size: 1.28571428571429em;
+  font-size: 16px;
   line-height: 1.22222222222222;
   font-weight: 600;
   font-family: 'Open Sans', sans-serif;
   padding: 10px 0;
   color: #666;
   vertical-align: middle;
+  cursor: pointer;
 }
 .ms-searchCenter-refinement label.ms-ref-ellipsis {
   display: inline-block;
